@@ -5,5 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: complex_numbers/complex_numbers
-- file: series
-- file: matrices
+- file: sequences_and_series/series
+- file: matrices/matrices
