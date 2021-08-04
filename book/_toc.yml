@@ -4,6 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: complex_numbers
+- file: complex_numbers/complex_numbers
 - file: series
 - file: matrices
