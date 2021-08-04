@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex Numbers &#8212; Mathematics for Natural Sciences 1</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Series" href="series.html" />
+    <link rel="prev" title="Introduction" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="series.html">
+   Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="matrices.html">
+   Matrices
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/complex_numbers.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcomplex_numbers.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivations-and-definitions">
+   Motivations and Definitions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometric-interpretation">
+   Geometric Interpretation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-complex-plane">
+     The complex plane
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-modulus-and-argument-of-a-complex-number">
+     The modulus and argument of a complex number
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="complex-numbers">
+<h1>Complex Numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="motivations-and-definitions">
+<h2>Motivations and Definitions<a class="headerlink" href="#motivations-and-definitions" title="Permalink to this headline">¶</a></h2>
+<p>The real number line is not sufficient to solve every algebraic equation. For example, there is no real value <span class="math notranslate nohighlight">\(y\)</span> that satisfies the following problem:</p>
+<div class="math notranslate nohighlight" id="equation-ysquaredplus1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-ysquaredplus1" title="Permalink to this equation">¶</a></span>\[y^2 + 1 = 0.\]</div>
+<p>However, let us <em>suppose</em> that a number <span class="math notranslate nohighlight">\(i\)</span> exists, with the property that <span class="math notranslate nohighlight">\(i=\sqrt{−1}\)</span>. Then the two roots of the quadratic equation <a class="reference internal" href="#equation-ysquaredplus1">(1)</a> are:</p>
+<div class="math notranslate nohighlight" id="equation-plusminusi">
+<span class="eqno">(2)<a class="headerlink" href="#equation-plusminusi" title="Permalink to this equation">¶</a></span>\[y = \pm i\]</div>
+<p><em>Check the negative root:</em></p>
+<p><span class="math notranslate nohighlight">\((-i)^2 = (-1)^2i^2=1(-1)=-1\)</span>.</p>
+<p>This seems at first like pure mathematical trickery, and it is not immediately clear what has been gained. However, it turns out that with this one new definition <em>every</em> algebraic equation can be solved. Furthermore, we will soon see that we are able to find real-valued solutions to many mathematical problems by performing intermediate manipulations involving the imaginary number <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<p>We can use our new definition <span class="math notranslate nohighlight">\(i\)</span> to construct the complex numbers:</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>A <strong>complex number</strong> is any value of the form <span class="math notranslate nohighlight">\(z=x+yi\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are real numbers and <span class="math notranslate nohighlight">\(i=\sqrt{−1}\)</span>.</p>
+<p>We call <span class="math notranslate nohighlight">\(x\)</span> the real part, and <span class="math notranslate nohighlight">\(y\)</span> the imaginary part. For example, for the number <span class="math notranslate nohighlight">\(z=\sqrt{3}+\pi i\)</span>, the real part is <span class="math notranslate nohighlight">\(\sqrt{3}\)</span> and the imaginary part is <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<p>For two complex numbers to be equal, they must have the same real part and the same imaginary part. That is,</p>
+<p>if <span class="math notranslate nohighlight">\((x_1+y_1i)=(x_2+y_2i)\)</span> then <span class="math notranslate nohighlight">\(x_1=x_2\)</span> and <span class="math notranslate nohighlight">\(y_1=y_2\)</span>.</p>
+<p>It can be seen that the real numbers are a special case of complex numbers where the imaginary part is equal to zero.</p>
+</div>
+<p>In later work we also will need the definition of the complex conjugate:</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>The <strong>complex conjugate</strong> of <span class="math notranslate nohighlight">\(z=x+yi\)</span> is given by negating the sign of the imaginary part.</p>
+<p>We write either <span class="math notranslate nohighlight">\(z^∗=x−yi\)</span> or <span class="math notranslate nohighlight">\(\bar{z}=x−yi\)</span>. For example, for the number <span class="math notranslate nohighlight">\(z=\sqrt{3}+\pi i\)</span>, the complex conjugate is given by <span class="math notranslate nohighlight">\(z^*=\sqrt{3}-\pi i\)</span>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Practice</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(z_1=2-3i\)</span> and <span class="math notranslate nohighlight">\(z_2=2-ai\)</span>.</p>
+<ol class="simple">
+<li><p>state the imaginary part of <span class="math notranslate nohighlight">\(z_1\)</span></p></li>
+<li><p>Write down the result of <span class="math notranslate nohighlight">\(z_1^*\)</span></p></li>
+<li><p>What is the value of the constant <span class="math notranslate nohighlight">\(a\)</span> if <span class="math notranslate nohighlight">\(z_1 = z_2\)</span>?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="geometric-interpretation">
+<h2>Geometric Interpretation<a class="headerlink" href="#geometric-interpretation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-complex-plane">
+<h3>The complex plane<a class="headerlink" href="#the-complex-plane" title="Permalink to this headline">¶</a></h3>
+<p>Since the number <span class="math notranslate nohighlight">\(z=x+yi\)</span> features two independent real parameters (<span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>), we can represent a complex number graphically using <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> as coordinates. This is an extension of our idea of representing the real numbers on a line.</p>
+<p>We construct a plane with the real part of <span class="math notranslate nohighlight">\(z\)</span> on the horizontal axis, and the imaginary part of <span class="math notranslate nohighlight">\(z\)</span> on the vertical axis, as shown in <a class="reference internal" href="#complex-plane"><span class="std std-numref">Fig. 1</span></a>. The complex conjugate <span class="math notranslate nohighlight">\(z^*\)</span> is also illustrated in the figure.</p>
+<div class="figure align-default" id="complex-plane">
+<img alt="_images/conjugate.jpg" src="_images/conjugate.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Representation of a complex number in the complex plane (also known as an Argand diagram).
+The real part of the number is represented on the horizontal axis, and the imaginary part is represented on the vertical axis.
+<span class="math notranslate nohighlight">\(z^*\)</span> is given by reflecting the point z through a mirror placed along the real axis (negating the imaginary part).</span><a class="headerlink" href="#complex-plane" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="the-modulus-and-argument-of-a-complex-number">
+<h3>The modulus and argument of a complex number<a class="headerlink" href="#the-modulus-and-argument-of-a-complex-number" title="Permalink to this headline">¶</a></h3>
+<p>The representation <span class="math notranslate nohighlight">\(z=x+yi\)</span> is known as the Cartesian form of a complex number. In graphical terms it tells us where the number lies with respect to the real and imaginary axes.</p>
+<p>An alternative way of describing the location of a complex number in the plane is by proving the following two pieces of information:</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>The <strong>modulus</strong> or <strong>absolute value</strong> of <span class="math notranslate nohighlight">\(z\)</span>, denoted by <span class="math notranslate nohighlight">\(|z|\)</span> or <span class="math notranslate nohighlight">\(\mathrm{abs}(z)\)</span>, measures the length of the line connecting the point to the origin. It is always a positive quantity.</p>
+<p>By inspecting Figure <a class="reference internal" href="#principal-argument"><span class="std std-numref">Fig. 2</span></a>, we can see that the modulus is just the length of the hypothenuse of a right-angled triangle. The base and height of the triangle are given by the real and imaginary parts, and so we have</p>
+<div class="math notranslate nohighlight">
+\[|x+iy| = \sqrt{x^2+y^2}.\]</div>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>The <strong>argument</strong> of a complex number, denoted by <span class="math notranslate nohighlight">\(\mathrm{arg}(z)\)</span>, measures the angle between the positive real axis and the line connecting the point to the origin. You might think of it as a bearing, relative to the direction of the positive real axis.</p>
+<p>We measure the argument continuously in the <em>anti-clockwise</em> direction, and there are two different conventions in use for giving the argument of a complex number that lies below the real axis.</p>
+<p>The two conventions are both illustrated in <a class="reference internal" href="#principal-argument"><span class="std std-numref">Fig. 2</span></a>.</p>
+</div>
+<div class="figure align-default" id="principal-argument">
+<img alt="_images/principal_argument.png" src="_images/principal_argument.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Generic illustration of a complex number in the plane. The length of the blue line connecting the point to the origin is given by <span class="math notranslate nohighlight">\(|z|=\sqrt{x_2+y_2}\)</span>. The angle subtended on the real axis is given by <span class="math notranslate nohighlight">\(\mu=\mathrm{arctan}(|y/x|)\)</span>. There are two different conventions in use for measuring the argument. Click on the interactive figure to explore them both.</span><a class="headerlink" href="#principal-argument" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ol class="simple">
+<li><p>You <strong>must</strong> work in radians when providing the argument of a complex number. We will see later that there are special mathematical relationships involving the argument of a complex number, that are only valid when working in radians.</p></li>
+<li><p>We will always gives the argument in the range <span class="math notranslate nohighlight">\((−\pi,\pi]\)</span>. This convention is much more common in the literature and also used by most mathematical computer software. Notice that conjugation in polar form is neater with this convention, since <span class="math notranslate nohighlight">\(\mathrm{arg}(z^∗)=−\mathrm{arg}(z)\)</span>.</p></li>
+<li><p>Strictly speaking, the argument as defined here is called the principal argument, since we could also locate the complex number by wrapping multiple times around the plane. For example, the argument <span class="math notranslate nohighlight">\(−\pi/4\)</span> could equally be given as <span class="math notranslate nohighlight">\((2n−1/4)\pi\)</span> for any integer value of <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+</ol>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Practice</p>
+<p>The interactive app below allows you to generate randomly selected complex numbers in each quadrant. Try to calculate the modulus and argument for the examples, and click the “Show/Hide” button to check your answers:</p>
+<p><a class="reference external" href="https://www.wolframcloud.com/obj/ucqssjm/Published/argand.cdf">https://www.wolframcloud.com/obj/ucqssjm/Published/argand.cdf</a></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Introduction</a>
+    <a class='right-next' id="next-link" href="series.html" title="next page">Series</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
