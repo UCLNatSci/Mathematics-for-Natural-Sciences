@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Differentiation &#8212; Mathematics for Natural Sciences 1</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Matrices" href="../matrices/matrices.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../complex_numbers/complex_numbers.html">
+   Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/series.html">
+   Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matrices/matrices.html">
+   Matrices
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Differentiation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Differentiation/Differentiation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDifferentiation/Differentiation.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivations-and-first-principle-arguments">
+   Motivations and First Principle Arguments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivative-as-a-rate-of-change">
+   Derivative as a “rate of change”
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-and-higher-derivatives">
+   Second and Higher Derivatives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stationary-points">
+   Stationary Points
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentiation-rules">
+   Differentiation Rules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parametric-differentiation">
+   Parametric Differentiation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivatives-of-inverse-functions">
+   Derivatives of Inverse Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implicit-differentiation">
+   Implicit Differentiation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solutions">
+   Solutions
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="differentiation">
+<h1>Differentiation<a class="headerlink" href="#differentiation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="motivations-and-first-principle-arguments">
+<h2>Motivations and First Principle Arguments<a class="headerlink" href="#motivations-and-first-principle-arguments" title="Permalink to this headline">¶</a></h2>
+<p>The equation <span class="math notranslate nohighlight">\(y=mx+c\)</span> represents a straight line. In this expression, the constant <span class="math notranslate nohighlight">\(m\)</span> tells us how quickly the slope <span class="math notranslate nohighlight">\(y\)</span> changes with <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>For instance,</p>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(m\)</span>=1 then 𝑦 increases by 1 unit for every unit of increase in <span class="math notranslate nohighlight">\(x\)</span></p></li>
+<li><p>if <span class="math notranslate nohighlight">\(m\)</span>=2 then 𝑦 increases by 2 units for every unit of increase in <span class="math notranslate nohighlight">\(x\)</span></p></li>
+<li><p>if <span class="math notranslate nohighlight">\(m\)</span>=−2 then 𝑦 decreases by 2 units for every unit of increase in <span class="math notranslate nohighlight">\(x\)</span></p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p><strong>Problem</strong>: Find the slope of the straight line connecting the points (-3,2) and (5,7).</p>
+<p><strong>Solution</strong>:</p>
+<p><img alt="Calculating the slope of a straight line" src="../_images/solution_1.png" /></p>
+<p>The straight line that can be drawn through the points (-3,2) and (5,7).</p>
+<ul class="simple">
+<li><p>the change in <span class="math notranslate nohighlight">\(x\)</span> is given by Δ<span class="math notranslate nohighlight">\(x\)</span>=(5+3)=8</p></li>
+<li><p>the change in <span class="math notranslate nohighlight">\(y\)</span> is given by Δ<span class="math notranslate nohighlight">\(y\)</span>=(7−2)=5</p></li>
+</ul>
+<p>So <span class="math notranslate nohighlight">\(y\)</span> increases by 5 units for every 8 units of increase in <span class="math notranslate nohighlight">\(x\)</span></p>
+<p>The rate of change of <span class="math notranslate nohighlight">\(y\)</span> with <span class="math notranslate nohighlight">\(x\)</span> (the slope) is <span class="math notranslate nohighlight">\(\frac{Δy}{Δx}\)</span> = <span class="math notranslate nohighlight">\(\frac{5}{8}\)</span> (This is the constant <span class="math notranslate nohighlight">\(m\)</span> in the equation of the line <span class="math notranslate nohighlight">\(y=mx+c\)</span>)</p>
+<p>Triangles drawn under the line have the same slope. By considering a triangle connecting the point (5,7) to (<span class="math notranslate nohighlight">\(x\)</span>,<span class="math notranslate nohighlight">\(y\)</span>), we could write
+<span class="math notranslate nohighlight">\(\frac{y−7}{x−5}\)</span> = <span class="math notranslate nohighlight">\(\frac{5}{8}\)</span>, which rearranges to <span class="math notranslate nohighlight">\(y\)</span>=<span class="math notranslate nohighlight">\(\frac{5}{8}x\)</span> + <span class="math notranslate nohighlight">\(\frac{31}{8}\)</span>.</p>
+</div>
+<p>In a curve, the slope is not constant, but we can identify the slope at any point by drawing the tangent to the curve at that point. The tangent is the line that “just touches” the curve, and the normal is the line that is at right angles to the tangent.</p>
+<div class="figure align-default" id="tangent-and-normal">
+<img alt="../_images/slope.png" src="../_images/slope.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">The tangent at the point is indicated in blue and the normal is indicated in red.  If the tangent has slope <span class="math notranslate nohighlight">\(m\)</span> then the normal has slope −1/<span class="math notranslate nohighlight">\(m\)</span>.</span><a class="headerlink" href="#tangent-and-normal" title="Permalink to this image">¶</a></p>
+</div>
+<p>In <a class="reference internal" href="#tangent-and-normal"><span class="std std-numref">Fig. 5</span></a> we can see that if we moved the point along the curve, both the slope of the tangent line and the normal line change.  We are interested in finding a mathematical expression for the slope of a curve at any given point <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<div class="figure align-default" id="height-base">
+<img alt="../_images/height-base.png" src="../_images/height-base.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">The curve shows a hypothetical function <span class="math notranslate nohighlight">\(f\)</span>, and the black dashed line shows the tangent at the arbitrary point <span class="math notranslate nohighlight">\((x,f(x))\)</span>. The slope of this line is the <strong>height:base</strong> ratio in the gray shaded triangle</span><a class="headerlink" href="#height-base" title="Permalink to this image">¶</a></p>
+</div>
+<p>As a first approximation, we construct a secant on the curve by joining <span class="math notranslate nohighlight">\(x\)</span> to a nearby point <span class="math notranslate nohighlight">\(x+Δx\)</span>. (Here, <span class="math notranslate nohighlight">\(Δx\)</span> means a small change in the parameter <span class="math notranslate nohighlight">\(x\)</span>). This result is shown graphically in <a class="reference internal" href="#height-base"><span class="std std-numref">Fig. 6</span></a>, we consider the secant line joining <span class="math notranslate nohighlight">\((x,f(x))\)</span> to a nearby point <span class="math notranslate nohighlight">\((x+Δx,f(x+Δx))\)</span></p>
+<p>The slope of the secant line is given by:</p>
+<div class="math notranslate nohighlight" id="equation-slope-secant">
+<span class="eqno">(11)<a class="headerlink" href="#equation-slope-secant" title="Permalink to this equation">¶</a></span>\[\frac{Δf}{Δx}=\frac{f(x+Δx)−f(x)}{Δx}\]</div>
+</div>
+<div class="section" id="derivative-as-a-rate-of-change">
+<h2>Derivative as a “rate of change”<a class="headerlink" href="#derivative-as-a-rate-of-change" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="second-and-higher-derivatives">
+<h2>Second and Higher Derivatives<a class="headerlink" href="#second-and-higher-derivatives" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="stationary-points">
+<h2>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="differentiation-rules">
+<h2>Differentiation Rules<a class="headerlink" href="#differentiation-rules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="parametric-differentiation">
+<h2>Parametric Differentiation<a class="headerlink" href="#parametric-differentiation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="derivatives-of-inverse-functions">
+<h2>Derivatives of Inverse Functions<a class="headerlink" href="#derivatives-of-inverse-functions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="implicit-differentiation">
+<h2>Implicit Differentiation<a class="headerlink" href="#implicit-differentiation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="solutions">
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Differentiation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../matrices/matrices.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Matrices</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

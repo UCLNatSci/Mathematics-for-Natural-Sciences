@@ -225,6 +225,38 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polar-form-of-a-complex-number">
+   Polar Form of a Complex Number
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complex-arithmetic">
+   Complex Arithmetic
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#addition-and-subtraction">
+     Addition and Subtraction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplication-of-complex-numbers">
+     Multiplication of complex numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#division-of-complex-numbers">
+     Division of Complex Numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplying-and-dividing-complex-numbers-in-polar-form">
+     Multiplying and Dividing Complex Numbers in Polar Form
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -295,9 +327,9 @@ The real part of the number is represented on the horizontal axis, and the imagi
 <p class="admonition-title">Definition</p>
 <p>The <strong>modulus</strong> or <strong>absolute value</strong> of <span class="math notranslate nohighlight">\(z\)</span>, denoted by <span class="math notranslate nohighlight">\(|z|\)</span> or <span class="math notranslate nohighlight">\(\mathrm{abs}(z)\)</span>, measures the length of the line connecting the point to the origin. It is always a positive quantity.</p>
 <p>By inspecting Figure <a class="reference internal" href="#principal-argument"><span class="std std-numref">Fig. 2</span></a>, we can see that the modulus is just the length of the hypothenuse of a right-angled triangle. The base and height of the triangle are given by the real and imaginary parts, and so we have</p>
-<div class="math notranslate nohighlight">
-\[|x+iy| = \sqrt{x^2+y^2}.\]</div>
 </div>
+<div class="math notranslate nohighlight" id="equation-xplusiy">
+<span class="eqno">(3)<a class="headerlink" href="#equation-xplusiy" title="Permalink to this equation">¶</a></span>\[|x+iy| = \sqrt{x^2+y^2}.\]</div>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>The <strong>argument</strong> of a complex number, denoted by <span class="math notranslate nohighlight">\(\mathrm{arg}(z)\)</span>, measures the angle between the positive real axis and the line connecting the point to the origin. You might think of it as a bearing, relative to the direction of the positive real axis.</p>
@@ -320,6 +352,127 @@ The real part of the number is represented on the horizontal axis, and the imagi
 <p class="admonition-title">Practice</p>
 <p>The interactive app below allows you to generate randomly selected complex numbers in each quadrant. Try to calculate the modulus and argument for the examples, and click the “Show/Hide” button to check your answers:</p>
 <p><a class="reference external" href="https://www.wolframcloud.com/obj/ucqssjm/Published/argand.cdf">https://www.wolframcloud.com/obj/ucqssjm/Published/argand.cdf</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="polar-form-of-a-complex-number">
+<h2>Polar Form of a Complex Number<a class="headerlink" href="#polar-form-of-a-complex-number" title="Permalink to this headline">¶</a></h2>
+<p>The relationship between the Cartesian representation <span class="math notranslate nohighlight">\(z = x + yi\)</span> and the modulus &amp; argument representation is illustrated in . We conclude that a complex number can be expressed in the form:</p>
+<div class="math notranslate nohighlight" id="equation-polarcomplex">
+<span class="eqno">(4)<a class="headerlink" href="#equation-polarcomplex" title="Permalink to this equation">¶</a></span>\[z = r(cos(\theta) + i sin(\theta)).\]</div>
+<p>An alternative way of writing this result is the celebrated <em>polar form</em> of a complex number, using the exponential function:</p>
+<div class="math notranslate nohighlight" id="equation-eulersformula">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eulersformula" title="Permalink to this equation">¶</a></span>\[z = re^{i\theta} = r(cos(\theta) + i sin(\theta)), \textrm{where } r = |z|, \theta = arg(z)\]</div>
+<p>We will understand (and prove!) this result later. For now, we just <em>find</em> the polar representation of given complex numbers, and <em>use</em> the polar form to deduce some further results.</p>
+<div class="tip admonition">
+<p class="admonition-title">Practice</p>
+<p><em>Note: It is usually best to draw a diagram showing the location of the complex numbers in the plane, especially when just starting out. This will help avoid mistakes!</em></p>
+<ol class="simple">
+<li><p>Write down the polar form of the following complex numbers:<br />
+(a) <span class="math notranslate nohighlight">\(1+i\)</span>   (b) <span class="math notranslate nohighlight">\(-1+i\)</span><br />
+(c) <span class="math notranslate nohighlight">\(-1-i\)</span>   (d) <span class="math notranslate nohighlight">\(1-i\)</span><br />
+(e) <span class="math notranslate nohighlight">\(-1\)</span></p></li>
+<li><p>Express the following complex numbers in Cartesian form:<br />
+(a) <span class="math notranslate nohighlight">\(\sqrt{3}e^{i\pi /3}\)</span><br />
+(b) <span class="math notranslate nohighlight">\(e^{i\pi /2}\)</span></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="complex-arithmetic">
+<h2>Complex Arithmetic<a class="headerlink" href="#complex-arithmetic" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="addition-and-subtraction">
+<h3>Addition and Subtraction<a class="headerlink" href="#addition-and-subtraction" title="Permalink to this headline">¶</a></h3>
+<p>To add or subtract complex numbers, we simply add or subtract the real and imaginary parts:</p>
+<div class="math notranslate nohighlight" id="equation-complexaddition">
+<span class="eqno">(6)<a class="headerlink" href="#equation-complexaddition" title="Permalink to this equation">¶</a></span>\[(x_1+y_1i) \pm (x_2+y_2i) = (x_1 \pm x_2) + (y_1 \pm y_2)i\]</div>
+<p>We can represent the result of the addition graphically by constructing a parallelogram from the three complex points</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(z_1 = x_1 + y_1i\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(z_2 = x_2 + y_2i\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(z_3 = z_1 + z_2\)</span></p></li>
+</ul>
+<p>as shown in <a class="reference internal" href="#complexnumberaddition"><span class="std std-numref">Fig. 3</span></a>.</p>
+<div class="figure align-default" id="complexnumberaddition">
+<img alt="../_images/ComplexNumberAddition.png" src="../_images/ComplexNumberAddition.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Parallelogram rule for addition of complex numbers, <span class="math notranslate nohighlight">\(z_3 = z_1+z_2\)</span></span><a class="headerlink" href="#complexnumberaddition" title="Permalink to this image">¶</a></p>
+</div>
+<p>A graphical representation of the result for subtraction is shown in <a class="reference internal" href="#complexnumbersubtraction"><span class="std std-numref">Fig. 4</span></a>. notice that <span class="math notranslate nohighlight">\(z_3 = z_2-z_1\)</span> rearranges to give <span class="math notranslate nohighlight">\(z_2 = z_1-z_3\)</span>, so now <span class="math notranslate nohighlight">\(z_2\)</span> is lies on the diahonal of the parallelogram.</p>
+<div class="figure align-default" id="complexnumbersubtraction">
+<img alt="../_images/ComplexNumberSubtraction.png" src="../_images/ComplexNumberSubtraction.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Triangle rule for subtraction of two complex numbers, <span class="math notranslate nohighlight">\(z_3=z_2-z_1\)</span>.</span><a class="headerlink" href="#complexnumbersubtraction" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="multiplication-of-complex-numbers">
+<h3>Multiplication of complex numbers<a class="headerlink" href="#multiplication-of-complex-numbers" title="Permalink to this headline">¶</a></h3>
+<p>The product of two complex numbers is just an ordinary product of sums, and so follows the FOIL rule (<strong>F</strong>irsts, <strong>O</strong>utsides, <strong>I</strong>nsides, <strong>L</strong>asts):</p>
+<div class="math notranslate nohighlight" id="equation-complexmultiplication">
+<span class="eqno">(7)<a class="headerlink" href="#equation-complexmultiplication" title="Permalink to this equation">¶</a></span>\[(x_1+y_1i)(x_2+y_2i) = x_1x_2 + ix_1y_2 + ix_2y_1 + i^2y_1y_2 = (x_1x_2 - y_1y_2) + i(x_1y_2 + x_2y_1)\]</div>
+<p>Note the use of <span class="math notranslate nohighlight">\(i^2=-1\)</span> to simplify the result.</p>
+<div class="tip admonition">
+<p class="admonition-title">Practice</p>
+<ol class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(z=1+2i\)</span>, and <span class="math notranslate nohighlight">\(q=2+1\)</span>. Calculate <span class="math notranslate nohighlight">\(zw*\)</span>.</p></li>
+<li><p>Show that the result <span class="math notranslate nohighlight">\(zz^* = |z|^2\)</span> is true for any complex number z. <em>This result is useful, and should be remembered!</em></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="division-of-complex-numbers">
+<h3>Division of Complex Numbers<a class="headerlink" href="#division-of-complex-numbers" title="Permalink to this headline">¶</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(z_1 = x_1 + iy_1\)</span>, <span class="math notranslate nohighlight">\(z_2 = x_2 + iy_2\)</span> and we want to express the result <span class="math notranslate nohighlight">\(z_3 = \frac{z_1}{z_2}\)</span> in the form <span class="math notranslate nohighlight">\(z_3 = x_3 + iy_3\)</span> where <span class="math notranslate nohighlight">\(x_3\)</span> and <span class="math notranslate nohighlight">\(y_3\)</span> are real numbers.</p>
+<p>We make use of the fact that <span class="math notranslate nohighlight">\(zz^*\)</span> is real to make sure we get a real number in the denominator of the resulting fraction:</p>
+<div class="math notranslate nohighlight" id="equation-complexnumberdivision">
+<span class="eqno">(8)<a class="headerlink" href="#equation-complexnumberdivision" title="Permalink to this equation">¶</a></span>\[z_3 = \frac{z_1}{z_2}\frac{z_2*}{z_2*} = \frac{z_1z_2*}{|z_2|^2}\]</div>
+<p>Here we have just multiplied by <span class="math notranslate nohighlight">\(1\)</span>, as <span class="math notranslate nohighlight">\(\frac{z_2*}{z_2*} = 1\)</span>.</p>
+<p>Let’s see how this works for an example in which <span class="math notranslate nohighlight">\(z_1 = 2 + 3i\)</span> and <span class="math notranslate nohighlight">\(z_2 = 1 - 2i\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-complexnumberdivisionexample">
+<span class="eqno">(9)<a class="headerlink" href="#equation-complexnumberdivisionexample" title="Permalink to this equation">¶</a></span>\[\frac{2+3i}{1-2i} = \frac{2+3i}{1-2i} \frac{1+2i}{1+2i} = \frac{2+3i+4i-6}{1+4} = -\frac{4}{5} + \frac{7}{5}i\]</div>
+<div class="tip admonition">
+<p class="admonition-title">Practice</p>
+<ol class="simple">
+<li><p>Simplify the expression <span class="math notranslate nohighlight">\(\frac{7+i}{1+3i}\)</span></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="multiplying-and-dividing-complex-numbers-in-polar-form">
+<h3>Multiplying and Dividing Complex Numbers in Polar Form<a class="headerlink" href="#multiplying-and-dividing-complex-numbers-in-polar-form" title="Permalink to this headline">¶</a></h3>
+<p>Multiplying and dividing complex numbers in polar form is particularly easy. If we suppose that <span class="math notranslate nohighlight">\(z_1 = r_1e^{i\theta_1}\)</span>, and <span class="math notranslate nohighlight">\(z_2 = r_2e^{i\theta_2}\)</span>, then the result follows immediately from the laws of exponents:</p>
+<div class="math notranslate nohighlight" id="equation-multdivinpolarform">
+<span class="eqno">(10)<a class="headerlink" href="#equation-multdivinpolarform" title="Permalink to this equation">¶</a></span>\[z_1 z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}\]</div>
+<p>These results highlight very clearly the geometry of multiplication and division in the complex plane. Notice in particular that multiplication by <span class="math notranslate nohighlight">\(e^{i\theta}\)</span> just rotates a complex number in the plane by and angle <span class="math notranslate nohighlight">\(\theta\)</span>. What result would multiplication by <span class="math notranslate nohighlight">\(e^{2\pi i}\)</span> give?</p>
+<div class="note admonition">
+<p class="admonition-title">The geometry of multiplication</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(|z_1z_2| = |z_1||z_2|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\textrm{arg}(z_1z_2) = \textrm{arg}(z_1) + \textrm{arg}(z_2)\)</span></p></li>
+</ul>
+<p>When <span class="math notranslate nohighlight">\(z_1\)</span> is multiplied by <span class="math notranslate nohighlight">\(z_2\)</span>:</p>
+<ul class="simple">
+<li><p>The distance of <span class="math notranslate nohighlight">\(z_1z_2\)</span> to the origin is increased by a factor of <span class="math notranslate nohighlight">\(|z_2|\)</span>,</p></li>
+<li><p>The position of <span class="math notranslate nohighlight">\(z_1z_2\)</span> is rotated counter clockwise by an angle <span class="math notranslate nohighlight">\(\textrm{arg}(z_2)\)</span> relative to <span class="math notranslate nohighlight">\(z_1\)</span>.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">The geometry of division</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(|z_1/z_2| = |z_1|/|z_2|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\textrm{arg}(z_1/z_2) = \textrm{arg}(z_1) - \textrm{arg}(z_2)\)</span></p></li>
+</ul>
+<p>When <span class="math notranslate nohighlight">\(z_1\)</span> is multiplied by <span class="math notranslate nohighlight">\(z_2\)</span>:</p>
+<ul class="simple">
+<li><p>The distance of <span class="math notranslate nohighlight">\(z_1z_2\)</span> to the origin is reduced by a factor of <span class="math notranslate nohighlight">\(|z_2|\)</span>,</p></li>
+<li><p>The position of <span class="math notranslate nohighlight">\(z_1z_2\)</span> is rotated clockwise by an angle <span class="math notranslate nohighlight">\(\textrm{arg}(z_2)\)</span> relative to <span class="math notranslate nohighlight">\(z_1\)</span>.</p></li>
+</ul>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Practice</p>
+<ol class="simple">
+<li><p>For each of the following pairs of numbers, state the results <span class="math notranslate nohighlight">\(|zw|\)</span> and <span class="math notranslate nohighlight">\(\textrm{arg}(zw)\)</span>, taking care to ensure that you give the argument in the principal domain.</p></li>
+</ol>
+<p>(a) <span class="math notranslate nohighlight">\(z = -1+i\)</span>, <span class="math notranslate nohighlight">\(w=\sqrt{3}+i\)</span>,</p>
+<p>(b) <span class="math notranslate nohighlight">\(z = -1+i\)</span>, <span class="math notranslate nohighlight">\(w = -\sqrt{3} + i\)</span>.</p>
+<ol class="simple">
+<li><p>By writing <span class="math notranslate nohighlight">\(z_1 = r_1e^{i\theta_1}\)</span>, <span class="math notranslate nohighlight">\(z_2 = r_2e^{i\theta_2}\)</span>, prove the result <span class="math notranslate nohighlight">\((\frac{z_1}{z_2})^* = \frac{z_1^*}{z_2^*}\)</span></p></li>
+</ol>
 </div>
 </div>
 </div>
