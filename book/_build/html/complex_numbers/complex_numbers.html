@@ -257,6 +257,48 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complex-roots">
+   Complex Roots
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#periodicity-of-e-i-theta">
+     Periodicity of
+     <span class="math notranslate nohighlight">
+      \(e^{i\theta}\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#roots-of-unity">
+     Roots of Unity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#roots-of-other-values">
+     Roots of Other Values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trigonometric-and-hyperbolic-relationships">
+   Trigonometric and Hyperbolic Relationships
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relationship-between-trigonometric-and-hyperbolic-functions">
+     Relationship Between Trigonometric and Hyperbolic Functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compound-angle-formulae">
+     Compound Angle Formulae
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -474,6 +516,87 @@ The real part of the number is represented on the horizontal axis, and the imagi
 <li><p>By writing <span class="math notranslate nohighlight">\(z_1 = r_1e^{i\theta_1}\)</span>, <span class="math notranslate nohighlight">\(z_2 = r_2e^{i\theta_2}\)</span>, prove the result <span class="math notranslate nohighlight">\((\frac{z_1}{z_2})^* = \frac{z_1^*}{z_2^*}\)</span></p></li>
 </ol>
 </div>
+</div>
+</div>
+<div class="section" id="complex-roots">
+<h2>Complex Roots<a class="headerlink" href="#complex-roots" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="periodicity-of-e-i-theta">
+<h3>Periodicity of <span class="math notranslate nohighlight">\(e^{i\theta}\)</span><a class="headerlink" href="#periodicity-of-e-i-theta" title="Permalink to this headline">¶</a></h3>
+<p>Earlier we deduced that multiplication by <span class="math notranslate nohighlight">\(e^{i\theta}\)</span> corresponds to a <strong>rotation</strong> of a complex number by an angle <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<p>For the special case of a complete rotation, <span class="math notranslate nohighlight">\(\theta = 3\pi\)</span>, multiplication returns the complex number to its original location in the plane, and so we have the result <span class="math notranslate nohighlight">\(e^{2\pi i} = 1\)</span>. In a general form, <span class="math notranslate nohighlight">\(e^{2k\pi i} = 1\)</span> for any whole number of rotations <span class="math notranslate nohighlight">\(k\)</span>, with the sign of the exponent determining the direction of rotation.</p>
+<p>Another way of viewing this result is in terms of the periodicity of the complex exponential. Euler’s formula tells us that the complex exponential <span class="math notranslate nohighlight">\(e^{i\theta}\)</span> is the linear sum of two <span class="math notranslate nohighlight">\(2\pi\)</span>-periodic functions, and so we can deduce that it also has a period of <span class="math notranslate nohighlight">\(2\pi\)</span>. That is:</p>
+<div class="math notranslate nohighlight" id="equation-complexperiodicity">
+<span class="eqno">(11)<a class="headerlink" href="#equation-complexperiodicity" title="Permalink to this equation">¶</a></span>\[e^{i(\theta + 2k\pi)} = e^{i\theta} \textrm{ for } k = 0, \pm1, \pm2, ...\]</div>
+<p>Geometrically, the expression is merely a statement of the fact that if we continuously “wrap around” the complex plane without changing the modulus, we will return to our starting position at the end of each complete revolution.</p>
+<p>This was also the principle by which we were able to define (at least) two different possible conventions for the principle argument.</p>
+<div class="tip admonition">
+<p class="admonition-title">Practice</p>
+<p>Write the following complex numbers in polar form where the argument is given in the principle range (<span class="math notranslate nohighlight">\(-\pi\)</span>, <span class="math notranslate nohighlight">\(\pi\)</span>):</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sqrt{2}e^{\frac{7\pi i}{3}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3e^{-\frac{13\pi i}{12}}\)</span></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="roots-of-unity">
+<h3>Roots of Unity<a class="headerlink" href="#roots-of-unity" title="Permalink to this headline">¶</a></h3>
+<p>In this subsection, we will deduce the roots of the problem <span class="math notranslate nohighlight">\(z^m = 1\)</span>, where <span class="math notranslate nohighlight">\(m\)</span> is a natural number (1, 2, 3, …). We call these results the <span class="math notranslate nohighlight">\(m^{th}\)</span> “roots of unity”.</p>
+<p>From the basic laws of exponents, we can observe that taking:</p>
+<div class="math notranslate nohighlight" id="equation-rootsofunity">
+<span class="eqno">(12)<a class="headerlink" href="#equation-rootsofunity" title="Permalink to this equation">¶</a></span>\[z_k = e^{i\frac{2k\pi}{m}}\]</div>
+<p>gives <span class="math notranslate nohighlight">\((z_k)^m = e^{2k\pi i}\)</span>, and these values are both equal to 1 if k is an integer.</p>
+<p>Since the number of integers in infinite, it appears that we have found an infinite number of <span class="math notranslate nohighlight">\(m^{th}\)</span> roots of unity. However, we know that a degree <span class="math notranslate nohighlight">\(m\)</span> polynomial should have only <span class="math notranslate nohighlight">\(m\)</span> roots, which may not be distinct from one another, as all such polynomials can be obtained by multiplying together a product of <span class="math notranslate nohighlight">\(m\)</span> factors of the form <span class="math notranslate nohighlight">\((z-z_k)\)</span>.</p>
+<p>We can reconcile this apparent contradiction by again considering the periodicity of the complex exponential. You may verify that for the expression <span class="math notranslate nohighlight">\(z_k\)</span> given above, <span class="math notranslate nohighlight">\(z_{k+m}=z_k\)</span>. and this means that after a run of <span class="math notranslate nohighlight">\(m\)</span> consecutive values of <span class="math notranslate nohighlight">\(k\)</span> the results will start to repeat.</p>
+<p><a class="reference internal" href="#rootsofunity"><span class="std std-numref">Fig. 5</span></a> illustrates how the values of <span class="math notranslate nohighlight">\(k\)</span> can be chosen to give the roots in polar form where the argument is in the range (<span class="math notranslate nohighlight">\(-\pi, \pi\)</span>). The geometric location of the roots in the complex plane is also shown, illustrating the equal angular separation between the roots.</p>
+<div class="figure align-default" id="rootsofunity">
+<img alt="../_images/roots_of_unity.png" src="../_images/roots_of_unity.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">An illustration showing the location of the roots of <span class="math notranslate nohighlight">\(z^m=1\)</span>, which are of the form <span class="math notranslate nohighlight">\(z=e^{\frac{2k\pi i}{m}}\)</span>.</span><a class="headerlink" href="#rootsofunity" title="Permalink to this image">¶</a></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Practice</p>
+<p>Have a go at finding all the roots of the problem <span class="math notranslate nohighlight">\(z^3=1\)</span> in Cartesian form.</p>
+</div>
+</div>
+<div class="section" id="roots-of-other-values">
+<h3>Roots of Other Values<a class="headerlink" href="#roots-of-other-values" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have solved the roots of unity, finding the complex roots of other values <span class="math notranslate nohighlight">\(z^m = c\)</span> is relatively straightforward, even in cases where <span class="math notranslate nohighlight">\(c\)</span> is complex value.</p>
+<p>We simply express <span class="math notranslate nohighlight">\(c\)</span> in polar form, <span class="math notranslate nohighlight">\(c=re^{i\theta}\)</span>, and then use the result:</p>
+<div class="math notranslate nohighlight" id="equation-rootsofothervalues">
+<span class="eqno">(13)<a class="headerlink" href="#equation-rootsofothervalues" title="Permalink to this equation">¶</a></span>\[z_m = r^{1/m}e^{i\frac{\theta}{m}}e^{i\frac{2\pi k}{m}}\]</div>
+<div class="admonition-worked-example admonition">
+<p class="admonition-title">Worked Example</p>
+<p>Find all roots of the problem <span class="math notranslate nohighlight">\(z^4 = \sqrt{3} - i\)</span> in Cartesian form, <span class="math notranslate nohighlight">\(z = x + iy\)</span>.</p>
+<p><em>Solution</em>
+We begin by writing the right hand side in polar form: <span class="math notranslate nohighlight">\(\sqrt{3} - i = 2e^{-i\frac{\pi}{6}}\)</span></p>
+<p>Here, <span class="math notranslate nohighlight">\(m=4\)</span>, and so we use Equation <a class="reference internal" href="#equation-rootsofothervalues">(13)</a> to find our roots.</p>
+<p>One solution is given simply by <span class="math notranslate nohighlight">\(z = (2e^{-i\frac{\pi}{6}})^{\frac{1}{4}} = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}}\)</span></p>
+<p>The others are found by multiplying by <span class="math notranslate nohighlight">\(e^{-\frac{\pi}{2}}\)</span>, <span class="math notranslate nohighlight">\(e^{\frac{\pi}{2}}\)</span>, <span class="math notranslate nohighlight">\(e^{\pi}\)</span></p>
+<p>Following through, we then obtain:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(z_{-1} = 2^{\frac{1}{4}}e^{-i\frac{13\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{13\pi}{24}) - i\textrm{sin}(\frac{13\pi}{24})) \approx -0.155 - 1.179i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(z_0 = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{\pi}{24}) - i\textrm{sin}(\frac{\pi}{24})) \approx 1.179-0.155i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(z_1 = 2^{\frac{1}{4}}e^{-i\frac{11\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{11\pi}{24}) + i\textrm{sin}(\frac{11\pi}{24})) \approx 0.155 + 1.179i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(z_2 = 2^{\frac{1}{4}}e^{-i\frac{23\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{23\pi}{24}) + i\textrm{sin}(\frac{23\pi}{24})) \approx -1.190 + 0.155i\)</span></p></li>
+</ul>
+</div>
+<p>We didn’t really need to fiddle about combining the angles (<span class="math notranslate nohighlight">\(\frac{-i\pi}{24} + \frac{2k\pi}{4}\)</span>) in this case, since the <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> spacing between the roots corresponds to a simple multiplication by <span class="math notranslate nohighlight">\(i\)</span>, but it was done here to illustrate the principle of finding the argument for each root in exact form.</p>
+</div>
+</div>
+<div class="section" id="trigonometric-and-hyperbolic-relationships">
+<h2>Trigonometric and Hyperbolic Relationships<a class="headerlink" href="#trigonometric-and-hyperbolic-relationships" title="Permalink to this headline">¶</a></h2>
+<p>In this section, we make use of Euler’s identity, <span class="math notranslate nohighlight">\(e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)\)</span>, to prove sevral results involving trigonometric and hyperbolic functions. We haven’t yet proven Euler’s identity yet, but we will be able to do so later in the course).</p>
+<div class="section" id="relationship-between-trigonometric-and-hyperbolic-functions">
+<h3>Relationship Between Trigonometric and Hyperbolic Functions<a class="headerlink" href="#relationship-between-trigonometric-and-hyperbolic-functions" title="Permalink to this headline">¶</a></h3>
+<p>Starting from Euler’s identity, we observe that:</p>
+<div class="math notranslate nohighlight" id="equation-trigeuler">
+<span class="eqno">(14)<a class="headerlink" href="#equation-trigeuler" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}e^{i\theta} = \textrm{cos}(\theta) + i\textrm{sin}(\theta)\\e^{-i\theta} = \textrm{cos}(\theta) - i\textrm{sin}(\theta)\end{aligned}\end{align} \]</div>
+<p>By adding and subtracting these two results, we obtain expressions for cosine and sine in terms of complex exponentials, which are strikingly similar to the hyperbolic cosine and sine functions:</p>
+<div class="math notranslate nohighlight" id="equation-complexhyperbolic">
+<span class="eqno">(15)<a class="headerlink" href="#equation-complexhyperbolic" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\textrm{cos}(\theta) = \frac{1}{2}(e^{i\theta}+e^{-i\theta}) = \textrm{cosh}(i\theta)\\\textrm{sin}(\theta) = \frac{1}{2i}(e^{i\theta}-e^{-i\theta}) = -i\textrm{sinh}(i\theta)\end{aligned}\end{align} \]</div>
+<p>The results may be used to obtain similar results for <strong>tan</strong>, <strong>cosec</strong>, <strong>sec</strong> and <strong>cot</strong>. For example, <span class="math notranslate nohighlight">\(\textrm{tan}(\theta) = \textrm{sin}(\theta) / \textrm{cos}(\theta) = \frac{-i\textrm{sinh}(i\theta)}{\textrm{cosh}(i\theta)} = -i\textrm{tanh}(i\theta)\)</span>.</p>
+</div>
+<div class="section" id="compound-angle-formulae">
+<h3>Compound Angle Formulae<a class="headerlink" href="#compound-angle-formulae" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>

@@ -265,6 +265,118 @@ When $z_1$ is multiplied by $z_2$:
 2. By writing $z_1 = r_1e^{i\theta_1}$, $z_2 = r_2e^{i\theta_2}$, prove the result $(\frac{z_1}{z_2})^* = \frac{z_1^*}{z_2^*}$
 ```
 
+## Complex Roots
+### Periodicity of $e^{i\theta}$
+
+Earlier we deduced that multiplication by $e^{i\theta}$ corresponds to a **rotation** of a complex number by an angle $\theta$.
+
+For the special case of a complete rotation, $\theta = 3\pi$, multiplication returns the complex number to its original location in the plane, and so we have the result $e^{2\pi i} = 1$. In a general form, $e^{2k\pi i} = 1$ for any whole number of rotations $k$, with the sign of the exponent determining the direction of rotation.
+
+Another way of viewing this result is in terms of the periodicity of the complex exponential. Euler's formula tells us that the complex exponential $e^{i\theta}$ is the linear sum of two $2\pi$-periodic functions, and so we can deduce that it also has a period of $2\pi$. That is:
+
+```{math}
+:label: complexperiodicity
+e^{i(\theta + 2k\pi)} = e^{i\theta} \textrm{ for } k = 0, \pm1, \pm2, ...
+```
+
+Geometrically, the expression is merely a statement of the fact that if we continuously "wrap around" the complex plane without changing the modulus, we will return to our starting position at the end of each complete revolution.
+
+This was also the principle by which we were able to define (at least) two different possible conventions for the principle argument.
+
+```{admonition} Practice
+:class: tip
+Write the following complex numbers in polar form where the argument is given in the principle range ($-\pi$, $\pi$):
+1. $\sqrt{2}e^{\frac{7\pi i}{3}}$
+2. $3e^{-\frac{13\pi i}{12}}$
+```
+
+### Roots of Unity
+In this subsection, we will deduce the roots of the problem $z^m = 1$, where $m$ is a natural number (1, 2, 3, ...). We call these results the $m^{th}$ "roots of unity".
+
+From the basic laws of exponents, we can observe that taking:
+
+```{math}
+:label: rootsofunity
+z_k = e^{i\frac{2k\pi}{m}}
+```
+
+gives $(z_k)^m = e^{2k\pi i}$, and these values are both equal to 1 if k is an integer.
+
+Since the number of integers in infinite, it appears that we have found an infinite number of $m^{th}$ roots of unity. However, we know that a degree $m$ polynomial should have only $m$ roots, which may not be distinct from one another, as all such polynomials can be obtained by multiplying together a product of $m$ factors of the form $(z-z_k)$.
+
+We can reconcile this apparent contradiction by again considering the periodicity of the complex exponential. You may verify that for the expression $z_k$ given above, $z_{k+m}=z_k$. and this means that after a run of $m$ consecutive values of $k$ the results will start to repeat.
+
+{numref}`rootsofunity` illustrates how the values of $k$ can be chosen to give the roots in polar form where the argument is in the range ($-\pi, \pi$). The geometric location of the roots in the complex plane is also shown, illustrating the equal angular separation between the roots.
+
+```{figure} roots_of_unity.png
+---
+name: rootsofunity
+---
+An illustration showing the location of the roots of $z^m=1$, which are of the form $z=e^{\frac{2k\pi i}{m}}$.
+```
+
+```{admonition} Practice
+:class: tip
+Have a go at finding all the roots of the problem $z^3=1$ in Cartesian form.
+```
+
+### Roots of Other Values
+Now that we have solved the roots of unity, finding the complex roots of other values $z^m = c$ is relatively straightforward, even in cases where $c$ is complex value.
+
+We simply express $c$ in polar form, $c=re^{i\theta}$, and then use the result:
+
+```{math}
+:label: rootsofothervalues
+z_m = r^{1/m}e^{i\frac{\theta}{m}}e^{i\frac{2\pi k}{m}}
+```
+
+```{admonition} Worked Example
+Find all roots of the problem $z^4 = \sqrt{3} - i$ in Cartesian form, $z = x + iy$.
+
+*Solution*
+We begin by writing the right hand side in polar form: $\sqrt{3} - i = 2e^{-i\frac{\pi}{6}}$
+
+Here, $m=4$, and so we use Equation {eq}`rootsofothervalues` to find our roots.
+
+One solution is given simply by $z = (2e^{-i\frac{\pi}{6}})^{\frac{1}{4}} = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}}$
+
+The others are found by multiplying by $e^{-\frac{\pi}{2}}$, $e^{\frac{\pi}{2}}$, $e^{\pi}$
+
+Following through, we then obtain:
+* $z_{-1} = 2^{\frac{1}{4}}e^{-i\frac{13\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{13\pi}{24}) - i\textrm{sin}(\frac{13\pi}{24})) \approx -0.155 - 1.179i$
+* $z_0 = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{\pi}{24}) - i\textrm{sin}(\frac{\pi}{24})) \approx 1.179-0.155i$
+* $z_1 = 2^{\frac{1}{4}}e^{-i\frac{11\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{11\pi}{24}) + i\textrm{sin}(\frac{11\pi}{24})) \approx 0.155 + 1.179i$
+* $z_2 = 2^{\frac{1}{4}}e^{-i\frac{23\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{23\pi}{24}) + i\textrm{sin}(\frac{23\pi}{24})) \approx -1.190 + 0.155i$
+```
+
+We didn't really need to fiddle about combining the angles ($\frac{-i\pi}{24} + \frac{2k\pi}{4}$) in this case, since the $\frac{\pi}{2}$ spacing between the roots corresponds to a simple multiplication by $i$, but it was done here to illustrate the principle of finding the argument for each root in exact form.
+
+
+## Trigonometric and Hyperbolic Relationships
+In this section, we make use of Euler's identity, $e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)$, to prove sevral results involving trigonometric and hyperbolic functions. We haven't yet proven Euler's identity yet, but we will be able to do so later in the course).
+
+### Relationship Between Trigonometric and Hyperbolic Functions
+Starting from Euler's identity, we observe that:
+
+```{math}
+:label: trigEuler
+e^{i\theta} = \textrm{cos}(\theta) + i\textrm{sin}(\theta)
+
+e^{-i\theta} = \textrm{cos}(\theta) - i\textrm{sin}(\theta)
+```
+
+By adding and subtracting these two results, we obtain expressions for cosine and sine in terms of complex exponentials, which are strikingly similar to the hyperbolic cosine and sine functions:
+
+```{math}
+:label: complexhyperbolic
+\textrm{cos}(\theta) = \frac{1}{2}(e^{i\theta}+e^{-i\theta}) = \textrm{cosh}(i\theta)
+
+\textrm{sin}(\theta) = \frac{1}{2i}(e^{i\theta}-e^{-i\theta}) = -i\textrm{sinh}(i\theta)
+```
+
+The results may be used to obtain similar results for **tan**, **cosec**, **sec** and **cot**. For example, $\textrm{tan}(\theta) = \textrm{sin}(\theta) / \textrm{cos}(\theta) = \frac{-i\textrm{sinh}(i\theta)}{\textrm{cosh}(i\theta)} = -i\textrm{tanh}(i\theta)$.
+
+### Compound Angle Formulae
 
 
 
