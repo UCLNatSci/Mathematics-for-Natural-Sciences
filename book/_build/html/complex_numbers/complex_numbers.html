@@ -297,6 +297,53 @@
      Compound Angle Formulae
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-moivre-s-theorem">
+     De Moivre’s Theorem
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solutions">
+   Solutions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1-1-1">
+     Question 1.1.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1-3-1">
+     Question 1.3.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1-4-1">
+     Question 1.4.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1-4-2">
+     Question 1.4.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1-4-3">
+     Question 1.4.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1-5-1">
+     Question 1.5.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1-5-2">
+     Question 1.5.2
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -415,7 +462,7 @@ The real part of the number is represented on the horizontal axis, and the imagi
 (c) <span class="math notranslate nohighlight">\(-1-i\)</span>   (d) <span class="math notranslate nohighlight">\(1-i\)</span><br />
 (e) <span class="math notranslate nohighlight">\(-1\)</span></p></li>
 <li><p>Express the following complex numbers in Cartesian form:<br />
-(a) <span class="math notranslate nohighlight">\(\sqrt{3}e^{i\pi /3}\)</span><br />
+(a) <span class="math notranslate nohighlight">\(\sqrt{3}e^{-i\pi /3}\)</span><br />
 (b) <span class="math notranslate nohighlight">\(e^{i\pi /2}\)</span></p></li>
 </ol>
 </div>
@@ -597,6 +644,111 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 </div>
 <div class="section" id="compound-angle-formulae">
 <h3>Compound Angle Formulae<a class="headerlink" href="#compound-angle-formulae" title="Permalink to this headline">¶</a></h3>
+<p>The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:</p>
+<div class="math notranslate nohighlight" id="equation-compoundangle1">
+<span class="eqno">(16)<a class="headerlink" href="#equation-compoundangle1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}e^{i(A+B)} = e^{iA}e^{iB} \textrm{ therefore...}\\\textrm{cos}(A+B) + i\textrm{sin}(A+B) = (\textrm{cos}(A) + i\textrm{sin}(A))(\textrm{cos}(B) + i\textrm{sin}(B))\end{aligned}\end{align} \]</div>
+<p>Expanding out the right hand side and comparing the real and imaginary parts provides us with the <strong>compound angle formula</strong> for <span class="math notranslate nohighlight">\(\textrm{cos}(A+B)\)</span> and <span class="math notranslate nohighlight">\(\textrm{sin}(A+B)\)</span>. We obtain the familiar results:</p>
+<div class="math notranslate nohighlight" id="equation-compoundangle2">
+<span class="eqno">(17)<a class="headerlink" href="#equation-compoundangle2" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\textrm{cos}(A+B) = \textrm{cos}(A)\textrm{cos}(B) - \textrm{sin}(A)\textrm{sin}(B)\\\textrm{sin}(A+B) = \textrm{sin}(A)\textrm{cos}(B) + \textrm{cos}(A)\textrm{sin}(B)\end{aligned}\end{align} \]</div>
+<p>In some applications (e.g. integration), we will occasionally need to express trigonometric powers in terms of multiple angles (e.g. <span class="math notranslate nohighlight">\(\textrm{cos}^2(\theta) = \frac{1}{2}(\textrm{cos}(2\theta)+1)\)</span>).</p>
+<p>For higher powers we make use of the complex exponential form:</p>
+<div class="math notranslate nohighlight">
+\[
+\textrm{sin}^5(\theta) = (\frac{1}{2i}^5(e^{i\theta}-e^{-i\theta})^5
+\]</div>
+<p>Expanding out the right hand side using Binomial expansion, and collecting together powers of <span class="math notranslate nohighlight">\(\theta\)</span> gives:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+\textrm{sin}^5(\theta) = (\frac{1}{2})^5 (-i) [(e^{5i\theta} - e^{-5i\theta}) - 5(e^{3i\theta} - e^{-3i\theta}) + 10(e^{i\theta} - e^{-i\theta})]\\= \frac{1}{2})^5 (-i) [2i\textrm{sin}(5\theta) - 5(2i)\textrm{sin}(3\theta) + 10(2i)\textrm{sin}(\theta)]\\= \frac{1}{2})^4 [\textrm{sin}(5\theta) - 5\textrm{sin}(3\theta) + 10\textrm{sin}(\theta)]
+\end{aligned}\end{align} \]</div>
+<div class="tip admonition">
+<p class="admonition-title">Practice</p>
+<p>Here is a nasty one for you to try:</p>
+<p>Show that <span class="math notranslate nohighlight">\(\textrm{cos}^7(\theta) = \frac{1}{64} [35\textrm{cos}(\theta) + 21\textrm{cos}(3\theta) + 7\textrm{cos}(5\theta) + \textrm{cos}(7\theta)\)</span></p>
+</div>
+</div>
+<div class="section" id="de-moivre-s-theorem">
+<h3>De Moivre’s Theorem<a class="headerlink" href="#de-moivre-s-theorem" title="Permalink to this headline">¶</a></h3>
+<p>Starting with Euler’s Identity <span class="math notranslate nohighlight">\(e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)\)</span> and raising both sides to the <span class="math notranslate nohighlight">\(n^{th}\)</span> power gives:</p>
+<div class="math notranslate nohighlight" id="equation-eulerton">
+<span class="eqno">(18)<a class="headerlink" href="#equation-eulerton" title="Permalink to this equation">¶</a></span>\[e^{in\theta} = (\textrm{cos}(\theta) + i\textrm{sin}(\theta))^2\]</div>
+<p>We can then use Euler’s identity again (replacing <span class="math notranslate nohighlight">\(\theta\)</span> with <span class="math notranslate nohighlight">\(n\theta\)</span>) to re-write the left had side:</p>
+<div class="math notranslate nohighlight" id="equation-demoivre">
+<span class="eqno">(19)<a class="headerlink" href="#equation-demoivre" title="Permalink to this equation">¶</a></span>\[\textrm{cos}(n\theta) + i\textrm{sin}(n\theta) \equiv (\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n\]</div>
+<p>This result (for integer values of <span class="math notranslate nohighlight">\(n\)</span>) is known as De Moivre’s theorem. Historically, it was proved before Euler’s identity. A possible technique for proving it without Euler’s identity is by <em>induction</em>. Proof by induction is not a technique that we study in this module, but the argument is given in the section on further reading for any interested students.</p>
+<p>The fact that De Moivre’s theorem is <em>consistent</em> with Euler’s identity is reassuring, although we have still not proved that Euler’s identity is correct.</p>
+<div class="note admonition">
+<p class="admonition-title">Non-integer Values</p>
+<p>For non-integer values <span class="math notranslate nohighlight">\((\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n\)</span> is multiple-valued. The principle root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result <span class="math notranslate nohighlight">\(\textrm{cos}(n\theta) + i\textrm{sin}(n\theta)\)</span> gives a single root to the problem, but not necessarily the principle root.</p>
+</div>
+</div>
+</div>
+<div class="section" id="solutions">
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="question-1-1-1">
+<h3>Question 1.1.1<a class="headerlink" href="#question-1-1-1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(-3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2 + 3i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3\)</span></p></li>
+</ol>
+</div>
+<div class="section" id="question-1-3-1">
+<h3>Question 1.3.1<a class="headerlink" href="#question-1-3-1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>All of the numbers (a-d) have a modulus of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> and subtend an angle of <span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span> with the real axis. Thus, we have:</p></li>
+</ol>
+<p>(a) <span class="math notranslate nohighlight">\(1+i \equiv \sqrt{2}e^{\frac{i\pi}{4}}\)</span></p>
+<p>(b) <span class="math notranslate nohighlight">\(-1+i \equiv \sqrt{2}e^{\frac{3i\pi}{4}}\)</span></p>
+<p>(c) <span class="math notranslate nohighlight">\(-1-i \equiv \sqrt{2}e^{\frac{-3i\pi}{4}}\)</span></p>
+<p>(d)<span class="math notranslate nohighlight">\(1-i \equiv \sqrt{2}e^{\frac{-i\pi}{4}}\)</span></p>
+<p>(e) Since <span class="math notranslate nohighlight">\(-1\)</span> lies on the negative real axis, it has an argument of <span class="math notranslate nohighlight">\(\pi\)</span>. It has a modulus <span class="math notranslate nohighlight">\(1\)</span>. Hence, we can write the famous result <span class="math notranslate nohighlight">\(e^{i\pi} + 1 = 0\)</span>.</p>
+<ol class="simple">
+<li><p>Using the result that <span class="math notranslate nohighlight">\(e^{i\theta} = \textrm{cos}(\theta) + i\textrm{sin}(\theta)\)</span> gives:
+(a) <span class="math notranslate nohighlight">\(\sqrt{3}e^{-i\frac{\pi}{3}} = \sqrt{3}(\textrm{cos}(\frac{\pi}{3} - i\textrm{sin}(\frac{\pi}{3})) = \sqrt{3}(\frac{1}{2} - i\frac{\sqrt3}{2}) = \frac{\sqrt3}{2} - i\frac{3}{2}\)</span></p></li>
+</ol>
+<p>(b) <span class="math notranslate nohighlight">\(e^{i\frac{\pi}{2}} = i\)</span></p>
+<p>Both results could also be derived by sketching the numbers in the plane. Result (b) is particularly easy. It lies on the positive imaginary axis (<span class="math notranslate nohighlight">\(\textrm{arg}(z) = \frac{\pi}{2}\)</span>) and has a modulus of <span class="math notranslate nohighlight">\(1\)</span>.</p>
+</div>
+<div class="section" id="question-1-4-1">
+<h3>Question 1.4.1<a class="headerlink" href="#question-1-4-1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(zw^* = (1+2i)(2-i) = 2-i+4i+2 = 3+3i\)</span></p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(z=x+yi\)</span>. Then <span class="math notranslate nohighlight">\(zz^* = (x+yi)(x-yi) = x^2 + yi - yi + i^2y = x^2 + y^2 = |z|^2\)</span></p></li>
+</ol>
+</div>
+<div class="section" id="question-1-4-2">
+<h3>Question 1.4.2<a class="headerlink" href="#question-1-4-2" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(\frac{7+i}{1+3i} = \frac{7+i}{1+3i}\frac{1-3i}{1-3i} = \frac{7-21i+i+3}{1+9} = 1-2i\)</span></p>
+</div>
+<div class="section" id="question-1-4-3">
+<h3>Question 1.4.3<a class="headerlink" href="#question-1-4-3" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>(a) <span class="math notranslate nohighlight">\(|z| = \sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(|w| = 2\)</span>, so <span class="math notranslate nohighlight">\(|zw| = 2\sqrt{2}\)</span></p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{\pi}{6} = \frac{11}{12}\pi = \textrm{arg}(zw)\)</span></p>
+<p>(b) <span class="math notranslate nohighlight">\(|zw| = 2\sqrt{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{5}{6}\pi = \frac{19}{12}\pi\)</span>, which lies in the fourth quadrant.</p>
+<p>The principle argument is given by <span class="math notranslate nohighlight">\(\textrm{arg}(zw) = -\frac{5}{12}\pi\)</span>.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\((\frac{z_q}{z_2})^* = (\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}})^* = (\frac{r_1}{r_2}e^{-i(\theta_1 - \theta_2)^* = \frac{r_1}{r_2}e^{-i(\theta_1 - \theta_2)} = \frac{r_1e^{-i\theta_1}}{r_2e^{-i\theta_2}} = \frac{z_1^*}{z_2^*}\)</span></p></li>
+</ol>
+</div>
+<div class="section" id="question-1-5-1">
+<h3>Question 1.5.1<a class="headerlink" href="#question-1-5-1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{7\pi}{3} = 2\pi + \frac{\pi}{3}\)</span> so the result lies in the first quadrant at an angle of <span class="math notranslate nohighlight">\(\frac{\pi}{3}\)</span> away from the real axis. The result can be written as <span class="math notranslate nohighlight">\(\sqrt{2}e^{\frac{\pi i}{3}}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(-\frac{13\pi}{12}\)</span> lies in the second quadrant at an angle of <span class="math notranslate nohighlight">\(\frac{\pi}{12}\)</span> away from the real axis, so the equivalent to an argument of <span class="math notranslate nohighlight">\(\pi - \frac{\pi}{12}\)</span>. The result can be written as <span class="math notranslate nohighlight">\(3e^\frac{11\pi}{12}\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="question-1-5-2">
+<h3>Question 1.5.2<a class="headerlink" href="#question-1-5-2" title="Permalink to this headline">¶</a></h3>
+<p>The roots are given by:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(z = e^{-\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} - i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} - i\frac{\sqrt{3}}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(z = e^0 = 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(z = e^{\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} + i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} + i\frac{\sqrt{3}}{2}\)</span></p></li>
+</ul>
 </div>
 </div>
 </div>

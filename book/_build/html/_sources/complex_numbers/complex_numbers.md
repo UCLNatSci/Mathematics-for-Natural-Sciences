@@ -143,7 +143,7 @@ We will understand (and prove!) this result later. For now, we just *find* the p
 (e) $-1$
 
 2. Express the following complex numbers in Cartesian form:  
-(a) $\sqrt{3}e^{i\pi /3}$  
+(a) $\sqrt{3}e^{-i\pi /3}$  
 (b) $e^{i\pi /2}$
 ```
 
@@ -377,6 +377,133 @@ By adding and subtracting these two results, we obtain expressions for cosine an
 The results may be used to obtain similar results for **tan**, **cosec**, **sec** and **cot**. For example, $\textrm{tan}(\theta) = \textrm{sin}(\theta) / \textrm{cos}(\theta) = \frac{-i\textrm{sinh}(i\theta)}{\textrm{cosh}(i\theta)} = -i\textrm{tanh}(i\theta)$.
 
 ### Compound Angle Formulae
+The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:
+
+```{math}
+:label: compoundangle1
+e^{i(A+B)} = e^{iA}e^{iB} \textrm{ therefore...}
+
+\textrm{cos}(A+B) + i\textrm{sin}(A+B) = (\textrm{cos}(A) + i\textrm{sin}(A))(\textrm{cos}(B) + i\textrm{sin}(B))
+```
+
+Expanding out the right hand side and comparing the real and imaginary parts provides us with the **compound angle formula** for $\textrm{cos}(A+B)$ and $\textrm{sin}(A+B)$. We obtain the familiar results:
+
+```{math}
+:label: compoundangle2
+\textrm{cos}(A+B) = \textrm{cos}(A)\textrm{cos}(B) - \textrm{sin}(A)\textrm{sin}(B)
+
+\textrm{sin}(A+B) = \textrm{sin}(A)\textrm{cos}(B) + \textrm{cos}(A)\textrm{sin}(B)
+```
+
+In some applications (e.g. integration), we will occasionally need to express trigonometric powers in terms of multiple angles (e.g. $\textrm{cos}^2(\theta) = \frac{1}{2}(\textrm{cos}(2\theta)+1)$).
+
+For higher powers we make use of the complex exponential form:
+
+$$
+\textrm{sin}^5(\theta) = (\frac{1}{2i}^5(e^{i\theta}-e^{-i\theta})^5
+$$
+
+Expanding out the right hand side using Binomial expansion, and collecting together powers of $\theta$ gives:
+
+$$
+\textrm{sin}^5(\theta) = (\frac{1}{2})^5 (-i) [(e^{5i\theta} - e^{-5i\theta}) - 5(e^{3i\theta} - e^{-3i\theta}) + 10(e^{i\theta} - e^{-i\theta})]
+
+= \frac{1}{2})^5 (-i) [2i\textrm{sin}(5\theta) - 5(2i)\textrm{sin}(3\theta) + 10(2i)\textrm{sin}(\theta)]
+
+= \frac{1}{2})^4 [\textrm{sin}(5\theta) - 5\textrm{sin}(3\theta) + 10\textrm{sin}(\theta)]
+$$
+
+```{admonition} Practice
+:class: Tip
+Here is a nasty one for you to try:
+
+Show that $\textrm{cos}^7(\theta) = \frac{1}{64} [35\textrm{cos}(\theta) + 21\textrm{cos}(3\theta) + 7\textrm{cos}(5\theta) + \textrm{cos}(7\theta)$
+```
+
+### De Moivre's Theorem
+Starting with Euler's Identity $e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)$ and raising both sides to the $n^{th}$ power gives:
+
+```{math}
+:label: eulerton
+e^{in\theta} = (\textrm{cos}(\theta) + i\textrm{sin}(\theta))^2
+```
+
+We can then use Euler's identity again (replacing $\theta$ with $n\theta$) to re-write the left had side:
+
+```{math}
+:label: demoivre
+\textrm{cos}(n\theta) + i\textrm{sin}(n\theta) \equiv (\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n
+```
+This result (for integer values of $n$) is known as De Moivre's theorem. Historically, it was proved before Euler's identity. A possible technique for proving it without Euler's identity is by *induction*. Proof by induction is not a technique that we study in this module, but the argument is given in the section on further reading for any interested students.
+
+The fact that De Moivre's theorem is *consistent* with Euler's identity is reassuring, although we have still not proved that Euler's identity is correct.
+
+```{admonition} Non-integer Values
+:class: note
+For non-integer values $(\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n$ is multiple-valued. The principle root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result $\textrm{cos}(n\theta) + i\textrm{sin}(n\theta)$ gives a single root to the problem, but not necessarily the principle root.
+```
+
+
+## Solutions
+#### Question 1.1.1
+1. $-3$
+2. $2 + 3i$
+3. $3$
+
+#### Question 1.3.1
+1. All of the numbers (a-d) have a modulus of $\sqrt{2}$ and subtend an angle of $\frac{\pi}{4}$ with the real axis. Thus, we have:
+
+(a) $1+i \equiv \sqrt{2}e^{\frac{i\pi}{4}}$
+
+(b) $-1+i \equiv \sqrt{2}e^{\frac{3i\pi}{4}}$
+
+(c) $-1-i \equiv \sqrt{2}e^{\frac{-3i\pi}{4}}$
+
+(d)$1-i \equiv \sqrt{2}e^{\frac{-i\pi}{4}}$
+
+(e) Since $-1$ lies on the negative real axis, it has an argument of $\pi$. It has a modulus $1$. Hence, we can write the famous result $e^{i\pi} + 1 = 0$.
+
+2. Using the result that $e^{i\theta} = \textrm{cos}(\theta) + i\textrm{sin}(\theta)$ gives:
+(a) $\sqrt{3}e^{-i\frac{\pi}{3}} = \sqrt{3}(\textrm{cos}(\frac{\pi}{3} - i\textrm{sin}(\frac{\pi}{3})) = \sqrt{3}(\frac{1}{2} - i\frac{\sqrt3}{2}) = \frac{\sqrt3}{2} - i\frac{3}{2}$
+
+(b) $e^{i\frac{\pi}{2}} = i$
+
+Both results could also be derived by sketching the numbers in the plane. Result (b) is particularly easy. It lies on the positive imaginary axis ($\textrm{arg}(z) = \frac{\pi}{2}$) and has a modulus of $1$.
+
+#### Question 1.4.1
+1. $zw^* = (1+2i)(2-i) = 2-i+4i+2 = 3+3i$
+
+2. Let $z=x+yi$. Then $zz^* = (x+yi)(x-yi) = x^2 + yi - yi + i^2y = x^2 + y^2 = |z|^2$
+
+#### Question 1.4.2
+$\frac{7+i}{1+3i} = \frac{7+i}{1+3i}\frac{1-3i}{1-3i} = \frac{7-21i+i+3}{1+9} = 1-2i$
+
+#### Question 1.4.3
+1. (a) $|z| = \sqrt{2}$, $|w| = 2$, so $|zw| = 2\sqrt{2}$
+
+$\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{\pi}{6} = \frac{11}{12}\pi = \textrm{arg}(zw)$
+
+(b) $|zw| = 2\sqrt{2}$
+
+$\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{5}{6}\pi = \frac{19}{12}\pi$, which lies in the fourth quadrant.
+
+The principle argument is given by $\textrm{arg}(zw) = -\frac{5}{12}\pi$.
+
+2. $(\frac{z_q}{z_2})^* = (\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}})^* = (\frac{r_1}{r_2}e^{-i(\theta_1 - \theta_2)^* = \frac{r_1}{r_2}e^{-i(\theta_1 - \theta_2)} = \frac{r_1e^{-i\theta_1}}{r_2e^{-i\theta_2}} = \frac{z_1^*}{z_2^*}$
+
+#### Question 1.5.1
+1. $\frac{7\pi}{3} = 2\pi + \frac{\pi}{3}$ so the result lies in the first quadrant at an angle of $\frac{\pi}{3}$ away from the real axis. The result can be written as $\sqrt{2}e^{\frac{\pi i}{3}}$.
+
+2. $-\frac{13\pi}{12}$ lies in the second quadrant at an angle of $\frac{\pi}{12}$ away from the real axis, so the equivalent to an argument of $\pi - \frac{\pi}{12}$. The result can be written as $3e^\frac{11\pi}{12}$.
+
+#### Question 1.5.2
+The roots are given by:
+* $z = e^{-\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} - i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} - i\frac{\sqrt{3}}{2}$
+* $z = e^0 = 1$
+* $z = e^{\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} + i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} + i\frac{\sqrt{3}}{2}$
+
+
+
 
 
 

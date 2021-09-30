@@ -1,0 +1,1015 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Series &#8212; Mathematics for Natural Sciences 1</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../complex_numbers/complex_numbers.html">
+   Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="series.html">
+   Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matrices/matrices.html">
+   Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Differentiation/Differentiation.html">
+   Differentiation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/sequences_and_series/series_HF.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsequences_and_series/series_HF.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notation-sequences-and-series">
+   Notation: sequences and series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sequences">
+     Sequences
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#overview">
+       Overview
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sequences-as-numerical-patterns">
+       Sequences as numerical patterns
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#definition">
+       Definition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#expressing-a-sequence-pattern-as-a-formula">
+       Expressing a sequence pattern as a formula
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Series
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Definition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#summations">
+       Summations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questions">
+     Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic-and-geometric-progressions">
+   Arithmetic and Geometric Progressions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arithmetic-progression">
+     Arithmetic progression
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Definition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progessions">
+       Solving the series of arithmetic progessions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#proof-of-the-solution-of-the-series-of-arithmetic-progressions">
+       Proof of the solution of the series of arithmetic progressions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geometric-progression">
+     Geometric Progression
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Definition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solving-the-series-of-geometriic-progessions">
+       Solving the series of geometriic progessions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#proof-of-the-solution-of-the-series-of-geometric-progressions">
+       Proof of the solution of the series of geometric progressions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-preliminary-introduction-to-convergence-and-divergence">
+       A preliminary introduction to convergence and divergence
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binomial-expansion">
+   Binomial Expansion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-a-binomial">
+     Definition of a binomial
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-binomial-formula">
+     The binomial formula
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#expanding-low-powers-of-binomials-by-hand">
+       Expanding low powers of binomials by hand
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-binomial-coefficient">
+       The binomial coefficient
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#factorials">
+       Factorials
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#statement-of-the-binomial-formula">
+       Statement of the binomial formula
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limits">
+   Limits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limits-of-functions">
+     Limits of functions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-1">
+       Example 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-2">
+       Example 2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-one-sided-limit">
+       The one-sided limit
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limits-of-sequences">
+     Limits of sequences
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combinaton-of-limits">
+     Combinaton of limits
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#functions-that-tend-to-finite-values-the-combination-theorem-for-limits">
+       Functions that tend to finite values: the combination theorem for limits
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#functions-that-to-to-infinite-values">
+       Functions that to to infinite values
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id6">
+         Example 1
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id7">
+         Example 2
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#summary">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="series">
+<h1>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h1>
+<p>To do:</p>
+<ul class="simple">
+<li><p>definition of sequence</p></li>
+<li><p>limit of sequence</p></li>
+<li><p>convergence and divergence and plenty of examples</p></li>
+<li><p>definition of series as limit of partial sums</p></li>
+</ul>
+<div class="section" id="notation-sequences-and-series">
+<h2>Notation: sequences and series<a class="headerlink" href="#notation-sequences-and-series" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sequences">
+<h3>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="overview">
+<h4>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h4>
+<p>Your intuition of a sequence will likely be correct.
+It can mean a sequence of letters, such as a word (e.g. A, U, S, T, R, A, L, I, A) or a DNA sequence
+(e.g. A, T, G, C, G, G, T, C, A, T, C).
+It can also be a sequence of numbers such as a telephone number, date of birth, something nonsensical
+(e.g. <span class="math notranslate nohighlight">\(181291, 2, -4309, \sqrt{7}\)</span>) or the prime numbers: <span class="math notranslate nohighlight">\(2, 3, 5, 7, 11, \dots\)</span>.
+Here, the dots indicate that the sequence goes on infinitely.</p>
+<p>Each part of the sequence is called a <strong>term</strong>.
+Each sequence has a specific ordering of terms.
+For example, the series <span class="math notranslate nohighlight">\(1,2,3,4\)</span> is different from the series <span class="math notranslate nohighlight">\(4,3,2,1\)</span> much in the same way that the telephone number
+<span class="math notranslate nohighlight">\(18001234\)</span> will reach a different person to the phone number <span class="math notranslate nohighlight">\(18004321\)</span>.</p>
+</div>
+<div class="section" id="sequences-as-numerical-patterns">
+<h4>Sequences as numerical patterns<a class="headerlink" href="#sequences-as-numerical-patterns" title="Permalink to this headline">¶</a></h4>
+<p>In this course sequences will be <a class="reference external" href="https://www.youtube.com/watch?v=vV7C7bXm4VI">numerical patterns</a>.
+Much of mathematics is concerned with patterns in both mathematical constructs and nature, the study of sequences
+provides a firm grounding for this endeavour.</p>
+<p>A famous pattern that arises in many natural systems is the <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci sequence</a>:
+<span class="math notranslate nohighlight">\(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, \dots\)</span>.
+This sequence is generated by starting with the sequence <span class="math notranslate nohighlight">\(0,1\)</span> and finding the next number
+in the sequence by adding the two previous numbers together, e.g. <span class="math notranslate nohighlight">\(0+1=\mathbf{1}\)</span>, <span class="math notranslate nohighlight">\(1+1=\mathbf{2}\)</span>, <span class="math notranslate nohighlight">\(1+2=\mathbf{3}\)</span>,
+<span class="math notranslate nohighlight">\(2+3=\mathbf{5}\)</span>, <span class="math notranslate nohighlight">\(3+5=\mathbf{8}\)</span>, etc.</p>
+</div>
+<div class="section" id="definition">
+<h4>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>A <strong>sequence</strong> is a set of terms where order matters, written as follows:</p>
+<div class="math notranslate nohighlight">
+\[    u_1, u_2, \dots, u_n\]</div>
+</div>
+<p>Here, the size of the sequence (the number of terms) is <span class="math notranslate nohighlight">\(n\)</span>.
+The <span class="math notranslate nohighlight">\(i\)</span>-th term in the sequence is <span class="math notranslate nohighlight">\(u_i\)</span> where <span class="math notranslate nohighlight">\(i = 1, 2, \dots, n\)</span>.
+It must be noted that the index notation <span class="math notranslate nohighlight">\(i\)</span> is an arbitrarily chosen, one might use other letters such as <span class="math notranslate nohighlight">\(j\)</span> or <span class="math notranslate nohighlight">\(k\)</span>
+or even Greek letters such as <span class="math notranslate nohighlight">\(\alpha\)</span> or <span class="math notranslate nohighlight">\(\sigma\)</span>.
+It is also conventional to express a series in brackets: <span class="math notranslate nohighlight">\((u_1, u_2, \dots, u_n)\)</span>.
+As we saw in the previous examples, sequences can have finite <span class="math notranslate nohighlight">\(n&lt;\infty\)</span> (e.g. telephone numbers) or infinite sizes
+<span class="math notranslate nohighlight">\(n \to \infty\)</span> (e.g. Fibonacci sequence and prime numbers).</p>
+</div>
+<div class="section" id="expressing-a-sequence-pattern-as-a-formula">
+<h4>Expressing a sequence pattern as a formula<a class="headerlink" href="#expressing-a-sequence-pattern-as-a-formula" title="Permalink to this headline">¶</a></h4>
+<p>It is sometimes possible to express a sequence as a formula, which sets out the rule(s) to find the sequence.
+For example, the Fibonacci sequence can be expressed as the formula</p>
+<div class="math notranslate nohighlight">
+\[u_i=u_{i-1}+u_{i-2}\]</div>
+<p>which specifies the <span class="math notranslate nohighlight">\(i\)</span>-th term provided we have the term for <span class="math notranslate nohighlight">\(i-1\)</span> and <span class="math notranslate nohighlight">\(i-2\)</span>.
+It is because of this formula that it is necessary to provide the first two terms of the sequence, <span class="math notranslate nohighlight">\(u_1=0\)</span> and <span class="math notranslate nohighlight">\(u_2=1\)</span>,
+to find the rest of the sequence.
+This formula can be used to find the entire, infinite sequence.
+For example, the 298-th term is <span class="math notranslate nohighlight">\(u_{298} = 84885164052257330097714121751630835360966663883732297726369399\)</span> and
+the 299-th term is <span class="math notranslate nohighlight">\(u_{299} = 137347080577163115432025771710279131845700275212767467264610201\)</span> and hence the
+300-term is is <span class="math notranslate nohighlight">\(u_{300} = 222232244629420445529739893461909967206666939096499764990979600\)</span>.</p>
+<p>Note that the formula <span class="math notranslate nohighlight">\(u_i=u_{i-1}+u_{i-2}\)</span> will generate a different sequence to the Fibonacci sequence when the
+starting terms ar different (e.g. <span class="math notranslate nohighlight">\(u_1=10\)</span> and <span class="math notranslate nohighlight">\(u_2=11\)</span>).
+For an example, convince yousrelf that the formule <span class="math notranslate nohighlight">\(u_i = 2 + u_{i-1}\)</span> provides the sequence of even numbers when
+<span class="math notranslate nohighlight">\(u_1=2\)</span> and the sequence of odd numbers when <span class="math notranslate nohighlight">\(u_1=1\)</span>.</p>
+<p>As a final example, the formula <span class="math notranslate nohighlight">\(u_i = 2 + 3 \times (i-2)\)</span> generates the infinite sequence: <span class="math notranslate nohighlight">\(-1, 2, 5, 8, 11, 14, 17, 20, \dots\)</span>.
+Note that it is not necessary to provide the first term in the sequence because the formula does not depend on the previous
+term(s) in the sequence.
+Also notice that the sequence grows without bound.
+That is, each term is larger than each of the previous terms.
+In this way the sequence grows to an infinite value as <span class="math notranslate nohighlight">\(i\)</span> tends to infinity.</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Series<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Series play a central role in calculus and are the main reason why we introduce sequences in the section above.</p>
+<div class="section" id="id2">
+<h4>Definition<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Series are simply defined by the sum of a sequence.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>A <strong>series</strong> is the sum of a sequence of terms, written as follows:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^n u_i = u_1 + u_2 + \ldots + u_n.\]</div>
+</div>
+<p>The subscript numbering does not have to start from 1.
+We can also replace the upper value <span class="math notranslate nohighlight">\(n\)</span> with <span class="math notranslate nohighlight">\(\infty\)</span> for an infinite series.
+For example, the series of the infinite sequence <span class="math notranslate nohighlight">\((u_1,u_2,u_3,\dots)\)</span> is <span class="math notranslate nohighlight">\(\sum_{i=1}^\infty u_i\)</span>.</p>
+</div>
+<div class="section" id="summations">
+<h4>Summations<a class="headerlink" href="#summations" title="Permalink to this headline">¶</a></h4>
+<p>Character <span class="math notranslate nohighlight">\(\Sigma\)</span> is the Greek letter sigma, written in upper case, and is used to mean “sum”.
+We would read the expression above as “the sum of <span class="math notranslate nohighlight">\(u_i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=n\)</span>”.
+For example the sum of <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=4\)</span> is <span class="math notranslate nohighlight">\(\sum_{i=1}^4 i = 1 + 2 + 3 + 4 = 10\)</span> and the sum of <span class="math notranslate nohighlight">\(2 i\)</span> from
+<span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=4\)</span> is <span class="math notranslate nohighlight">\(\sum_{i=1}^4 2 i = 2 + 4 + 6 + 8 = 20\)</span>.
+From this example it should be clear that, in general:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^n a u_i = a \sum_{i=1}^n u_i\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is a constant number and <span class="math notranslate nohighlight">\(u_i\)</span> is a function of <span class="math notranslate nohighlight">\(i\)</span> (i.e. a number that changes with the value of <span class="math notranslate nohighlight">\(i\)</span>).
+We note that <span class="math notranslate nohighlight">\(\sum_{i=1}^n a + u_i\)</span> does not equal (<span class="math notranslate nohighlight">\(\ne\)</span>) to <span class="math notranslate nohighlight">\(a + \sum_{i=1}^n u_i\)</span>.
+For example, <span class="math notranslate nohighlight">\(\sum_{i=1}^4 1+i = 2 + 3 + 4 + 5 = 14\)</span>.</p>
+</div>
+</div>
+<div class="section" id="questions">
+<h3>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="arithmetic-and-geometric-progressions">
+<h2>Arithmetic and Geometric Progressions<a class="headerlink" href="#arithmetic-and-geometric-progressions" title="Permalink to this headline">¶</a></h2>
+<p>We now introduce the arithmetic progression (otherwise known as the arithmetic sequence) and the geometric progression
+(otherwise known as the geometric sequence).
+These sequences have the nice property that their series can be solved.</p>
+<div class="section" id="arithmetic-progression">
+<h3>Arithmetic progression<a class="headerlink" href="#arithmetic-progression" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>Definition<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-arithmetic-progression admonition">
+<p class="admonition-title">Arithmetic Progression</p>
+<p>An arithmetic progression (otherwise known as an arithmetic sequence) is a sequence of <span class="math notranslate nohighlight">\(n\)</span> terms which all have a “common
+difference” <span class="math notranslate nohighlight">\(d\)</span>, written as follows:</p>
+<div class="math notranslate nohighlight">
+\[a, a + d, a + 2d, a + 3d, \dots, a + (n-1) d \]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.</p>
+<p>Using the notation for sequences in the previous section, the <span class="math notranslate nohighlight">\(i\)</span>-th term of the arithmetic progression is
+<span class="math notranslate nohighlight">\(u_i=a+(i-1)d\)</span> for <span class="math notranslate nohighlight">\(i=1,2,\dots,n\)</span>.
+An example is the sequence <span class="math notranslate nohighlight">\(3,5,7,9,11,13\)</span> in which the first term is <span class="math notranslate nohighlight">\(a=3\)</span>, the common difference is <span class="math notranslate nohighlight">\(d=2\)</span> and the
+number of terms is <span class="math notranslate nohighlight">\(n=6\)</span>.
+An infinite arithmetic progression is given by the case where <span class="math notranslate nohighlight">\(n \to \infty\)</span>.</p>
+</div>
+<div class="section" id="solving-the-series-of-arithmetic-progessions">
+<h4>Solving the series of arithmetic progessions<a class="headerlink" href="#solving-the-series-of-arithmetic-progessions" title="Permalink to this headline">¶</a></h4>
+<p>Series of arithmetic progessions can be solved (i.e. reduced to a number).
+The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of an arithmetic progression <span class="math notranslate nohighlight">\(u_i=a+(i-1)d\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[ S_n = \sum_{i=1}^n u_i = \sum_{i=1}^n a + (i -1 ) d = \frac{n}{2} \big( 2 a + (n - 1) d \big) = \frac{n}{2} (a + L)\]</div>
+<p>where <span class="math notranslate nohighlight">\(L = a + (n-1) d\)</span> is the last term in the series.</p>
+<p>Notice that as <span class="math notranslate nohighlight">\(n\)</span> (the number of terms) increases, the terms of arithmetic progessions grow without bound.
+That is, as <span class="math notranslate nohighlight">\(n\)</span> approaches <span class="math notranslate nohighlight">\(\infty\)</span>, the arithmetic progession approaches <span class="math notranslate nohighlight">\(\infty\)</span> if <span class="math notranslate nohighlight">\(d&gt;0\)</span> and approaches <span class="math notranslate nohighlight">\(-\infty\)</span> if
+<span class="math notranslate nohighlight">\(d&lt;0\)</span>.
+In these cases we say that the series diverges (more on this later!).
+Infinite arithmetic progressions always diverge, the proof of which can be found via
+<a class="reference external" href="https://math.stackexchange.com/questions/3334553/proof-that-arithmetic-series-diverges">this link</a>
+(although further reading is required!).</p>
+</div>
+<div class="section" id="proof-of-the-solution-of-the-series-of-arithmetic-progressions">
+<h4>Proof of the solution of the series of arithmetic progressions<a class="headerlink" href="#proof-of-the-solution-of-the-series-of-arithmetic-progressions" title="Permalink to this headline">¶</a></h4>
+<p>Fromm the equation foor <span class="math notranslate nohighlight">\(S_n\)</span> write down the reversed series below the original:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_n = a + (a+d) + (a+2d) + \dots + \Big( a + (n-3) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-1) d \Big) \\
+S_n = a + \Big( a + (n-1) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-3) d \Big) + \dots + (a+2d) + (a+d) + a \ .\end{split}\]</div>
+<p>Adding these two expressions gives:</p>
+<div class="math notranslate nohighlight">
+\[2 S_n =  \Big( 2 a + (n-1) d \Big) + \Big( 2 a + (n-1) d \Big) + \dots + \Big( 2 a + (n-1) d \Big) \ .\]</div>
+<p>Since there are <span class="math notranslate nohighlight">\(n\)</span> terms, this equations simplifies to the final result:</p>
+<div class="math notranslate nohighlight">
+\[S_n =  \frac{n}{2} \Big( 2 a + (n-1) d \Big)  \ .\]</div>
+<p><a class="reference external" href="https://www.americanscientist.org/article/gausss-day-of-reckoning">There is a legend</a>,
+that Gauss (a famous mathematician) used a similar approach as a schoolboy back in the 1780s to find the answer to
+<span class="math notranslate nohighlight">\(1+2+\dots+99+100\)</span>.</p>
+</div>
+</div>
+<div class="section" id="geometric-progression">
+<h3>Geometric Progression<a class="headerlink" href="#geometric-progression" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h4>Definition<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-geometric-progression admonition">
+<p class="admonition-title">Geometric Progression</p>
+<p>A geometric progression (otherwise known as an geometric sequence) is a sequence of <span class="math notranslate nohighlight">\(n\)</span> terms which have “common ratio”
+<span class="math notranslate nohighlight">\(r\)</span>, written as follows:</p>
+<div class="math notranslate nohighlight">
+\[a, a r, a r^2, a r^3, \dots , a r^{n-1}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.
+Using the notation for sequences in the previous section, the <span class="math notranslate nohighlight">\(i\)</span>-th term of the geometric progression is
+<span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> for <span class="math notranslate nohighlight">\(i=1,2,\dots,n\)</span>.
+In other words, the next term in the geometric progression can be found by multiplying the previous term by the common
+ratio <span class="math notranslate nohighlight">\(r\)</span>, given by the formula <span class="math notranslate nohighlight">\(u_i = r u_{i-1}\)</span> where <span class="math notranslate nohighlight">\(u_1=a\)</span>.
+An example is the sequence <span class="math notranslate nohighlight">\(24,−12,6,−3,1.5\)</span> in which the first term is <span class="math notranslate nohighlight">\(a=2\)</span>, the common ratio is <span class="math notranslate nohighlight">\(r=−\frac{1}{2}\)</span> and
+the number of terms is <span class="math notranslate nohighlight">\(n=5\)</span>.</p>
+</div>
+<div class="section" id="solving-the-series-of-geometriic-progessions">
+<h4>Solving the series of geometriic progessions<a class="headerlink" href="#solving-the-series-of-geometriic-progessions" title="Permalink to this headline">¶</a></h4>
+<p>Like arithmetic progessions, the series of geometric progressions can be solved (i.e. reduced to a number).
+The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of a geometric progression <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[ S_n = \sum_{i=1}^n u_i = a r^{i -1} = a \frac{1 - r^n}{1-r} \]</div>
+</div>
+<div class="section" id="proof-of-the-solution-of-the-series-of-geometric-progressions">
+<h4>Proof of the solution of the series of geometric progressions<a class="headerlink" href="#proof-of-the-solution-of-the-series-of-geometric-progressions" title="Permalink to this headline">¶</a></h4>
+<p>Starting from the the definition of the series:</p>
+<div class="math notranslate nohighlight">
+\[S_n = a + a r + a r^2 + \dots + a r^{n-3} + a r^{n-2} + a r^{n-1} = a \Big(1 + r + r^2 + \dots + r^{n-3} + r^{n-2} + 
+r^{n-1} \big) \ ,\]</div>
+<p>we multiply by <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[r S_n = a \Big(r + r^2 + r^2 + \dots + r^{n-2} + r^{n-1} + r^{n} \big) \ .\]</div>
+<p>Subtracting <span class="math notranslate nohighlight">\(r S_n\)</span> from <span class="math notranslate nohighlight">\(S_n\)</span> and cancelling the terms provides:</p>
+<div class="math notranslate nohighlight">
+\[ S_n - r S_n = a \Big(1 - r^{n} \big) \ ,\]</div>
+<p>which can be rearranged to provide the result.</p>
+</div>
+<div class="section" id="a-preliminary-introduction-to-convergence-and-divergence">
+<h4>A preliminary introduction to convergence and divergence<a class="headerlink" href="#a-preliminary-introduction-to-convergence-and-divergence" title="Permalink to this headline">¶</a></h4>
+<p>The behaviour of a geometric progression for “large” numbers of terms <span class="math notranslate nohighlight">\(n\)</span> depends on the value of the common ratio <span class="math notranslate nohighlight">\(r\)</span>.
+This can be deduced by the following reasoning.
+If <span class="math notranslate nohighlight">\(r &gt; 1\)</span> or <span class="math notranslate nohighlight">\(r &lt; -1\)</span> (which is to say that the absolute value <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span>) then the <span class="math notranslate nohighlight">\(i\)</span>-th term of the
+geometric progression <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> becomes a very large positive or negative number.
+In this case we say that the series <strong>diverges</strong>.
+Conversely, if <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span>  then <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> becomes a very small positive or negative number.
+In this case we say that the series <strong>converges</strong>.
+Thus we conclude that</p>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span> then <span class="math notranslate nohighlight">\(S_n\)</span> converges and approaches <span class="math notranslate nohighlight">\(\frac{a}{1-r}\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>,</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(\lvert r \rvert &gt; 1\)</span> then <span class="math notranslate nohighlight">\(S_n\)</span> diverges and approaches <span class="math notranslate nohighlight">\(\infty\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Questions<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="binomial-expansion">
+<h2>Binomial Expansion<a class="headerlink" href="#binomial-expansion" title="Permalink to this headline">¶</a></h2>
+<p>Throughout your scientific journey you will likely come across a time where you have to solve an equation like <span class="math notranslate nohighlight">\((x+y)^n\)</span>.
+We will know describe how you go about such a task and will highlight some interesting mathematical relations.</p>
+<div class="section" id="definition-of-a-binomial">
+<h3>Definition of a binomial<a class="headerlink" href="#definition-of-a-binomial" title="Permalink to this headline">¶</a></h3>
+<p>Polynomials are expressions such as <span class="math notranslate nohighlight">\(a_0 + a_1 x + a_2 x^2 + a_3 x^3\)</span> where <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span> and <span class="math notranslate nohighlight">\(a_3\)</span> are the
+polynomial coefficients and <span class="math notranslate nohighlight">\(x\)</span> is the variable.
+They can have multiple variables (e.g. <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>) such as <span class="math notranslate nohighlight">\(a_0 + a_1 x + a_2 x y + a_3 x y^2\)</span>.
+A binomial is a polynomial with two terms (e.g. x + y, x^3 + 1,  4.3 x^5 - 2.2 y, etc).
+Binomial expansion refers to the computation of powers of binomials:</p>
+<div class="math notranslate nohighlight">
+\[(x+y)^n\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is a real number.
+This is a general way to express a binomial expansion - the expansion of more complicated binomials can be “swapped in”
+for the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> (e.g. <span class="math notranslate nohighlight">\(x\to 10 x^3\)</span> and <span class="math notranslate nohighlight">\(y \to \sqrt{17}\)</span>).
+In this section we will investigate the binomial expansion only for the case where <span class="math notranslate nohighlight">\(n\)</span> is a noon-negative integer
+(e.g. <span class="math notranslate nohighlight">\(n=0,1,2,3,\dots\)</span>).</p>
+</div>
+<div class="section" id="the-binomial-formula">
+<h3>The binomial formula<a class="headerlink" href="#the-binomial-formula" title="Permalink to this headline">¶</a></h3>
+<p>We now set out to calculate the polynomials produced by the expansion of powers of a binomial.</p>
+<div class="section" id="expanding-low-powers-of-binomials-by-hand">
+<h4>Expanding low powers of binomials by hand<a class="headerlink" href="#expanding-low-powers-of-binomials-by-hand" title="Permalink to this headline">¶</a></h4>
+<p>It is possible to expand low powers of binomials (i.e. <span class="math notranslate nohighlight">\(n=0,1,2,3,4,5\)</span>) by hand:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(x+y)^0 &amp;= 1 \ , \\
+(x+y)^1 &amp;= x+y \ , \\
+(x+y)^2 &amp;= (x+y)(x+y) = x^2 + 2 x y + y^2 \ , \\
+(x+y)^3 &amp;= (x+y) (x+y)^2 = x^3 + 3 x^2 y + 2 x y^2 + y^3 \ , \\ 
+(x+y)^4 &amp;= (x+y) (x+y)^3 = x^4 + 4 x^3 y + 6 x^2 y^2 + 4 x y^3 + y^4 \ , \\ 
+(x+5)^5 &amp;= (x+y) (x+y)^4 = x^5 + 5 x^4 y + 10 x^3 y^2 + 10 x^2 y^3 + 5 x y^4 + y^5 \ .\end{split}\]</div>
+<p>You can see symmetry and patterns in the polynomials on the right hand side of the expansions.
+For instance, the combined powers of the <span class="math notranslate nohighlight">\(x\)</span>’s and <span class="math notranslate nohighlight">\(y\)</span>’s are equal to the power of expansion <span class="math notranslate nohighlight">\(n\)</span> and the total number
+of terms is <span class="math notranslate nohighlight">\(n+1\)</span>.
+But what is the pattern for the coefficients?
+The answer to this is not trivial and is a fundamental sequence of numbers - the binomial coefficients.</p>
+</div>
+<div class="section" id="the-binomial-coefficient">
+<h4>The binomial coefficient<a class="headerlink" href="#the-binomial-coefficient" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-the-binomial-coefficient admonition">
+<p class="admonition-title">The binomial coefficient</p>
+<div class="math notranslate nohighlight">
+\[ \binom{n}{k} = \frac{n!}{k! (n - k)!} \ .\]</div>
+</div>
+<p>Like the number <span class="math notranslate nohighlight">\(\pi\)</span>, the binomial coefficient pops up in many unexpected places - particularly in counting problems
+(the bread-and-butter of the field of combinatorics).
+For example, these numbers were first described in tenth century by Indian mathematician
+<a class="reference external" href="https://en.wikipedia.org/wiki/Halayudha">Halayuddha</a>.
+An ancient way (first discovers in China in 11th century) of calculating the binomial coefficients can be found using
+<a class="reference external" href="https://en.wikipedia.org/wiki/Pascal%27s_trianglehttps://en.wikipedia.org/wiki/Pascal%27s_triangle">Pascal’s triangle</a>.
+The binomial coefficient is the number of ways, disregarding order, that <span class="math notranslate nohighlight">\(k\)</span> objects can be chosen from <span class="math notranslate nohighlight">\(n\)</span> objects.
+This number <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span> can be casually referred to as “n choose k”, and can be expressed by <span class="math notranslate nohighlight">\(C^n_k\)</span> $and hence
+calculators encode the binomial coefficient by the “nCk” button.</p>
+</div>
+<div class="section" id="factorials">
+<h4>Factorials<a class="headerlink" href="#factorials" title="Permalink to this headline">¶</a></h4>
+<p>We breifly note that the “<span class="math notranslate nohighlight">\(!\)</span>” symbol represents a factorial of an integer number.
+A factorial of integer number <span class="math notranslate nohighlight">\(n\)</span> is defined as the product of all the numbers from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(n\)</span>:
+<span class="math notranslate nohighlight">\(n! = n \times (n-1) \times (n-2) \times \dots \times 2 \times 1\)</span>.
+The special cases of factorials are <span class="math notranslate nohighlight">\(0! =1\)</span> and <span class="math notranslate nohighlight">\(1!=1\)</span>.
+The special cases of the binomial coefficient are thus <span class="math notranslate nohighlight">\(\binom{n}{0}= 1\)</span>, <span class="math notranslate nohighlight">\(\binom{n}{1} = n\)</span>, <span class="math notranslate nohighlight">\(\binom{n}{n}=1\)</span> and
+<span class="math notranslate nohighlight">\(\binom{n}{n-1} = n\)</span>.
+These examples highlight a nice symmetrical property of the binomial coefficient: <span class="math notranslate nohighlight">\(\binom{n}{k} = \binom{n}{n-k}\)</span> (where
+<span class="math notranslate nohighlight">\(0 \le k \le n\)</span>).</p>
+</div>
+<div class="section" id="statement-of-the-binomial-formula">
+<h4>Statement of the binomial formula<a class="headerlink" href="#statement-of-the-binomial-formula" title="Permalink to this headline">¶</a></h4>
+<p>Knowing the binomial coeffient allows us to find the solution to <span class="math notranslate nohighlight">\((x + y)^n\)</span> for all positive integers <span class="math notranslate nohighlight">\(n=0,1,2,\dots\)</span>.
+With much ado the binomial formula is as follows.</p>
+<div class="admonition-the-binomial-formula admonition">
+<p class="admonition-title">The binomial formula</p>
+<div class="math notranslate nohighlight">
+\[ (x+y)^n = \sum_{k=0}^n \binom{n}{k} x^k y^{n-k} =  \binom{n}{0} x^0 y^n +  \binom{n}{1} x^1 y^{n-1} + \dots +
+ \binom{n}{n-1} x^{n-1} y^{1} + \binom{n}{n} x^n y^0 \ .\]</div>
+</div>
+<p>You are not required to be familiar with
+<a class="reference external" href="https://math.stackexchange.com/questions/119480/derivation-of-binomial-coefficient-in-binomial-theorem">the details of its derivation</a>
+but do need to be able to apply the formula to compute binomial expansions.
+This formula also shows you why <span class="math notranslate nohighlight">\( \binom{n}{k}\)</span> are called binomial coefficients - because they are the coefficients of
+the polynomial produce by the expansion of powers of binomials.
+Reassure yourself of the utility of this formula by timing yourself expanding <span class="math notranslate nohighlight">\((x+y)^6\)</span> by hand and then by the binomial
+formula.
+For further reading you may like to explore the <a class="reference external" href="https://en.wikipedia.org/wiki/Multinomial_theorem">multinomial theorem</a>
+which is a generalisation of the binomial formula to polynomials.</p>
+</div>
+</div>
+</div>
+<div class="section" id="limits">
+<h2>Limits<a class="headerlink" href="#limits" title="Permalink to this headline">¶</a></h2>
+<p>The mathematics of limits is used to describe the behaviour of a function or sequence that is not AT a point,
+but approaching it.
+For example, in the geometric progression we saw that the sequence approaches either a finite number (converges) or
+infinite number (diverges) as the number of terms appraoches infinity.
+In what comes next, we will be interested in calculating the “limit” of (i) the terms in a sequence <span class="math notranslate nohighlight">\(u_k\)</span> as
+<span class="math notranslate nohighlight">\(k \to \infty\)</span>, and (ii) the value of a function <span class="math notranslate nohighlight">\(f(x)\)</span> as <span class="math notranslate nohighlight">\(x \to c\)</span> where <span class="math notranslate nohighlight">\(c\)</span> can be a finite or infinite number.
+We may distinguish the cases where:</p>
+<ul class="simple">
+<li><p>the function and terms in a sequence <strong>diverge</strong> to an infinite value (blow up to <span class="math notranslate nohighlight">\(\pm \infty\)</span>),</p></li>
+<li><p>the function and terms in a sequence <strong>converge</strong> to a finite value.</p></li>
+</ul>
+<div class="section" id="limits-of-functions">
+<h3>Limits of functions<a class="headerlink" href="#limits-of-functions" title="Permalink to this headline">¶</a></h3>
+<p>The limits of a function are best illustrated by example.</p>
+<div class="section" id="example-1">
+<h4>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h4>
+<p>We start with a trivial example, by considering the function <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> near to the point (2,4).</p>
+<div class="figure align-default" id="x-squared">
+<img alt="../_images/x_squared.png" src="../_images/x_squared.png" />
+<p class="caption"><span class="caption-text">A plot of <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> together with the point <span class="math notranslate nohighlight">\((2,4)\)</span>.</span><a class="headerlink" href="#x-squared" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this example, it is apparent that we can trace along the <span class="math notranslate nohighlight">\(x^2\)</span> curve towards the point, from either direction.
+Mathematically, we say that we can make <span class="math notranslate nohighlight">\(f(x)\)</span> arbitrarily close (“as close as you like”) to 4 by making <span class="math notranslate nohighlight">\(x\)</span>
+sufficiently close to 2.
+We write</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 2} x^2 = 4\]</div>
+<p>and we say that ” the limit of <span class="math notranslate nohighlight">\(x^2\)</span> as <span class="math notranslate nohighlight">\(x\)</span> tends to (approaches) 2 is equal to 4”.
+In fact, for the squared function, it is clear that</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to c} f(x) = f(c)\]</div>
+<p>for all <span class="math notranslate nohighlight">\(c\)</span>, but we will see that this behaviour does not apply for all functions.</p>
+<p>We may also consider the limit of a function <span class="math notranslate nohighlight">\(f(x)\)</span> as its argument <span class="math notranslate nohighlight">\(x\)</span> becomes “very large”.
+For instance, we can say that <span class="math notranslate nohighlight">\(\lim_{x\to\infty} x^2 = \infty\)</span> since <span class="math notranslate nohighlight">\(x^2\)</span> can be made arbitrarily large by making <span class="math notranslate nohighlight">\(x\)</span>
+“big enough”.
+For instance, we can make <span class="math notranslate nohighlight">\(x^2\)</span> larger than 10^{998} by making <span class="math notranslate nohighlight">\(x\)</span> larger than 10^{499}.</p>
+<p>We would read the expression by saying: “the limit of <span class="math notranslate nohighlight">\(x^2\)</span> as <span class="math notranslate nohighlight">\(x\)</span> tends to infinity is infinity”, though it does not
+actually reach infinity.</p>
+</div>
+<div class="section" id="example-2">
+<h4>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h4>
+<p>Whilst the limit of <span class="math notranslate nohighlight">\(x^2\)</span> for large <span class="math notranslate nohighlight">\(x\)</span> is non-finite, there are other functions which approach a finite value as
+<span class="math notranslate nohighlight">\(x \to \infty\)</span>, and also functions which approach a non-finite value whilst <span class="math notranslate nohighlight">\(x\)</span> remains finite.
+For example, consider the behaviour of <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>, illustrated in the plot below.</p>
+<div class="figure align-default" id="reciprocal-x">
+<img alt="../_images/reciprocal_x.png" src="../_images/reciprocal_x.png" />
+<p class="caption"><span class="caption-text">A plot of <span class="math notranslate nohighlight">\(f(x)= \frac{1}{x}\)</span>.</span><a class="headerlink" href="#reciprocal-x" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this case, as <span class="math notranslate nohighlight">\(x\)</span> becomes very large, <span class="math notranslate nohighlight">\(f(x)\)</span> approaches zero.
+We write that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\lim_{x \to \infty} \frac{1}{x}&amp;= 0^+ \\
+\lim_{x \to - \infty} \frac{1}{x}&amp;= 0^- \ .\end{split}\]</div>
+<p>The <span class="math notranslate nohighlight">\(0^+\)</span> and <span class="math notranslate nohighlight">\(0^−\)</span> have been used here to indicate that the function “tends to zero from above/below” as <span class="math notranslate nohighlight">\(x\)</span> tends to
+positive and negative infinity respectively.</p>
+<p>Near to <span class="math notranslate nohighlight">\(x=0\)</span>, the behaviour of <span class="math notranslate nohighlight">\(\frac{1}{x}\)</span> is different to what we have seen so far:</p>
+<ul class="simple">
+<li><p>As <span class="math notranslate nohighlight">\(x\)</span> tends to zero from above (from the right), the graph shoots off to positive infinity, but…</p></li>
+<li><p>As <span class="math notranslate nohighlight">\(x\)</span> tends to zero from below (from the left), the graph shoot off to negative infinity.</p></li>
+</ul>
+</div>
+<div class="section" id="the-one-sided-limit">
+<h4>The one-sided limit<a class="headerlink" href="#the-one-sided-limit" title="Permalink to this headline">¶</a></h4>
+<p>The previous example motivates the idea of a <a class="reference external" href="https://en.wikipedia.org/wiki/One-sided_limit">one-sided limit</a>.
+We write that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\lim_{x \to 0^+} \frac{1}{x} &amp;= + \infty \\
+\lim_{x \to 0^-} \frac{1}{x} &amp;= - \infty \ .\end{split}\]</div>
+<p>Since the left- and right- limits are not the same, then we cannot meaningfully refer to “the limit” without providing
+a direction, so the result for <span class="math notranslate nohighlight">\(\lim_{x \to 0} \frac{1}{x}\)</span> is undefined.
+We say that the function is discontinuous at <span class="math notranslate nohighlight">\(x = 0\)</span>, though it is
+“<a class="reference external" href="https://math.stackexchange.com/questions/1968943/whats-the-difference-between-continuous-and-piecewise-continuous-functions">piecewise continuous</a>”
+on each of the pieces either side of <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<p>Another example of a piecewise continous function is the Heaviside function, which we define as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H(x) = \begin{cases}
+1 \ \ &amp;\text{if} \ \ \ x &gt; 0 \\
+0 \ \ &amp;\text{if} \ \ \ x &lt; 0 
+\end{cases}\end{split}\]</div>
+<p>A plot of this function is shown below. It has a finite jump discontinuity at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<div class="figure align-default" id="heaviside">
+<img alt="../_images/heaviside.png" src="../_images/heaviside.png" />
+<p class="caption"><span class="caption-text">A plot of the Heaviside function <span class="math notranslate nohighlight">\(H(x)\)</span>.</span><a class="headerlink" href="#heaviside" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="limits-of-sequences">
+<h3>Limits of sequences<a class="headerlink" href="#limits-of-sequences" title="Permalink to this headline">¶</a></h3>
+<p>The limit of a sequence is the value that the terms of a sequence approaches (or tends to) as the number of terms
+approaches infinity, written as <span class="math notranslate nohighlight">\(k \to \infty\)</span> if <span class="math notranslate nohighlight">\(k\)</span> were the index variable.</p>
+<div class="admonition-the-limit-of-a-sequence admonition">
+<p class="admonition-title">The limit of a sequence</p>
+<p>For a sequence <span class="math notranslate nohighlight">\((u_1, u_2, u_3, \dots)\)</span>, the limit of a sequence is written as</p>
+<div class="math notranslate nohighlight">
+\[ \lim_{k \to \infty} u_k \ .\]</div>
+</div>
+<p>We say that a number, say <span class="math notranslate nohighlight">\(U\)</span>, is the limit of a the sequence <span class="math notranslate nohighlight">\((u_1, u_2, u_3, \dots)\)</span> if the numbers of the sequence
+<span class="math notranslate nohighlight">\(u_k\)</span> approach <span class="math notranslate nohighlight">\(U\)</span> as <span class="math notranslate nohighlight">\(k\to\infty\)</span>.
+We say that the limit of the sequence diverges if <span class="math notranslate nohighlight">\(\lvert U \rvert =\infty\)</span> and converges if <span class="math notranslate nohighlight">\(\lvert U \rvert &lt; \infty\)</span>.</p>
+<p>It is important to note that similarity between the limits of a sequence and a function.
+A function <span class="math notranslate nohighlight">\(f(x)\)</span> for real number <span class="math notranslate nohighlight">\(x\)</span> will have the same limit as the sequence <span class="math notranslate nohighlight">\(u_k = f(k)\)</span> for integer number <span class="math notranslate nohighlight">\(k\)</span>.
+For example <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>, the limit <span class="math notranslate nohighlight">\(\lim_{x \to \infty} f(x) = \infty\)</span> is the same as the limit (infinite) of the
+sequence with terms <span class="math notranslate nohighlight">\(u_k = k^2\)</span>, $(1, 2, 4, 16, \dots).</p>
+<p>The key difference is that when we refer to the limit of a sequence we always mean the limit of the terms <span class="math notranslate nohighlight">\(u_k\)</span> as the
+numbers of terms go to infinity <span class="math notranslate nohighlight">\(k\to\infty\)</span>.
+This is not the case for the limit of functions where the variable (i.e. <span class="math notranslate nohighlight">\(x\)</span>) can go to any number.</p>
+<p>Consider another example from the previous section, the limit of the infinite sequence with terms
+<span class="math notranslate nohighlight">\(u_k = \frac{1}{k}\)</span> for <span class="math notranslate nohighlight">\(k=1,2,\dots\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \dots \]</div>
+<p>is <span class="math notranslate nohighlight">\(0\)</span> in the same way that <span class="math notranslate nohighlight">\(\lim{x\to\infty} \frac{1}{x} = \infty\)</span>.</p>
+</div>
+<div class="section" id="combinaton-of-limits">
+<h3>Combinaton of limits<a class="headerlink" href="#combinaton-of-limits" title="Permalink to this headline">¶</a></h3>
+<p>It is useful to know how to solve the limit of combinations of functions (or so called functions of functions) such as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\lim_{x \to c} \Big( f(x) + g(x) \Big) \\
+&amp;\lim_{x \to c} f(x) g(x)  \\
+&amp;\lim_{x \to c} \frac{f(x)}{g(x)} \ ,\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c\)</span> will can be any number such as <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(\infty\)</span>.</p>
+<p>The approach we take to solve these depends on whether the limits of the inidividual functions <span class="math notranslate nohighlight">\(\lim_{x \to c} f(x)\)</span>
+and <span class="math notranslate nohighlight">\(\lim_{x \to c} g(x)\)</span> are finite or infinite.</p>
+<div class="section" id="functions-that-tend-to-finite-values-the-combination-theorem-for-limits">
+<h4>Functions that tend to finite values: the combination theorem for limits<a class="headerlink" href="#functions-that-tend-to-finite-values-the-combination-theorem-for-limits" title="Permalink to this headline">¶</a></h4>
+<p>First consider the case where the limit of all the functions are finite.
+If and only if the limits of the individual functions are FINITE then we can use the combination theorem to solve the combination
+of functions.</p>
+<div class="admonition-the-combination-theorem-for-limits admonition">
+<p class="admonition-title">The combination theorem for limits</p>
+<p>If the limits <span class="math notranslate nohighlight">\(\lim_{x \to c} f(x)\)</span> and <span class="math notranslate nohighlight">\(\lim_{x \to c} g(x)\)</span>  are <strong>finite</strong> then,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} &amp;\lim_{x \to c} \Big( \alpha f(x) + \beta g(x) \Big) = \alpha \lim_{x \to c} f(x) + \beta \lim_{x \to c} g(x) \ ,\\
+&amp;\lim_{x \to c} f(x) g(x) = \lim_{x \to c} f(x) \lim_{x \to c} g(x) \ ,  \\
+&amp;\lim_{x \to c} \frac{f(x)}{g(x)} \ ,\end{split}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are constants.
+To stress the point again, the combination theorem for limits can only be used if the limit of every function is finite.</p>
+<p>As an example, consider the function:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 0} \frac{x^2}{(x+1)^3 - (x-1)^3} \ . \]</div>
+<p>Since the limits of each of the individual functions are finite: <span class="math notranslate nohighlight">\(\lim_{x \to 0} x^2 = 0\)</span>, <span class="math notranslate nohighlight">\(\lim_{x \to 0} (x+1)^3 = 1\)</span>
+and <span class="math notranslate nohighlight">\(\lim_{x \to 0} (x-1)^3 = -1\)</span>, we can use first and third statment of the combination theorem to rewrite and solve
+the equation as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \lim_{x \to 0} \frac{x^2}{(x+1)^3 - (x-1)^3} &amp;= \frac{\lim_{x \to 0} x^2}{\lim_{x \to 0} \Big((x+1)^3 - (x-1)^3}\\
+ &amp;= \frac{\lim_{x \to 0} x^2}{\lim_{x \to 0} (x+1)^3 - \lim_{x \to 0}(x-1)^3}\\
+ &amp; = \frac{0}{1 - (-1)} \\
+ &amp; = \frac{0}{2} \\
+ &amp; = 0\end{split}\]</div>
+<p>So we can conclude the limit of the function is <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</div>
+<div class="section" id="functions-that-to-to-infinite-values">
+<h4>Functions that to to infinite values<a class="headerlink" href="#functions-that-to-to-infinite-values" title="Permalink to this headline">¶</a></h4>
+<p>We now consider the case where the limit of all the individual functions are infinite, such as
+<span class="math notranslate nohighlight">\(\lim_{x\to \infty} x^2 = \infty\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\to 0^-} \frac{1}{x} = -\infty\)</span>.</p>
+<p>The approach we take can be illustrated by the followinig two examples:</p>
+<div class="section" id="id6">
+<h5>Example 1<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
+<div class="math notranslate nohighlight">
+\[ \lim_{x \to \infty} ( x^2 - x ) \ . \]</div>
+<p>This limit appears to “go like” <span class="math notranslate nohighlight">\(\infty - \infty\)</span>, so you would be forgiven for thinking this result is zero.
+On the other hand, there is a sense in which <span class="math notranslate nohighlight">\(x^2\)</span> is “much bigger” than <span class="math notranslate nohighlight">\(x\)</span> and so it dominates this expression.
+That is <span class="math notranslate nohighlight">\(x^2\)</span> “blows up faster” than <span class="math notranslate nohighlight">\(x\)</span> as <span class="math notranslate nohighlight">\(x\to \infty\)</span>.
+Indeed, if you try subsitute a large value of <span class="math notranslate nohighlight">\(x\)</span> into the function <span class="math notranslate nohighlight">\((x^2 - x)\)</span> you may infer that function can get
+arbitrarily large by making <span class="math notranslate nohighlight">\(x\)</span> sufficiently large.
+So this limit appears to be infinity.</p>
+<p>Another way to approach this problem is to factorise <span class="math notranslate nohighlight">\((x^2 - x) = x (x-1)\)</span>; both <span class="math notranslate nohighlight">\(x \to \infty\)</span> and <span class="math notranslate nohighlight">\(x-1 \to \infty\)</span><br />
+as <span class="math notranslate nohighlight">\(x\to\infty\)</span>.</p>
+</div>
+<div class="section" id="id7">
+<h5>Example 2<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+<div class="math notranslate nohighlight">
+\[ \lim_{x \to \infty} \frac{x + \sqrt{x + 2} }{4 x} \ .\]</div>
+<p>The second limit “goes like” <span class="math notranslate nohighlight">\(\frac{\infty}{\infty}\)</span>, but the answer is not one.
+To solve this limit we consider the behaviour of the numerator and denominator separately.
+We note that the function <span class="math notranslate nohighlight">\(x\)</span> is “much much” greater than <span class="math notranslate nohighlight">\(\sqrt{x + 2}\)</span> for large <span class="math notranslate nohighlight">\(x\)</span> (i.e. <span class="math notranslate nohighlight">\(x &gt;&gt; \sqrt{x + 2}\)</span>) so we
+say that the numerator “goes like” <span class="math notranslate nohighlight">\(x\)</span> for large <span class="math notranslate nohighlight">\(x\)</span>.
+The denominator simply “goes like” 4𝑥, so the fraction in the limit “goes like” <span class="math notranslate nohighlight">\( \frac{x}{4 x} = \frac{1}{4}\)</span>.
+Again, you may convince yourself of this by taking some large values of <span class="math notranslate nohighlight">\(x\)</span> on your calculator -
+though note that your calculator may not be able to handle the ratio if you make the values too large.</p>
+<p>Another approach you may take is to simply the function first:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \lim_{x \to \infty} \frac{x + \sqrt{x + 2} }{4 x} &amp;= \frac{1 + \frac{\sqrt{x +2 }}{x} }{4} \\
+ &amp; = \frac{1 + \sqrt{ \frac{1}{x} + \frac{2}{x^2}  }}{4} \ .\end{split}\]</div>
+<p>Because <span class="math notranslate nohighlight">\(\lim_{x\to\infty} \frac{1}{x} = \lim_{x\to\infty} \frac{2}{x^2} = 0\)</span>, we can see we also arrive at the solution
+of <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>.</p>
+<p>As an exercise, convince yourself that the limit:</p>
+<div class="math notranslate nohighlight">
+\[ \lim_{x \to 0} \frac{x + \sqrt{x + 2} }{4 x} = \infty \ .\]</div>
+</div>
+<div class="section" id="summary">
+<h5>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h5>
+<p>From the 2 examples above we illustrate that the solutions can be found be determing the individual function(s) (which
+may be constant values) that dominate in the limit.
+It most cases it is useful to simply the equation before tackling the limit.</p>
+<p>It must be noted that fractions which “go like” <span class="math notranslate nohighlight">\(\frac{\infty}{\infty}\)</span> do not necessarily approach a finite limit.
+For instance, the result <span class="math notranslate nohighlight">\(\lim_{x \to \infty} \frac{x+2}{x^2 - x}\)</span> is equal to zero, since the degree of the denominator
+is larger than the degree of the numerator and it dominates.
+That is, the denomiator “blows up faster” than the numerator.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./sequences_and_series"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
