@@ -361,7 +361,7 @@
 <h1>Complex Numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="motivations-and-definitions">
 <h2>Motivations and Definitions<a class="headerlink" href="#motivations-and-definitions" title="Permalink to this headline">¶</a></h2>
-<p>The real number line is not sufficient to solve every algebraic equation. For example, there is no real value <span class="math notranslate nohighlight">\(y\)</span> that satisfies the following problem:</p>
+<p>Real numbers (e.g. …<span class="math notranslate nohighlight">\(-1\)</span>, <span class="math notranslate nohighlight">\(-\frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(1\)</span>, …) are not always sufficient to solve every algebraic equation. For example, there is no real value <span class="math notranslate nohighlight">\(y\)</span> that satisfies the following problem:</p>
 <div class="math notranslate nohighlight" id="equation-ysquaredplus1">
 <span class="eqno">(1)<a class="headerlink" href="#equation-ysquaredplus1" title="Permalink to this equation">¶</a></span>\[y^2 + 1 = 0.\]</div>
 <p>However, let us <em>suppose</em> that a number <span class="math notranslate nohighlight">\(i\)</span> exists, with the property that <span class="math notranslate nohighlight">\(i=\sqrt{−1}\)</span>. Then the two roots of the quadratic equation <a class="reference internal" href="#equation-ysquaredplus1">(1)</a> are:</p>
@@ -433,8 +433,8 @@ The real part of the number is represented on the horizontal axis, and the imagi
 <p class="admonition-title">Attention</p>
 <ol class="simple">
 <li><p>You <strong>must</strong> work in radians when providing the argument of a complex number. We will see later that there are special mathematical relationships involving the argument of a complex number, that are only valid when working in radians.</p></li>
-<li><p>We will always gives the argument in the range <span class="math notranslate nohighlight">\((−\pi,\pi]\)</span>. This convention is much more common in the literature and also used by most mathematical computer software. Notice that conjugation in polar form is neater with this convention, since <span class="math notranslate nohighlight">\(\mathrm{arg}(z^∗)=−\mathrm{arg}(z)\)</span>.</p></li>
-<li><p>Strictly speaking, the argument as defined here is called the principal argument, since we could also locate the complex number by wrapping multiple times around the plane. For example, the argument <span class="math notranslate nohighlight">\(−\pi/4\)</span> could equally be given as <span class="math notranslate nohighlight">\((2n−1/4)\pi\)</span> for any integer value of <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p>We will always give the argument in the range <span class="math notranslate nohighlight">\((−\pi,\pi]\)</span>. This convention is much more common in the literature and also used by most mathematical computer software. Notice that conjugation in polar form is neater with this convention, since <span class="math notranslate nohighlight">\(\mathrm{arg}(z^∗)=−\mathrm{arg}(z)\)</span>.</p></li>
+<li><p>Strictly speaking, the argument as defined here is called the <strong>principal argument</strong>, since we could also locate the complex number by wrapping multiple times around the plane. For example, the argument <span class="math notranslate nohighlight">\(−\pi/4\)</span> could equally be given as <span class="math notranslate nohighlight">\((2n−1/4)\pi\)</span> for any integer value of <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
 </ol>
 </div>
 <div class="tip admonition">
@@ -485,7 +485,7 @@ The real part of the number is represented on the horizontal axis, and the imagi
 <img alt="../_images/ComplexNumberAddition.png" src="../_images/ComplexNumberAddition.png" />
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Parallelogram rule for addition of complex numbers, <span class="math notranslate nohighlight">\(z_3 = z_1+z_2\)</span></span><a class="headerlink" href="#complexnumberaddition" title="Permalink to this image">¶</a></p>
 </div>
-<p>A graphical representation of the result for subtraction is shown in <a class="reference internal" href="#complexnumbersubtraction"><span class="std std-numref">Fig. 4</span></a>. notice that <span class="math notranslate nohighlight">\(z_3 = z_2-z_1\)</span> rearranges to give <span class="math notranslate nohighlight">\(z_2 = z_1-z_3\)</span>, so now <span class="math notranslate nohighlight">\(z_2\)</span> is lies on the diahonal of the parallelogram.</p>
+<p>A graphical representation of the result for subtraction is shown in <a class="reference internal" href="#complexnumbersubtraction"><span class="std std-numref">Fig. 4</span></a>. notice that <span class="math notranslate nohighlight">\(z_3 = z_2-z_1\)</span> rearranges to give <span class="math notranslate nohighlight">\(z_2 = z_1-z_3\)</span>, so now <span class="math notranslate nohighlight">\(z_2\)</span> is lies on the diagonal of the parallelogram.</p>
 <div class="figure align-default" id="complexnumbersubtraction">
 <img alt="../_images/ComplexNumberSubtraction.png" src="../_images/ComplexNumberSubtraction.png" />
 <p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Triangle rule for subtraction of two complex numbers, <span class="math notranslate nohighlight">\(z_3=z_2-z_1\)</span>.</span><a class="headerlink" href="#complexnumbersubtraction" title="Permalink to this image">¶</a></p>
@@ -575,10 +575,10 @@ The real part of the number is represented on the horizontal axis, and the imagi
 <div class="math notranslate nohighlight" id="equation-complexperiodicity">
 <span class="eqno">(11)<a class="headerlink" href="#equation-complexperiodicity" title="Permalink to this equation">¶</a></span>\[e^{i(\theta + 2k\pi)} = e^{i\theta} \textrm{ for } k = 0, \pm1, \pm2, ...\]</div>
 <p>Geometrically, the expression is merely a statement of the fact that if we continuously “wrap around” the complex plane without changing the modulus, we will return to our starting position at the end of each complete revolution.</p>
-<p>This was also the principle by which we were able to define (at least) two different possible conventions for the principle argument.</p>
+<p>This was also the principal by which we were able to define (at least) two different possible conventions for the principal argument.</p>
 <div class="tip admonition">
 <p class="admonition-title">Practice</p>
-<p>Write the following complex numbers in polar form where the argument is given in the principle range (<span class="math notranslate nohighlight">\(-\pi\)</span>, <span class="math notranslate nohighlight">\(\pi\)</span>):</p>
+<p>Write the following complex numbers in polar form where the argument is given in the principal range (<span class="math notranslate nohighlight">\(-\pi\)</span>, <span class="math notranslate nohighlight">\(\pi\)</span>):</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(\sqrt{2}e^{\frac{7\pi i}{3}}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(3e^{-\frac{13\pi i}{12}}\)</span></p></li>
@@ -626,12 +626,12 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 <li><p><span class="math notranslate nohighlight">\(z_2 = 2^{\frac{1}{4}}e^{-i\frac{23\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{23\pi}{24}) + i\textrm{sin}(\frac{23\pi}{24})) \approx -1.190 + 0.155i\)</span></p></li>
 </ul>
 </div>
-<p>We didn’t really need to fiddle about combining the angles (<span class="math notranslate nohighlight">\(\frac{-i\pi}{24} + \frac{2k\pi}{4}\)</span>) in this case, since the <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> spacing between the roots corresponds to a simple multiplication by <span class="math notranslate nohighlight">\(i\)</span>, but it was done here to illustrate the principle of finding the argument for each root in exact form.</p>
+<p>We didn’t really need to fiddle about combining the angles (<span class="math notranslate nohighlight">\(\frac{-i\pi}{24} + \frac{2k\pi}{4}\)</span>) in this case, since the <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> spacing between the roots corresponds to a simple multiplication by <span class="math notranslate nohighlight">\(i\)</span>, but it was done here to illustrate the principal of finding the argument for each root in exact form.</p>
 </div>
 </div>
 <div class="section" id="trigonometric-and-hyperbolic-relationships">
 <h2>Trigonometric and Hyperbolic Relationships<a class="headerlink" href="#trigonometric-and-hyperbolic-relationships" title="Permalink to this headline">¶</a></h2>
-<p>In this section, we make use of Euler’s identity, <span class="math notranslate nohighlight">\(e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)\)</span>, to prove sevral results involving trigonometric and hyperbolic functions. We haven’t yet proven Euler’s identity yet, but we will be able to do so later in the course).</p>
+<p>In this section, we make use of Euler’s identity, <span class="math notranslate nohighlight">\(e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)\)</span>, to prove several results involving trigonometric and hyperbolic functions. We haven’t yet proven Euler’s identity yet, but we will be able to do so later in the course).</p>
 <div class="section" id="relationship-between-trigonometric-and-hyperbolic-functions">
 <h3>Relationship Between Trigonometric and Hyperbolic Functions<a class="headerlink" href="#relationship-between-trigonometric-and-hyperbolic-functions" title="Permalink to this headline">¶</a></h3>
 <p>Starting from Euler’s identity, we observe that:</p>
@@ -679,7 +679,7 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 <p>The fact that De Moivre’s theorem is <em>consistent</em> with Euler’s identity is reassuring, although we have still not proved that Euler’s identity is correct.</p>
 <div class="note admonition">
 <p class="admonition-title">Non-integer Values</p>
-<p>For non-integer values <span class="math notranslate nohighlight">\((\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n\)</span> is multiple-valued. The principle root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result <span class="math notranslate nohighlight">\(\textrm{cos}(n\theta) + i\textrm{sin}(n\theta)\)</span> gives a single root to the problem, but not necessarily the principle root.</p>
+<p>For non-integer values <span class="math notranslate nohighlight">\((\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n\)</span> is multiple-valued. The principal root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result <span class="math notranslate nohighlight">\(\textrm{cos}(n\theta) + i\textrm{sin}(n\theta)\)</span> gives a single root to the problem, but not necessarily the principal root.</p>
 </div>
 </div>
 </div>
@@ -729,7 +729,7 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 <p><span class="math notranslate nohighlight">\(\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{\pi}{6} = \frac{11}{12}\pi = \textrm{arg}(zw)\)</span></p>
 <p>(b) <span class="math notranslate nohighlight">\(|zw| = 2\sqrt{2}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{5}{6}\pi = \frac{19}{12}\pi\)</span>, which lies in the fourth quadrant.</p>
-<p>The principle argument is given by <span class="math notranslate nohighlight">\(\textrm{arg}(zw) = -\frac{5}{12}\pi\)</span>.</p>
+<p>The principal argument is given by <span class="math notranslate nohighlight">\(\textrm{arg}(zw) = -\frac{5}{12}\pi\)</span>.</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\((\frac{z_q}{z_2})^* = (\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}})^* = (\frac{r_1}{r_2}e^{-i(\theta_1 - \theta_2)^* = \frac{r_1}{r_2}e^{-i(\theta_1 - \theta_2)} = \frac{r_1e^{-i\theta_1}}{r_2e^{-i\theta_2}} = \frac{z_1^*}{z_2^*}\)</span></p></li>
 </ol>

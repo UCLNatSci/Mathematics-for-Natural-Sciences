@@ -1,7 +1,7 @@
 # Complex Numbers
 ## Motivations and Definitions
 
-The real number line is not sufficient to solve every algebraic equation. For example, there is no real value $y$ that satisfies the following problem:
+Real numbers (e.g. ...$-1$, $-\frac{1}{2}$, $0$, $\frac{1}{2}$, $1$, ...) are not always sufficient to solve every algebraic equation. For example, there is no real value $y$ that satisfies the following problem:
 
 ```{math}
 :label: ysquaredplus1
@@ -104,8 +104,8 @@ Generic illustration of a complex number in the plane. The length of the blue li
 
 ```{attention}
 1. You **must** work in radians when providing the argument of a complex number. We will see later that there are special mathematical relationships involving the argument of a complex number, that are only valid when working in radians.
-1. We will always gives the argument in the range $(−\pi,\pi]$. This convention is much more common in the literature and also used by most mathematical computer software. Notice that conjugation in polar form is neater with this convention, since $\mathrm{arg}(z^∗)=−\mathrm{arg}(z)$.
-1. Strictly speaking, the argument as defined here is called the principal argument, since we could also locate the complex number by wrapping multiple times around the plane. For example, the argument $−\pi/4$ could equally be given as $(2n−1/4)\pi$ for any integer value of $n$.
+1. We will always give the argument in the range $(−\pi,\pi]$. This convention is much more common in the literature and also used by most mathematical computer software. Notice that conjugation in polar form is neater with this convention, since $\mathrm{arg}(z^∗)=−\mathrm{arg}(z)$.
+1. Strictly speaking, the argument as defined here is called the **principal argument**, since we could also locate the complex number by wrapping multiple times around the plane. For example, the argument $−\pi/4$ could equally be given as $(2n−1/4)\pi$ for any integer value of $n$.
 ```
 
 ```{admonition} Practice
@@ -171,7 +171,7 @@ name: complexnumberaddition
 Parallelogram rule for addition of complex numbers, $z_3 = z_1+z_2$
 ```
 
-A graphical representation of the result for subtraction is shown in {numref}`complexnumbersubtraction`. notice that $z_3 = z_2-z_1$ rearranges to give $z_2 = z_1-z_3$, so now $z_2$ is lies on the diahonal of the parallelogram.
+A graphical representation of the result for subtraction is shown in {numref}`complexnumbersubtraction`. notice that $z_3 = z_2-z_1$ rearranges to give $z_2 = z_1-z_3$, so now $z_2$ is lies on the diagonal of the parallelogram.
 
 ```{figure} ComplexNumberSubtraction.png
 ---
@@ -281,11 +281,11 @@ e^{i(\theta + 2k\pi)} = e^{i\theta} \textrm{ for } k = 0, \pm1, \pm2, ...
 
 Geometrically, the expression is merely a statement of the fact that if we continuously "wrap around" the complex plane without changing the modulus, we will return to our starting position at the end of each complete revolution.
 
-This was also the principle by which we were able to define (at least) two different possible conventions for the principle argument.
+This was also the principal by which we were able to define (at least) two different possible conventions for the principal argument.
 
 ```{admonition} Practice
 :class: tip
-Write the following complex numbers in polar form where the argument is given in the principle range ($-\pi$, $\pi$):
+Write the following complex numbers in polar form where the argument is given in the principal range ($-\pi$, $\pi$):
 1. $\sqrt{2}e^{\frac{7\pi i}{3}}$
 2. $3e^{-\frac{13\pi i}{12}}$
 ```
@@ -349,11 +349,11 @@ Following through, we then obtain:
 * $z_2 = 2^{\frac{1}{4}}e^{-i\frac{23\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{23\pi}{24}) + i\textrm{sin}(\frac{23\pi}{24})) \approx -1.190 + 0.155i$
 ```
 
-We didn't really need to fiddle about combining the angles ($\frac{-i\pi}{24} + \frac{2k\pi}{4}$) in this case, since the $\frac{\pi}{2}$ spacing between the roots corresponds to a simple multiplication by $i$, but it was done here to illustrate the principle of finding the argument for each root in exact form.
+We didn't really need to fiddle about combining the angles ($\frac{-i\pi}{24} + \frac{2k\pi}{4}$) in this case, since the $\frac{\pi}{2}$ spacing between the roots corresponds to a simple multiplication by $i$, but it was done here to illustrate the principal of finding the argument for each root in exact form.
 
 
 ## Trigonometric and Hyperbolic Relationships
-In this section, we make use of Euler's identity, $e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)$, to prove sevral results involving trigonometric and hyperbolic functions. We haven't yet proven Euler's identity yet, but we will be able to do so later in the course).
+In this section, we make use of Euler's identity, $e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)$, to prove several results involving trigonometric and hyperbolic functions. We haven't yet proven Euler's identity yet, but we will be able to do so later in the course).
 
 ### Relationship Between Trigonometric and Hyperbolic Functions
 Starting from Euler's identity, we observe that:
@@ -440,7 +440,7 @@ The fact that De Moivre's theorem is *consistent* with Euler's identity is reass
 
 ```{admonition} Non-integer Values
 :class: note
-For non-integer values $(\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n$ is multiple-valued. The principle root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result $\textrm{cos}(n\theta) + i\textrm{sin}(n\theta)$ gives a single root to the problem, but not necessarily the principle root.
+For non-integer values $(\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n$ is multiple-valued. The principal root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result $\textrm{cos}(n\theta) + i\textrm{sin}(n\theta)$ gives a single root to the problem, but not necessarily the principal root.
 ```
 
 
@@ -487,7 +487,7 @@ $\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{\pi}{6} = \frac{11}{
 
 $\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{5}{6}\pi = \frac{19}{12}\pi$, which lies in the fourth quadrant.
 
-The principle argument is given by $\textrm{arg}(zw) = -\frac{5}{12}\pi$.
+The principal argument is given by $\textrm{arg}(zw) = -\frac{5}{12}\pi$.
 
 2. $(\frac{z_q}{z_2})^* = (\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}})^* = (\frac{r_1}{r_2}e^{-i(\theta_1 - \theta_2)^* = \frac{r_1}{r_2}e^{-i(\theta_1 - \theta_2)} = \frac{r_1e^{-i\theta_1}}{r_2e^{-i\theta_2}} = \frac{z_1^*}{z_2^*}$
 
