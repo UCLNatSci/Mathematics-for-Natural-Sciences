@@ -1,8 +1,6 @@
 # Series
 
-## Introduction to sequences and series
-
-[Link to a short video introducing sequences and series](https://www.youtube.com/watch?v=m5Yn4BdpOV0).
+## Introduction to Sequences and Series
 
 ### Sequences
 
@@ -1084,8 +1082,6 @@ One of the most straightforward to use is the [sandwich theorem](https://en.wiki
 (also known as the "squeeze theorem"), which can be used not only to demonstrate that a series is convergent, but also 
 to find upper and lower bounds for the value of the sum or even to find the value of the sum exactly.
 
-[A short video of D'Alembert's ratio test](https://www.youtube.com/watch?v=iy8mhbZTY7g).
-
 #### Example
 
 We will use D'Alembert's ratio test to determine whether $\sum_{k=1}^n \frac{k^2}{k!}$ converges.
@@ -1115,8 +1111,15 @@ Use D'Alembert's ratio test to determine if the following series converges:
 2. $\sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots$.
 
 
+### Comparison Test
 
+#### Prelimaries
 
+This test aims to compare the terms in our unknown series with terms of a well understood series - typically we will compare to series involving powers of 2 here.  If for instance we write a geometric series that term by term is greater than or equal to the terms in an unknown series, we can typically argue that our unkown series converges and even offer an upper limit on the total value of the series.  
+
+#### Statement
+
+We argue that a series $S_1 = \Sum_n a_n$ can be shown to converge if there exists a series $S_2 = \Sum_n b_n$ such that for all terms $b_n \geq a_n$ where series $S_2$ is known to converge, therefore series $S_1$ must also converge.  
 
 
 ### Absolute vs conditional convergence
