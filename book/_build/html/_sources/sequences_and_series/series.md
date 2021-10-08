@@ -975,7 +975,7 @@ rewrite the summand, show the result:
 We have already seen in the sections on geometric progression and method of differences that some series can approach 
 a finite value as the number of terms grows infinitely large.
 Series of this type are called **convergent**. 
-For instance, the series $\sum_{n=1}^N \frac{1}{4^n}$ approaches (converges) to $\frac{1}{3}$ as $N$ approaches $\infty$
+For instance, the series $\sum_{n=1}^N \left(\frac{1}{4}\right)^n$ approaches (converges) to $\frac{1}{3}$ as $N$ approaches $\infty$
 ($N \to \infty$).
 
 
