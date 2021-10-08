@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sequences and Series &#8212; Mathematics for Natural Sciences 1</title>
+    <title>Series &#8212; Mathematics for Natural Sciences 1</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -42,15 +42,15 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Differentiation" href="../Differentiation/Differentiation.html" />
@@ -73,6 +73,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -82,7 +86,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -99,7 +103,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Sequences and Series
+   Series
   </a>
  </li>
  <li class="toctree-l1">
@@ -176,11 +180,11 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notation-sequences-and-series">
-   Notation: sequences and series
+  <a class="reference internal nav-link" href="#introduction-to-sequences-and-series">
+   Introduction to Sequences and Series
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -211,12 +215,12 @@
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#series">
+    <a class="reference internal nav-link" href="#id1">
      Series
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
+      <a class="reference internal nav-link" href="#id2">
        Definition
       </a>
      </li>
@@ -228,8 +232,8 @@
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#questions">
-     Questions
+    <a class="reference internal nav-link" href="#questions-2-1">
+     Questions 2.1
     </a>
    </li>
   </ul>
@@ -245,7 +249,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
+      <a class="reference internal nav-link" href="#id3">
        Definition
       </a>
      </li>
@@ -260,8 +264,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Questions
+      <a class="reference internal nav-link" href="#questions-2-2-1">
+       Questions 2.2.1
       </a>
      </li>
     </ul>
@@ -292,8 +296,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       Questions
+      <a class="reference internal nav-link" href="#questions-2-2-2">
+       Questions 2.2.2
       </a>
      </li>
     </ul>
@@ -301,8 +305,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#binomial-expansion">
-   Binomial Expansion
+  <a class="reference internal nav-link" href="#binomial-expansion-and-theorem">
+   Binomial Expansion and Theorem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -326,13 +330,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pascal-s-triangle">
-       Pascal’s triangle
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#short-video-explanation">
-       Short video explanation
+      <a class="reference internal nav-link" href="#pascal-s-triangle-and-question-2-3-1">
+       Pascal’s triangle and question 2.3.1
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -346,8 +345,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
-       Questions
+      <a class="reference internal nav-link" href="#questions-2-3-2">
+       Questions 2.3.2
       </a>
      </li>
     </ul>
@@ -385,6 +384,23 @@
     <a class="reference internal nav-link" href="#limits-of-sequences">
      Limits of sequences
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Definition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#similarity-to-limits-of-a-function">
+       Similarity to limits of a function
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#infinite-series-as-limit-of-partial-sums">
+       Infinite series as limit of partial sums
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#combinaton-of-limits">
@@ -397,17 +413,17 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#functions-that-to-to-infinite-values">
-       Functions that to to infinite values
+      <a class="reference internal nav-link" href="#functions-that-tend-to-infinite-values">
+       Functions that tend to infinite values
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id7">
+        <a class="reference internal nav-link" href="#id6">
          Example 1
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id8">
+        <a class="reference internal nav-link" href="#id7">
          Example 2
         </a>
        </li>
@@ -421,8 +437,8 @@
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id9">
-     Questions
+    <a class="reference internal nav-link" href="#questions-2-4">
+     Questions 2.4
     </a>
    </li>
   </ul>
@@ -441,10 +457,27 @@
     <a class="reference internal nav-link" href="#rewriting-the-summation-index">
      Rewriting the summation index
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#demonstration-of-utility">
+       Demonstration of utility
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#generalisation">
+       Generalisation
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example">
+       Example
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id10">
-     Questions
+    <a class="reference internal nav-link" href="#questions-2-5">
+     Questions 2.5
     </a>
    </li>
   </ul>
@@ -463,6 +496,18 @@
     <a class="reference internal nav-link" href="#preliminary-test-for-divergence">
      Preliminary test for divergence
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Definition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-the-harmonic-series">
+       Example: the harmonic series
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#d-alembert-s-ratio-test">
@@ -480,21 +525,60 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example">
+      <a class="reference internal nav-link" href="#id9">
        Example
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id11">
-       Questions
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#absolute-vs-conditional-convergence">
-     Absolute vs conditional convergence
+    <a class="reference internal nav-link" href="#questions-2-6">
+     Questions 2.6
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparison-test">
+     Comparison Test
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Prelimaries
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       Statement
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id12">
+       Example
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#absolute-v-s-conditional-convergence">
+     Absolute v’s Conditional Convergence
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#motivation">
+       Motivation
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#explanation-of-conditional-convergence">
+       Explanation of conditional convergence
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id13">
+       Example
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -502,6 +586,48 @@
   <a class="reference internal nav-link" href="#solutions-for-this-chapter">
    Solutions for this chapter
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Questions 2.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Questions 2.2.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     Questions 2.2.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questions-2-3-1">
+     Questions 2.3.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-2-3-2">
+     Question 2.3.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     Questions 2.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     Questions 2.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     Questions 2.6
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -514,20 +640,20 @@
         
               <div>
                 
-  <div class="section" id="sequences-and-series">
-<h1>Sequences and Series<a class="headerlink" href="#sequences-and-series" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="notation-sequences-and-series">
-<h2>Notation: sequences and series<a class="headerlink" href="#notation-sequences-and-series" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="series">
+<h1>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction-to-sequences-and-series">
+<h2>Introduction to Sequences and Series<a class="headerlink" href="#introduction-to-sequences-and-series" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="sequences">
 <h3>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="overview">
 <h4>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h4>
-<p>Your intuition of a sequence will likely be correct.
+<p>Your intuition of a <a class="reference external" href="https://en.wikipedia.org/wiki/Sequence">sequence</a> will likely be correct.
 It can mean a sequence of letters, such as a word (e.g. A, U, S, T, R, A, L, I, A) or a DNA sequence
 (e.g. A, T, G, C, G, G, T, C, A, T, C).
 It can also be a sequence of numbers such as a telephone number, date of birth, something nonsensical
 (e.g. <span class="math notranslate nohighlight">\(181291, 2, -4309, \sqrt{7}\)</span>) or the prime numbers: <span class="math notranslate nohighlight">\(2, 3, 5, 7, 11, \dots\)</span>.
-Here, the dots indicate that the sequence goes on infinitely.</p>
+Here, the dots indicate that the <a class="reference external" href="https://whatis.techtarget.com/definition/infinite-sequence">sequence goes on infinitely</a>.</p>
 <p>Each part of the sequence is called a <strong>term</strong>.
 Each sequence has a specific ordering of terms.
 For example, the series <span class="math notranslate nohighlight">\(1,2,3,4\)</span> is different from the series <span class="math notranslate nohighlight">\(4,3,2,1\)</span> much in the same way that the telephone number
@@ -543,19 +669,33 @@ provides a firm grounding for this endeavour.</p>
 This sequence is generated by starting with the sequence <span class="math notranslate nohighlight">\(0,1\)</span> and finding the next number
 in the sequence by adding the two previous numbers together, e.g. <span class="math notranslate nohighlight">\(0+1=\mathbf{1}\)</span>, <span class="math notranslate nohighlight">\(1+1=\mathbf{2}\)</span>, <span class="math notranslate nohighlight">\(1+2=\mathbf{3}\)</span>,
 <span class="math notranslate nohighlight">\(2+3=\mathbf{5}\)</span>, <span class="math notranslate nohighlight">\(3+5=\mathbf{8}\)</span>, etc.</p>
+<p><strong>Python code for Fibonacci sequence:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">u1</span><span class="p">,</span> <span class="n">u2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="c1"># first two values</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">u1</span><span class="p">)</span> <span class="c1"># print values     </span>
+       <span class="n">nth</span> <span class="o">=</span> <span class="n">u1</span> <span class="o">+</span> <span class="n">u2</span> <span class="c1"># recurrence relation             </span>
+       <span class="n">u1</span> <span class="o">=</span> <span class="n">u2</span> <span class="c1"># update values       </span>
+       <span class="n">u2</span> <span class="o">=</span> <span class="n">nth</span> <span class="c1"># update values       </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+<p>You can use <a class="reference external" href="https://skulpt.org/">this webpage</a> to run basic python scripts.</p>
 </div>
 <div class="section" id="definition">
 <h4>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h4>
-<div class="admonition-definition admonition">
-<p class="admonition-title">Definition</p>
+<div class="admonition-sequence admonition">
+<p class="admonition-title">Sequence</p>
 <p>A <strong>sequence</strong> is a set of terms where order matters, written as follows:</p>
-<div class="math notranslate nohighlight">
-\[    u_1, u_2, \dots, u_n\]</div>
+<div class="math notranslate nohighlight" id="equation-sequencedef">
+<span class="eqno">(20)<a class="headerlink" href="#equation-sequencedef" title="Permalink to this equation">¶</a></span>\[    u_1, u_2, \dots, u_n\]</div>
 </div>
 <p>Here, the size of the sequence (the number of terms) is <span class="math notranslate nohighlight">\(n\)</span>.
 The <span class="math notranslate nohighlight">\(i\)</span>-th term in the sequence is <span class="math notranslate nohighlight">\(u_i\)</span> where <span class="math notranslate nohighlight">\(i = 1, 2, \dots, n\)</span>.
-It must be noted that the index notation <span class="math notranslate nohighlight">\(i\)</span> is an arbitrarily chosen, one might use other letters such as <span class="math notranslate nohighlight">\(j\)</span> or <span class="math notranslate nohighlight">\(k\)</span>
-or even Greek letters such as <span class="math notranslate nohighlight">\(\alpha\)</span> or <span class="math notranslate nohighlight">\(\sigma\)</span>.
+It must be noted that the index notation <span class="math notranslate nohighlight">\(i\)</span> is an arbitrarily chosen, one might use other letters such as <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(k\)</span> or <span class="math notranslate nohighlight">\(n\)</span>,
+or even <a class="reference external" href="https://en.wikipedia.org/wiki/Greek_alphabet">Greek letters</a> such as <span class="math notranslate nohighlight">\(\alpha\)</span> or <span class="math notranslate nohighlight">\(\sigma\)</span>.
+The same is also true for the term <span class="math notranslate nohighlight">\(u_k\)</span>, you will see other letters such as <span class="math notranslate nohighlight">\(x_k\)</span> and <span class="math notranslate nohighlight">\(r_k\)</span>.
 It is also conventional to express a series in brackets: <span class="math notranslate nohighlight">\((u_1, u_2, \dots, u_n)\)</span>.
 As we saw in the previous examples, sequences can have finite <span class="math notranslate nohighlight">\(n&lt;\infty\)</span> (e.g. telephone numbers) or infinite sizes
 <span class="math notranslate nohighlight">\(n \to \infty\)</span> (e.g. Fibonacci sequence and prime numbers).</p>
@@ -566,8 +706,8 @@ As we saw in the previous examples, sequences can have finite <span class="math 
 <a class="reference external" href="https://en.wikipedia.org/wiki/Recurrence_relation">recurrence relation</a>, which sets out the
 rule(s) to find the sequence.
 For example, the Fibonacci sequence can be expressed as the formula</p>
-<div class="math notranslate nohighlight">
-\[u_i=u_{i-1}+u_{i-2}\]</div>
+<div class="math notranslate nohighlight" id="equation-recreldef">
+<span class="eqno">(21)<a class="headerlink" href="#equation-recreldef" title="Permalink to this equation">¶</a></span>\[u_i=u_{i-1}+u_{i-2}\]</div>
 <p>which specifies the <span class="math notranslate nohighlight">\(i\)</span>-th term provided we have the term for <span class="math notranslate nohighlight">\(i-1\)</span> and <span class="math notranslate nohighlight">\(i-2\)</span>.
 It is because of this formula that it is necessary to provide the first two terms of the sequence, <span class="math notranslate nohighlight">\(u_1=0\)</span> and <span class="math notranslate nohighlight">\(u_2=1\)</span>,
 to find the rest of the sequence.
@@ -577,9 +717,21 @@ the 299-th term is <span class="math notranslate nohighlight">\(u_{299} = 137347
 300-term is is <span class="math notranslate nohighlight">\(u_{300} = 222232244629420445529739893461909967206666939096499764990979600\)</span>.</p>
 <p>Note that the formula <span class="math notranslate nohighlight">\(u_i=u_{i-1}+u_{i-2}\)</span> will generate a different sequence to the Fibonacci sequence when the
 starting terms ar different (e.g. <span class="math notranslate nohighlight">\(u_1=10\)</span> and <span class="math notranslate nohighlight">\(u_2=11\)</span>).
-For an example, convince yousrelf that the formule <span class="math notranslate nohighlight">\(u_i = 2 + u_{i-1}\)</span> provides the sequence of even numbers when
+For an example, convince yourself that the formule <span class="math notranslate nohighlight">\(u_i = 2 + u_{i-1}\)</span> provides the sequence of even numbers when
 <span class="math notranslate nohighlight">\(u_1=2\)</span> and the sequence of odd numbers when <span class="math notranslate nohighlight">\(u_1=1\)</span>.</p>
-<p>As a final example, the formula <span class="math notranslate nohighlight">\(u_i = 2 + 3 \times (i-2)\)</span> generates the infinite sequence: <span class="math notranslate nohighlight">\(-1, 2, 5, 8, 11, 14, 17, 20, \dots\)</span>.
+<p><strong>Pythod code for even numbers:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># first value</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="c1"># print values     </span>
+       <span class="n">u</span> <span class="o">=</span> <span class="n">u</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># recurrence relation                   </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+<p>Can you edit this code to produce the sequence of odd numbers?</p>
+<p>As a final example, convince yourself that the formula <span class="math notranslate nohighlight">\(u_i = 2 + 3 \times (i-2)\)</span> generates the infinite sequence:
+<span class="math notranslate nohighlight">\(-1, 2, 5, 8, 11, 14, 17, 20, \dots\)</span>.
 Note that it is not necessary to provide the first term in the sequence because the formula does not depend on the previous
 term(s) in the sequence.
 Also notice that the sequence grows without bound.
@@ -587,44 +739,58 @@ That is, each term is larger than each of the previous terms.
 In this way the sequence grows to an infinite value as <span class="math notranslate nohighlight">\(i\)</span> tends to infinity.</p>
 <p>Recurrance relations, although simple, can produce surprisingly complicated behaviours.
 For further reading you may like to study the <a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_map">logistic map</a>:</p>
-<div class="math notranslate nohighlight">
-\[u_{i+1} = r u_{i} (1 - u_i) \ ,\]</div>
+<div class="math notranslate nohighlight" id="equation-logisticmap">
+<span class="eqno">(22)<a class="headerlink" href="#equation-logisticmap" title="Permalink to this equation">¶</a></span>\[u_{i+1} = r u_{i} (1 - u_i) \ ,\]</div>
 <p>where <span class="math notranslate nohighlight">\(r\)</span> is a constant.
 This equation (which models animal population growth) openned up the field of chaos theory.</p>
 </div>
 </div>
-<div class="section" id="series">
-<h3>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h3>
-<p>Series play a central role in calculus and are the main reason why we introduce sequences in the section above.</p>
 <div class="section" id="id1">
-<h4>Definition<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h3>Series<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Series_(mathematics)">Series</a>
+play a central role in calculus and are the main reason why we introduce sequences in the section above.</p>
+<div class="section" id="id2">
+<h4>Definition<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>Series are simply defined by the sum of a sequence.</p>
-<div class="admonition-definition admonition">
-<p class="admonition-title">Definition</p>
+<div class="admonition-series admonition">
+<p class="admonition-title">Series</p>
 <p>A <strong>series</strong> is the sum of a sequence of terms, written as follows:</p>
-<div class="math notranslate nohighlight">
-\[\sum_{i=1}^n u_i = u_1 + u_2 + \ldots + u_n.\]</div>
+<div class="math notranslate nohighlight" id="equation-seriesdef">
+<span class="eqno">(23)<a class="headerlink" href="#equation-seriesdef" title="Permalink to this equation">¶</a></span>\[\sum_{i=m}^n u_i = u_1 + u_2 + \ldots + u_n \,\]</div>
 </div>
-<p>The subscript numbering does not have to start from 1.
-We can also replace the upper value <span class="math notranslate nohighlight">\(n\)</span> with <span class="math notranslate nohighlight">\(\infty\)</span> for an infinite series.
-For example, the series of the infinite sequence <span class="math notranslate nohighlight">\((u_1,u_2,u_3,\dots)\)</span> is <span class="math notranslate nohighlight">\(\sum_{i=1}^\infty u_i\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(m \le n\)</span>, and usually equal to one (<span class="math notranslate nohighlight">\(m=1\)</span>).</p>
+<p>We can replace the upper value <span class="math notranslate nohighlight">\(n\)</span> with <span class="math notranslate nohighlight">\(\infty\)</span> for an <a class="reference external" href="https://www.mathsisfun.com/algebra/infinite-series.html">infinite series</a>.
+For example, the series of the infinite sequence <span class="math notranslate nohighlight">\((u_1,u_2,u_3,\dots)\)</span> is written as <span class="math notranslate nohighlight">\(\sum_{i=1}^\infty u_i\)</span>.
+We say that <span class="math notranslate nohighlight">\(\sum_{i=m}^n u_i\)</span> for <span class="math notranslate nohighlight">\(n &lt; \infty\)</span> is a partial sum because the series is partially added up to just the <span class="math notranslate nohighlight">\(n\)</span>-th term.</p>
+<p><strong>Python code for the series of the sequence with recurrence relation</strong> <span class="math notranslate nohighlight">\(u_k = u_{k-1}+\frac{1}{2}\)</span> with <span class="math notranslate nohighlight">\(u_1=0\)</span>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># first value of sequence</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># first value of series</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span> <span class="c1"># print series value    </span>
+       <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="c1"># update sequence</span>
+       <span class="n">ser</span> <span class="o">=</span> <span class="n">ser</span> <span class="o">+</span> <span class="n">seq</span> <span class="c1"># update series                   </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="summations">
 <h4>Summations<a class="headerlink" href="#summations" title="Permalink to this headline">¶</a></h4>
-<p>Character <span class="math notranslate nohighlight">\(\Sigma\)</span> is the Greek letter sigma, written in upper case, and is used to mean “sum”.
+<p>Character <span class="math notranslate nohighlight">\(\Sigma\)</span> is the Greek letter sigma, written in upper case, and denotes a <a class="reference external" href="https://en.wikipedia.org/wiki/Summation">summation</a>.
 We would read the expression above as “the sum of <span class="math notranslate nohighlight">\(u_i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=n\)</span>”.
 For example the sum of <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=4\)</span> is <span class="math notranslate nohighlight">\(\sum_{i=1}^4 i = 1 + 2 + 3 + 4 = 10\)</span> and the sum of <span class="math notranslate nohighlight">\(2 i\)</span> from
 <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=4\)</span> is <span class="math notranslate nohighlight">\(\sum_{i=1}^4 2 i = 2 + 4 + 6 + 8 = 20\)</span>.
 From this example it should be clear that, in general:</p>
-<div class="math notranslate nohighlight">
-\[\sum_{i=1}^n a u_i = a \sum_{i=1}^n u_i\]</div>
+<div class="math notranslate nohighlight" id="equation-summationrule">
+<span class="eqno">(24)<a class="headerlink" href="#equation-summationrule" title="Permalink to this equation">¶</a></span>\[\sum_{i=1}^n a u_i = a \sum_{i=1}^n u_i\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is a constant number and <span class="math notranslate nohighlight">\(u_i\)</span> is a function of <span class="math notranslate nohighlight">\(i\)</span> (i.e. a number that changes with the value of <span class="math notranslate nohighlight">\(i\)</span>).
 We note that <span class="math notranslate nohighlight">\(\sum_{i=1}^n a + u_i\)</span> does not equal (<span class="math notranslate nohighlight">\(\ne\)</span>) to <span class="math notranslate nohighlight">\(a + \sum_{i=1}^n u_i\)</span>.
 For example, <span class="math notranslate nohighlight">\(\sum_{i=1}^4 1+i = 2 + 3 + 4 + 5 = 14\)</span>.</p>
 </div>
 </div>
-<div class="section" id="questions">
-<h3>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="questions-2-1">
+<h3>Questions 2.1<a class="headerlink" href="#questions-2-1" title="Permalink to this headline">¶</a></h3>
 <p>Write the following expressions using as a sum (<span class="math notranslate nohighlight">\(\Sigma\)</span> notation) without evaluating the sum:</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(1 + 5 + 9 + 13 + 17 +21\)</span></p></li>
@@ -635,45 +801,77 @@ For example, <span class="math notranslate nohighlight">\(\sum_{i=1}^4 1+i = 2 +
 </div>
 <div class="section" id="arithmetic-and-geometric-progressions">
 <h2>Arithmetic and Geometric Progressions<a class="headerlink" href="#arithmetic-and-geometric-progressions" title="Permalink to this headline">¶</a></h2>
-<p>We now introduce the arithmetic progression (otherwise known as the arithmetic sequence) and the geometric progression
+<p>We now introduce the <a class="reference external" href="https://en.wikipedia.org/wiki/Arithmetic_progression">arithmetic progression</a> (otherwise known as
+the arithmetic sequence) and the <a class="reference external" href="https://en.wikipedia.org/wiki/Geometric_progression">geometric progression</a>
 (otherwise known as the geometric sequence).
 These sequences have the nice property that their series can be solved.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Tj89FA-d0f8">Link to a short video on arithmetic and geometric progressions</a>.</p>
 <div class="section" id="arithmetic-progression">
 <h3>Arithmetic progression<a class="headerlink" href="#arithmetic-progression" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id2">
-<h4>Definition<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id3">
+<h4>Definition<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <div class="admonition-arithmetic-progression admonition">
 <p class="admonition-title">Arithmetic Progression</p>
 <p>An arithmetic progression (otherwise known as an arithmetic sequence) is a sequence of <span class="math notranslate nohighlight">\(n\)</span> terms which all have a “common
 difference” <span class="math notranslate nohighlight">\(d\)</span>, written as follows:</p>
-<div class="math notranslate nohighlight">
-\[a, a + d, a + 2d, a + 3d, \dots, a + (n-1) d\]</div>
+<div class="math notranslate nohighlight" id="equation-apdef">
+<span class="eqno">(25)<a class="headerlink" href="#equation-apdef" title="Permalink to this equation">¶</a></span>\[a, a + d, a + 2d, a + 3d, \dots, a + (n-1) d \]</div>
 </div>
-<p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.</p>
-<p>Using the notation for sequences in the previous section, the <span class="math notranslate nohighlight">\(i\)</span>-th term of the arithmetic progression is
-<span class="math notranslate nohighlight">\(u_i=a+(i-1)d\)</span> for <span class="math notranslate nohighlight">\(i=1,2,\dots,n\)</span>.
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.
 An example is the sequence <span class="math notranslate nohighlight">\(3,5,7,9,11,13\)</span> in which the first term is <span class="math notranslate nohighlight">\(a=3\)</span>, the common difference is <span class="math notranslate nohighlight">\(d=2\)</span> and the
 number of terms is <span class="math notranslate nohighlight">\(n=6\)</span>.
 An infinite arithmetic progression is given by the case where <span class="math notranslate nohighlight">\(n \to \infty\)</span>.</p>
+<p>The <span class="math notranslate nohighlight">\(i\)</span>-th term of the arithmetic progression can be expressed as the following recurrence relation:</p>
+<div class="math notranslate nohighlight" id="equation-aprrdef">
+<span class="eqno">(26)<a class="headerlink" href="#equation-aprrdef" title="Permalink to this equation">¶</a></span>\[u_i=a+(i-1)d\]</div>
+<p>for <span class="math notranslate nohighlight">\(i=1,2,\dots,n\)</span>.</p>
+<p><strong>Python code for arithmetic progression:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1"># first value</span>
+<span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span> <span class="c1"># commmon difference</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># first value of sequence</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="c1"># print series value    </span>
+       <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span> <span class="o">+</span> <span class="n">d</span> <span class="c1"># update sequence                 </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+<p>You can play around with the behaviouur of different arithmetic progessions by changing the values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(d\)</span>.</p>
 </div>
 <div class="section" id="solving-the-series-of-arithmetic-progessions">
 <h4>Solving the series of arithmetic progessions<a class="headerlink" href="#solving-the-series-of-arithmetic-progessions" title="Permalink to this headline">¶</a></h4>
 <p>Series of arithmetic progessions can be solved (i.e. reduced to a number).
-The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of an arithmetic progression <span class="math notranslate nohighlight">\(u_i=a+(i-1)d\)</span> is:</p>
-<div class="math notranslate nohighlight">
-\[ S_n = \sum_{i=1}^n u_i = \sum_{i=1}^n a + (i -1 ) d = \frac{n}{2} \big( 2 a + (n - 1) d \big) = \frac{n}{2} (a + L)\]</div>
+The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of an arithmetic progression with recurrence relation <span class="math notranslate nohighlight">\(u_i=a+(i-1)d\)</span> is:</p>
+<div class="math notranslate nohighlight" id="equation-seriessol">
+<span class="eqno">(27)<a class="headerlink" href="#equation-seriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i = \sum_{i=1}^n a + (i -1 ) d = \frac{n}{2} \big( 2 a + (n - 1) d \big) = \frac{n}{2} (a + L)\]</div>
 <p>where <span class="math notranslate nohighlight">\(L = a + (n-1) d\)</span> is the last term in the series.</p>
-<p>Notice that as <span class="math notranslate nohighlight">\(n\)</span> (the number of terms) increases, the terms of arithmetic progessions grow without bound.
+<p>Notice in equation <a class="reference internal" href="#equation-seriessol">(27)</a> that as <span class="math notranslate nohighlight">\(n\)</span> (the number of terms) increases, the terms of arithmetic progessions grow without bound.
 That is, as <span class="math notranslate nohighlight">\(n\)</span> approaches <span class="math notranslate nohighlight">\(\infty\)</span>, the arithmetic progession approaches <span class="math notranslate nohighlight">\(\infty\)</span> if <span class="math notranslate nohighlight">\(d&gt;0\)</span> and approaches <span class="math notranslate nohighlight">\(-\infty\)</span> if
 <span class="math notranslate nohighlight">\(d&lt;0\)</span>.
 In these cases we say that the series diverges (more on this later!).
 Infinite arithmetic progressions always diverge, the proof of which can be found via
 <a class="reference external" href="https://math.stackexchange.com/questions/3334553/proof-that-arithmetic-series-diverges">this link</a>
 (although further reading is required!).</p>
+<p><strong>Python code for the series of the arithmetic progression:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1"># first value</span>
+<span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span> <span class="c1"># commmon difference</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># first value of sequence</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># first value of series</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span> <span class="c1"># print series value    </span>
+       <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span> <span class="o">+</span> <span class="n">d</span> <span class="c1"># update sequence</span>
+       <span class="n">ser</span> <span class="o">=</span> <span class="n">ser</span> <span class="o">+</span> <span class="n">seq</span> <span class="c1"># update series                   </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+<p>You can use this code to convince yourself that the series of arithmetic progressions grow without bound for large <span class="math notranslate nohighlight">\(n\)</span>.</p>
 </div>
 <div class="section" id="proof-of-the-solution-of-the-series-of-arithmetic-progressions">
 <h4>Proof of the solution of the series of arithmetic progressions<a class="headerlink" href="#proof-of-the-solution-of-the-series-of-arithmetic-progressions" title="Permalink to this headline">¶</a></h4>
-<p>Fromm the equation foor <span class="math notranslate nohighlight">\(S_n\)</span> write down the reversed series below the original:</p>
+<p>From equation <a class="reference internal" href="#equation-seriessol">(27)</a> write down the reversed series below the original:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}S_n = a + (a+d) + (a+2d) + \dots + \Big( a + (n-3) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-1) d \Big) \\
 S_n = a + \Big( a + (n-1) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-3) d \Big) + \dots + (a+2d) + (a+d) + a \ .\end{split}\]</div>
@@ -687,8 +885,8 @@ S_n = a + \Big( a + (n-1) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-3) d 
 that Gauss (a famous mathematician) used a similar approach as a schoolboy back in the 1780s to find the answer to
 <span class="math notranslate nohighlight">\(1+2+\dots+99+100\)</span>.</p>
 </div>
-<div class="section" id="id3">
-<h4>Questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="questions-2-2-1">
+<h4>Questions 2.2.1<a class="headerlink" href="#questions-2-2-1" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
 <li><p>How many terms are in the sequence <span class="math notranslate nohighlight">\(54, 52, 50,\dots, 18\)</span>?</p></li>
 <li><p>Find the sum of the first 30 terms of the arithmetic progression with the first three terms <span class="math notranslate nohighlight">\(3,9,15\)</span>.</p></li>
@@ -707,29 +905,55 @@ that Gauss (a famous mathematician) used a similar approach as a schoolboy back 
 <p class="admonition-title">Geometric Progression</p>
 <p>A geometric progression (otherwise known as an geometric sequence) is a sequence of <span class="math notranslate nohighlight">\(n\)</span> terms which have “common ratio”
 <span class="math notranslate nohighlight">\(r\)</span>, written as follows:</p>
-<div class="math notranslate nohighlight">
-\[a, a r, a r^2, a r^3, \dots , a r^{n-1}\]</div>
+<div class="math notranslate nohighlight" id="equation-gpdef">
+<span class="eqno">(28)<a class="headerlink" href="#equation-gpdef" title="Permalink to this equation">¶</a></span>\[a, a r, a r^2, a r^3, \dots , a r^{n-1}\]</div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.
 Using the notation for sequences in the previous section, the <span class="math notranslate nohighlight">\(i\)</span>-th term of the geometric progression is
 <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> for <span class="math notranslate nohighlight">\(i=1,2,\dots,n\)</span>.
 In other words, the next term in the geometric progression can be found by multiplying the previous term by the common
-ratio <span class="math notranslate nohighlight">\(r\)</span>, given by the formula <span class="math notranslate nohighlight">\(u_i = r u_{i-1}\)</span> where <span class="math notranslate nohighlight">\(u_1=a\)</span>.
+ratio <span class="math notranslate nohighlight">\(r\)</span>, given by the recurrence relation <span class="math notranslate nohighlight">\(u_i = r u_{i-1}\)</span> where <span class="math notranslate nohighlight">\(u_1=a\)</span>.
 An example is the sequence <span class="math notranslate nohighlight">\(24,−12,6,−3,1.5\)</span> in which the first term is <span class="math notranslate nohighlight">\(a=2\)</span>, the common ratio is <span class="math notranslate nohighlight">\(r=−\frac{1}{2}\)</span> and
 the number of terms is <span class="math notranslate nohighlight">\(n=5\)</span>.</p>
+<p><strong>Python code for the geometric progression:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">24</span> <span class="c1"># first value</span>
+<span class="n">r</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="c1"># commmon difference</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># first value of sequence</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="c1"># print series value    </span>
+       <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span> <span class="o">*</span> <span class="n">r</span> <span class="c1"># update sequence                  </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="solving-the-series-of-geometric-progessions">
 <h4>Solving the series of geometric progessions<a class="headerlink" href="#solving-the-series-of-geometric-progessions" title="Permalink to this headline">¶</a></h4>
 <p>Like arithmetic progessions, the series of geometric progressions can be solved (i.e. reduced to a number).
 The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of a geometric progression <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> is:</p>
-<div class="math notranslate nohighlight">
-\[ S_n = \sum_{i=1}^n u_i = a r^{i -1} = a \frac{1 - r^n}{1-r}\]</div>
+<div class="math notranslate nohighlight" id="equation-gpseriessol">
+<span class="eqno">(29)<a class="headerlink" href="#equation-gpseriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i =  \sum_{i=1}^n a r^{i -1} = a \frac{1 - r^n}{1-r} \]</div>
+<p><strong>Python code for the series of the geometric progression:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">24</span> <span class="c1"># first value</span>
+<span class="n">r</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="c1"># commmon difference</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># first value of sequence</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">seq</span> <span class="c1"># first value of series</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="c1"># print series value    </span>
+       <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span> <span class="o">*</span> <span class="n">r</span> <span class="c1"># update sequence   </span>
+       <span class="n">ser</span> <span class="o">=</span> <span class="n">ser</span> <span class="o">+</span> <span class="n">seq</span> <span class="c1"># update sequence               </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="proof-of-the-solution-of-the-series-of-geometric-progressions">
 <h4>Proof of the solution of the series of geometric progressions<a class="headerlink" href="#proof-of-the-solution-of-the-series-of-geometric-progressions" title="Permalink to this headline">¶</a></h4>
-<p>Starting from the the definition of the series:</p>
+<p>Starting from equation <a class="reference internal" href="#equation-gpdef">(28)</a>, the definition of the geometric progression:</p>
 <div class="math notranslate nohighlight">
-\[S_n = a + a r + a r^2 + \dots + a r^{n-3} + a r^{n-2} + a r^{n-1} = a \Big(1 + r + r^2 + \dots + r^{n-3} + r^{n-2} +
+\[S_n = a + a r + a r^2 + \dots + a r^{n-3} + a r^{n-2} + a r^{n-1} = a \Big(1 + r + r^2 + \dots + r^{n-3} + r^{n-2} + 
 r^{n-1} \big) \ ,\]</div>
 <p>we multiply by <span class="math notranslate nohighlight">\(r\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -745,92 +969,97 @@ r^{n-1} \big) \ ,\]</div>
 This can be deduced by the following reasoning.
 If <span class="math notranslate nohighlight">\(r &gt; 1\)</span> or <span class="math notranslate nohighlight">\(r &lt; -1\)</span> (which is to say that the absolute value <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span>) then the <span class="math notranslate nohighlight">\(i\)</span>-th term of the
 geometric progression <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> becomes a very large positive or negative number.
-In this case we say that the series <strong>diverges</strong>.
+In this case we say that the series <a class="reference external" href="https://en.wikipedia.org/wiki/Divergent_series"><strong>diverges</strong></a>.
 Conversely, if <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span>  then <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> becomes a very small positive or negative number.
-In this case we say that the series <strong>converges</strong>.
-Thus we conclude that</p>
+In this case we say that the series <a class="reference external" href="https://en.wikipedia.org/wiki/Convergent_series"><strong>converges</strong></a>.
+The topics of divergence and convergence are explored in detail later in thte course.
+Thus we conclude that:</p>
 <ul class="simple">
 <li><p>if <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span> then <span class="math notranslate nohighlight">\(S_n\)</span> converges and approaches <span class="math notranslate nohighlight">\(\frac{a}{1-r}\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>,</p></li>
 <li><p>if <span class="math notranslate nohighlight">\(\lvert r \rvert &gt; 1\)</span> then <span class="math notranslate nohighlight">\(S_n\)</span> diverges and approaches <span class="math notranslate nohighlight">\(\infty\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>.</p></li>
 </ul>
 </div>
-<div class="section" id="id5">
-<h4>Questions<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="questions-2-2-2">
+<h4>Questions 2.2.2<a class="headerlink" href="#questions-2-2-2" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
-<li><p>Find the sum of the first five terms in a geometric progression with first term 27 and common ration is $\frac{2}{3}?</p></li>
+<li><p>Find the sum of the first five terms in a geometric progression with first term 27 and common ration is <span class="math notranslate nohighlight">\(\frac{2}{3}\)</span>?</p></li>
 <li><p>Evaluate <span class="math notranslate nohighlight">\( \sum_{n=1}^\infty 729 \Big(\frac{1}{3} \Big)^{n-1}\)</span>.</p></li>
 <li><p>The first term of a geometric progression is <span class="math notranslate nohighlight">\(8\)</span>. Given that the sum of the first three terms is 38, find the two possible values of the common ratio.</p></li>
 <li><p>A geometric progression has first term <span class="math notranslate nohighlight">\(27\)</span> and common ratio of <span class="math notranslate nohighlight">\(r=\frac{4}{3}\)</span>. Find the least number of terms that the sequence can have if its sum exceeds <span class="math notranslate nohighlight">\(550\)</span>.</p></li>
-<li><p>By writing the recurring decimal <span class="math notranslate nohighlight">\(0.123123123\dots\)</span> as a geometric progression, show that it can be expressed as the fraction \frac{41}{333}.</p></li>
+<li><p>By writing the recurring decimal <span class="math notranslate nohighlight">\(0.123123123\dots\)</span> as a geometric progression, show that it can be expressed as the fraction <span class="math notranslate nohighlight">\(\frac{41}{333}\)</span>.</p></li>
 </ol>
 </div>
 </div>
 </div>
-<div class="section" id="binomial-expansion">
-<h2>Binomial Expansion<a class="headerlink" href="#binomial-expansion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="binomial-expansion-and-theorem">
+<h2>Binomial Expansion and Theorem<a class="headerlink" href="#binomial-expansion-and-theorem" title="Permalink to this headline">¶</a></h2>
 <p>Throughout your scientific journey you will likely come across a time where you have to solve an equation like <span class="math notranslate nohighlight">\((x+y)^n\)</span>.
 We will know describe how you go about such a task and will highlight some interesting mathematical relations.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=iPwrDWQ7hPc">Link to a short video on the binomial theorem</a>.</p>
 <div class="section" id="definition-of-a-binomial">
 <h3>Definition of a binomial<a class="headerlink" href="#definition-of-a-binomial" title="Permalink to this headline">¶</a></h3>
-<p>Polynomials are expressions such as <span class="math notranslate nohighlight">\(a_0 + a_1 x + a_2 x^2 + a_3 x^3\)</span> where <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span> and <span class="math notranslate nohighlight">\(a_3\)</span> are the
-polynomial coefficients and <span class="math notranslate nohighlight">\(x\)</span> is the variable.
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Polynomial">Polynomials</a> are expressions such as <span class="math notranslate nohighlight">\(a_0 + a_1 x + a_2 x^2 + a_3 x^3\)</span> where
+<span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span> and <span class="math notranslate nohighlight">\(a_3\)</span> are the polynomial coefficients and <span class="math notranslate nohighlight">\(x\)</span> is the variable.
 They can have multiple variables (e.g. <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>) such as <span class="math notranslate nohighlight">\(a_0 + a_1 x + a_2 x y + a_3 x y^2\)</span>.
-A binomial is a polynomial with two terms (e.g. x + y, x^3 + 1,  4.3 x^5 - 2.2 y, etc).
-Binomial expansion refers to the computation of powers of binomials:</p>
-<div class="math notranslate nohighlight">
-\[(x+y)^n\]</div>
+A <a class="reference external" href="https://en.wikipedia.org/wiki/Binomial_(polynomial)">binomial</a> is a polynomial with two terms (e.g. x + y, x^3 + 1,
+4.3 x^5 - 2.2 y, etc).
+<a class="reference external" href="https://en.wikipedia.org/wiki/Binomial_theorem">Binomial expansion</a> refers to the computation of powers of binomials:</p>
+<div class="math notranslate nohighlight" id="equation-binomialexpansion">
+<span class="eqno">(30)<a class="headerlink" href="#equation-binomialexpansion" title="Permalink to this equation">¶</a></span>\[(x+y)^n\]</div>
 <p>where <span class="math notranslate nohighlight">\(n\)</span> is a real number.
-This is a general way to express a binomial expansion - the expansion of more complicated binomials can be “swapped in”
-for the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> (e.g. <span class="math notranslate nohighlight">\(x\to 10 x^3\)</span> and <span class="math notranslate nohighlight">\(y \to \sqrt{17}\)</span>).
-In this section we will investigate the binomial expansion only for the case where <span class="math notranslate nohighlight">\(n\)</span> is a noon-negative integer
-(e.g. <span class="math notranslate nohighlight">\(n=0,1,2,3,\dots\)</span>).</p>
+Equation <a class="reference internal" href="#equation-binomialexpansion">(30)</a> is a general way to express a binomial expansion - the expansion of more complicated binomials can consider by
+“swapping in” other functions for the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> (e.g. <span class="math notranslate nohighlight">\(x\to 10 x^3\)</span> and <span class="math notranslate nohighlight">\(y \to \sqrt{17} e^x\)</span>).
+In this section we will investigate the binomial expansion only for the case where <span class="math notranslate nohighlight">\(n\)</span> is a non-negative
+<a class="reference external" href="https://en.wikipedia.org/wiki/Integer">integer</a> (e.g. <span class="math notranslate nohighlight">\(n=0,1,2,3,\dots\)</span>).</p>
 </div>
 <div class="section" id="the-binomial-formula">
 <h3>The binomial formula<a class="headerlink" href="#the-binomial-formula" title="Permalink to this headline">¶</a></h3>
 <p>We now set out to calculate the polynomials produced by the expansion of powers of a binomial.</p>
 <div class="section" id="expanding-low-powers-of-binomials-by-hand">
 <h4>Expanding low powers of binomials by hand<a class="headerlink" href="#expanding-low-powers-of-binomials-by-hand" title="Permalink to this headline">¶</a></h4>
-<p>It is possible to expand low powers of binomials (i.e. <span class="math notranslate nohighlight">\(n=0,1,2,3,4,5\)</span>) by hand:</p>
+<p>It is possible to expand low powers of binomials (i.e. <span class="math notranslate nohighlight">\(n=0,1,2,3,4,5\)</span>), equation <a class="reference internal" href="#equation-binomialexpansion">(30)</a>, by hand:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}(x+y)^0 &amp;= 1 \ , \\
 (x+y)^1 &amp;= x+y \ , \\
 (x+y)^2 &amp;= (x+y)(x+y) = x^2 + 2 x y + y^2 \ , \\
-(x+y)^3 &amp;= (x+y) (x+y)^2 = x^3 + 3 x^2 y + 2 x y^2 + y^3 \ , \\
-(x+y)^4 &amp;= (x+y) (x+y)^3 = x^4 + 4 x^3 y + 6 x^2 y^2 + 4 x y^3 + y^4 \ , \\
+(x+y)^3 &amp;= (x+y) (x+y)^2 = x^3 + 3 x^2 y + 2 x y^2 + y^3 \ , \\ 
+(x+y)^4 &amp;= (x+y) (x+y)^3 = x^4 + 4 x^3 y + 6 x^2 y^2 + 4 x y^3 + y^4 \ , \\ 
 (x+5)^5 &amp;= (x+y) (x+y)^4 = x^5 + 5 x^4 y + 10 x^3 y^2 + 10 x^2 y^3 + 5 x y^4 + y^5 \ .\end{split}\]</div>
 <p>You can see symmetry and patterns in the polynomials on the right hand side of the expansions.
 For instance, the combined powers of the <span class="math notranslate nohighlight">\(x\)</span>’s and <span class="math notranslate nohighlight">\(y\)</span>’s are equal to the power of expansion <span class="math notranslate nohighlight">\(n\)</span> and the total number
 of terms is <span class="math notranslate nohighlight">\(n+1\)</span>.
 But what is the pattern for the coefficients?
-The answer to this is not trivial and is a fundamental sequence of numbers - the binomial coefficients.</p>
+The answer to this is not trivial and is a fundamental sequence of numbers - the
+<a class="reference external" href="https://en.wikipedia.org/wiki/Binomial_coefficient">binomial coefficients</a>.</p>
 </div>
 <div class="section" id="the-binomial-coefficient">
 <h4>The binomial coefficient<a class="headerlink" href="#the-binomial-coefficient" title="Permalink to this headline">¶</a></h4>
 <div class="admonition-the-binomial-coefficient admonition">
 <p class="admonition-title">The binomial coefficient</p>
-<div class="math notranslate nohighlight">
-\[ \binom{n}{k} = \frac{n!}{k! (n - k)!} \ .\]</div>
+<p>The binomial coefficent is defined as:</p>
+<div class="math notranslate nohighlight" id="equation-binomcoeff">
+<span class="eqno">(31)<a class="headerlink" href="#equation-binomcoeff" title="Permalink to this equation">¶</a></span>\[ \binom{n}{k} = \frac{n!}{k! (n - k)!} \ ,\]</div>
 </div>
-<p>Like the number <span class="math notranslate nohighlight">\(\pi\)</span>, the binomial coefficient pops up in many unexpected places - particularly in counting problems
+<p>where <span class="math notranslate nohighlight">\(n\le0\)</span> and <span class="math notranslate nohighlight">\(n\le k \le 0\)</span> are integers.
+Like the number <span class="math notranslate nohighlight">\(\pi\)</span>, the binomial coefficient pops up in many unexpected places - particularly in counting problems
 (the bread-and-butter of the field of combinatorics).
-For example, these numbers were first described in tenth century by Indian mathematician
-<a class="reference external" href="https://en.wikipedia.org/wiki/Halayudha">Halayuddha</a>.
 The binomial coefficient is the number of ways, disregarding order, that <span class="math notranslate nohighlight">\(k\)</span> objects can be chosen from <span class="math notranslate nohighlight">\(n\)</span> objects.
 This number <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span> can be casually referred to as “n choose k”, and can be expressed by <span class="math notranslate nohighlight">\(C^n_k\)</span> and hence
 calculators encode the binomial coefficient by the “nCk” button.</p>
 </div>
-<div class="section" id="pascal-s-triangle">
-<h4>Pascal’s triangle<a class="headerlink" href="#pascal-s-triangle" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="pascal-s-triangle-and-question-2-3-1">
+<h4>Pascal’s triangle and question 2.3.1<a class="headerlink" href="#pascal-s-triangle-and-question-2-3-1" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=XMriWTvPXHI">Link to a video on the binomial series and Pascal’s triangle</a>.</p>
 <p>A very old (first discovers in China in 11th century), but very elegant, way of calculating the binomial coefficients
-can be found using
+(equation <a class="reference internal" href="#equation-binomcoeff">(31)</a>) can be found using
 <a class="reference external" href="https://en.wikipedia.org/wiki/Pascal%27s_trianglehttps://en.wikipedia.org/wiki/Pascal%27s_triangle">Pascal’s triangle</a>.</p>
-<p>As an introduction to this section, try to prove the following results:</p>
+<p>As an introduction to this section, try to prove the following results (question 2.3.2):</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\binom{n+1}{k} &amp;= \binom{n}{k} + \binom{n}{k-1} \\
 \binom{n}{0} &amp;= \binom{n}{n} = 1 \ .\end{split}\]</div>
 <p>Hint: use the definition of the binomial coefficent.</p>
-<p>These results provides a <a class="reference external" href="https://en.wikipedia.org/wiki/Recurrence_relation">recurrence relation</a>
-for the coefficients in the binomial expansion.
+<p>These results provides a <a class="reference external" href="https://en.wikipedia.org/wiki/Recurrence_relation">recurrence relation</a> for the coefficients
+in the binomial expansion.
 The method is illustrated in the figure below.</p>
 <div class="figure align-default" id="pascal">
 <img alt="../_images/pascal.png" src="../_images/pascal.png" />
@@ -846,20 +1075,17 @@ For instance, to compute the expansion of <span class="math notranslate nohighli
 <div class="math notranslate nohighlight">
 \[(x+y)^6 = x^6 + 6 x^5 y + 15 x^4 y^6 + 20 x^3 y^3 + 15 x^2 y^4 + 6 x y^5 + y^6 \ .\]</div>
 </div>
-<div class="section" id="short-video-explanation">
-<h4>Short video explanation<a class="headerlink" href="#short-video-explanation" title="Permalink to this headline">¶</a></h4>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=XMriWTvPXHI">Binomial series and Pascal’s triangle</a>.</p>
-</div>
 <div class="section" id="factorials">
 <h4>Factorials<a class="headerlink" href="#factorials" title="Permalink to this headline">¶</a></h4>
-<p>We breifly note that the “<span class="math notranslate nohighlight">\(!\)</span>” symbol represents a factorial of an integer number.
+<p>We breifly note that the “<span class="math notranslate nohighlight">\(!\)</span>” symbol represents a <a class="reference external" href="https://en.wikipedia.org/wiki/Factorial">factorial</a> of an integer number.
 A factorial of integer number <span class="math notranslate nohighlight">\(n\)</span> is defined as the product of all the numbers from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(n\)</span>:
 <span class="math notranslate nohighlight">\(n! = n \times (n-1) \times (n-2) \times \dots \times 2 \times 1\)</span>.
 The special cases of factorials are <span class="math notranslate nohighlight">\(0! =1\)</span> and <span class="math notranslate nohighlight">\(1!=1\)</span>.
-The special cases of the binomial coefficient are thus <span class="math notranslate nohighlight">\(\binom{n}{0}= 1\)</span>, <span class="math notranslate nohighlight">\(\binom{n}{1} = n\)</span>, <span class="math notranslate nohighlight">\(\binom{n}{n}=1\)</span> and
+The special cases of the binomial coefficient (equation <a class="reference internal" href="#equation-binomcoeff">(31)</a>) are thus <span class="math notranslate nohighlight">\(\binom{n}{0}= 1\)</span>, <span class="math notranslate nohighlight">\(\binom{n}{1} = n\)</span>, <span class="math notranslate nohighlight">\(\binom{n}{n}=1\)</span> and
 <span class="math notranslate nohighlight">\(\binom{n}{n-1} = n\)</span>.
 These examples highlight a nice symmetrical property of the binomial coefficient: <span class="math notranslate nohighlight">\(\binom{n}{k} = \binom{n}{n-k}\)</span> (where
 <span class="math notranslate nohighlight">\(0 \le k \le n\)</span>).</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=pxh__ugRKz8">Link to a video on factorials</a>.</p>
 </div>
 <div class="section" id="statement-of-the-binomial-formula">
 <h4>Statement of the binomial formula<a class="headerlink" href="#statement-of-the-binomial-formula" title="Permalink to this headline">¶</a></h4>
@@ -867,22 +1093,23 @@ These examples highlight a nice symmetrical property of the binomial coefficient
 With much ado the binomial formula is as follows.</p>
 <div class="admonition-the-binomial-formula admonition">
 <p class="admonition-title">The binomial formula</p>
-<div class="math notranslate nohighlight">
-\[ (x+y)^n = \sum_{k=0}^n \binom{n}{k} x^k y^{n-k} =  \binom{n}{0} x^0 y^n +  \binom{n}{1} x^1 y^{n-1} + \dots +
+<p>The binomial formula (otherwise known as the binomial theorem) is defined as:</p>
+<div class="math notranslate nohighlight" id="equation-binomform">
+<span class="eqno">(32)<a class="headerlink" href="#equation-binomform" title="Permalink to this equation">¶</a></span>\[ (x+y)^n = \sum_{k=0}^n \binom{n}{k} x^k y^{n-k} =  \binom{n}{0} x^0 y^n +  \binom{n}{1} x^1 y^{n-1} + \dots +
  \binom{n}{n-1} x^{n-1} y^{1} + \binom{n}{n} x^n y^0 \ .\]</div>
 </div>
 <p>You are not required to be familiar with
 <a class="reference external" href="https://math.stackexchange.com/questions/119480/derivation-of-binomial-coefficient-in-binomial-theorem">the details of its derivation</a>
 but do need to be able to apply the formula to compute binomial expansions.
-This formula also shows you why <span class="math notranslate nohighlight">\( \binom{n}{k}\)</span> are called binomial coefficients - because they are the coefficients of
+This formula also shows you why <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span> are called binomial coefficients - because they are the coefficients of
 the polynomial produce by the expansion of powers of binomials.
 Reassure yourself of the utility of this formula by timing yourself expanding <span class="math notranslate nohighlight">\((x+y)^6\)</span> by hand and then by the binomial
 formula.
 For further reading you may like to explore the <a class="reference external" href="https://en.wikipedia.org/wiki/Multinomial_theorem">multinomial theorem</a>
 which is a generalisation of the binomial formula to polynomials.</p>
 </div>
-<div class="section" id="id6">
-<h4>Questions<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="questions-2-3-2">
+<h4>Questions 2.3.2<a class="headerlink" href="#questions-2-3-2" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
 <li><p>Calculate <span class="math notranslate nohighlight">\((x+y)^9\)</span> using the Binomial theorem.</p></li>
 <li><p>Calculate the coefficient of the term in <span class="math notranslate nohighlight">\(x^2 y^3\)</span> in the expansion <span class="math notranslate nohighlight">\((2 x - 3)^5\)</span>.</p></li>
@@ -894,8 +1121,8 @@ which is a generalisation of the binomial formula to polynomials.</p>
 </div>
 <div class="section" id="limits">
 <h2>Limits<a class="headerlink" href="#limits" title="Permalink to this headline">¶</a></h2>
-<p>The mathematics of limits is used to describe the behaviour of a function or sequence that is not AT a point,
-but approaching it.
+<p>The mathematics of <a class="reference external" href="https://en.wikipedia.org/wiki/Limit_(mathematics)">limits</a> is used to describe the behaviour of a
+function or sequence that is not AT a point, but approaching it.
 For example, in the geometric progression we saw that the sequence approaches either a finite number (converges) or
 infinite number (diverges) as the number of terms appraoches infinity.
 In what comes next, we will be interested in calculating the “limit” of (i) the terms in a sequence <span class="math notranslate nohighlight">\(u_k\)</span> as
@@ -905,9 +1132,10 @@ We may distinguish the cases where:</p>
 <li><p>the function and terms in a sequence <strong>diverge</strong> to an infinite value (blow up to <span class="math notranslate nohighlight">\(\pm \infty\)</span>),</p></li>
 <li><p>the function and terms in a sequence <strong>converge</strong> to a finite value.</p></li>
 </ul>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=riXcZT2ICjA">Link to a video introducing the concept of a limit</a>.</p>
 <div class="section" id="limits-of-functions">
 <h3>Limits of functions<a class="headerlink" href="#limits-of-functions" title="Permalink to this headline">¶</a></h3>
-<p>The limits of a function are best illustrated by example.</p>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Limit_of_a_function">limits of a function</a> are best illustrated by example.</p>
 <div class="section" id="example-1">
 <h4>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h4>
 <p>We start with a trivial example, by considering the function <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> near to the point (2,4).</p>
@@ -921,15 +1149,16 @@ sufficiently close to 2.
 We write</p>
 <div class="math notranslate nohighlight">
 \[\lim_{x \to 2} x^2 = 4\]</div>
-<p>and we say that ” the limit of <span class="math notranslate nohighlight">\(x^2\)</span> as <span class="math notranslate nohighlight">\(x\)</span> tends to (approaches) 2 is equal to 4”.
+<p>and we say that “the limit of <span class="math notranslate nohighlight">\(x^2\)</span> as <span class="math notranslate nohighlight">\(x\)</span> tends to (approaches) 2 is equal to 4”.
 In fact, for the squared function, it is clear that</p>
 <div class="math notranslate nohighlight">
 \[\lim_{x \to c} f(x) = f(c)\]</div>
-<p>for all <span class="math notranslate nohighlight">\(c\)</span>, but we will see that this behaviour does not apply for all functions.</p>
+<p>for all <span class="math notranslate nohighlight">\(c\)</span>.
+However we will see that this behaviour does not apply for all functions.</p>
 <p>We may also consider the limit of a function <span class="math notranslate nohighlight">\(f(x)\)</span> as its argument <span class="math notranslate nohighlight">\(x\)</span> becomes “very large”.
 For instance, we can say that <span class="math notranslate nohighlight">\(\lim_{x\to\infty} x^2 = \infty\)</span> since <span class="math notranslate nohighlight">\(x^2\)</span> can be made arbitrarily large by making <span class="math notranslate nohighlight">\(x\)</span>
 “big enough”.
-For instance, we can make <span class="math notranslate nohighlight">\(x^2\)</span> larger than 10^{998} by making <span class="math notranslate nohighlight">\(x\)</span> larger than 10^{499}.</p>
+For instance, we can make <span class="math notranslate nohighlight">\(x^2\)</span> larger than <span class="math notranslate nohighlight">\(10^{998}\)</span> by making <span class="math notranslate nohighlight">\(x\)</span> larger than <span class="math notranslate nohighlight">\(10^{499}\)</span>.</p>
 <p>We would read the expression by saying: “the limit of <span class="math notranslate nohighlight">\(x^2\)</span> as <span class="math notranslate nohighlight">\(x\)</span> tends to infinity is infinity”, though it does not
 actually reach infinity.</p>
 </div>
@@ -967,13 +1196,16 @@ a direction, so the result for <span class="math notranslate nohighlight">\(\lim
 We say that the function is discontinuous at <span class="math notranslate nohighlight">\(x = 0\)</span>, though it is
 “<a class="reference external" href="https://math.stackexchange.com/questions/1968943/whats-the-difference-between-continuous-and-piecewise-continuous-functions">piecewise continuous</a>”
 on each of the pieces either side of <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
-<p>Another example of a piecewise continous function is the Heaviside function, which we define as:</p>
+<p>Another example of a piecewise continous function is the <a class="reference external" href="https://en.wikipedia.org/wiki/Heaviside_step_function">Heaviside function</a>,
+which we define as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}H(x) = \begin{cases}
 1 \ \ &amp;\text{if} \ \ \ x &gt; 0 \\
-0 \ \ &amp;\text{if} \ \ \ x &lt; 0
-\end{cases}\end{split}\]</div>
-<p>A plot of this function is shown below. It has a finite jump discontinuity at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+0 \ \ &amp;\text{if} \ \ \ x &lt; 0 
+\end{cases} \ ,\end{split}\]</div>
+<p>although it may be defined otherwise (e.g. with <span class="math notranslate nohighlight">\(H(0)=\frac{1}{2}\)</span>).
+A plot of this function is shown below.
+It has a finite jump discontinuity at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
 <div class="figure align-default" id="heaviside">
 <img alt="../_images/heaviside.png" src="../_images/heaviside.png" />
 <p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">A plot of the Heaviside function <span class="math notranslate nohighlight">\(H(x)\)</span>.</span><a class="headerlink" href="#heaviside" title="Permalink to this image">¶</a></p>
@@ -982,8 +1214,10 @@ on each of the pieces either side of <span class="math notranslate nohighlight">
 </div>
 <div class="section" id="limits-of-sequences">
 <h3>Limits of sequences<a class="headerlink" href="#limits-of-sequences" title="Permalink to this headline">¶</a></h3>
-<p>The limit of a sequence is the value that the terms of a sequence approaches (or tends to) as the number of terms
-approaches infinity, written as <span class="math notranslate nohighlight">\(k \to \infty\)</span> if <span class="math notranslate nohighlight">\(k\)</span> were the index variable.</p>
+<div class="section" id="id5">
+<h4>Definition<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Limit_of_a_sequence">limit of a sequence</a> is the value that the terms of a sequence
+approaches (or tends to) as the number of terms approaches infinity, written as <span class="math notranslate nohighlight">\(k \to \infty\)</span> if <span class="math notranslate nohighlight">\(k\)</span> were the index variable.</p>
 <div class="admonition-the-limit-of-a-sequence admonition">
 <p class="admonition-title">The limit of a sequence</p>
 <p>For a sequence <span class="math notranslate nohighlight">\((u_1, u_2, u_3, \dots)\)</span>, the limit of a sequence is written as</p>
@@ -993,26 +1227,44 @@ approaches infinity, written as <span class="math notranslate nohighlight">\(k \
 <p>We say that a number, say <span class="math notranslate nohighlight">\(U\)</span>, is the limit of a the sequence <span class="math notranslate nohighlight">\((u_1, u_2, u_3, \dots)\)</span> if the numbers of the sequence
 <span class="math notranslate nohighlight">\(u_k\)</span> approach <span class="math notranslate nohighlight">\(U\)</span> as <span class="math notranslate nohighlight">\(k\to\infty\)</span>.
 We say that the limit of the sequence diverges if <span class="math notranslate nohighlight">\(\lvert U \rvert =\infty\)</span> and converges if <span class="math notranslate nohighlight">\(\lvert U \rvert &lt; \infty\)</span>.</p>
+</div>
+<div class="section" id="similarity-to-limits-of-a-function">
+<h4>Similarity to limits of a function<a class="headerlink" href="#similarity-to-limits-of-a-function" title="Permalink to this headline">¶</a></h4>
 <p>It is important to note that similarity between the limits of a sequence and a function.
 A function <span class="math notranslate nohighlight">\(f(x)\)</span> for real number <span class="math notranslate nohighlight">\(x\)</span> will have the same limit as the sequence <span class="math notranslate nohighlight">\(u_k = f(k)\)</span> for integer number <span class="math notranslate nohighlight">\(k\)</span>.
 For example <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>, the limit <span class="math notranslate nohighlight">\(\lim_{x \to \infty} f(x) = \infty\)</span> is the same as the limit (infinite) of the
-sequence with terms <span class="math notranslate nohighlight">\(u_k = k^2\)</span>, $(1, 2, 4, 16, \dots).</p>
+sequence with terms <span class="math notranslate nohighlight">\(u_k = k^2\)</span>, <span class="math notranslate nohighlight">\((1, 2, 4, 16, \dots)\)</span>.</p>
 <p>The key difference is that when we refer to the limit of a sequence we always mean the limit of the terms <span class="math notranslate nohighlight">\(u_k\)</span> as the
 numbers of terms go to infinity <span class="math notranslate nohighlight">\(k\to\infty\)</span>.
 This is not the case for the limit of functions where the variable (i.e. <span class="math notranslate nohighlight">\(x\)</span>) can go to any number.</p>
 <p>Consider another example from the previous section, the limit of the infinite sequence with terms
 <span class="math notranslate nohighlight">\(u_k = \frac{1}{k}\)</span> for <span class="math notranslate nohighlight">\(k=1,2,\dots\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \dots\]</div>
-<p>is <span class="math notranslate nohighlight">\(0\)</span> in the same way that <span class="math notranslate nohighlight">\(\lim{x\to\infty} \frac{1}{x} = \infty\)</span>.</p>
+\[1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \dots \]</div>
+<p>is <span class="math notranslate nohighlight">\(0\)</span> in the same way that the limit of the functon <span class="math notranslate nohighlight">\(\frac{1}{x}\)</span> is zero, <span class="math notranslate nohighlight">\(\lim_{x\to\infty} \frac{1}{x} = 0\)</span>.</p>
+</div>
+<div class="section" id="infinite-series-as-limit-of-partial-sums">
+<h4>Infinite series as limit of partial sums<a class="headerlink" href="#infinite-series-as-limit-of-partial-sums" title="Permalink to this headline">¶</a></h4>
+<p>The value of a infinite series can be defined as the value of the limit (if exists) of the sequence defined by it partial
+sums, that is:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^\infty u_k = \lim_{n \to \infty} \sum_{k=1}^n u_k \ .\]</div>
+<p>Alternatively we could write that <span class="math notranslate nohighlight">\(S_n = \sum_{k=1}^n u_k\)</span> and that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} S_n = S_\infty\)</span>.</p>
+<p>For example, consider the series of the geometric progression <span class="math notranslate nohighlight">\((a, a r, a r^2, a r^3, \dots , a r^{n-1})\)</span> where <span class="math notranslate nohighlight">\(1 &gt; r &gt; 0\)</span>
+and <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary constant:</p>
+<div class="math notranslate nohighlight">
+\[S_n = \sum_{k=1}^n a r^{k -1} = a \frac{1 - r^n}{1-r}\]</div>
+<p>The infinite series of the geometric progression for <span class="math notranslate nohighlight">\(n \to \infty\)</span> is thus:</p>
+<div class="math notranslate nohighlight">
+\[S_\infty = \lim_{n \to \infty} S_n =  a \lim_{n \to \infty} \frac{1 - r^n}{1-r} = \frac{a}{1-r} \ ,\]</div>
+<p>because <span class="math notranslate nohighlight">\(\lim_{n\to \infty} r^n = 0\)</span> since <span class="math notranslate nohighlight">\(r&lt;1\)</span>.</p>
+</div>
 </div>
 <div class="section" id="combinaton-of-limits">
 <h3>Combinaton of limits<a class="headerlink" href="#combinaton-of-limits" title="Permalink to this headline">¶</a></h3>
 <p>It is useful to know how to solve the limit of combinations of functions (or so called functions of functions) such as</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;\lim_{x \to c} \Big( f(x) + g(x) \Big) \\
-&amp;\lim_{x \to c} f(x) g(x)  \\
-&amp;\lim_{x \to c} \frac{f(x)}{g(x)} \ ,\end{split}\]</div>
+\[\lim_{x \to c} \frac{f(x)}{g(x)} \ ,\]</div>
 <p>where <span class="math notranslate nohighlight">\(c\)</span> will can be any number such as <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(\infty\)</span>.</p>
 <p>The approach we take to solve these depends on whether the limits of the inidividual functions <span class="math notranslate nohighlight">\(\lim_{x \to c} f(x)\)</span>
 and <span class="math notranslate nohighlight">\(\lim_{x \to c} g(x)\)</span> are finite or infinite.</p>
@@ -1033,27 +1285,25 @@ of functions.</p>
 To stress the point again, the combination theorem for limits can only be used if the limit of every function is finite.</p>
 <p>As an example, consider the function:</p>
 <div class="math notranslate nohighlight">
-\[\lim_{x \to 0} \frac{x^2}{(x+1)^3 - (x-1)^3} \ .\]</div>
+\[\lim_{x \to 0} \frac{x^2}{(x+1)^3 - (x-1)^3} \ . \]</div>
 <p>Since the limits of each of the individual functions are finite: <span class="math notranslate nohighlight">\(\lim_{x \to 0} x^2 = 0\)</span>, <span class="math notranslate nohighlight">\(\lim_{x \to 0} (x+1)^3 = 1\)</span>
 and <span class="math notranslate nohighlight">\(\lim_{x \to 0} (x-1)^3 = -1\)</span>, we can use first and third statment of the combination theorem to rewrite and solve
 the equation as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \lim_{x \to 0} \frac{x^2}{(x+1)^3 - (x-1)^3} &amp;= \frac{\lim_{x \to 0} x^2}{\lim_{x \to 0} \Big((x+1)^3 - (x-1)^3}\\
  &amp;= \frac{\lim_{x \to 0} x^2}{\lim_{x \to 0} (x+1)^3 - \lim_{x \to 0}(x-1)^3}\\
- &amp; = \frac{0}{1 - (-1)} \\
- &amp; = \frac{0}{2} \\
- &amp; = 0\end{split}\]</div>
+ &amp; = \frac{0}{1 - (-1)}\end{split}\]</div>
 <p>So we can conclude the limit of the function is <span class="math notranslate nohighlight">\(0\)</span>.</p>
 </div>
-<div class="section" id="functions-that-to-to-infinite-values">
-<h4>Functions that to to infinite values<a class="headerlink" href="#functions-that-to-to-infinite-values" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="functions-that-tend-to-infinite-values">
+<h4>Functions that tend to infinite values<a class="headerlink" href="#functions-that-tend-to-infinite-values" title="Permalink to this headline">¶</a></h4>
 <p>We now consider the case where the limit of all the individual functions are infinite, such as
 <span class="math notranslate nohighlight">\(\lim_{x\to \infty} x^2 = \infty\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\to 0^-} \frac{1}{x} = -\infty\)</span>.</p>
 <p>The approach we take can be illustrated by the followinig two examples:</p>
-<div class="section" id="id7">
-<h5>Example 1<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id6">
+<h5>Example 1<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
 <div class="math notranslate nohighlight">
-\[ \lim_{x \to \infty} ( x^2 - x ) \ .\]</div>
+\[ \lim_{x \to \infty} ( x^2 - x ) \ . \]</div>
 <p>This limit appears to “go like” <span class="math notranslate nohighlight">\(\infty - \infty\)</span>, so you would be forgiven for thinking this result is zero.
 On the other hand, there is a sense in which <span class="math notranslate nohighlight">\(x^2\)</span> is “much bigger” than <span class="math notranslate nohighlight">\(x\)</span> and so it dominates this expression.
 That is <span class="math notranslate nohighlight">\(x^2\)</span> “blows up faster” than <span class="math notranslate nohighlight">\(x\)</span> as <span class="math notranslate nohighlight">\(x\to \infty\)</span>.
@@ -1063,8 +1313,8 @@ So this limit appears to be infinity.</p>
 <p>Another way to approach this problem is to factorise <span class="math notranslate nohighlight">\((x^2 - x) = x (x-1)\)</span>; both <span class="math notranslate nohighlight">\(x \to \infty\)</span> and <span class="math notranslate nohighlight">\(x-1 \to \infty\)</span><br />
 as <span class="math notranslate nohighlight">\(x\to\infty\)</span>.</p>
 </div>
-<div class="section" id="id8">
-<h5>Example 2<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id7">
+<h5>Example 2<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
 <div class="math notranslate nohighlight">
 \[ \lim_{x \to \infty} \frac{x + \sqrt{x + 2} }{4 x} \ .\]</div>
 <p>The second limit “goes like” <span class="math notranslate nohighlight">\(\frac{\infty}{\infty}\)</span>, but the answer is not one.
@@ -1074,13 +1324,13 @@ say that the numerator “goes like” <span class="math notranslate nohighlight
 The denominator simply “goes like” 4𝑥, so the fraction in the limit “goes like” <span class="math notranslate nohighlight">\( \frac{x}{4 x} = \frac{1}{4}\)</span>.
 Again, you may convince yourself of this by taking some large values of <span class="math notranslate nohighlight">\(x\)</span> on your calculator -
 though note that your calculator may not be able to handle the ratio if you make the values too large.</p>
-<p>Another approach you may take is to simply the function first:</p>
+<p>Another approach you may take is to simplify the function first:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \lim_{x \to \infty} \frac{x + \sqrt{x + 2} }{4 x} &amp;= \frac{1 + \frac{\sqrt{x +2 }}{x} }{4} \\
  &amp; = \frac{1 + \sqrt{ \frac{1}{x} + \frac{2}{x^2}  }}{4} \ .\end{split}\]</div>
 <p>Because <span class="math notranslate nohighlight">\(\lim_{x\to\infty} \frac{1}{x} = \lim_{x\to\infty} \frac{2}{x^2} = 0\)</span>, we can see we also arrive at the solution
-of <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>.</p>
-<p>As an exercise, convince yourself that the limit:</p>
+of <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>.
+As an exercise, convince yourself of the following result:</p>
 <div class="math notranslate nohighlight">
 \[ \lim_{x \to 0} \frac{x + \sqrt{x + 2} }{4 x} = \infty \ .\]</div>
 </div>
@@ -1096,8 +1346,8 @@ That is, the denomiator “blows up faster” than the numerator.</p>
 </div>
 </div>
 </div>
-<div class="section" id="id9">
-<h3>Questions<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="questions-2-4">
+<h3>Questions 2.4<a class="headerlink" href="#questions-2-4" title="Permalink to this headline">¶</a></h3>
 <p>Find the following limits:</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(\lim_{x\to\infty} \frac{x+2}{x^2-2}\)</span>.</p></li>
@@ -1108,18 +1358,20 @@ That is, the denomiator “blows up faster” than the numerator.</p>
 </div>
 <div class="section" id="method-of-differences">
 <h2>Method of Differences<a class="headerlink" href="#method-of-differences" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference external" href="https://www.youtube.com/watch?embed=no&amp;v=AAxES-zFuxQ">method of differences</a> provides a way to find a series
-(sum of a sequence) by using the difference of similar sums to compute the desired result.</p>
+<p>The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
+to compute the desired result.
+This is a handy trick to find the value of partial (finite) sums.</p>
 <p>This is best illustrated by example.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?embed=no&amp;v=AAxES-zFuxQ">Link to a short video</a>.</p>
 <div class="section" id="illustrative-example">
 <h3>Illustrative example<a class="headerlink" href="#illustrative-example" title="Permalink to this headline">¶</a></h3>
-<p>Say we want to compute the sum:</p>
+<p>Say we want to compute the partial sum:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{r=1}^N r \ .\]</div>
 <p>One way to approach this is to consider the following two series:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\sum_{r=1}^N r (r+1) &amp;= 1 \times 2 + 2 \times 3 + 3 \times 4 + \dots + (N-1) \times N + N \times (N+1) \\
-\sum_{r=1}^N r (r-1) &amp;= 1 \times 0 + 2 \times 1 + 3 \times 2 + \dots + (N-1) \times (N-2) + N \times (N-1) \ .\end{split}\]</div>
+\sum_{r=1}^N r (r-1) &amp;= 1 \times 0 + 2 \times 1 + 3 \times 2 + \dots + (N-1) \times (N-2) + N \times (N-1) \ . \end{split}\]</div>
 <p>It can be seen that in general the <span class="math notranslate nohighlight">\(n\)</span>-th term in the second series is the same as the <span class="math notranslate nohighlight">\((n-1)\)</span>-th term in the first
 series.
 Therefore, if we calculate the difference between the two sums, almost all of the terms cancel, to leave:</p>
@@ -1133,6 +1385,8 @@ and common difference 1.</p>
 </div>
 <div class="section" id="rewriting-the-summation-index">
 <h3>Rewriting the summation index<a class="headerlink" href="#rewriting-the-summation-index" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="demonstration-of-utility">
+<h4>Demonstration of utility<a class="headerlink" href="#demonstration-of-utility" title="Permalink to this headline">¶</a></h4>
 <p>It is possible to demonstrate the cancellation of terms without writing out the terms in the series.
 Using the example above, we could rewrite:</p>
 <div class="math notranslate nohighlight">
@@ -1140,6 +1394,9 @@ Using the example above, we could rewrite:</p>
 <p>and therefore:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{r=1}^N \Big( r (r+1) - r (r-1) \Big) = \sum_{r=1}^N  r (r+1) - \sum_{r=1}^N  r (r+1)  + N(N+1)  = N(N+1) \ .\]</div>
+</div>
+<div class="section" id="generalisation">
+<h4>Generalisation<a class="headerlink" href="#generalisation" title="Permalink to this headline">¶</a></h4>
 <p>In general, rewriting the summation index provides:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{r=1}^N f(r+c) = \sum_{r=1+c}^{N+c} f(r) \ ,\]</div>
@@ -1147,11 +1404,14 @@ Using the example above, we could rewrite:</p>
 This can be also used for negative integer values:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{r=1}^N f(r-c) = \sum_{r=1-c}^{N-c} f(r) \ .\]</div>
-<p>You will find that this technique can drastically simplify summations we wish to solve.</p>
-<p>For example:</p>
+<p>You will find that this technique can drastically simplify summations we wish to solve.
+For example:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{r=1}^N \frac{2^{r+5}}{ \sqrt{r+5}} = \sum_{r=6}^{N+5} \frac{2^{r}}{ \sqrt{r}} \ .\]</div>
-<p>For another example, consider the difference between the following two sums:</p>
+</div>
+<div class="section" id="example">
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<p>Consider the difference between the following two sums:</p>
 <div class="math notranslate nohighlight">
 \[D = \sum_{r=1}^N \frac{e^r}{ (r+1) (r+2) } - \sum_{r=1}^N \frac{e^{r+2}}{(r+3) (r+4)} \ .\]</div>
 <p>Notice that the function within summation on the right <span class="math notranslate nohighlight">\(\frac{e^{r+2}}{(r+3) (r+4)}\)</span> is the same as that on the left
@@ -1163,20 +1423,22 @@ Thus we can rewrite the summation index of the right sum to provide:</p>
 To solve the equation we simply “take out” the index values that are not common, i.e. <span class="math notranslate nohighlight">\(r=1,2\)</span> on the left sumation
 and <span class="math notranslate nohighlight">\(r=N+1,N+2\)</span> on the right summation:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}D &amp; = \frac{e^1}{2\times 3} + \frac{e^2}{ 3 \times 4} + \sum_{r=3}^N \frac{e^r}{ (r+1) (r+2) } -
+\[\begin{split}D &amp; = \frac{e^1}{2\times 3} + \frac{e^2}{ 3 \times 4} + \sum_{r=3}^N \frac{e^r}{ (r+1) (r+2) } - 
 \sum_{r=3}^N \frac{e^r}{ (r+1) (r+2) } - \frac{e^{N+1}}{(N+2)\times (N+3)}  - \frac{e^{N+2}}{(N+3)\times (N+4)} \\
-&amp;=\frac{e^1}{2\times 3} + \frac{e^2}{ 3 \times 4} - \frac{e^{N+1}}{(N+2)\times (N+3)}  - \frac{e^{N+2}}{(N+3)\times (N+4)}\end{split}\]</div>
+&amp;=\frac{e^1}{2\times 3} + \frac{e^2}{ 3 \times 4} - \frac{e^{N+1}}{(N+2)\times (N+3)}  - \frac{e^{N+2}}{(N+3)\times (N+4)} \end{split}\]</div>
 <p>Note: if you struggle with rewriting the summation index, it’s ok to just write out the terms in the series and
 demonstrate the cross-cancellation.</p>
 </div>
-<div class="section" id="id10">
-<h3>Questions<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="questions-2-5">
+<h3>Questions 2.5<a class="headerlink" href="#questions-2-5" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Use the result <span class="math notranslate nohighlight">\(r^2 (r+1)^2 - (r-1)^2 r^2 = 4 r^3\)</span> to calculate <span class="math notranslate nohighlight">\(\sum_{r = 1}^{N} r^3\)</span>.</p></li>
-<li><p>By using partial fractions to rewrite the summand, show the result:</p></li>
+<li><p>By using <a class="reference external" href="https://www.mathcentre.ac.uk/resources/uploaded/mc-ty-partialfractions-2009-1.pdf">partial fractions</a> to
+rewrite the summand, show the result:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
-\[\sum_{r = 1}^N \frac{2}{r (r+1) (r+2)} = \frac{1}{n+2} - \frac{1}{n+1} + \frac{1}{2} \ .\]</div>
+\[\sum_{r = 1}^n \frac{2}{r (r+1) (r+2)} = \frac{1}{n+2} - \frac{1}{n+1} + \frac{1}{2} \ . \]</div>
 </div>
 </div>
 <div class="section" id="convergence-and-divergence">
@@ -1186,7 +1448,7 @@ demonstrate the cross-cancellation.</p>
 <p>We have already seen in the sections on geometric progression and method of differences that some series can approach
 a finite value as the number of terms grows infinitely large.
 Series of this type are called <strong>convergent</strong>.
-For instance, the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N frac{1}{4^n}\)</span> approaches (converges) to <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span> as <span class="math notranslate nohighlight">\(N\)</span> approaches <span class="math notranslate nohighlight">\(\infty\)</span>
+For instance, the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N \left(\frac{1}{4}\right)^n\)</span> approaches (converges) to <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span> as <span class="math notranslate nohighlight">\(N\)</span> approaches <span class="math notranslate nohighlight">\(\infty\)</span>
 (<span class="math notranslate nohighlight">\(N \to \infty\)</span>).</p>
 <p>On the other hand, the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N n\)</span> can be made as big as we like by adding additional terms.
 We say that this series <strong>diverges</strong>.
@@ -1202,6 +1464,8 @@ Hence, this series also diverges.</p>
 </div>
 <div class="section" id="preliminary-test-for-divergence">
 <h3>Preliminary test for divergence<a class="headerlink" href="#preliminary-test-for-divergence" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h4>Definition<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <p>These ideas of the previous section lead us to the following “preliminary test for divergence”.</p>
 <div class="admonition-preliminary-test-for-divergence admonition">
 <p class="admonition-title">Preliminary test for divergence</p>
@@ -1214,6 +1478,9 @@ However it does test whether a series is divergent.</p>
 sequence) must also diverge.
 However, the case where the terms in the series approach zero may not match our intuition.
 It is NOT necessarily true that if the terms in the series approach zero then the series will converge.</p>
+</div>
+<div class="section" id="example-the-harmonic-series">
+<h4>Example: the harmonic series<a class="headerlink" href="#example-the-harmonic-series" title="Permalink to this headline">¶</a></h4>
 <p>For example, consider the <a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)">harmonic series</a></p>
 <div class="math notranslate nohighlight">
 \[\sum_{n=1}^N \frac{1}{n} \ .\]</div>
@@ -1234,25 +1501,26 @@ The preliminary test cannot distinguish between these cases, and so further test
 of the sum if the terms approach zero in the long run.
 One such test is D’Alembert’s ratio test, outined below.</p>
 </div>
+</div>
 <div class="section" id="d-alembert-s-ratio-test">
 <h3>D’Alembert’s ratio test<a class="headerlink" href="#d-alembert-s-ratio-test" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="prelimaries">
 <h4>Prelimaries<a class="headerlink" href="#prelimaries" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Ratio_test">D’Alembert’s ratio test</a> (sometimes simply referred to as the “ratio test”)
-relies on looking at the <strong>ratio</strong> of terms in the series in the long run.
-Again, denoting the terms in the series by <span class="math notranslate nohighlight">\(u_n\)</span>, we consider the fraction:</p>
-<div class="math notranslate nohighlight">
-\[\Bigg\lvert \frac{u_{n+1}}{u_n} \Bigg\rvert \ ,\]</div>
-<p>which compares the size of each term to the one before it.
+looks at the <strong>ratio</strong> of each terms of an infinite sequence of numbers (<span class="math notranslate nohighlight">\(u_1,u_2,u_3,\dots\)</span>)</p>
+<div class="math notranslate nohighlight" id="equation-daratio">
+<span class="eqno">(33)<a class="headerlink" href="#equation-daratio" title="Permalink to this equation">¶</a></span>\[ \rho = \Bigg\lvert \frac{u_{n+1}}{u_n} \Bigg\rvert \ ,\]</div>
+<p>to determine if the infinite series converges or diverges.
 The notation |•| is used for the magnitude (otherwise known as the absolute value, e.g. <span class="math notranslate nohighlight">\(\lvert -2 \rvert = 2\)</span>) of the
-expression.
-As such, we only consider the relative size of the terms in the series.
-f the result is less than 1 then the terms in the series are <strong>shrinking</strong>, whilst if the result is greater than 1 then
-the terms in the series are <strong>growing</strong>.</p>
+expression - the test thus only considers the relative size of the terms in the series.
+D’Alembert’s ratio test is more powerful than the preliminary test, but is usually a bit harder to apply and so we should use the
+preliminary test first (the clue is in the name!).</p>
 </div>
 <div class="section" id="statement">
 <h4>Statement<a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h4>
-<p>We look at the behaviour of this ratio in the limit <span class="math notranslate nohighlight">\(n \to \infty\)</span>, written as:</p>
+<p>To determine if an infinite series <span class="math notranslate nohighlight">\(\sum{n=1}^\infty u_n\)</span> diverges (<span class="math notranslate nohighlight">\(\sum{n=1}^\infty u_n = \infty\)</span>) of converges
+(<span class="math notranslate nohighlight">\(\sum{n=1}^\infty u_n&lt;\infty\)</span>) we look at the behaviour of the ratio in equation <a class="reference internal" href="#equation-daratio">(33)</a> in the limit
+<span class="math notranslate nohighlight">\(n \to \infty\)</span>, written as:</p>
 <div class="admonition-d-alembert-s-ratio-test admonition">
 <p class="admonition-title">D’Alembert’s ratio test</p>
 <p>For the magnitude of the ratio of sucessive terms in a series,
@@ -1264,20 +1532,18 @@ the terms in the series are <strong>growing</strong>.</p>
 </ul>
 </div>
 <p>Note well that the <span class="math notranslate nohighlight">\(n+1\)</span> term is the numerator and the <span class="math notranslate nohighlight">\(n\)</span> term is the denominator!</p>
-<p>Intuitively, D’Alembert’s ratio test tells us that if the terms are shrinking then the series converges and if they
-are growing then the series diverges.
-The test is more powerful than the preliminary test, but is usually a bit harder to apply and so we should use the
-preliminary test first (the clue is in the name!).</p>
+<p>Intuitively, D’Alembert’s ratio test tells us that if the ratio of suquential terms is less than 1 then the
+terms are <strong>shrinking</strong> and hence the series converges.
+If the converse is true the the terms are <strong>growing</strong> and hence the series diverges.</p>
 <p>The proof of the ratio test (not shown here) relies on comparing the series to a convergent/divergent geometric progression.</p>
 <p>Cases where the ratio test is inconclusive will not be dealt with in this course, although there are further tests that
 can be used for such problems.
 One of the most straightforward to use is the <a class="reference external" href="https://en.wikipedia.org/wiki/Squeeze_theorem">sandwich theorem</a>
 (also known as the “squeeze theorem”), which can be used not only to demonstrate that a series is convergent, but also
 to find upper and lower bounds for the value of the sum or even to find the value of the sum exactly.</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=iy8mhbZTY7g">A short video of D’Alembert’s ratio test</a>.</p>
 </div>
-<div class="section" id="example">
-<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id9">
+<h4>Example<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <p>We will use D’Alembert’s ratio test to determine whether <span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{k^2}{k!}\)</span> converges.</p>
 <p>Letting <span class="math notranslate nohighlight">\(u_k = \frac{k^2}{k!}\)</span>, the ratio <span class="math notranslate nohighlight">\(\frac{u_{k+1}}{u_k}\)</span> simplifies to:</p>
 <div class="math notranslate nohighlight">
@@ -1295,39 +1561,95 @@ By recalling the combination theorem, we have that:</p>
 <li><p>The limit step is important! We are interested to know what happens to the terms in the series in the long run - i.e. as <span class="math notranslate nohighlight">\(n \to \infty\)</span>. The limit must be explicitly taken!</p></li>
 </ol>
 </div>
-<div class="section" id="id11">
-<h4>Questions<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
-<p>Use D’Alembert’s ratio test to determine if the following series converges:
-1.</p>
-<div class="math notranslate nohighlight">
-\[\sum_{k=1}^n \frac{(2 k)!}{2^k k!}\]</div>
+</div>
+<div class="section" id="questions-2-6">
+<h3>Questions 2.6<a class="headerlink" href="#questions-2-6" title="Permalink to this headline">¶</a></h3>
+<p>Use D’Alembert’s ratio test to determine if the following series converges:</p>
 <ol class="simple">
-<li></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{(2 k)!}{2^k k!}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots\)</span>.</p></li>
 </ol>
+</div>
+<div class="section" id="comparison-test">
+<h3>Comparison Test<a class="headerlink" href="#comparison-test" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h4>Prelimaries<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>This test aims to compare the terms in our unknown series with terms of a well understood series - typically we will compare to series involving powers of 2 here.  If for instance we write a geometric series that term by term is greater than or equal to the terms in an unknown series, we can typically argue that our unkown series converges and even offer an upper limit on the total value of the series.</p>
+</div>
+<div class="section" id="id11">
+<h4>Statement<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p>We argue that a series <span class="math notranslate nohighlight">\(S_1 = \sum_n a_n\)</span> can be shown to converge if there exists a series <span class="math notranslate nohighlight">\(S_2 = \sum_n b_n\)</span> such that for all terms <span class="math notranslate nohighlight">\(b_n \geq a_n\)</span> where series <span class="math notranslate nohighlight">\(S_2\)</span> is known to converge, therefore series <span class="math notranslate nohighlight">\(S_1\)</span> must also converge.</p>
+</div>
+<div class="section" id="id12">
+<h4>Example<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<p>Show that the following series converges</p>
 <div class="math notranslate nohighlight">
-\[\sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots\]</div>
+\[S_1 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{6^2} + \frac{1}{8^2} + \frac{1}{10^2} + \frac{1}{12^2} + \frac{1}{14^2} + \frac{1}{16^2} +\dots = \sum_n^\infty \frac{1}{(2n)^2}
+\]</div>
+<p>We can compare this series to the following series, which we can find by rounding down every denominator to nearest power of two (before applying the squared):</p>
+<div class="math notranslate nohighlight">
+\[S_2 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} +\dots\]</div>
+<p>We can see that every term in <span class="math notranslate nohighlight">\(S_2\)</span> is greater than or equal to every term in <span class="math notranslate nohighlight">\(S_1\)</span>, therefore if both <span class="math notranslate nohighlight">\(S_1, S_2\)</span> converge, the value of <span class="math notranslate nohighlight">\(S_2 &gt; S_1\)</span>.</p>
+<p>We can rewrite <span class="math notranslate nohighlight">\(S_2\)</span> by collecting together like terms:</p>
+<div class="math notranslate nohighlight">
+\[S_2 = \frac{1}{2^2} + \frac{2}{4^2} + \frac{4}{8^2} + \dots = 1 + \frac{1}{2^2} + \frac{1}{2^3} + \frac{1}{2^4} + \dots\]</div>
+<p>which we can see is a geometric series, with <span class="math notranslate nohighlight">\(a = \frac{1}{2^2}\)</span> and <span class="math notranslate nohighlight">\(r = \frac{1}{2}\)</span>, which means that</p>
+<div class="math notranslate nohighlight">
+\[S_2 = \frac{1/2^2}{1 - 1/2} = \frac{1}{2}\]</div>
+<p>and since <span class="math notranslate nohighlight">\(S_2\)</span> converges, then by the comparison test <span class="math notranslate nohighlight">\(S_1\)</span> also converges.</p>
+<p>The comparision test can also be used to put bounds on the values of some series, since the rounding down procesure can often be followed by a rounding up procecure, which will give us upper and lower bounds for a series.  For the sum <span class="math notranslate nohighlight">\(S_1\)</span>, we can have:</p>
+<div class="math notranslate nohighlight">
+\[S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} +\dots\]</div>
+<p>which we can see gives every term less than or equal to every term in <span class="math notranslate nohighlight">\(S_1\)</span>.  By a similar process to finding the value of <span class="math notranslate nohighlight">\(S_2\)</span> we find:</p>
+<div class="math notranslate nohighlight">
+\[S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{2}{8^2} + \frac{4}{16^2} + \dots = 1 + \frac{1}{2^2} + \frac{1}{2^4} + \frac{1}{2^5} + \frac{1}{2^6} + \dots\]</div>
+<p>and if we skip the first terms here, this is also a geometric series, with <span class="math notranslate nohighlight">\(a = \frac{1}{2^4}\)</span> and <span class="math notranslate nohighlight">\(r = \frac{1}{2}\)</span>, therfore:</p>
+<div class="math notranslate nohighlight">
+\[S_2 = \frac{1}{2^2} + \frac{1/2^4}{1 - 1/2} = \frac{3}{8}\]</div>
+<p>and since <span class="math notranslate nohighlight">\(S_2 &gt; S_1 &gt; S_3\)</span> we have <span class="math notranslate nohighlight">\(\frac{4}{8} &gt; S_1 &gt; \frac{3}{8}\)</span>.</p>
 </div>
 </div>
-<div class="section" id="absolute-vs-conditional-convergence">
-<h3>Absolute vs conditional convergence<a class="headerlink" href="#absolute-vs-conditional-convergence" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="absolute-v-s-conditional-convergence">
+<h3>Absolute v’s Conditional Convergence<a class="headerlink" href="#absolute-v-s-conditional-convergence" title="Permalink to this headline">¶</a></h3>
 <p>See also Chapter 25 of “The Calculus Story: A Mathematical Adventure” by David Acheson.</p>
+<div class="section" id="motivation">
+<h4>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h4>
 <p>D’Alembert’s ratio test looks at the absolute value of the ratio to determine whether the terms are growing or decaying
 in size without recourse to their sign.
-This allows us to make a statement about the absolute convergence of the series.</p>
-<p>In some of the previous examples that we looked at, all of the terms in the series were the same sign
+This allows us to make a statement about the <a class="reference external" href="https://en.wikipedia.org/wiki/Absolute_convergence">absolute convergence</a>
+of the series.
+That is, series that converge to a single, finite number.
+However there are series that do not absolutely converge, but can be “rearranged” to converge to any value at all,
+including <span class="math notranslate nohighlight">\(\infty\)</span> or <span class="math notranslate nohighlight">\(-\infty\)</span>.
+This statement should not be immediately clear as it is quite unintuitive.
+These series are called <a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_convergence">conditionally convergence</a>, and are
+explained in what follows.</p>
+</div>
+<div class="section" id="explanation-of-conditional-convergence">
+<h4>Explanation of conditional convergence<a class="headerlink" href="#explanation-of-conditional-convergence" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-conditional-convergence admonition">
+<p class="admonition-title">Conditional convergence</p>
+<p>If a series is <strong>absolutely convergent</strong> then it will converge to the same value for any rearrangement of the terms.
+If the series is not absolutely convergent, then it may be <strong>conditionally convergent</strong>, in which case it can be summed
+to an arbitrary value (finite or infinite) depending on the arrangement of the terms in the series.</p>
+</div>
+<p>Conditionally convergent series have terms with alternating signs.
+In some of the previous examples that we looked at, all of the terms in the series were the same sign
 (all positive or all negative).
-In this case, we do not need to distinguish between absolute and conditional convergence.
-Looking at the relative size of the terms (as in D’Alembert’s ratio test) is usually sufficient to determine the
-convergence properties, and the remaining cases it can be tackled by comparison to another series whose convergence
-properties are known.</p>
-<p>But in the case where the signs in the series alternate, the behaviour is much more peculiar/subtle.
-For example, consider the series:</p>
+In these cases: (i) we did not need to distinguish between absolute and conditional convergence, and (ii)
+looking at the relative size of the terms (as in D’Alembert’s ratio test) were sufficient to determine the
+convergence properties.
+But in the case where the signs in the series alternate, the behaviour is much more peculiar/subtle.</p>
+</div>
+<div class="section" id="id13">
+<h4>Example<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<p>Consider the <a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Alternating_harmonic_series">alternating harmonic series</a>:</p>
 <div class="math notranslate nohighlight">
-\[\sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \dots \ ,\]</div>
-<p>It can be shown (see later work on Taylor series) that this series converges to the natural logarithm of 2, <span class="math notranslate nohighlight">\(\ln(2)\)</span>.</p>
+\[\sum_{k=1}^n \frac{(-1)^{k+1}}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \dots \ ,\]</div>
+<p>It can be shown (see later a chapter on Taylor series) that this series converges to the natural logarithm of 2, <span class="math notranslate nohighlight">\(\ln(2)\)</span>.</p>
 <p>However, a regrouping of the terms gives:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\sum_{k=1}^n \frac{(-1)^k}{k} &amp;= \Big( 1 - \frac{1}{2} \Big)  - \frac{1}{4} + \Big(\frac{1}{3} - \frac{1}{6}\Big) - \frac{1}{8} +
+\[\begin{split}\sum_{k=1}^n \frac{(-1)^k}{k} &amp;= \Big( 1 - \frac{1}{2} \Big)  - \frac{1}{4} + \Big(\frac{1}{3} - \frac{1}{6}\Big) - \frac{1}{8} + 
 \Big( \frac{1}{5} - \frac{1}{10} \Big) - \frac{1}{12} + \dots \\
 &amp;= \frac{1}{2} - \frac{1}{4} + \frac{1}{6} - \frac{1}{8} + \frac{1}{10} - \frac{1}{12} \\
 &amp;= \frac{1}{2} \Big( 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \dots \Big) \ ,\end{split}\]</div>
@@ -1335,13 +1657,155 @@ For example, consider the series:</p>
 <p>In fact, it can be shown that this series can be made equal to any value by a suitable rearrangement of the terms…</p>
 <p>This series is an example of a <a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_convergence">conditionally convergent</a> series
 -i.e. a series that does not converge absolutely, but can be made to converge to (any) value which depends on the
-arrangement of the terms.</p>
-<p>[Here is a short video explanation](Riemann’s paradox).</p>
+arrangement of the terms.
+This is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Riemann_series_theorem">Riemann’s paradox</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?embed=no&amp;v=-EtHF5ND3_s">Here is a short video explanation</a>.</p>
 <p>In this course we will only look at absolute convergence.</p>
+</div>
 </div>
 </div>
 <div class="section" id="solutions-for-this-chapter">
 <h2>Solutions for this chapter<a class="headerlink" href="#solutions-for-this-chapter" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h3>Questions 2.1<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sum_{i=1}^6 (4n - 3)\)</span> or <span class="math notranslate nohighlight">\(\sum_{i=0}^5 (4n + 1)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{i=0}^6 (-1)^n 2^{6 - n}\)</span> or <span class="math notranslate nohighlight">\(\sum_{i=0}^6 (-1)^n 2^n\)</span>, by reversing the order of the summation.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{i=3}^{99} \frac{1}{n}\)</span> or <span class="math notranslate nohighlight">\(\sum_{i=1}^{97} \frac{1}{n+2}\)</span>.
+Note: other answers are possible!</p></li>
+</ol>
+</div>
+<div class="section" id="id15">
+<h3>Questions 2.2.1<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>This is an arithmetic progression (AP) with first term <span class="math notranslate nohighlight">\(a=54\)</span>, common difference <span class="math notranslate nohighlight">\(d=-2\)</span>, and last term <span class="math notranslate nohighlight">\(L=18\)</span>.
+Since <span class="math notranslate nohighlight">\(L = a + (n-1)d\)</span>, we have <span class="math notranslate nohighlight">\(n = \frac{18-54}{-2} = 19\)</span> terms.</p></li>
+<li><p>For an AP with first term <span class="math notranslate nohighlight">\(a=3\)</span>, and common difference <span class="math notranslate nohighlight">\(d=6\)</span>, the sum of the first <span class="math notranslate nohighlight">\(30\)</span> terms is given by <span class="math notranslate nohighlight">\(S_{30} = \frac{n}{2}(2a+(n-1)d = \frac{30}{2} (6 + 29 \times 6) = 2700\)</span>.</p></li>
+<li><p>For this AP the first term is <span class="math notranslate nohighlight">\(a=2\)</span>, the common difference is <span class="math notranslate nohighlight">\(d=2\)</span>.
+The last term is given by <span class="math notranslate nohighlight">\(a+(n-1)d=10\)</span>, so we find that <span class="math notranslate nohighlight">\(n=5\)</span>.
+The sum is given by <span class="math notranslate nohighlight">\(S_5 = \frac{5}{2} (2+10) = 30\)</span>.</p></li>
+<li><p>The first expression is an AP with first term <span class="math notranslate nohighlight">\(a=4\)</span>, last term <span class="math notranslate nohighlight">\(L=49\)</span> and <span class="math notranslate nohighlight">\(n=10\)</span> terms. The sum is <span class="math notranslate nohighlight">\(\frac{n}{2}(a+L)=265\)</span>.
+The second expression is an AP with first term <span class="math notranslate nohighlight">\(n=100\)</span>, last term <span class="math notranslate nohighlight">\(L=1000\)</span> and <span class="math notranslate nohighlight">\(n=901\)</span> (take care!).
+The sum is <span class="math notranslate nohighlight">\(\frac{n}{2} (a+L) = 495550\)</span>.
+You could also calculate this using <span class="math notranslate nohighlight">\(\frac{1000}{2}(1+1000)−\frac{99}{2}(1+99)\)</span>.</p></li>
+<li><p>Let the first term of this AP be denoted by <span class="math notranslate nohighlight">\(a\)</span>, and the common difference be denoted by <span class="math notranslate nohighlight">\(d\)</span>.
+We have that <span class="math notranslate nohighlight">\(a+2d=26\)</span> and <span class="math notranslate nohighlight">\(a+7d=46\)</span>.
+Solving these two equations simultaneously gives <span class="math notranslate nohighlight">\(a=18\)</span> and <span class="math notranslate nohighlight">\(d=4\)</span>.
+The sum of the first <span class="math notranslate nohighlight">\(50\)</span> terms is given by <span class="math notranslate nohighlight">\(S_{50}=\frac{50}{2}(2a+49d)=5800\)</span>.</p></li>
+<li><p>The series is given by <span class="math notranslate nohighlight">\(S=6+12+18+...+96 = \sum_{n=1}^{16} 6 n\)</span>.
+This is the sum of an AP with first term <span class="math notranslate nohighlight">\(a=6\)</span>, last term <span class="math notranslate nohighlight">\(L=96\)</span> and <span class="math notranslate nohighlight">\(n=16\)</span> terms.
+The result is <span class="math notranslate nohighlight">\(S= \frac{16}{2}(6+96)=816\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="id16">
+<h3>Questions 2.2.2<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(a=27\)</span>, <span class="math notranslate nohighlight">\(r=\frac{2}{3}\)</span>, <span class="math notranslate nohighlight">\(S_5 = a \frac{1 - r^5}{1-r} = 27 \frac{1 - (2/3)^5}{1 - 2/3} = \frac{211}{3}\)</span>,</p></li>
+<li><p>The given expression represents the sum of a geometric progression (GP) with first term <span class="math notranslate nohighlight">\(a=729\)</span> and common ratio <span class="math notranslate nohighlight">\(r=\frac{1}{3}\)</span>.
+The sum over all integers n is given by <span class="math notranslate nohighlight">\(S_{\infty}=\frac{729}{1−1/3}=\frac{2187}{2}\)</span>.</p></li>
+<li><p>Let the first term of this GP be denoted by <span class="math notranslate nohighlight">\(a\)</span> (<span class="math notranslate nohighlight">\(=8\)</span>), and the common ratio be denoted by <span class="math notranslate nohighlight">\(r\)</span>.
+We have the sum of the first 3 terms is <span class="math notranslate nohighlight">\(8(1+r+r^2)=38\)</span>.
+This equation is a quadratic with solutions <span class="math notranslate nohighlight">\(r=−\frac{5}{2},\frac{3}{2}\)</span>.</p></li>
+<li><p>The sum of the first <span class="math notranslate nohighlight">\(n\)</span> terms in this GP is given by <span class="math notranslate nohighlight">\(S_n= 27 \frac{1−(4/3)^n}{1−4/3}\)</span>.
+We require that <span class="math notranslate nohighlight">\(S_n&gt;550\)</span>. The problem could be tackled by trial and error, but we will solve it analytically.
+The problem rearranges to give <span class="math notranslate nohighlight">\((\frac{4}{3})^n&gt;\frac{631}{81}\)</span> (take care with the direction of the inequality!).
+By taking the natural logarithm we obtain <span class="math notranslate nohighlight">\(n &gt; \frac{\ln \big( \frac{631}{81} \big)}{ \ln \big( \frac{4}{3} \big)}=7.136\)</span> (4sf).
+Since <span class="math notranslate nohighlight">\(n\)</span> is an integer, the least number of terms required is <span class="math notranslate nohighlight">\(8\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="questions-2-3-1">
+<h3>Questions 2.3.1<a class="headerlink" href="#questions-2-3-1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\((x+9)^2 = \sum_{k=0}^9 \binom{n}{k} x^k y^{n-k} = \binom{9}{0} x^0 y^9 +  \binom{9}{1} x^1 y^8 +  \binom{9}{2} x^2 y^7 + 
+\binom{9}{3} x^3 y^6 +  \binom{9}{4} x^4 y^5 +  \binom{9}{5} x^5 y^4 +  \binom{9}{6} x^6 y^3 + 
+\binom{9}{7} x^7 y^2 +  \binom{9}{8} x^8 y^1 +  \binom{9}{9} x^9 y^0 \)</span>.
+<span class="math notranslate nohighlight">\(= x^0 y^9 +  9 x^1 y^8 +  36 x^2 y^7 + 84 x^3 y^6 + 126 x^4 y^5 + 126 x^5 y^4 + 84 x^6 y^3 + 36 x^7 y^2 +  9 x^8 y^1 +  x^9 y^0 \)</span>.</p></li>
+<li><p>The term in <span class="math notranslate nohighlight">\(x^2 y^3\)</span> is given by <span class="math notranslate nohighlight">\(\binom{5}{2} (2x)^2 (-3y)^3 =10 (2)^2 (-3)^3 x^2 y^3\)</span>.
+The coefficient is <span class="math notranslate nohighlight">\(-1080\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\((x^2 - \frac{1}{x})^9 = \sum_{k=0}^9 \binom{9}{k} x^{2k} (-x)^{k-9} = \sum_{k=0}^9 \binom{9}{k} x^{3k-9} (-1)^{k-9}\)</span>.
+The constant terms is given by <span class="math notranslate nohighlight">\(k=3\)</span> with coefficient <span class="math notranslate nohighlight">\(\binom{9}{3} (-1)^6 = 84\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\((1+x-x^2)^7 = (1+(x-x^2))^7\)</span>
+<span class="math notranslate nohighlight">\( = \sum_{k=0}^7 \binom{7}{k} 1^{7-k} (x-x^2)^k\)</span>
+<span class="math notranslate nohighlight">\(= \binom{7}{0}  + \binom{7}{1} (x - x^2) + \binom{7}{2} (x - x^2)^2 + \binom{7}{3} (x - x^2)^3 + 
+\dots + \binom{7}{7} (x - x^2)^7\)</span>
+<span class="math notranslate nohighlight">\(= 1  + 7 (x - x^2) + 21 (x - x^2)^2 + 35 (x - x^2)^3 + 
+\dots + (x - x^2)^7\)</span>
+<span class="math notranslate nohighlight">\(=1 + 7x - 7 x^2 + 21 (x^2 - 2 x^3 + x^4) + 35 (x^3 + \dots) + \dots\)</span>
+<span class="math notranslate nohighlight">\(= 1 + 7 x + 14 x^2 - 7 x^3 - 49 x^4 - 14 x^5 + 77 x^6 + 29 x^7 - 77 x^8 - 14 x^9 + 49 x^{10} - 7 x^{11} - 14 x^{12} + 7 x^{13} - x^{14} \)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="question-2-3-2">
+<h3>Question 2.3.2<a class="headerlink" href="#question-2-3-2" title="Permalink to this headline">¶</a></h3>
+<p>Starting by writing out the result for the right hand side of the first expression gives
+<span class="math notranslate nohighlight">\(\binom{n}{k} + \binom{n}{k-1} = \frac{n!}{(n-k)!k!} + \frac{n!}{(n-k+1)!(k-1)!}\)</span>
+<span class="math notranslate nohighlight">\(= \frac{n!(n-k+1)}{(n-k+1)!k!} + \frac{n! k }{(n-k+1)!(k)!} \)</span>
+<span class="math notranslate nohighlight">\(= \frac{n!(n-k+1+k)}{(n-k+1)!k!} \)</span>
+<span class="math notranslate nohighlight">\(= \frac{(n+1)!}{(n-k+1)!k!} \)</span>
+<span class="math notranslate nohighlight">\( = \binom{n+1}{k}\)</span>.</p>
+<p>The second expression follows directly from the definition of <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span>.</p>
+</div>
+<div class="section" id="id17">
+<h3>Questions 2.4<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lim_{x \to \infty}\frac{x+2}{x^2 - 2} = \lim_{x \to \infty} \frac{1/x + 2/x^2}{1-2/x^2}\)</span>
+<span class="math notranslate nohighlight">\(= \frac{0+0}{1+0}\)</span>
+<span class="math notranslate nohighlight">\(=0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x \to \infty}\frac{x-2}{x+2} = \lim_{x \to \infty} \frac{1 - 2/x}{1+2/x}\)</span>
+<span class="math notranslate nohighlight">\(= \frac{1-0}{1+0}\)</span>
+<span class="math notranslate nohighlight">\(=1\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{x^2-2} - \sqrt{x^2+x}\)</span>
+<span class="math notranslate nohighlight">\( = \big(\sqrt{x^2-2} - \sqrt{x^2+x} \big) \frac{\sqrt{x^2-2} + \sqrt{x^2+x}}{\sqrt{x^2-2} + \sqrt{x^2+x}}\)</span>
+<span class="math notranslate nohighlight">\( = \frac{-x-2}{\sqrt{x^2-2} + \sqrt{x^2+x}}\)</span>
+<span class="math notranslate nohighlight">\( = \frac{-1-2/x}{\sqrt{1-2/x^2} + \sqrt{1+1/x} }\)</span>.
+Thus, <span class="math notranslate nohighlight">\(\lim_{x \to \infty} \big(\sqrt{x^2-2} - \sqrt{x^2+x} \big)\)</span>
+<span class="math notranslate nohighlight">\(= \frac{-1-0}{1+1}\)</span>
+<span class="math notranslate nohighlight">\( = -\frac{1}{2}\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="id18">
+<h3>Questions 2.5<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(4 \sum_{r=1}^N r^3 = \sum_{r=1}^N \big( r^2(r+1)^2 - (r-1)^2 r^2 \big)\)</span>
+<span class="math notranslate nohighlight">\(= \sum_{r=1}^N r^2(r+1)^2 - \sum{r=1}^N (r-1)^2 r^2  \)</span>
+<span class="math notranslate nohighlight">\(= 1^2 2^2 + 2^2 3^2 + \dots + (N-1)^2 N^2 + N^2 (N+1)^2\)</span>
+<span class="math notranslate nohighlight">\( - \big( 0^2 1^2 + + 1^2 2^2 + 2^2 3^2 + \dots + (N-1)^2 N^2 \big)\)</span>.
+Since all terms cancel except for <span class="math notranslate nohighlight">\(N^2 (N+1)^2\)</span> we have that <span class="math notranslate nohighlight">\(\sum_{r=1}^N r^3 = \frac{N^2 (N+1)^2}{4}\)</span>.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\( \frac{2}{2(r+1)(r+2)}  = \frac{A}{r} + \frac{B}{r+1} + \frac{C}{r+2}\)</span>
+<span class="math notranslate nohighlight">\(= \frac{A(r+1)(r+2) + B r (r+2) + Cr (r+1)}{ r (r+1) (r+2)}\)</span>.
+By equating coefficients of <span class="math notranslate nohighlight">\(r^0\)</span>, <span class="math notranslate nohighlight">\(r^1\)</span> and <span class="math notranslate nohighlight">\(r^2\)</span> in the numerator, we obtain:
+<span class="math notranslate nohighlight">\(A=1\)</span>, <span class="math notranslate nohighlight">\(B=-2\)</span>, <span class="math notranslate nohighlight">\(C=1\)</span>.
+Then
+<span class="math notranslate nohighlight">\(\sum_{r=1}^n \frac{2}{2(r+1)(r+2)}\)</span>
+<span class="math notranslate nohighlight">\(=\sum_{r=1}^n \frac{1}{r} - 2 \sum_{r=1}^n \frac{1}{r+1} + \sum_{r=1}^n \frac{1}{r+2}\)</span>
+<span class="math notranslate nohighlight">\( = \sum_{r=1}^n \frac{1}{2} - 2 \frac{r=2}{n+1} \frac{1}{r} + \sum_{r=3}^{n+2} \frac{1}{r}\)</span>
+<span class="math notranslate nohighlight">\( = (1-2+1) \sum_{r=3}^n \frac{1}{r} + \big( \frac{1}{1} + \frac{1}{2} \big) 
+-2 \big( \frac{1}{2} + \frac{1}{n+1} \big)
++\big( \frac{1}{n+1} + \frac{1}{n+1} \big)\)</span>
+<span class="math notranslate nohighlight">\(=\frac{1}{n+2} - \frac{1}{n+1} + \frac{1}{2}\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="id19">
+<h3>Questions 2.6<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(u_k = \frac{(2k)!}{2^k k!}\)</span>.
+Then <span class="math notranslate nohighlight">\(\frac{u_{k+1}}{u_k}\)</span>
+<span class="math notranslate nohighlight">\(= \frac{(2k+2)! (2^k k!)}{\big( 2^{k+1} (k+1)! \big) (2k)!}\)</span>
+<span class="math notranslate nohighlight">\( = \frac{(2k+2) (2k+1) (2k)! (2^k k!)}{\big( 2 2^{k} (k+1) k! \big) (2k)!}\)</span>
+<span class="math notranslate nohighlight">\( = \frac{(2k+2)(2k+1)}{2 (k+1)}\)</span>
+<span class="math notranslate nohighlight">\( = 2k+1\)</span>.
+So, <span class="math notranslate nohighlight">\(\lim_{k \to \infty} \lvert \frac{u_{k+1}}{u_k} \rvert =  \lim_{k \to \infty} (2k+1) &gt; 1\)</span>.
+Thus we conclude that the series diverges.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(u_k \frac{(-1)^{k-1}}{k}\)</span>.
+Then <span class="math notranslate nohighlight">\( \big\lvert \frac{u_{k+1}}{u_k} \big\rvert =  \big\lvert \frac{(-1)^k}{(k+1) (-1)^{k-1} / k} \big\rvert\)</span>
+<span class="math notranslate nohighlight">\(= \big\lvert \frac{k}{k+1} \big\rvert\)</span>
+<span class="math notranslate nohighlight">\( = \frac{1}{1+1/k}\)</span>.
+So, <span class="math notranslate nohighlight">\(\lim_{k \to \infty} \big\lvert \frac{u_{k+1}}{u_k} \big\rvert\)</span>
+<span class="math notranslate nohighlight">\( =  \frac{1}{1+1/k} \)</span>
+<span class="math notranslate nohighlight">\( = 1\)</span>.
+Thus we conclude that the test is inconclusive!
+Further tests are required to determine convergence/divergence, which is beyond the scope of the course.</p></li>
+</ol>
+</div>
 </div>
 </div>
 
@@ -1368,16 +1832,36 @@ arrangement of the terms.</p>
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../complex_numbers/complex_numbers.html" title="previous page">Complex Numbers</a>
-    <a class='right-next' id="next-link" href="../Differentiation/Differentiation.html" title="next page">Differentiation</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../complex_numbers/complex_numbers.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Complex Numbers</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../Differentiation/Differentiation.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Differentiation</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
