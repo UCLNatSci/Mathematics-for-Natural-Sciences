@@ -489,7 +489,12 @@ $\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{5}{6}\pi = \frac{19}
 
 The principal argument is given by $\textrm{arg}(zw) = -\frac{5}{12}\pi$.
 
-2. $(\frac{z_q}{z_2})^* = (\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}})^* = (\frac{r_1}{r_2}e^{-i(\theta_1 - \theta_2)^* = \frac{r_1}{r_2}e^{-i(\theta_1 - \theta_2)} = \frac{r_1e^{-i\theta_1}}{r_2e^{-i\theta_2}} = \frac{z_1^*}{z_2^*}$
+2. 
+```{math}
+\left(\frac{z_1}{z_2}\right)^* = \left(\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}\right)^* = \frac{r_1}{r_2} e^{-i(\theta_1 - \theta_2)} = \frac{r_1 e^{-i\theta_1}}{r_2 e^{-i\theta_2}} = \frac{z_1^* }{z_2^* }
+```
+
+
 
 #### Question 1.5.1
 1. $\frac{7\pi}{3} = 2\pi + \frac{\pi}{3}$ so the result lies in the first quadrant at an angle of $\frac{\pi}{3}$ away from the real axis. The result can be written as $\sqrt{2}e^{\frac{\pi i}{3}}$.

@@ -1124,42 +1124,42 @@ We argue that a series $S_1 = \sum_n a_n$ can be shown to converge if there exis
 #### Example
 Show that the following series converges
 ```{math}
-S_1 = 1 + \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{6^2} + \frac{1}{8^2} + \frac{1}{10^2} + \frac{1}{12^2} + \frac{1}{14^2} + \frac{1}{16^2} +\dots = \sum_n^\infty \frac{1}{(2n)^2}
+S_1 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{6^2} + \frac{1}{8^2} + \frac{1}{10^2} + \frac{1}{12^2} + \frac{1}{14^2} + \frac{1}{16^2} +\dots = \sum_n^\infty \frac{1}{(2n)^2}
 
 ```
 We can compare this series to the following series, which we can find by rounding down every denominator to nearest power of two (before applying the squared):
 ```{math}
-S_2 = 1 + \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} +\dots
+S_2 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} +\dots
 ```
 
 We can see that every term in $S_2$ is greater than or equal to every term in $S_1$, therefore if both $S_1, S_2$ converge, the value of $S_2 > S_1$.
 
 We can rewrite $S_2$ by collecting together like terms:
 ```{math}
-S_2 = 1 + \frac{1}{2^2} + \frac{2}{4^2} + \frac{4}{8^2} + \dots = 1 + \frac{1}{2^2} + \frac{1}{2^3} + \frac{1}{2^4} + \dots
+S_2 = \frac{1}{2^2} + \frac{2}{4^2} + \frac{4}{8^2} + \dots = 1 + \frac{1}{2^2} + \frac{1}{2^3} + \frac{1}{2^4} + \dots
 ```
-which for all terms after the first one we can see is a geometric series, with $a = \frac{1}{2^2}$ and $r = \frac{1}{2}$, which means that 
+which we can see is a geometric series, with $a = \frac{1}{2^2}$ and $r = \frac{1}{2}$, which means that 
 
 ```{math}
-S_2 = 1 + \frac{1/2^2}{1 - 1/2} = \frac{3}{2}
+S_2 = \frac{1/2^2}{1 - 1/2} = \frac{1}{2}
 ```
 and since $S_2$ converges, then by the comparison test $S_1$ also converges.
 
 The comparision test can also be used to put bounds on the values of some series, since the rounding down procesure can often be followed by a rounding up procecure, which will give us upper and lower bounds for a series.  For the sum $S_1$, we can have:
 ```{math}
-S_3 = 1 + \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} +\dots
+S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} +\dots
 ```
 which we can see gives every term less than or equal to every term in $S_1$.  By a similar process to finding the value of $S_2$ we find:
 ```{math}
-S_3 = 1 + \frac{1}{2^2} + \frac{1}{4^2} + \frac{2}{8^2} + \frac{4}{16^2} + \dots = 1 + \frac{1}{2^2} + \frac{1}{2^4} + \frac{1}{2^5} + \frac{1}{2^6} + \dots
+S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{2}{8^2} + \frac{4}{16^2} + \dots = 1 + \frac{1}{2^2} + \frac{1}{2^4} + \frac{1}{2^5} + \frac{1}{2^6} + \dots
 ```
-and if we ignore the first two terms here, this is also a geometric series, with $a = \frac{1}{2^4}$ and $r = \frac{1}{2}$, therfore:
+and if we skip the first terms here, this is also a geometric series, with $a = \frac{1}{2^4}$ and $r = \frac{1}{2}$, therfore:
 ```{math}
-S_2 = 1 + \frac{1}{2^2} + \frac{1/2^4}{1 - 1/2} = \frac{11}{8}
+S_2 = \frac{1}{2^2} + \frac{1/2^4}{1 - 1/2} = \frac{3}{8}
 ```
-and since $S_2 > S_1 > S_3$ we have $\frac{12}{8} > S_1 > \frac{11}{8}$.
+and since $S_2 > S_1 > S_3$ we have $\frac{4}{8} > S_1 > \frac{3}{8}$.
 
-### Absolute vs conditional convergence
+### Absolute v's Conditional Convergence
 
 See also Chapter 25 of "The Calculus Story: A Mathematical Adventure" by David Acheson.
 
@@ -1196,7 +1196,7 @@ Consider the [alternating harmonic series](https://en.wikipedia.org/wiki/Harmoni
 ```{math}
 \sum_{k=1}^n \frac{(-1)^{k+1}}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \dots \ ,
 ```
-It can be shown (see later work on Taylor series) that this series converges to the natural logarithm of 2, $\ln(2)$.
+It can be shown (see later a chapter on Taylor series) that this series converges to the natural logarithm of 2, $\ln(2)$.
 
 However, a regrouping of the terms gives:
 ```{math}
