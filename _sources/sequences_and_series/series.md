@@ -1119,7 +1119,7 @@ This test aims to compare the terms in our unknown series with terms of a well u
 
 #### Statement
 
-We argue that a series $S_1 = \sum_n a_n$ can be shown to converge if there exists a series $S_2 = \sum_n b_n$ such that for all terms $b_n \geq a_n$ where series $S_2$ is known to converge, therefore series $S_1$ must also converge.  
+We argue that a series $S_1 = \sum_n a_n$ can be shown to converge if there exists a series $S_2 = \sum_n b_n$ such that for all terms $|b_n| \geq |a_n|$ where series $S_2$ is known to converge, therefore series $S_1$ must also converge.  
 
 #### Example
 Show that the following series converges
