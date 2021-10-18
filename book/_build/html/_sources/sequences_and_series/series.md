@@ -1119,7 +1119,7 @@ This test aims to compare the terms in our unknown series with terms of a well u
 
 #### Statement
 
-We argue that a series $S_1 = \sum_n a_n$ can be shown to converge if there exists a series $S_2 = \sum_n b_n$ such that for all terms $b_n \geq a_n$ where series $S_2$ is known to converge, therefore series $S_1$ must also converge.  
+We argue that a series $S_1 = \sum_n a_n$ can be shown to converge if there exists a series $S_2 = \sum_n b_n$ such that for all terms $|b_n| \geq |a_n|$ where series $S_2$ is known to converge, therefore series $S_1$ must also converge.  
 
 #### Example
 Show that the following series converges
@@ -1151,11 +1151,11 @@ S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{1
 ```
 which we can see gives every term less than or equal to every term in $S_1$.  By a similar process to finding the value of $S_2$ we find:
 ```{math}
-S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{2}{8^2} + \frac{4}{16^2} + \dots = 1 + \frac{1}{2^2} + \frac{1}{2^4} + \frac{1}{2^5} + \frac{1}{2^6} + \dots
+S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{2}{8^2} + \frac{4}{16^2} + \dots = \frac{1}{2^2} + \frac{1}{2^4} + \frac{1}{2^5} + \frac{1}{2^6} + \dots
 ```
-and if we skip the first terms here, this is also a geometric series, with $a = \frac{1}{2^4}$ and $r = \frac{1}{2}$, therfore:
+and if we skip the first term here, this is also a geometric series, with $a = \frac{1}{2^4}$ and $r = \frac{1}{2}$, therfore:
 ```{math}
-S_2 = \frac{1}{2^2} + \frac{1/2^4}{1 - 1/2} = \frac{3}{8}
+S_3 = \frac{1}{2^2} + \frac{1/2^4}{1 - 1/2} = \frac{3}{8}
 ```
 and since $S_2 > S_1 > S_3$ we have $\frac{4}{8} > S_1 > \frac{3}{8}$.
 

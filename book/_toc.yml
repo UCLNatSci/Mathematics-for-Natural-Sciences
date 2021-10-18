@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: complex_numbers/complex_numbers
 - file: sequences_and_series/series
-- file: matrices/matrices
-- file: Differentiation/Differentiation
+- file: complex_numbers/complex_numbers
+#- file: matrices/matrices
+#- file: Differentiation/Differentiation
