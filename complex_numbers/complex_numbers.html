@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Complex Numbers &#8212; Mathematics for Natural Sciences 1</title>
+    <title>2. Complex Numbers &#8212; Mathematics for Natural Sciences 1</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -42,18 +42,19 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Series" href="../sequences_and_series/series.html" />
+    <link rel="next" title="3. Differentiation" href="../Differentiation/Differentiation.html" />
+    <link rel="prev" title="1. Series" href="../sequences_and_series/series.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -72,10 +73,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -85,7 +82,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -97,12 +94,17 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   Series
+   1. Series
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Complex Numbers
+   2. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Differentiation/Differentiation.html">
+   3. Differentiation
   </a>
  </li>
 </ul>
@@ -174,70 +176,70 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivations-and-definitions">
-   Motivations and Definitions
+   2.1. Motivations and Definitions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#geometric-interpretation">
-   Geometric Interpretation
+   2.2. Geometric Interpretation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-complex-plane">
-     The complex plane
+     2.2.1. The complex plane
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-modulus-and-argument-of-a-complex-number">
-     The modulus and argument of a complex number
+     2.2.2. The modulus and argument of a complex number
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#polar-form-of-a-complex-number">
-   Polar Form of a Complex Number
+   2.3. Polar Form of a Complex Number
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#complex-arithmetic">
-   Complex Arithmetic
+   2.4. Complex Arithmetic
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#addition-and-subtraction">
-     Addition and Subtraction
+     2.4.1. Addition and Subtraction
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#multiplication-of-complex-numbers">
-     Multiplication of complex numbers
+     2.4.2. Multiplication of complex numbers
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#division-of-complex-numbers">
-     Division of Complex Numbers
+     2.4.3. Division of Complex Numbers
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#multiplying-and-dividing-complex-numbers-in-polar-form">
-     Multiplying and Dividing Complex Numbers in Polar Form
+     2.4.4. Multiplying and Dividing Complex Numbers in Polar Form
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#complex-roots">
-   Complex Roots
+   2.5. Complex Roots
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#periodicity-of-e-i-theta">
-     Periodicity of
+     2.5.1. Periodicity of
      <span class="math notranslate nohighlight">
       \(e^{i\theta}\)
      </span>
@@ -245,76 +247,76 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#roots-of-unity">
-     Roots of Unity
+     2.5.2. Roots of Unity
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#roots-of-other-values">
-     Roots of Other Values
+     2.5.3. Roots of Other Values
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trigonometric-and-hyperbolic-relationships">
-   Trigonometric and Hyperbolic Relationships
+   2.6. Trigonometric and Hyperbolic Relationships
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#relationship-between-trigonometric-and-hyperbolic-functions">
-     Relationship Between Trigonometric and Hyperbolic Functions
+     2.6.1. Relationship Between Trigonometric and Hyperbolic Functions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#compound-angle-formulae">
-     Compound Angle Formulae
+     2.6.2. Compound Angle Formulae
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#de-moivre-s-theorem">
-     De Moivre’s Theorem
+    <a class="reference internal nav-link" href="#de-moivres-theorem">
+     2.6.3. De Moivre’s Theorem
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   Solutions
+   2.7. Solutions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1-1-1">
-     Question 1.1.1
+     2.7.1. Question 1.1.1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1-3-1">
-     Question 1.3.1
+     2.7.2. Question 1.3.1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1-4-1">
-     Question 1.4.1
+     2.7.3. Question 1.4.1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1-4-2">
-     Question 1.4.2
+     2.7.4. Question 1.4.2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1-4-3">
-     Question 1.4.3
+     2.7.5. Question 1.4.3
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1-5-1">
-     Question 1.5.1
+     2.7.6. Question 1.5.1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1-5-2">
-     Question 1.5.2
+     2.7.7. Question 1.5.2
     </a>
    </li>
   </ul>
@@ -331,15 +333,15 @@
               <div>
                 
   <div class="section" id="complex-numbers">
-<h1>Complex Numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Complex Numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="motivations-and-definitions">
-<h2>Motivations and Definitions<a class="headerlink" href="#motivations-and-definitions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Motivations and Definitions<a class="headerlink" href="#motivations-and-definitions" title="Permalink to this headline">¶</a></h2>
 <p>Real numbers (e.g. …<span class="math notranslate nohighlight">\(-1\)</span>, <span class="math notranslate nohighlight">\(-\frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(1\)</span>, …) are not always sufficient to solve every algebraic equation. For example, there is no real value <span class="math notranslate nohighlight">\(y\)</span> that satisfies the following problem:</p>
 <div class="math notranslate nohighlight" id="equation-ysquaredplus1">
-<span class="eqno">(15)<a class="headerlink" href="#equation-ysquaredplus1" title="Permalink to this equation">¶</a></span>\[y^2 + 1 = 0.\]</div>
-<p>However, let us <em>suppose</em> that a number <span class="math notranslate nohighlight">\(i\)</span> exists, with the property that <span class="math notranslate nohighlight">\(i=\sqrt{−1}\)</span>. Then the two roots of the quadratic equation <a class="reference internal" href="#equation-ysquaredplus1">(15)</a> are:</p>
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-ysquaredplus1" title="Permalink to this equation">¶</a></span>\[y^2 + 1 = 0.\]</div>
+<p>However, let us <em>suppose</em> that a number <span class="math notranslate nohighlight">\(i\)</span> exists, with the property that <span class="math notranslate nohighlight">\(i=\sqrt{−1}\)</span>. Then the two roots of the quadratic equation <a class="reference internal" href="#equation-ysquaredplus1">(2.1)</a> are:</p>
 <div class="math notranslate nohighlight" id="equation-plusminusi">
-<span class="eqno">(16)<a class="headerlink" href="#equation-plusminusi" title="Permalink to this equation">¶</a></span>\[y = \pm i\]</div>
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-plusminusi" title="Permalink to this equation">¶</a></span>\[y = \pm i\]</div>
 <p><em>Check the negative root:</em></p>
 <p><span class="math notranslate nohighlight">\((-i)^2 = (-1)^2i^2=1(-1)=-1\)</span>.</p>
 <p>This seems at first like pure mathematical trickery, and it is not immediately clear what has been gained. However, it turns out that with this one new definition <em>every</em> algebraic equation can be solved. Furthermore, we will soon see that we are able to find real-valued solutions to many mathematical problems by performing intermediate manipulations involving the imaginary number <span class="math notranslate nohighlight">\(i\)</span>.</p>
@@ -369,38 +371,38 @@
 </div>
 </div>
 <div class="section" id="geometric-interpretation">
-<h2>Geometric Interpretation<a class="headerlink" href="#geometric-interpretation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Geometric Interpretation<a class="headerlink" href="#geometric-interpretation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-complex-plane">
-<h3>The complex plane<a class="headerlink" href="#the-complex-plane" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.1. </span>The complex plane<a class="headerlink" href="#the-complex-plane" title="Permalink to this headline">¶</a></h3>
 <p>Since the number <span class="math notranslate nohighlight">\(z=x+yi\)</span> features two independent real parameters (<span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>), we can represent a complex number graphically using <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> as coordinates. This is an extension of our idea of representing the real numbers on a line.</p>
-<p>We construct a plane with the real part of <span class="math notranslate nohighlight">\(z\)</span> on the horizontal axis, and the imaginary part of <span class="math notranslate nohighlight">\(z\)</span> on the vertical axis, as shown in <a class="reference internal" href="#complex-plane"><span class="std std-numref">Fig. 5</span></a>. The complex conjugate <span class="math notranslate nohighlight">\(z^*\)</span> is also illustrated in the figure.</p>
+<p>We construct a plane with the real part of <span class="math notranslate nohighlight">\(z\)</span> on the horizontal axis, and the imaginary part of <span class="math notranslate nohighlight">\(z\)</span> on the vertical axis, as shown in <a class="reference internal" href="#complex-plane"><span class="std std-numref">Fig. 2.1</span></a>. The complex conjugate <span class="math notranslate nohighlight">\(z^*\)</span> is also illustrated in the figure.</p>
 <div class="figure align-default" id="complex-plane">
 <img alt="../_images/conjugate.jpg" src="../_images/conjugate.jpg" />
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Representation of a complex number in the complex plane (also known as an Argand diagram).
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Representation of a complex number in the complex plane (also known as an Argand diagram).
 The real part of the number is represented on the horizontal axis, and the imaginary part is represented on the vertical axis.
 <span class="math notranslate nohighlight">\(z^*\)</span> is given by reflecting the point z through a mirror placed along the real axis (negating the imaginary part).</span><a class="headerlink" href="#complex-plane" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="the-modulus-and-argument-of-a-complex-number">
-<h3>The modulus and argument of a complex number<a class="headerlink" href="#the-modulus-and-argument-of-a-complex-number" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.2. </span>The modulus and argument of a complex number<a class="headerlink" href="#the-modulus-and-argument-of-a-complex-number" title="Permalink to this headline">¶</a></h3>
 <p>The representation <span class="math notranslate nohighlight">\(z=x+yi\)</span> is known as the Cartesian form of a complex number. In graphical terms it tells us where the number lies with respect to the real and imaginary axes.</p>
 <p>An alternative way of describing the location of a complex number in the plane is by proving the following two pieces of information:</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>The <strong>modulus</strong> or <strong>absolute value</strong> of <span class="math notranslate nohighlight">\(z\)</span>, denoted by <span class="math notranslate nohighlight">\(|z|\)</span> or <span class="math notranslate nohighlight">\(\mathrm{abs}(z)\)</span>, measures the length of the line connecting the point to the origin. It is always a positive quantity.</p>
-<p>By inspecting Figure <a class="reference internal" href="#principal-argument"><span class="std std-numref">Fig. 6</span></a>, we can see that the modulus is just the length of the hypothenuse of a right-angled triangle. The base and height of the triangle are given by the real and imaginary parts, and so we have</p>
+<p>By inspecting Figure <a class="reference internal" href="#principal-argument"><span class="std std-numref">Fig. 2.2</span></a>, we can see that the modulus is just the length of the hypothenuse of a right-angled triangle. The base and height of the triangle are given by the real and imaginary parts, and so we have</p>
 </div>
 <div class="math notranslate nohighlight" id="equation-xplusiy">
-<span class="eqno">(17)<a class="headerlink" href="#equation-xplusiy" title="Permalink to this equation">¶</a></span>\[|x+iy| = \sqrt{x^2+y^2}.\]</div>
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-xplusiy" title="Permalink to this equation">¶</a></span>\[|x+iy| = \sqrt{x^2+y^2}.\]</div>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>The <strong>argument</strong> of a complex number, denoted by <span class="math notranslate nohighlight">\(\mathrm{arg}(z)\)</span>, measures the angle between the positive real axis and the line connecting the point to the origin. You might think of it as a bearing, relative to the direction of the positive real axis.</p>
 <p>We measure the argument continuously in the <em>anti-clockwise</em> direction, and there are two different conventions in use for giving the argument of a complex number that lies below the real axis.</p>
-<p>The two conventions are both illustrated in <a class="reference internal" href="#principal-argument"><span class="std std-numref">Fig. 6</span></a>.</p>
+<p>The two conventions are both illustrated in <a class="reference internal" href="#principal-argument"><span class="std std-numref">Fig. 2.2</span></a>.</p>
 </div>
 <div class="figure align-default" id="principal-argument">
 <img alt="../_images/principal_argument.png" src="../_images/principal_argument.png" />
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Generic illustration of a complex number in the plane. The length of the blue line connecting the point to the origin is given by <span class="math notranslate nohighlight">\(|z|=\sqrt{x_2+y_2}\)</span>. The angle subtended on the real axis is given by <span class="math notranslate nohighlight">\(\mu=\mathrm{arctan}(|y/x|)\)</span>. There are two different conventions in use for measuring the argument. Click on the interactive figure to explore them both.</span><a class="headerlink" href="#principal-argument" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Generic illustration of a complex number in the plane. The length of the blue line connecting the point to the origin is given by <span class="math notranslate nohighlight">\(|z|=\sqrt{x_2+y_2}\)</span>. The angle subtended on the real axis is given by <span class="math notranslate nohighlight">\(\mu=\mathrm{arctan}(|y/x|)\)</span>. There are two different conventions in use for measuring the argument. Click on the interactive figure to explore them both.</span><a class="headerlink" href="#principal-argument" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -418,13 +420,13 @@ The real part of the number is represented on the horizontal axis, and the imagi
 </div>
 </div>
 <div class="section" id="polar-form-of-a-complex-number">
-<h2>Polar Form of a Complex Number<a class="headerlink" href="#polar-form-of-a-complex-number" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Polar Form of a Complex Number<a class="headerlink" href="#polar-form-of-a-complex-number" title="Permalink to this headline">¶</a></h2>
 <p>The relationship between the Cartesian representation <span class="math notranslate nohighlight">\(z = x + yi\)</span> and the modulus &amp; argument representation is illustrated in . We conclude that a complex number can be expressed in the form:</p>
 <div class="math notranslate nohighlight" id="equation-polarcomplex">
-<span class="eqno">(18)<a class="headerlink" href="#equation-polarcomplex" title="Permalink to this equation">¶</a></span>\[z = r(cos(\theta) + i sin(\theta)).\]</div>
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-polarcomplex" title="Permalink to this equation">¶</a></span>\[z = r(cos(\theta) + i sin(\theta)).\]</div>
 <p>An alternative way of writing this result is the celebrated <em>polar form</em> of a complex number, using the exponential function:</p>
 <div class="math notranslate nohighlight" id="equation-eulersformula">
-<span class="eqno">(19)<a class="headerlink" href="#equation-eulersformula" title="Permalink to this equation">¶</a></span>\[z = re^{i\theta} = r(cos(\theta) + i sin(\theta)), \textrm{where } r = |z|, \theta = arg(z)\]</div>
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-eulersformula" title="Permalink to this equation">¶</a></span>\[z = re^{i\theta} = r(cos(\theta) + i sin(\theta)), \textrm{where } r = |z|, \theta = arg(z)\]</div>
 <p>We will understand (and prove!) this result later. For now, we just <em>find</em> the polar representation of given complex numbers, and <em>use</em> the polar form to deduce some further results.</p>
 <div class="tip admonition">
 <p class="admonition-title">Practice</p>
@@ -432,7 +434,7 @@ The real part of the number is represented on the horizontal axis, and the imagi
 <ol class="simple">
 <li><p>Write down the polar form of the following complex numbers:<br />
 (a) <span class="math notranslate nohighlight">\(1+i\)</span>   (b) <span class="math notranslate nohighlight">\(-1+i\)</span><br />
-(c) <span class="math notranslate nohighlight">\(-1-i\)</span>   (d) <span class="math notranslate nohighlight">\(1-i\)</span><br />
+© <span class="math notranslate nohighlight">\(-1-i\)</span>   (d) <span class="math notranslate nohighlight">\(1-i\)</span><br />
 (e) <span class="math notranslate nohighlight">\(-1\)</span></p></li>
 <li><p>Express the following complex numbers in Cartesian form:<br />
 (a) <span class="math notranslate nohighlight">\(\sqrt{3}e^{-i\pi /3}\)</span><br />
@@ -441,34 +443,34 @@ The real part of the number is represented on the horizontal axis, and the imagi
 </div>
 </div>
 <div class="section" id="complex-arithmetic">
-<h2>Complex Arithmetic<a class="headerlink" href="#complex-arithmetic" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Complex Arithmetic<a class="headerlink" href="#complex-arithmetic" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="addition-and-subtraction">
-<h3>Addition and Subtraction<a class="headerlink" href="#addition-and-subtraction" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.4.1. </span>Addition and Subtraction<a class="headerlink" href="#addition-and-subtraction" title="Permalink to this headline">¶</a></h3>
 <p>To add or subtract complex numbers, we simply add or subtract the real and imaginary parts:</p>
 <div class="math notranslate nohighlight" id="equation-complexaddition">
-<span class="eqno">(20)<a class="headerlink" href="#equation-complexaddition" title="Permalink to this equation">¶</a></span>\[(x_1+y_1i) \pm (x_2+y_2i) = (x_1 \pm x_2) + (y_1 \pm y_2)i\]</div>
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-complexaddition" title="Permalink to this equation">¶</a></span>\[(x_1+y_1i) \pm (x_2+y_2i) = (x_1 \pm x_2) + (y_1 \pm y_2)i\]</div>
 <p>We can represent the result of the addition graphically by constructing a parallelogram from the three complex points</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(z_1 = x_1 + y_1i\)</span>,</p></li>
 <li><p><span class="math notranslate nohighlight">\(z_2 = x_2 + y_2i\)</span>,</p></li>
 <li><p><span class="math notranslate nohighlight">\(z_3 = z_1 + z_2\)</span></p></li>
 </ul>
-<p>as shown in <a class="reference internal" href="#complexnumberaddition"><span class="std std-numref">Fig. 7</span></a>.</p>
+<p>as shown in <a class="reference internal" href="#complexnumberaddition"><span class="std std-numref">Fig. 2.3</span></a>.</p>
 <div class="figure align-default" id="complexnumberaddition">
 <img alt="../_images/ComplexNumberAddition.png" src="../_images/ComplexNumberAddition.png" />
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Parallelogram rule for addition of complex numbers, <span class="math notranslate nohighlight">\(z_3 = z_1+z_2\)</span></span><a class="headerlink" href="#complexnumberaddition" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Parallelogram rule for addition of complex numbers, <span class="math notranslate nohighlight">\(z_3 = z_1+z_2\)</span></span><a class="headerlink" href="#complexnumberaddition" title="Permalink to this image">¶</a></p>
 </div>
-<p>A graphical representation of the result for subtraction is shown in <a class="reference internal" href="#complexnumbersubtraction"><span class="std std-numref">Fig. 8</span></a>. notice that <span class="math notranslate nohighlight">\(z_3 = z_2-z_1\)</span> rearranges to give <span class="math notranslate nohighlight">\(z_2 = z_1-z_3\)</span>, so now <span class="math notranslate nohighlight">\(z_2\)</span> is lies on the diagonal of the parallelogram.</p>
+<p>A graphical representation of the result for subtraction is shown in <a class="reference internal" href="#complexnumbersubtraction"><span class="std std-numref">Fig. 2.4</span></a>. notice that <span class="math notranslate nohighlight">\(z_3 = z_2-z_1\)</span> rearranges to give <span class="math notranslate nohighlight">\(z_2 = z_1-z_3\)</span>, so now <span class="math notranslate nohighlight">\(z_2\)</span> is lies on the diagonal of the parallelogram.</p>
 <div class="figure align-default" id="complexnumbersubtraction">
 <img alt="../_images/ComplexNumberSubtraction.png" src="../_images/ComplexNumberSubtraction.png" />
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Triangle rule for subtraction of two complex numbers, <span class="math notranslate nohighlight">\(z_3=z_2-z_1\)</span>.</span><a class="headerlink" href="#complexnumbersubtraction" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Triangle rule for subtraction of two complex numbers, <span class="math notranslate nohighlight">\(z_3=z_2-z_1\)</span>.</span><a class="headerlink" href="#complexnumbersubtraction" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="multiplication-of-complex-numbers">
-<h3>Multiplication of complex numbers<a class="headerlink" href="#multiplication-of-complex-numbers" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.4.2. </span>Multiplication of complex numbers<a class="headerlink" href="#multiplication-of-complex-numbers" title="Permalink to this headline">¶</a></h3>
 <p>The product of two complex numbers is just an ordinary product of sums, and so follows the FOIL rule (<strong>F</strong>irsts, <strong>O</strong>utsides, <strong>I</strong>nsides, <strong>L</strong>asts):</p>
 <div class="math notranslate nohighlight" id="equation-complexmultiplication">
-<span class="eqno">(21)<a class="headerlink" href="#equation-complexmultiplication" title="Permalink to this equation">¶</a></span>\[(x_1+y_1i)(x_2+y_2i) = x_1x_2 + ix_1y_2 + ix_2y_1 + i^2y_1y_2 = (x_1x_2 - y_1y_2) + i(x_1y_2 + x_2y_1)\]</div>
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-complexmultiplication" title="Permalink to this equation">¶</a></span>\[(x_1+y_1i)(x_2+y_2i) = x_1x_2 + ix_1y_2 + ix_2y_1 + i^2y_1y_2 = (x_1x_2 - y_1y_2) + i(x_1y_2 + x_2y_1)\]</div>
 <p>Note the use of <span class="math notranslate nohighlight">\(i^2=-1\)</span> to simplify the result.</p>
 <div class="tip admonition">
 <p class="admonition-title">Practice</p>
@@ -479,15 +481,15 @@ The real part of the number is represented on the horizontal axis, and the imagi
 </div>
 </div>
 <div class="section" id="division-of-complex-numbers">
-<h3>Division of Complex Numbers<a class="headerlink" href="#division-of-complex-numbers" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.4.3. </span>Division of Complex Numbers<a class="headerlink" href="#division-of-complex-numbers" title="Permalink to this headline">¶</a></h3>
 <p>Suppose that <span class="math notranslate nohighlight">\(z_1 = x_1 + iy_1\)</span>, <span class="math notranslate nohighlight">\(z_2 = x_2 + iy_2\)</span> and we want to express the result <span class="math notranslate nohighlight">\(z_3 = \frac{z_1}{z_2}\)</span> in the form <span class="math notranslate nohighlight">\(z_3 = x_3 + iy_3\)</span> where <span class="math notranslate nohighlight">\(x_3\)</span> and <span class="math notranslate nohighlight">\(y_3\)</span> are real numbers.</p>
 <p>We make use of the fact that <span class="math notranslate nohighlight">\(zz^*\)</span> is real to make sure we get a real number in the denominator of the resulting fraction:</p>
 <div class="math notranslate nohighlight" id="equation-complexnumberdivision">
-<span class="eqno">(22)<a class="headerlink" href="#equation-complexnumberdivision" title="Permalink to this equation">¶</a></span>\[z_3 = \frac{z_1}{z_2}\frac{z_2*}{z_2*} = \frac{z_1z_2*}{|z_2|^2}\]</div>
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-complexnumberdivision" title="Permalink to this equation">¶</a></span>\[z_3 = \frac{z_1}{z_2}\frac{z_2*}{z_2*} = \frac{z_1z_2*}{|z_2|^2}\]</div>
 <p>Here we have just multiplied by <span class="math notranslate nohighlight">\(1\)</span>, as <span class="math notranslate nohighlight">\(\frac{z_2*}{z_2*} = 1\)</span>.</p>
 <p>Let’s see how this works for an example in which <span class="math notranslate nohighlight">\(z_1 = 2 + 3i\)</span> and <span class="math notranslate nohighlight">\(z_2 = 1 - 2i\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-complexnumberdivisionexample">
-<span class="eqno">(23)<a class="headerlink" href="#equation-complexnumberdivisionexample" title="Permalink to this equation">¶</a></span>\[\frac{2+3i}{1-2i} = \frac{2+3i}{1-2i} \frac{1+2i}{1+2i} = \frac{2+3i+4i-6}{1+4} = -\frac{4}{5} + \frac{7}{5}i\]</div>
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-complexnumberdivisionexample" title="Permalink to this equation">¶</a></span>\[\frac{2+3i}{1-2i} = \frac{2+3i}{1-2i} \frac{1+2i}{1+2i} = \frac{2+3i+4i-6}{1+4} = -\frac{4}{5} + \frac{7}{5}i\]</div>
 <div class="tip admonition">
 <p class="admonition-title">Practice</p>
 <ol class="simple">
@@ -496,10 +498,10 @@ The real part of the number is represented on the horizontal axis, and the imagi
 </div>
 </div>
 <div class="section" id="multiplying-and-dividing-complex-numbers-in-polar-form">
-<h3>Multiplying and Dividing Complex Numbers in Polar Form<a class="headerlink" href="#multiplying-and-dividing-complex-numbers-in-polar-form" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.4.4. </span>Multiplying and Dividing Complex Numbers in Polar Form<a class="headerlink" href="#multiplying-and-dividing-complex-numbers-in-polar-form" title="Permalink to this headline">¶</a></h3>
 <p>Multiplying and dividing complex numbers in polar form is particularly easy. If we suppose that <span class="math notranslate nohighlight">\(z_1 = r_1e^{i\theta_1}\)</span>, and <span class="math notranslate nohighlight">\(z_2 = r_2e^{i\theta_2}\)</span>, then the result follows immediately from the laws of exponents:</p>
 <div class="math notranslate nohighlight" id="equation-multdivinpolarform">
-<span class="eqno">(24)<a class="headerlink" href="#equation-multdivinpolarform" title="Permalink to this equation">¶</a></span>\[z_1 z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}\]</div>
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-multdivinpolarform" title="Permalink to this equation">¶</a></span>\[z_1 z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}\]</div>
 <p>These results highlight very clearly the geometry of multiplication and division in the complex plane. Notice in particular that multiplication by <span class="math notranslate nohighlight">\(e^{i\theta}\)</span> just rotates a complex number in the plane by and angle <span class="math notranslate nohighlight">\(\theta\)</span>. What result would multiplication by <span class="math notranslate nohighlight">\(e^{2\pi i}\)</span> give?</p>
 <div class="note admonition">
 <p class="admonition-title">The geometry of multiplication</p>
@@ -539,14 +541,14 @@ The real part of the number is represented on the horizontal axis, and the imagi
 </div>
 </div>
 <div class="section" id="complex-roots">
-<h2>Complex Roots<a class="headerlink" href="#complex-roots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>Complex Roots<a class="headerlink" href="#complex-roots" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="periodicity-of-e-i-theta">
-<h3>Periodicity of <span class="math notranslate nohighlight">\(e^{i\theta}\)</span><a class="headerlink" href="#periodicity-of-e-i-theta" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.1. </span>Periodicity of <span class="math notranslate nohighlight">\(e^{i\theta}\)</span><a class="headerlink" href="#periodicity-of-e-i-theta" title="Permalink to this headline">¶</a></h3>
 <p>Earlier we deduced that multiplication by <span class="math notranslate nohighlight">\(e^{i\theta}\)</span> corresponds to a <strong>rotation</strong> of a complex number by an angle <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <p>For the special case of a complete rotation, <span class="math notranslate nohighlight">\(\theta = 3\pi\)</span>, multiplication returns the complex number to its original location in the plane, and so we have the result <span class="math notranslate nohighlight">\(e^{2\pi i} = 1\)</span>. In a general form, <span class="math notranslate nohighlight">\(e^{2k\pi i} = 1\)</span> for any whole number of rotations <span class="math notranslate nohighlight">\(k\)</span>, with the sign of the exponent determining the direction of rotation.</p>
 <p>Another way of viewing this result is in terms of the periodicity of the complex exponential. Euler’s formula tells us that the complex exponential <span class="math notranslate nohighlight">\(e^{i\theta}\)</span> is the linear sum of two <span class="math notranslate nohighlight">\(2\pi\)</span>-periodic functions, and so we can deduce that it also has a period of <span class="math notranslate nohighlight">\(2\pi\)</span>. That is:</p>
 <div class="math notranslate nohighlight" id="equation-complexperiodicity">
-<span class="eqno">(25)<a class="headerlink" href="#equation-complexperiodicity" title="Permalink to this equation">¶</a></span>\[e^{i(\theta + 2k\pi)} = e^{i\theta} \textrm{ for } k = 0, \pm1, \pm2, ...\]</div>
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-complexperiodicity" title="Permalink to this equation">¶</a></span>\[e^{i(\theta + 2k\pi)} = e^{i\theta} \textrm{ for } k = 0, \pm1, \pm2, ...\]</div>
 <p>Geometrically, the expression is merely a statement of the fact that if we continuously “wrap around” the complex plane without changing the modulus, we will return to our starting position at the end of each complete revolution.</p>
 <p>This was also the principal by which we were able to define (at least) two different possible conventions for the principal argument.</p>
 <div class="tip admonition">
@@ -559,18 +561,18 @@ The real part of the number is represented on the horizontal axis, and the imagi
 </div>
 </div>
 <div class="section" id="roots-of-unity">
-<h3>Roots of Unity<a class="headerlink" href="#roots-of-unity" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.2. </span>Roots of Unity<a class="headerlink" href="#roots-of-unity" title="Permalink to this headline">¶</a></h3>
 <p>In this subsection, we will deduce the roots of the problem <span class="math notranslate nohighlight">\(z^m = 1\)</span>, where <span class="math notranslate nohighlight">\(m\)</span> is a natural number (1, 2, 3, …). We call these results the <span class="math notranslate nohighlight">\(m^{th}\)</span> “roots of unity”.</p>
 <p>From the basic laws of exponents, we can observe that taking:</p>
 <div class="math notranslate nohighlight" id="equation-rootsofunity">
-<span class="eqno">(26)<a class="headerlink" href="#equation-rootsofunity" title="Permalink to this equation">¶</a></span>\[z_k = e^{i\frac{2k\pi}{m}}\]</div>
+<span class="eqno">(2.12)<a class="headerlink" href="#equation-rootsofunity" title="Permalink to this equation">¶</a></span>\[z_k = e^{i\frac{2k\pi}{m}}\]</div>
 <p>gives <span class="math notranslate nohighlight">\((z_k)^m = e^{2k\pi i}\)</span>, and these values are both equal to 1 if k is an integer.</p>
 <p>Since the number of integers in infinite, it appears that we have found an infinite number of <span class="math notranslate nohighlight">\(m^{th}\)</span> roots of unity. However, we know that a degree <span class="math notranslate nohighlight">\(m\)</span> polynomial should have only <span class="math notranslate nohighlight">\(m\)</span> roots, which may not be distinct from one another, as all such polynomials can be obtained by multiplying together a product of <span class="math notranslate nohighlight">\(m\)</span> factors of the form <span class="math notranslate nohighlight">\((z-z_k)\)</span>.</p>
 <p>We can reconcile this apparent contradiction by again considering the periodicity of the complex exponential. You may verify that for the expression <span class="math notranslate nohighlight">\(z_k\)</span> given above, <span class="math notranslate nohighlight">\(z_{k+m}=z_k\)</span>. and this means that after a run of <span class="math notranslate nohighlight">\(m\)</span> consecutive values of <span class="math notranslate nohighlight">\(k\)</span> the results will start to repeat.</p>
-<p><a class="reference internal" href="#rootsofunity"><span class="std std-numref">Fig. 9</span></a> illustrates how the values of <span class="math notranslate nohighlight">\(k\)</span> can be chosen to give the roots in polar form where the argument is in the range (<span class="math notranslate nohighlight">\(-\pi, \pi\)</span>). The geometric location of the roots in the complex plane is also shown, illustrating the equal angular separation between the roots.</p>
+<p><a class="reference internal" href="#rootsofunity"><span class="std std-numref">Fig. 2.5</span></a> illustrates how the values of <span class="math notranslate nohighlight">\(k\)</span> can be chosen to give the roots in polar form where the argument is in the range (<span class="math notranslate nohighlight">\(-\pi, \pi\)</span>). The geometric location of the roots in the complex plane is also shown, illustrating the equal angular separation between the roots.</p>
 <div class="figure align-default" id="rootsofunity">
 <img alt="../_images/roots_of_unity.png" src="../_images/roots_of_unity.png" />
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">An illustration showing the location of the roots of <span class="math notranslate nohighlight">\(z^m=1\)</span>, which are of the form <span class="math notranslate nohighlight">\(z=e^{\frac{2k\pi i}{m}}\)</span>.</span><a class="headerlink" href="#rootsofunity" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">An illustration showing the location of the roots of <span class="math notranslate nohighlight">\(z^m=1\)</span>, which are of the form <span class="math notranslate nohighlight">\(z=e^{\frac{2k\pi i}{m}}\)</span>.</span><a class="headerlink" href="#rootsofunity" title="Permalink to this image">¶</a></p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Practice</p>
@@ -578,17 +580,17 @@ The real part of the number is represented on the horizontal axis, and the imagi
 </div>
 </div>
 <div class="section" id="roots-of-other-values">
-<h3>Roots of Other Values<a class="headerlink" href="#roots-of-other-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.3. </span>Roots of Other Values<a class="headerlink" href="#roots-of-other-values" title="Permalink to this headline">¶</a></h3>
 <p>Now that we have solved the roots of unity, finding the complex roots of other values <span class="math notranslate nohighlight">\(z^m = c\)</span> is relatively straightforward, even in cases where <span class="math notranslate nohighlight">\(c\)</span> is complex value.</p>
 <p>We simply express <span class="math notranslate nohighlight">\(c\)</span> in polar form, <span class="math notranslate nohighlight">\(c=re^{i\theta}\)</span>, and then use the result:</p>
 <div class="math notranslate nohighlight" id="equation-rootsofothervalues">
-<span class="eqno">(27)<a class="headerlink" href="#equation-rootsofothervalues" title="Permalink to this equation">¶</a></span>\[z_m = r^{1/m}e^{i\frac{\theta}{m}}e^{i\frac{2\pi k}{m}}\]</div>
+<span class="eqno">(2.13)<a class="headerlink" href="#equation-rootsofothervalues" title="Permalink to this equation">¶</a></span>\[z_m = r^{1/m}e^{i\frac{\theta}{m}}e^{i\frac{2\pi k}{m}}\]</div>
 <div class="admonition-worked-example admonition">
 <p class="admonition-title">Worked Example</p>
 <p>Find all roots of the problem <span class="math notranslate nohighlight">\(z^4 = \sqrt{3} - i\)</span> in Cartesian form, <span class="math notranslate nohighlight">\(z = x + iy\)</span>.</p>
 <p><em>Solution</em>
 We begin by writing the right hand side in polar form: <span class="math notranslate nohighlight">\(\sqrt{3} - i = 2e^{-i\frac{\pi}{6}}\)</span></p>
-<p>Here, <span class="math notranslate nohighlight">\(m=4\)</span>, and so we use Equation <a class="reference internal" href="#equation-rootsofothervalues">(27)</a> to find our roots.</p>
+<p>Here, <span class="math notranslate nohighlight">\(m=4\)</span>, and so we use Equation <a class="reference internal" href="#equation-rootsofothervalues">(2.13)</a> to find our roots.</p>
 <p>One solution is given simply by <span class="math notranslate nohighlight">\(z = (2e^{-i\frac{\pi}{6}})^{\frac{1}{4}} = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}}\)</span></p>
 <p>The others are found by multiplying by <span class="math notranslate nohighlight">\(e^{-\frac{\pi}{2}}\)</span>, <span class="math notranslate nohighlight">\(e^{\frac{\pi}{2}}\)</span>, <span class="math notranslate nohighlight">\(e^{\pi}\)</span></p>
 <p>Following through, we then obtain:</p>
@@ -603,26 +605,26 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 </div>
 </div>
 <div class="section" id="trigonometric-and-hyperbolic-relationships">
-<h2>Trigonometric and Hyperbolic Relationships<a class="headerlink" href="#trigonometric-and-hyperbolic-relationships" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.6. </span>Trigonometric and Hyperbolic Relationships<a class="headerlink" href="#trigonometric-and-hyperbolic-relationships" title="Permalink to this headline">¶</a></h2>
 <p>In this section, we make use of Euler’s identity, <span class="math notranslate nohighlight">\(e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)\)</span>, to prove several results involving trigonometric and hyperbolic functions. We haven’t yet proven Euler’s identity yet, but we will be able to do so later in the course).</p>
 <div class="section" id="relationship-between-trigonometric-and-hyperbolic-functions">
-<h3>Relationship Between Trigonometric and Hyperbolic Functions<a class="headerlink" href="#relationship-between-trigonometric-and-hyperbolic-functions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.6.1. </span>Relationship Between Trigonometric and Hyperbolic Functions<a class="headerlink" href="#relationship-between-trigonometric-and-hyperbolic-functions" title="Permalink to this headline">¶</a></h3>
 <p>Starting from Euler’s identity, we observe that:</p>
 <div class="math notranslate nohighlight" id="equation-trigeuler">
-<span class="eqno">(28)<a class="headerlink" href="#equation-trigeuler" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}e^{i\theta} = \textrm{cos}(\theta) + i\textrm{sin}(\theta)\\e^{-i\theta} = \textrm{cos}(\theta) - i\textrm{sin}(\theta)\end{aligned}\end{align} \]</div>
+<span class="eqno">(2.14)<a class="headerlink" href="#equation-trigeuler" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}e^{i\theta} = \textrm{cos}(\theta) + i\textrm{sin}(\theta)\\e^{-i\theta} = \textrm{cos}(\theta) - i\textrm{sin}(\theta)\end{aligned}\end{align} \]</div>
 <p>By adding and subtracting these two results, we obtain expressions for cosine and sine in terms of complex exponentials, which are strikingly similar to the hyperbolic cosine and sine functions:</p>
 <div class="math notranslate nohighlight" id="equation-complexhyperbolic">
-<span class="eqno">(29)<a class="headerlink" href="#equation-complexhyperbolic" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\textrm{cos}(\theta) = \frac{1}{2}(e^{i\theta}+e^{-i\theta}) = \textrm{cosh}(i\theta)\\\textrm{sin}(\theta) = \frac{1}{2i}(e^{i\theta}-e^{-i\theta}) = -i\textrm{sinh}(i\theta)\end{aligned}\end{align} \]</div>
+<span class="eqno">(2.15)<a class="headerlink" href="#equation-complexhyperbolic" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\textrm{cos}(\theta) = \frac{1}{2}(e^{i\theta}+e^{-i\theta}) = \textrm{cosh}(i\theta)\\\textrm{sin}(\theta) = \frac{1}{2i}(e^{i\theta}-e^{-i\theta}) = -i\textrm{sinh}(i\theta)\end{aligned}\end{align} \]</div>
 <p>The results may be used to obtain similar results for <strong>tan</strong>, <strong>cosec</strong>, <strong>sec</strong> and <strong>cot</strong>. For example, <span class="math notranslate nohighlight">\(\textrm{tan}(\theta) = \textrm{sin}(\theta) / \textrm{cos}(\theta) = \frac{-i\textrm{sinh}(i\theta)}{\textrm{cosh}(i\theta)} = -i\textrm{tanh}(i\theta)\)</span>.</p>
 </div>
 <div class="section" id="compound-angle-formulae">
-<h3>Compound Angle Formulae<a class="headerlink" href="#compound-angle-formulae" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.6.2. </span>Compound Angle Formulae<a class="headerlink" href="#compound-angle-formulae" title="Permalink to this headline">¶</a></h3>
 <p>The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:</p>
 <div class="math notranslate nohighlight" id="equation-compoundangle1">
-<span class="eqno">(30)<a class="headerlink" href="#equation-compoundangle1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}e^{i(A+B)} = e^{iA}e^{iB} \textrm{ therefore...}\\\textrm{cos}(A+B) + i\textrm{sin}(A+B) = (\textrm{cos}(A) + i\textrm{sin}(A))(\textrm{cos}(B) + i\textrm{sin}(B))\end{aligned}\end{align} \]</div>
+<span class="eqno">(2.16)<a class="headerlink" href="#equation-compoundangle1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}e^{i(A+B)} = e^{iA}e^{iB} \textrm{ therefore...}\\\textrm{cos}(A+B) + i\textrm{sin}(A+B) = (\textrm{cos}(A) + i\textrm{sin}(A))(\textrm{cos}(B) + i\textrm{sin}(B))\end{aligned}\end{align} \]</div>
 <p>Expanding out the right hand side and comparing the real and imaginary parts provides us with the <strong>compound angle formula</strong> for <span class="math notranslate nohighlight">\(\textrm{cos}(A+B)\)</span> and <span class="math notranslate nohighlight">\(\textrm{sin}(A+B)\)</span>. We obtain the familiar results:</p>
 <div class="math notranslate nohighlight" id="equation-compoundangle2">
-<span class="eqno">(31)<a class="headerlink" href="#equation-compoundangle2" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\textrm{cos}(A+B) = \textrm{cos}(A)\textrm{cos}(B) - \textrm{sin}(A)\textrm{sin}(B)\\\textrm{sin}(A+B) = \textrm{sin}(A)\textrm{cos}(B) + \textrm{cos}(A)\textrm{sin}(B)\end{aligned}\end{align} \]</div>
+<span class="eqno">(2.17)<a class="headerlink" href="#equation-compoundangle2" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\textrm{cos}(A+B) = \textrm{cos}(A)\textrm{cos}(B) - \textrm{sin}(A)\textrm{sin}(B)\\\textrm{sin}(A+B) = \textrm{sin}(A)\textrm{cos}(B) + \textrm{cos}(A)\textrm{sin}(B)\end{aligned}\end{align} \]</div>
 <p>In some applications (e.g. integration), we will occasionally need to express trigonometric powers in terms of multiple angles (e.g. <span class="math notranslate nohighlight">\(\textrm{cos}^2(\theta) = \frac{1}{2}(\textrm{cos}(2\theta)+1)\)</span>).</p>
 <p>For higher powers we make use of the complex exponential form:</p>
 <div class="math notranslate nohighlight">
@@ -640,14 +642,14 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 <p>Show that <span class="math notranslate nohighlight">\(\textrm{cos}^7(\theta) = \frac{1}{64} [35\textrm{cos}(\theta) + 21\textrm{cos}(3\theta) + 7\textrm{cos}(5\theta) + \textrm{cos}(7\theta)\)</span></p>
 </div>
 </div>
-<div class="section" id="de-moivre-s-theorem">
-<h3>De Moivre’s Theorem<a class="headerlink" href="#de-moivre-s-theorem" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="de-moivres-theorem">
+<h3><span class="section-number">2.6.3. </span>De Moivre’s Theorem<a class="headerlink" href="#de-moivres-theorem" title="Permalink to this headline">¶</a></h3>
 <p>Starting with Euler’s Identity <span class="math notranslate nohighlight">\(e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)\)</span> and raising both sides to the <span class="math notranslate nohighlight">\(n^{th}\)</span> power gives:</p>
 <div class="math notranslate nohighlight" id="equation-eulerton">
-<span class="eqno">(32)<a class="headerlink" href="#equation-eulerton" title="Permalink to this equation">¶</a></span>\[e^{in\theta} = (\textrm{cos}(\theta) + i\textrm{sin}(\theta))^2\]</div>
+<span class="eqno">(2.18)<a class="headerlink" href="#equation-eulerton" title="Permalink to this equation">¶</a></span>\[e^{in\theta} = (\textrm{cos}(\theta) + i\textrm{sin}(\theta))^2\]</div>
 <p>We can then use Euler’s identity again (replacing <span class="math notranslate nohighlight">\(\theta\)</span> with <span class="math notranslate nohighlight">\(n\theta\)</span>) to re-write the left had side:</p>
 <div class="math notranslate nohighlight" id="equation-demoivre">
-<span class="eqno">(33)<a class="headerlink" href="#equation-demoivre" title="Permalink to this equation">¶</a></span>\[\textrm{cos}(n\theta) + i\textrm{sin}(n\theta) \equiv (\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n\]</div>
+<span class="eqno">(2.19)<a class="headerlink" href="#equation-demoivre" title="Permalink to this equation">¶</a></span>\[\textrm{cos}(n\theta) + i\textrm{sin}(n\theta) \equiv (\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n\]</div>
 <p>This result (for integer values of <span class="math notranslate nohighlight">\(n\)</span>) is known as De Moivre’s theorem. Historically, it was proved before Euler’s identity. A possible technique for proving it without Euler’s identity is by <em>induction</em>. Proof by induction is not a technique that we study in this module, but the argument is given in the section on further reading for any interested students.</p>
 <p>The fact that De Moivre’s theorem is <em>consistent</em> with Euler’s identity is reassuring, although we have still not proved that Euler’s identity is correct.</p>
 <div class="note admonition">
@@ -657,9 +659,9 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 </div>
 </div>
 <div class="section" id="solutions">
-<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.7. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="question-1-1-1">
-<h3>Question 1.1.1<a class="headerlink" href="#question-1-1-1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.1. </span>Question 1.1.1<a class="headerlink" href="#question-1-1-1" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(-3\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(2 + 3i\)</span></p></li>
@@ -667,13 +669,13 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 </ol>
 </div>
 <div class="section" id="question-1-3-1">
-<h3>Question 1.3.1<a class="headerlink" href="#question-1-3-1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.2. </span>Question 1.3.1<a class="headerlink" href="#question-1-3-1" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>All of the numbers (a-d) have a modulus of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> and subtend an angle of <span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span> with the real axis. Thus, we have:</p></li>
 </ol>
 <p>(a) <span class="math notranslate nohighlight">\(1+i \equiv \sqrt{2}e^{\frac{i\pi}{4}}\)</span></p>
 <p>(b) <span class="math notranslate nohighlight">\(-1+i \equiv \sqrt{2}e^{\frac{3i\pi}{4}}\)</span></p>
-<p>(c) <span class="math notranslate nohighlight">\(-1-i \equiv \sqrt{2}e^{\frac{-3i\pi}{4}}\)</span></p>
+<p>© <span class="math notranslate nohighlight">\(-1-i \equiv \sqrt{2}e^{\frac{-3i\pi}{4}}\)</span></p>
 <p>(d)<span class="math notranslate nohighlight">\(1-i \equiv \sqrt{2}e^{\frac{-i\pi}{4}}\)</span></p>
 <p>(e) Since <span class="math notranslate nohighlight">\(-1\)</span> lies on the negative real axis, it has an argument of <span class="math notranslate nohighlight">\(\pi\)</span>. It has a modulus <span class="math notranslate nohighlight">\(1\)</span>. Hence, we can write the famous result <span class="math notranslate nohighlight">\(e^{i\pi} + 1 = 0\)</span>.</p>
 <ol class="simple">
@@ -684,18 +686,18 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 <p>Both results could also be derived by sketching the numbers in the plane. Result (b) is particularly easy. It lies on the positive imaginary axis (<span class="math notranslate nohighlight">\(\textrm{arg}(z) = \frac{\pi}{2}\)</span>) and has a modulus of <span class="math notranslate nohighlight">\(1\)</span>.</p>
 </div>
 <div class="section" id="question-1-4-1">
-<h3>Question 1.4.1<a class="headerlink" href="#question-1-4-1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.3. </span>Question 1.4.1<a class="headerlink" href="#question-1-4-1" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(zw^* = (1+2i)(2-i) = 2-i+4i+2 = 3+3i\)</span></p></li>
 <li><p>Let <span class="math notranslate nohighlight">\(z=x+yi\)</span>. Then <span class="math notranslate nohighlight">\(zz^* = (x+yi)(x-yi) = x^2 + yi - yi + i^2y = x^2 + y^2 = |z|^2\)</span></p></li>
 </ol>
 </div>
 <div class="section" id="question-1-4-2">
-<h3>Question 1.4.2<a class="headerlink" href="#question-1-4-2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.4. </span>Question 1.4.2<a class="headerlink" href="#question-1-4-2" title="Permalink to this headline">¶</a></h3>
 <p><span class="math notranslate nohighlight">\(\frac{7+i}{1+3i} = \frac{7+i}{1+3i}\frac{1-3i}{1-3i} = \frac{7-21i+i+3}{1+9} = 1-2i\)</span></p>
 </div>
 <div class="section" id="question-1-4-3">
-<h3>Question 1.4.3<a class="headerlink" href="#question-1-4-3" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.5. </span>Question 1.4.3<a class="headerlink" href="#question-1-4-3" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>(a) <span class="math notranslate nohighlight">\(|z| = \sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(|w| = 2\)</span>, so <span class="math notranslate nohighlight">\(|zw| = 2\sqrt{2}\)</span></p></li>
 </ol>
@@ -710,14 +712,14 @@ We begin by writing the right hand side in polar form: <span class="math notrans
 \[\left(\frac{z_1}{z_2}\right)^* = \left(\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}\right)^* = \frac{r_1}{r_2} e^{-i(\theta_1 - \theta_2)} = \frac{r_1 e^{-i\theta_1}}{r_2 e^{-i\theta_2}} = \frac{z_1^* }{z_2^* }\]</div>
 </div>
 <div class="section" id="question-1-5-1">
-<h3>Question 1.5.1<a class="headerlink" href="#question-1-5-1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.6. </span>Question 1.5.1<a class="headerlink" href="#question-1-5-1" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(\frac{7\pi}{3} = 2\pi + \frac{\pi}{3}\)</span> so the result lies in the first quadrant at an angle of <span class="math notranslate nohighlight">\(\frac{\pi}{3}\)</span> away from the real axis. The result can be written as <span class="math notranslate nohighlight">\(\sqrt{2}e^{\frac{\pi i}{3}}\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(-\frac{13\pi}{12}\)</span> lies in the second quadrant at an angle of <span class="math notranslate nohighlight">\(\frac{\pi}{12}\)</span> away from the real axis, so the equivalent to an argument of <span class="math notranslate nohighlight">\(\pi - \frac{\pi}{12}\)</span>. The result can be written as <span class="math notranslate nohighlight">\(3e^\frac{11\pi}{12}\)</span>.</p></li>
 </ol>
 </div>
 <div class="section" id="question-1-5-2">
-<h3>Question 1.5.2<a class="headerlink" href="#question-1-5-2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.7.7. </span>Question 1.5.2<a class="headerlink" href="#question-1-5-2" title="Permalink to this headline">¶</a></h3>
 <p>The roots are given by:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(z = e^{-\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} - i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} - i\frac{\sqrt{3}}{2}\)</span></p></li>
@@ -751,27 +753,16 @@ We begin by writing the right hand side in polar form: <span class="math notrans
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="../sequences_and_series/series.html" title="previous page"><span class="section-number">1. </span>Series</a>
+    <a class='right-next' id="next-link" href="../Differentiation/Differentiation.html" title="next page"><span class="section-number">3. </span>Differentiation</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../sequences_and_series/series.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Series</p>
-            </div>
-        </a>
-    </div>
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
