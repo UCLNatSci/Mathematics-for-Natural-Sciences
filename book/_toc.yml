@@ -3,8 +3,12 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: True
+
 chapters:
 - file: sequences_and_series/series
 - file: complex_numbers/complex_numbers
 #- file: matrices/matrices
-#- file: Differentiation/Differentiation
+- file: Differentiation/Differentiation
+- file: Integration/integration
