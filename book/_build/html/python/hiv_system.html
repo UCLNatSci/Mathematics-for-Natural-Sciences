@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Mathematics for Natural Sciences 1</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/series.html">
+   1. Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../complex_numbers/complex_numbers.html">
+   2. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Differentiation/Differentiation.html">
+   3. Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Integration/integration.html">
+   4. Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/Intro_ODEs.html">
+   5. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/1st_order_ODEs.html">
+   6. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/2nd_order_ODEs.html">
+   7. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ode_solver_demo.html">
+   8. ODE Solver demo
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/python/hiv_system.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/python/hiv_system.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## preamble : This part loads the packages that we will use</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># function that returns dz/dt</span>
+<span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">kr1</span><span class="p">,</span><span class="n">kr2</span><span class="p">,</span><span class="n">kr3</span><span class="p">,</span><span class="n">kr4</span><span class="p">,</span><span class="n">kr5</span><span class="p">,</span><span class="n">kr6</span><span class="p">):</span>
+    
+    <span class="c1">#kr1 = 1e5 #= new healthy cells per year</span>
+    <span class="c1">#kr2 = 0.1 #= death rate of healthy cells</span>
+    <span class="c1">#kr3 = 2e-7 #= healthy cells converting to infected cells</span>
+    <span class="c1">#kr4 = 0.5 #= death rate of infected cells</span>
+    <span class="c1">#kr5 = 5 #= death rate of virus</span>
+    <span class="c1">#kr6 = 100 #= production of virus by infected cells</span>
+    
+    <span class="n">H</span> <span class="o">=</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">I</span> <span class="o">=</span> <span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">V</span> <span class="o">=</span> <span class="n">z</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">dHdt</span> <span class="o">=</span> <span class="n">kr1</span><span class="o">-</span><span class="n">kr2</span><span class="o">*</span><span class="n">H</span><span class="o">-</span><span class="n">kr3</span><span class="o">*</span><span class="n">H</span><span class="o">*</span><span class="n">V</span>
+    <span class="n">dIdt</span> <span class="o">=</span> <span class="n">kr3</span><span class="o">*</span><span class="n">H</span><span class="o">*</span><span class="n">V</span><span class="o">-</span><span class="n">kr4</span><span class="o">*</span><span class="n">I</span> 
+    <span class="n">dVdt</span> <span class="o">=</span> <span class="o">-</span><span class="n">kr3</span><span class="o">*</span><span class="n">H</span><span class="o">*</span><span class="n">V</span><span class="o">-</span><span class="n">kr5</span><span class="o">*</span><span class="n">V</span><span class="o">+</span><span class="n">kr6</span><span class="o">*</span><span class="n">I</span>
+    <span class="n">dzdt</span> <span class="o">=</span> <span class="p">[</span><span class="n">dHdt</span><span class="p">,</span><span class="n">dIdt</span><span class="p">,</span><span class="n">dVdt</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">dzdt</span>
+
+<span class="c1"># initial condition</span>
+<span class="n">z0</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1e6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span>
+
+
+<span class="c1"># number of time points</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">401</span>
+
+<span class="c1"># time points</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1"># solve ODE</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">z0</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mf">1e5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">2e-7</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+
+<span class="c1"># plot results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">z</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;b-&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;H(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">z</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;r--&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;I(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">z</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;values&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/hiv_system_0_0.png" src="../_images/hiv_system_0_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Model definition</span>
+<span class="k">def</span> <span class="nf">dIdt</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">r0</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">mu</span><span class="o">*</span><span class="p">(</span><span class="n">r0</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">I</span>
+
+<span class="n">mu</span><span class="p">,</span><span class="n">r0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">14</span><span class="p">,</span><span class="mi">3</span> <span class="c1">## chosen parameter values</span>
+<span class="n">t</span><span class="p">,</span><span class="n">I</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span>     <span class="c1">## initial conditions</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dIdt</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">r0</span><span class="p">))</span> <span class="c1"># slope at t=0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.14285714285714285
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span><span class="p">,</span><span class="n">tmax</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">10</span>     <span class="c1">## define step size and tmax</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">tmax</span><span class="o">/</span><span class="n">h</span><span class="p">)</span> <span class="c1">## number of steps</span>
+
+<span class="c1"># We will build up lists of results as we step forward</span>
+<span class="n">tlist</span><span class="p">,</span> <span class="n">ilist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">t</span><span class="p">]),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">I</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+  <span class="n">t</span><span class="p">,</span> <span class="n">I</span><span class="o">=</span> <span class="n">t</span><span class="o">+</span><span class="n">h</span><span class="p">,</span> <span class="n">I</span><span class="o">+</span><span class="n">h</span><span class="o">*</span><span class="n">dIdt</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">r0</span><span class="p">)</span>
+  <span class="n">tlist</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tlist</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+  <span class="n">ilist</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ilist</span><span class="p">,</span><span class="n">I</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tlist</span><span class="p">,</span><span class="n">ilist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x203e89f2ec8&gt;]
+</pre></div>
+</div>
+<img alt="../_images/hiv_system_2_1.png" src="../_images/hiv_system_2_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tlist</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.  1.1 1.2 1.3 1.4 1.5 1.6 1.7
+ 1.8 1.9 2.  2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.  3.1 3.2 3.3 3.4 3.5
+ 3.6 3.7 3.8 3.9 4.  4.1 4.2 4.3 4.4 4.5 4.6 4.7 4.8 4.9 5.  5.1 5.2 5.3
+ 5.4 5.5 5.6 5.7 5.8 5.9 6.  6.1 6.2 6.3 6.4 6.5 6.6 6.7 6.8 6.9 7.  7.1
+ 7.2 7.3 7.4 7.5 7.6 7.7 7.8 7.9 8.  8.1 8.2 8.3 8.4 8.5 8.6 8.7 8.8 8.9
+ 9.  9.1 9.2 9.3 9.4 9.5 9.6 9.7 9.8 9.9 1. ]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Model definition</span>
+<span class="k">def</span> <span class="nf">dIdt</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">r0</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">mu</span><span class="o">*</span><span class="p">(</span><span class="n">r0</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">I</span>
+
+<span class="n">I0</span> <span class="o">=</span> <span class="mi">1</span>             <span class="c1">## initial condition</span>
+<span class="n">n</span><span class="p">,</span><span class="n">tmax</span> <span class="o">=</span> <span class="mi">401</span><span class="p">,</span><span class="mi">10</span>    <span class="c1">## n is number of time points</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">tmax</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="c1"># time points</span>
+
+<span class="c1"># solve ODE</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">dIdt</span><span class="p">,</span><span class="n">I0</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">14</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="c1"># plot results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x203e8b9b348&gt;]
+</pre></div>
+</div>
+<img alt="../_images/hiv_system_4_1.png" src="../_images/hiv_system_4_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dIdt</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">I</span><span class="p">,</span><span class="n">t</span> <span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">I</span>
+
+<span class="c1"># initial condition</span>
+<span class="n">z0</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># number of time points</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">401</span>
+
+<span class="c1"># time points</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1"># solve ODE</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">dIdt</span><span class="p">,</span><span class="n">z0</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+
+<span class="c1"># plot results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x203e8c17d88&gt;]
+</pre></div>
+</div>
+<img alt="../_images/hiv_system_5_1.png" src="../_images/hiv_system_5_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Model definition</span>
+<span class="k">def</span> <span class="nf">dXdt</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+  <span class="n">dSdt</span><span class="o">=</span> <span class="o">-</span><span class="n">beta</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">N</span>
+  <span class="n">dIdt</span><span class="o">=</span> <span class="n">beta</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">N</span> <span class="o">-</span> <span class="n">mu</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+  <span class="n">dRdt</span><span class="o">=</span> <span class="n">mu</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">dSdt</span><span class="p">,</span><span class="n">dIdt</span><span class="p">,</span><span class="n">dRdt</span><span class="p">]</span>
+
+<span class="n">pop</span> <span class="o">=</span> <span class="mf">9e6</span> <span class="c1">## The population of London is  ~9 million</span>
+
+<span class="c1"># initial condition</span>
+<span class="n">X0</span> <span class="o">=</span> <span class="p">[</span><span class="n">pop</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>  
+
+<span class="c1"># solve ODE</span>
+<span class="n">tmax</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="mi">140</span><span class="p">,</span><span class="mi">401</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">tmax</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">dXdt</span><span class="p">,</span><span class="n">X0</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">14</span><span class="p">,</span><span class="mi">3</span><span class="o">/</span><span class="mi">14</span><span class="p">,</span><span class="n">pop</span><span class="p">))</span>
+
+<span class="c1"># plot results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;b--&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;S(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;r--&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;I(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;R(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;values&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/hiv_system_6_0.png" src="../_images/hiv_system_6_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Model definition</span>
+<span class="k">def</span> <span class="nf">dSdt</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">k</span><span class="o">*</span><span class="n">S</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">S</span><span class="o">/</span><span class="n">L</span><span class="p">)</span>
+
+<span class="n">S0</span> <span class="o">=</span> <span class="mi">1</span>             <span class="c1">## initial condition</span>
+<span class="n">n</span><span class="p">,</span><span class="n">tmax</span> <span class="o">=</span> <span class="mi">401</span><span class="p">,</span><span class="mi">10</span>    <span class="c1">## n is number of time points</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">tmax</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="c1"># time points</span>
+
+<span class="c1"># solve ODE</span>
+<span class="n">S1</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">dSdt</span><span class="p">,</span><span class="n">S0</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<span class="n">S2</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">dSdt</span><span class="p">,</span><span class="n">S0</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+
+<span class="c1"># plot results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">S1</span><span class="p">,</span><span class="s1">&#39;b-&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;k=1&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">S2</span><span class="p">,</span><span class="s1">&#39;g-&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;k=3&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;values&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/hiv_system_7_0.png" src="../_images/hiv_system_7_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Model definition</span>
+<span class="k">def</span> <span class="nf">dXdt</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">dT</span><span class="p">,</span><span class="n">dI</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+  <span class="n">dTdt</span><span class="o">=</span> <span class="n">L</span><span class="o">-</span><span class="n">b</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">dT</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="n">dIdt</span><span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">dI</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+  <span class="n">dVdt</span><span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">c</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">dTdt</span><span class="p">,</span><span class="n">dIdt</span><span class="p">,</span><span class="n">dVdt</span><span class="p">]</span>
+
+<span class="c1"># initial condition</span>
+<span class="n">X0</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1e6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span>  
+
+<span class="c1"># solve ODE</span>
+<span class="n">tmax</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span><span class="mi">401</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">tmax</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">dXdt</span><span class="p">,</span><span class="n">X0</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mf">1e5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mf">2e-7</span><span class="p">))</span>
+
+<span class="c1"># plot results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;b--&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;T(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;r--&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;I(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;R(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;values&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/hiv_system_8_0.png" src="../_images/hiv_system_8_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Model definition</span>
+<span class="k">def</span> <span class="nf">dXdt</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">beta</span><span class="p">):</span>
+  <span class="n">drdt</span><span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">alpha</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+  <span class="n">dfdt</span><span class="o">=</span> <span class="o">-</span><span class="n">b</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">beta</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">drdt</span><span class="p">,</span><span class="n">dfdt</span><span class="p">]</span>
+
+<span class="c1"># initial condition</span>
+<span class="n">X0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span>  
+
+<span class="c1"># solve ODE</span>
+<span class="n">tmax</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span><span class="mi">401</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">tmax</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">dXdt</span><span class="p">,</span><span class="n">X0</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.02</span><span class="p">))</span>
+
+<span class="c1"># plot results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;b--&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;r(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;r--&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;f(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;values&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/hiv_system_9_0.png" src="../_images/hiv_system_9_0.png" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
