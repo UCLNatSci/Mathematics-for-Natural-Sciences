@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6. First Order ODEs &#8212; Mathematics for Natural Sciences 1</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="5. Ordinary Differential Equations" href="Intro_ODEs.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/series.html">
+   1. Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../complex_numbers/complex_numbers.html">
+   2. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Differentiation/Differentiation.html">
+   3. Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Integration/integration.html">
+   4. Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro_ODEs.html">
+   5. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. First Order ODEs
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/odes/1st_order_ODEs.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#separation-of-variables-technique">
+   6.1. Separation of variables Technique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integrating-factor-technique">
+   6.2. Integrating Factor Technique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motivation">
+     6.2.1. Motivation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#technique">
+     6.2.2. Technique
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="first-order-odes">
+<h1><span class="section-number">6. </span>First Order ODEs<a class="headerlink" href="#first-order-odes" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will look at some strategies for solving first order ODEs</p>
+<div class="section" id="separation-of-variables-technique">
+<h2><span class="section-number">6.1. </span>Separation of variables Technique<a class="headerlink" href="#separation-of-variables-technique" title="Permalink to this headline">¶</a></h2>
+<p>Of all the techniques for solving first order ODEs, separation of variables is the simplest to understand, being essentially a direct application of Fundamental Theorem of Calculus.
+The technique requires us to take a look at whether the variable dependence can be totally separated on different sides of the equation.</p>
+<p>For example, in the problem <span class="math notranslate nohighlight">\(\frac{\mathrm{d}y}{\mathrm{d}x} = x^2y\)</span> we can separate the <span class="math notranslate nohighlight">\(x\)</span> and the <span class="math notranslate nohighlight">\(y\)</span> dependence to give</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{1}{y}\frac{\mathrm{d}y}{\mathrm{d}x} = x^2, \quad (y \neq 0)
+\end{equation*}\]</div>
+<p>Then, we can proceed with integration of both sides, with respect to <span class="math notranslate nohighlight">\(x\)</span>, using the chain rule to rewrite:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}y}{\mathrm{d}x}\mathrm{d}x = \mathrm{d}y
+\end{equation*}\]</div>
+<p>We can then integrate both sides:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\int\frac{1}{y}\mathrm{d}y = \int x^2\mathrm{d}x \quad \longleftrightarrow \quad \ln|y| = \frac{1}{3}x^3 + \text{const}
+\end{equation*}\]</div>
+<p>This implicit relationship may be rearranged to obtain a solution for <span class="math notranslate nohighlight">\(y\)</span> explicitly in terms of <span class="math notranslate nohighlight">\(x\)</span>, with the sign of the arbitrary constant depending on whether <span class="math notranslate nohighlight">\(y &gt; 0\)</span> or <span class="math notranslate nohighlight">\(y\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=Ae^{\frac{1}{3}x^3}, \quad A \in \mathbb{R}.
+\end{equation*}\]</div>
+<div class="note admonition">
+<p class="admonition-title">Example Questions 1</p>
+<p>Decide which of the following expressions are separable, and have a go at solving those that are</p>
+<p>( a ) <span class="math notranslate nohighlight">\(\displaystyle (1+e^x)y\frac{\mathrm{d}y}{\mathrm{d}x} = e^x\)</span></p>
+<p>( b ) <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x} = (3x + 2y + 1)^2\)</span></p>
+<p>( c ) <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x} + x\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}y}{\mathrm{d}x}\)</span></p>
+<p>( d ) <span class="math notranslate nohighlight">\(\displaystyle \frac{x}{y}\frac{\mathrm{d}y}{\mathrm{d}x} = x^2 - 1\)</span></p>
+<p>( e ) <span class="math notranslate nohighlight">\(\displaystyle x^2\frac{\mathrm{d}y}{\mathrm{d}x} = y^2 - 1\)</span></p>
+<p>( f ) <span class="math notranslate nohighlight">\(\displaystyle xy\frac{\mathrm{d}y}{\mathrm{d}x} = \ln(x),\   y(1)=0,\ x \geq 1\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Solutions</p>
+<p>( a ) <span class="math notranslate nohighlight">\(\displaystyle \int y \mathrm{d}y = \int\frac{e^x}{1+e^x}\mathrm{d}x \quad \longleftrightarrow \quad \frac{y^2}{2} = \ln(e^x+1) + \text{const}\)</span></p>
+<p>( b ) This problem is not separable</p>
+<p>( c ) <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{x} = (1-x)\frac{\mathrm{d}y}{\mathrm{d}x} \quad \longleftrightarrow\quad  \frac{\mathrm{d}y}{\mathrm{d}x}= \frac{1}{x(1-x)} = \frac{1}{x} + \frac{1}{1-x} \quad \longleftrightarrow\quad  y = \ln\biggr|\frac{x}{1-x}\biggr|\)</span></p>
+<p>( d ) <span class="math notranslate nohighlight">\(\displaystyle \int \frac{1}{y}\mathrm{d}y = \int \left(x-\frac{1}{x}\right)\mathrm{d}x \quad \longleftrightarrow\quad  \ln|y|= \frac{x^2}{2}-\ln|x| \quad \longleftrightarrow\quad  y= \frac{Ae^{x^2/2}}{x}, \quad A \in \mathbb{R}\)</span></p>
+<p>( e ) <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{2}\int \left(\frac{1}{y-1}-\frac{1}{y+1}\right)\mathrm{d}y = \int\frac{1}{x^2}\mathrm{d}x \quad \longleftrightarrow\quad   \ln\left(\frac{y-1}{y+1}\right)=-\frac{2}{x}+\text{const},\quad -1 &lt; y &lt; 1\)</span></p>
+<p>( f ) <span class="math notranslate nohighlight">\(\displaystyle \int{y\mathrm{d}y} = \displaystyle \int \frac{\ln(x)}{x}\mathrm{d}x \quad \longleftrightarrow\quad  \frac{y^2}{2} = \frac{(\ln(x))^2}{2} + C\)</span></p>
+<p><span class="math notranslate nohighlight">\(y(1) = 0 \Rightarrow C = 0\)</span> so, <span class="math notranslate nohighlight">\(y^2 = (\ln(x))^2 \)</span></p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Example Question 2</p>
+<p>The rate of growth of a population 𝑃 is proportional to itself. Set up and solve a differential equation for the population, given that the initial population is <span class="math notranslate nohighlight">\(P_0\)</span> and it doubles after 10 years.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Solution</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}P}{\mathrm{d}t} = \lambda P \quad \longleftrightarrow\quad  \int_{P_0}^{P}\frac{1}{P}\mathrm{d}P = \int_{0}^t\lambda \mathrm{d}t \quad \longleftrightarrow \quad \ln\left(\frac{P}{P_0}\right) = \lambda t \quad\longleftrightarrow\quad P = P_0e^{\lambda t}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle P(10) = 2P_0 \Rightarrow \lambda = \frac{1}{10}\ln(2)\)</span>, so  <span class="math notranslate nohighlight">\(P = P_02^{\frac{t}{10}}\)</span></p>
+</div>
+</div>
+<div class="section" id="integrating-factor-technique">
+<h2><span class="section-number">6.2. </span>Integrating Factor Technique<a class="headerlink" href="#integrating-factor-technique" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="motivation">
+<h3><span class="section-number">6.2.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
+<p>Consider the following differential equation:</p>
+<div class="math notranslate nohighlight" id="equation-intfexample">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-intfexample" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\frac{\cos(x)}{x}, \quad (x\neq 0)\]</div>
+<p>A quick check will show that this equation is not separable.
+If we try to integrate directly, then we obtain</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\displaystyle \int \mathrm{d}y+\int \frac{1}{x}y \mathrm{d}x = \int \frac{\cos(x)}{x}\mathrm{d}x.
+\end{equation*}\]</div>
+<p>We can deal with the integral on the right (in principle) but the term <span class="math notranslate nohighlight">\(\displaystyle \int \frac{y}{x}\mathrm{d}x\)</span> appearing on the left cannot be evaluated without knowing <span class="math notranslate nohighlight">\(y\)</span>. So, we reached a dead end.</p>
+<p>Now, observe that we can multiply equation <a class="reference internal" href="#equation-intfexample">(6.1)</a> throughout by <span class="math notranslate nohighlight">\(x\)</span>, to obtain</p>
+<div class="math notranslate nohighlight" id="equation-intfexample2">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-intfexample2" title="Permalink to this equation">¶</a></span>\[x\frac{\mathrm{d}y}{\mathrm{d}x}+y=\cos(x), \quad (x\neq 0)\]</div>
+<p>The expression on the left-hand side is an <em>exact derivative</em></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}}{\mathrm{d}x}(yx)=x\frac{\mathrm{d}y}{\mathrm{d}x}+y
+\end{equation*}\]</div>
+<p>Neat! This means that we can integrate equation <a class="reference internal" href="#equation-intfexample2">(6.2)</a> to obtain</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+xy=\int\cos(x)\mathrm{d}x
+\end{equation*}\]</div>
+<p>The final solution is <span class="math notranslate nohighlight">\(y=\frac{1}{x}(\sin(x)+k)\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is an arbitrary constant. Verify that the solution satisfies equation <a class="reference internal" href="#equation-intfexample">(6.1)</a> now.</p>
+<p><strong>Solution</strong><br>
+We have <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\left[-\frac{1}{x^2}(\sin(x)+k)+\frac{1}{x}\cos(x)\right]+\frac{1}{x^2}(\sin(x)+k)=\frac{\cos(x)}{x}\)</span> as required.</p>
+<div class="tip admonition">
+<p class="admonition-title">Solutions</p>
+<p>(a) The LHS is given by the exact derivative <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}\left(y e^{\cos(x)}\right)\)</span> and so the solution to this problem can be found by direct integration. The result is <span class="math notranslate nohighlight">\(ye^{\cos(x)}=\frac{x^2}{2}+k\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is an arbitrary constant.</p>
+<p>(b) The left hand side is not an exact derivative</p>
+<p>© The LHS is given by the exact derivative <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}(\tan(x)y)\)</span> and so the solution to the problem is <span class="math notranslate nohighlight">\(\tan(x)y=x\ln(x)=x+k\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is an arbitrary constant.</p>
+</div>
+<p>In example (b) above, if we multiply throughout by a factor <span class="math notranslate nohighlight">\(\mu= \text{sech}^2(x)\)</span> then we obtain</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\text{sech}(x)\frac{\mathrm{d}y}{\mathrm{d}x}-\text{sech}(x)\tanh(x)y=2\tanh(x)
+\end{equation*}\]</div>
+<p>Now the LHS can be written as an exact derivative <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{d}x}(\text{sech}(x)y)\)</span> and so the problem can be solved by direct integration.</p>
+<p>We call the <span class="math notranslate nohighlight">\(\mu\)</span> an <em>integrating factor</em>. It’s role is to cast the left hand side as an exact derivative to make the problem integrable. But can we always do this? And if so, how do we choose the integrating factor?</p>
+<p>It turns out that we can always find an integrating factor for problems of a special form that we will look at in the next section.</p>
+</div>
+<div class="section" id="technique">
+<h3><span class="section-number">6.2.2. </span>Technique<a class="headerlink" href="#technique" title="Permalink to this headline">¶</a></h3>
+<p>We will apply an integrating factor technique to solve problems of the special form</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} + f(x)y = g(x)\]</div>
+<p>The technique can be written down in the form of an algorithm:</p>
+<div class="danger admonition">
+<p class="admonition-title">The Integrating Factor Algorithm</p>
+<ul class="simple">
+<li><p>Compute the integrating factor <span class="math notranslate nohighlight">\(\mu(x) = e^{\int{f(x) \mathrm{d}x}}\)</span></p></li>
+<li><p>Multiply the whole ODE by <span class="math notranslate nohighlight">\(\mu(x)\)</span></p></li>
+<li><p>You should find that the left-hand-side can be rewritten as <span class="math notranslate nohighlight">\(\frac{\mathrm{d}}{\mathrm{d}x}(\mu y)\)</span></p></li>
+<li><p>Integrate both sides with respect to <span class="math notranslate nohighlight">\(x\)</span></p></li>
+</ul>
+</div>
+<p>We will first look at a couple of examples of how it’s done, and then we’ll take a look at why it works.</p>
+<div class="note admonition">
+<p class="admonition-title">Example 1</p>
+<p><span class="math notranslate nohighlight">\(x\frac{dy}{dx} + 2y = 4x^2\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Solution</p>
+<p>First we need to put the ODE into the correct form, by dividing throughout by <span class="math notranslate nohighlight">\(x\)</span>,assuming that <span class="math notranslate nohighlight">\(x \neq 0\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x} + \frac{2}{x}y = 4x\)</span></p>
+<p>Comparing this form to the template equation we see that <span class="math notranslate nohighlight">\(f(x) = \frac{2}{x}\)</span> and so</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \int\)</span><span class="math notranslate nohighlight">\(f(x)\mathrm{d}x=\int\)</span><span class="math notranslate nohighlight">\(\frac{2}{x}\mathrm{d}x=2\ln(x)=\ln(x^2)+C\)</span></p>
+<p>The integrating factor (IF) is <span class="math notranslate nohighlight">\(\mu = e^{\ln(x^2)}=x^2\)</span>. Multiplying through this factor gives</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle x^2\frac{\mathrm{d}y}{\mathrm{d}x}+2xy=4x^3\)</span></p>
+<p>We’ve achieved something! The left-hand side is an exact derivative of <span class="math notranslate nohighlight">\((x^2y)\)</span>. We can write the modified equation as</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x}(x^2y)=4x^3\)</span></p>
+<p>Finally, integrating both sides with respect to <span class="math notranslate nohighlight">\(x\)</span> gives</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle x^2y = x^4 + K \quad \longleftrightarrow \quad y = x^2 + \frac{K}{x^2}\)</span>,</p>
+<p>where <span class="math notranslate nohighlight">\(K\)</span> is an arbritary constant.</p>
+<p>You can verify that the solution works by substituting it into the original ODE.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Example  2</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle x^2\frac{dy}{dx}+3xy=e^{3x}\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Solution</p>
+<p>Rearrange to <span class="math notranslate nohighlight">\(\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{3}{x}y = \frac{1}{x^2}e^{3x}\)</span></p>
+<p>Integrating factor <span class="math notranslate nohighlight">\(\mu(x) = e^{\int{f(x) \mathrm{d}x}}\)</span></p>
+<p>Multiplying through by the integrating factor gives</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle x^3\frac{\mathrm{d}y}{x} + 3x^2y = xe^{3x} \quad \longrightarrow \quad \frac{\mathrm{d}}{\mathrm{d}x}(x^3y) = xe^{3x}\)</span></p>
+<p>Integrate with respect to x to solve:</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle x^3y = \frac{e^{3x}}{3}\left(x-\frac{1}{3}\right) + K \quad \longrightarrow \quad y = \frac{1}{3x^3}
+e^{3x}\left(x-\frac{1}{3}\right) + \frac{K}{x^3}\)</span></p>
+</div>
+<p><strong>So how does it work?</strong></p>
+<p>Multiplying the LHS of the general form by <span class="math notranslate nohighlight">\(\mu(x)\)</span> gives</p>
+<div class="math notranslate nohighlight" id="equation-eq1compare">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-eq1compare" title="Permalink to this equation">¶</a></span>\[\mu \frac{\mathrm{d}y}{\mathrm{d}x}+ y \mu f(x)\]</div>
+<p>Compare with</p>
+<div class="math notranslate nohighlight" id="equation-eq2compare">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-eq2compare" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}}{\mathrm{d}x}\left(\mu y \right)=\mu \frac{\mathrm{d}y}{\mathrm{d}x}+y\frac{\mathrm{d}\mu}{\mathrm{d}x}\]</div>
+<p>By equating <a class="reference internal" href="#equation-eq1compare">(6.3)</a> with <a class="reference internal" href="#equation-eq2compare">(6.4)</a> it can be seen that we can make the integrating factor work if we choose <span class="math notranslate nohighlight">\(\mu\)</span> to satisfy</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}\mu}{\mathrm{d}x}=\mu f(x)
+\end{equation*}\]</div>
+<p>Can you solve this equation by separation? The solution is
+<span class="math notranslate nohighlight">\(\mu = e^{\int f(x)\mathrm{d}x}\)</span></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./odes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Intro_ODEs.html" title="previous page"><span class="section-number">5. </span>Ordinary Differential Equations</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -12,3 +12,6 @@ chapters:
 #- file: matrices/matrices
 - file: Differentiation/Differentiation
 - file: Integration/integration
+- file: odes/Intro_ODEs
+- file: odes/1st_order_ODEs
+- file: odes/2nd_order_ODEs
