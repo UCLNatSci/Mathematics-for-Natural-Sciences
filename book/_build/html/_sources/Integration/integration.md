@@ -58,7 +58,7 @@ Rectangles drawn under the curve $f(x)$ can be used to approximate the area. The
 ```
 
 It can be proved that integration and anti-differentiation are essentially the same thing. This result is known as the "fundamental theorem of calculus". In fact, the theorem comes in two parts. The first part, given in the box below, allows the definite integral to be determined by evaluating an anti-derivative at integration limits. The second part (not given here) essentially proves that every continuous function has an anti-derivative, which can be found by integration. For some functions, such as $e^{-x^2}$, we might not be able to express the integral in terms of elementary functions, but we know it exists
-(and we can use sucessive approximation techniques either analytically or numerically to estimate them).
+(and we can use successive approximation techniques either analytically or numerically to estimate them).
 
 ```{admonition} Definition
 **The First Fundamental Theorem of Calculus (FTC1)**
