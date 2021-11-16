@@ -98,7 +98,7 @@ def dXdt(X,t,k,m):
   return [dxdt, dydt]
 
 
-# For example, suppose that the system starts from rest at $x(0)=1$, $\dot{x}=0$.
+# For example, suppose that the system starts from rest at $x(0)=1$, $\dot{x}(0)=0$.
 # 
 # 
 # Taking the constants to be $k=m=1$ gives the following result for $\frac{\mathrm{d}X}{\mathrm{d}t}$ at time $t=0$:
@@ -148,7 +148,7 @@ plt.show()
 # Re-define the model to include the forcing term
 def dXdt(X,t,k,m,F,W):
   dxdt = X[1]                          #dx/dt = y
-  dydt = -k*X[0]/m + F*np.sin(W*t)     #dy/dt=-k*x/m 
+  dydt = -k*X[0]/m + F*np.sin(W*t)     #dy/dt=-k*x/m + F*sin(W*t)
   return [dxdt, dydt]
 
 t0,X0 =0,[1,0] #initial conditions for t,x,y

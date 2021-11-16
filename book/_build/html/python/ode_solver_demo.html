@@ -345,7 +345,7 @@
 </div>
 </div>
 </div>
-<p>For example, suppose that the system starts from rest at <span class="math notranslate nohighlight">\(x(0)=1\)</span>, <span class="math notranslate nohighlight">\(\dot{x}=0\)</span>.</p>
+<p>For example, suppose that the system starts from rest at <span class="math notranslate nohighlight">\(x(0)=1\)</span>, <span class="math notranslate nohighlight">\(\dot{x}(0)=0\)</span>.</p>
 <p>Taking the constants to be <span class="math notranslate nohighlight">\(k=m=1\)</span> gives the following result for <span class="math notranslate nohighlight">\(\frac{\mathrm{d}X}{\mathrm{d}t}\)</span> at time <span class="math notranslate nohighlight">\(t=0\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -397,7 +397,7 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Re-define the model to include the forcing term</span>
 <span class="k">def</span> <span class="nf">dXdt</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">F</span><span class="p">,</span><span class="n">W</span><span class="p">):</span>
   <span class="n">dxdt</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>                          <span class="c1">#dx/dt = y</span>
-  <span class="n">dydt</span> <span class="o">=</span> <span class="o">-</span><span class="n">k</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">m</span> <span class="o">+</span> <span class="n">F</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">W</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>     <span class="c1">#dy/dt=-k*x/m </span>
+  <span class="n">dydt</span> <span class="o">=</span> <span class="o">-</span><span class="n">k</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">m</span> <span class="o">+</span> <span class="n">F</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">W</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>     <span class="c1">#dy/dt=-k*x/m + F*sin(W*t)</span>
   <span class="k">return</span> <span class="p">[</span><span class="n">dxdt</span><span class="p">,</span> <span class="n">dydt</span><span class="p">]</span>
 
 <span class="n">t0</span><span class="p">,</span><span class="n">X0</span> <span class="o">=</span><span class="mi">0</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#initial conditions for t,x,y</span>
