@@ -5,53 +5,53 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction &#8212; Mathematics for Natural Sciences 1</title>
+    <title>8. Simple harmonic motion script &#8212; Mathematics for Natural Sciences 1</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Series" href="sequences_and_series/series.html" />
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="7. Second Order ODEs" href="../odes/2nd_order_ODEs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -68,65 +68,65 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="_static/logo.jpg" class="logo" alt="logo">
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 1</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
    Introduction
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="sequences_and_series/series.html">
+  <a class="reference internal" href="../sequences_and_series/series.html">
    1. Series
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="complex_numbers/complex_numbers.html">
+  <a class="reference internal" href="../complex_numbers/complex_numbers.html">
    2. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Differentiation/Differentiation.html">
+  <a class="reference internal" href="../Differentiation/Differentiation.html">
    3. Differentiation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Integration/integration.html">
+  <a class="reference internal" href="../Integration/integration.html">
    4. Integration
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="odes/Intro_ODEs.html">
+  <a class="reference internal" href="../odes/Intro_ODEs.html">
    5. Ordinary Differential Equations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="odes/1st_order_ODEs.html">
+  <a class="reference internal" href="../odes/1st_order_ODEs.html">
    6. First Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="odes/2nd_order_ODEs.html">
+  <a class="reference internal" href="../odes/2nd_order_ODEs.html">
    7. Second Order ODEs
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python/ode_solver_demo.html">
-   8. ODEs with Python
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Simple harmonic motion script
   </a>
  </li>
 </ul>
@@ -170,7 +170,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/python/shm.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -203,10 +203,14 @@
         
               <div>
                 
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>All of the lecture notes for this module can be found here. When viewing the notes, you can navigate the chapters and sub-chapters using the Table of Contents that appears in the left sidebar, and you can print a version of the book from the button available on the top menu. At the end of each chapter you can find the solutions to the problems that appear throughout.</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="simple-harmonic-motion-script">
+<h1><span class="section-number">8. </span>Simple harmonic motion script<a class="headerlink" href="#simple-harmonic-motion-script" title="Permalink to this headline">¶</a></h1>
+<p><strong>A title</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## preamble : This part loads the packages that we will use</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                   <span class="c1">#for linspace</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>   <span class="c1">#for odeint</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>      <span class="c1">#for plotting</span>
+</pre></div>
 </div>
 </div>
 
@@ -223,7 +227,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./python"
         },
         predefinedOutput: true
     }
@@ -235,7 +239,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="sequences_and_series/series.html" title="next page"><span class="section-number">1. </span>Series</a>
+    <a class='left-prev' id="prev-link" href="../odes/2nd_order_ODEs.html" title="previous page"><span class="section-number">7. </span>Second Order ODEs</a>
 
         </div>
         
@@ -257,7 +261,7 @@
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
   </body>

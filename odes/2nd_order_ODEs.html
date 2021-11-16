@@ -53,6 +53,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Simple harmonic motion script" href="../python/shm.html" />
     <link rel="prev" title="6. First Order ODEs" href="1st_order_ODEs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -124,6 +125,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    7. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/shm.html">
+   8. Simple harmonic motion script
   </a>
  </li>
 </ul>
@@ -293,8 +299,8 @@ The quadratic has roots <span class="math notranslate nohighlight">\(\lambda=-\f
 <div class="section" id="principle-of-linear-superposition">
 <h3><span class="section-number">7.1.2. </span>Principle of linear superposition<a class="headerlink" href="#principle-of-linear-superposition" title="Permalink to this headline">¶</a></h3>
 <p>The general second order homogeneous ODE given is linear, meaning that it has no products of terms involving the dependent variable <span class="math notranslate nohighlight">\(y\)</span>. As a result of this fact, any linear combination of solutions will also be a solution:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d627dcd8-b684-4104-9a46-c8f122be65f7">
-<span class="eqno">(7.3)<a class="headerlink" href="#equation-d627dcd8-b684-4104-9a46-c8f122be65f7" title="Permalink to this equation">¶</a></span>\[\begin{align}\mathcal{L}(k_1y_1+k_2y_2)&amp;=k_1\left[a y_1^{\prime\prime}+by_1^{\prime}+c y_1\right]+k_2\left[a y_2^{\prime\prime}+by_2^{\prime}+c y_2\right]\\&amp;=k_1\mathcal{L}(y_1)+k_2\mathcal{L}(y_2)\\&amp;=0+0 \quad \text{ if $y_1$ and $y_2$ are solutions.}\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-aa6f1b08-77ab-4d95-a2b9-69b10b32c9c2">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-aa6f1b08-77ab-4d95-a2b9-69b10b32c9c2" title="Permalink to this equation">¶</a></span>\[\begin{align}\mathcal{L}(k_1y_1+k_2y_2)&amp;=k_1\left[a y_1^{\prime\prime}+by_1^{\prime}+c y_1\right]+k_2\left[a y_2^{\prime\prime}+by_2^{\prime}+c y_2\right]\\&amp;=k_1\mathcal{L}(y_1)+k_2\mathcal{L}(y_2)\\&amp;=0+0 \quad \text{ if $y_1$ and $y_2$ are solutions.}\end{align}\]</div>
 <p>Therefore, in the previous example we can combine the two solutions that we found, to obtain a more general solution <span class="math notranslate nohighlight">\(y=k_1e^{-\frac{1}{2}x}+k_2 e^{x}\)</span>. You are encouraged to check this solution to confirm that it works!</p>
 </div>
 <div class="section" id="applying-conditions">
@@ -331,8 +337,8 @@ In that case, we may wish to write the general solution a bit differently. After
 <span class="math notranslate nohighlight">\(y=k_1 e^{(\alpha+i\omega)x}+k_2 e^{(\alpha -i\omega)x}\)</span>
 then the only way to satisfy real initial conditions would be if the coefficients <span class="math notranslate nohighlight">\(k_1\)</span> and <span class="math notranslate nohighlight">\(k_2\)</span> are complex, which isn’t nice.
 We make use of our knowledge of complex numbers (Euler’s theorem) to rewrite:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-596f5dc8-df3d-459a-bd3a-779f8aa8be1f">
-<span class="eqno">(7.4)<a class="headerlink" href="#equation-596f5dc8-df3d-459a-bd3a-779f8aa8be1f" title="Permalink to this equation">¶</a></span>\[\begin{align}y&amp;=e^{\alpha x}\left[(k_1+k_2)\cos(\omega x)+i(k_1-k_2)\sin(\omega x)\right]\\&amp;=e^{\alpha x}\left[K_1\cos(\omega x)+K_2\sin(\omega x)\right]\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b2be23d1-3534-4bb9-a3c8-79d1cc9c3617">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-b2be23d1-3534-4bb9-a3c8-79d1cc9c3617" title="Permalink to this equation">¶</a></span>\[\begin{align}y&amp;=e^{\alpha x}\left[(k_1+k_2)\cos(\omega x)+i(k_1-k_2)\sin(\omega x)\right]\\&amp;=e^{\alpha x}\left[K_1\cos(\omega x)+K_2\sin(\omega x)\right]\end{align}\]</div>
 <p>upon relabelling the constants.
 This is a much nicer form of the solution, because all parts of it are real, and so we expect that the coefficients <span class="math notranslate nohighlight">\(K_1\)</span> and <span class="math notranslate nohighlight">\(K_2\)</span> will be real as well. It also shows us clearly that the solution consists of an exponentially growing/decaying amplitude combined with wavy oscillations of frequency <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <div class="note admonition">
@@ -391,8 +397,8 @@ For the problem <span class="math notranslate nohighlight">\(y^{\prime\prime}(x)
 ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=0
 \end{equation*}\]</div>
 <p>is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9f140f4a-d231-4e04-9a0d-8aabae44a56a">
-<span class="eqno">(7.5)<a class="headerlink" href="#equation-9f140f4a-d231-4e04-9a0d-8aabae44a56a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-66317768-66cb-4ba3-8841-803b51f68885">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-66317768-66cb-4ba3-8841-803b51f68885" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 y=\begin{cases}\begin{array}{lll}k_1e^{\lambda_1 x}+k_2 e^{\lambda_2 x}, &amp;\text{where $\lambda_{1,2}=\frac{-b\pm\sqrt{\Delta}}{2a}$} &amp; \text{if $\Delta &gt;0$}\\e^{\alpha x}(k_1\cos(\omega x)+k_2\sin(\omega x))&amp;\text{where $\alpha=-\frac{b}{2a}$, $\omega =\sqrt{\Delta}$}&amp;\text{if $\Delta &lt; 0$}\\(k_1x+k_2)e^{\lambda x}&amp;\text{where $\lambda=-\frac{b}{2a}$}&amp;\text{if $\Delta=0$}\end{array}\end{cases}
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Delta=b^2-4ac\)</span>.</p>
@@ -410,8 +416,8 @@ y(x)=k_1 y_1(x)+k_2 y_2(x)
 <p>This condition is met if <span class="math notranslate nohighlight">\(y_2\)</span> is not a constant multiple of <span class="math notranslate nohighlight">\(y_1\)</span>. We say that the solutions are <em>linearly independent</em>. A more general definition of linear independence will be given in the course on mathematical methods 2.</p>
 <p><strong>Proof:</strong><br>
 Applying the given conditions gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c194e47e-7c0d-4158-b6f9-a5bdd535e9d6">
-<span class="eqno">(7.7)<a class="headerlink" href="#equation-c194e47e-7c0d-4158-b6f9-a5bdd535e9d6" title="Permalink to this equation">¶</a></span>\[\begin{align}y_1(x_0)k_1+y_2(x_0)k_2 &amp;=y_0\\y_1^{\prime}(x_0)k_1+y_2^{\prime}(x_0)&amp;=y_0^{\prime}\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-74acd68d-a16c-4b9a-a6b5-d4bb0f279e12">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-74acd68d-a16c-4b9a-a6b5-d4bb0f279e12" title="Permalink to this equation">¶</a></span>\[\begin{align}y_1(x_0)k_1+y_2(x_0)k_2 &amp;=y_0\\y_1^{\prime}(x_0)k_1+y_2^{\prime}(x_0)&amp;=y_0^{\prime}\end{align}\]</div>
 <p>This is a set of two equations in two unknowns (<span class="math notranslate nohighlight">\(k_0\)</span> and <span class="math notranslate nohighlight">\(k_1\)</span>). A unique solution exists if and only if the condition <a class="reference internal" href="#equation-linindepend">(7.6)</a> is met.</p>
 </div>
 <div class="section" id="motivation-for-the-trial-solution">
@@ -457,6 +463,7 @@ and the solutions to the problem $\underline{y}^{\prime}=k\underline{y}$ are of 
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="1st_order_ODEs.html" title="previous page"><span class="section-number">6. </span>First Order ODEs</a>
+    <a class='right-next' id="next-link" href="../python/shm.html" title="next page"><span class="section-number">8. </span>Simple harmonic motion script</a>
 
         </div>
         
