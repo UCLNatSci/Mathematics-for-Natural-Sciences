@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Differentiation &#8212; Mathematics for Natural Sciences 1</title>
+    <title>5. Differentiation &#8212; Mathematics for Natural Sciences 1</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Integration" href="../Integration/integration.html" />
-    <link rel="prev" title="2. Complex Numbers" href="../complex_numbers/complex_numbers.html" />
+    <link rel="next" title="6. Integration" href="integration.html" />
+    <link rel="prev" title="4. Complex Numbers" href="../complex_numbers/complex_numbers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -93,43 +93,58 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/limits.html">
+   1. Limits of Functions and Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   1. Series
+   2. Introduction to Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/convergence.html">
+   3. Convergence of Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   2. Complex Numbers
+   4. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Differentiation
+   5. Differentiation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Integration/integration.html">
-   4. Integration
+  <a class="reference internal" href="integration.html">
+   6. Integration
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../odes/Intro_ODEs.html">
-   5. Ordinary Differential Equations
+  <a class="reference internal" href="../sequences_and_series/taylor_series.html">
+   7. Taylor series
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../odes/1st_order_ODEs.html">
-   6. First Order ODEs
+  <a class="reference internal" href="../odes/intro_odes.html">
+   8. Ordinary Differential Equations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../odes/2nd_order_ODEs.html">
-   7. Second Order ODEs
+  <a class="reference internal" href="../odes/1st_order_odes.html">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/2nd_order_odes.html">
+   10. Second Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   8. ODEs with Python
+   11. ODEs with Python
   </a>
  </li>
 </ul>
@@ -173,7 +188,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Differentiation/Differentiation.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/differentiation_and_integration/differentiation.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -205,59 +220,59 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivations-and-first-principle-arguments">
-   3.1. Motivations and First Principle Arguments
+   5.1. Motivations and First Principle Arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivative-as-a-rate-of-change">
-   3.2. Derivative as a “rate of change”
+   5.2. Derivative as a “rate of change”
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#second-and-higher-derivatives">
-   3.3. Second and Higher Derivatives
+   5.3. Second and Higher Derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stationary-points">
-   3.4. Stationary Points
+   5.4. Stationary Points
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#first-derivative-test">
-     3.4.1. First Derivative Test
+     5.4.1. First Derivative Test
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#second-derivative-test">
-     3.4.2. Second derivative test
+     5.4.2. Second derivative test
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#differentiation-rules">
-   3.5. Differentiation Rules
+   5.5. Differentiation Rules
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parametric-differentiation">
-   3.6. Parametric Differentiation
+   5.6. Parametric Differentiation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivatives-of-inverse-functions">
-   3.7. Derivatives of Inverse Functions
+   5.7. Derivatives of Inverse Functions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implicit-differentiation">
-   3.8. Implicit Differentiation
+   5.8. Implicit Differentiation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   3.9. Solutions
+   5.9. Solutions
   </a>
  </li>
 </ul>
@@ -272,9 +287,9 @@
               <div>
                 
   <div class="section" id="differentiation">
-<h1><span class="section-number">3. </span>Differentiation<a class="headerlink" href="#differentiation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Differentiation<a class="headerlink" href="#differentiation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="motivations-and-first-principle-arguments">
-<h2><span class="section-number">3.1. </span>Motivations and First Principle Arguments<a class="headerlink" href="#motivations-and-first-principle-arguments" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Motivations and First Principle Arguments<a class="headerlink" href="#motivations-and-first-principle-arguments" title="Permalink to this headline">¶</a></h2>
 <p>The equation <span class="math notranslate nohighlight">\(y=mx+c\)</span> represents a straight line. In this expression, the constant <span class="math notranslate nohighlight">\(m\)</span> tells us how quickly the slope <span class="math notranslate nohighlight">\(y\)</span> changes with <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>For instance,</p>
 <ul class="simple">
@@ -300,22 +315,22 @@
 <p>In a curve, the slope is not constant, but we can identify the slope at any point by drawing the tangent to the curve at that point. The tangent is the line that “just touches” the curve, and the normal is the line that is at right angles to the tangent.</p>
 <div class="figure align-default" id="tangent-and-normal">
 <img alt="../_images/slope.png" src="../_images/slope.png" />
-<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">The tangent at the point is indicated in blue and the normal is indicated in red.  If the tangent has slope <span class="math notranslate nohighlight">\(m\)</span> then the normal has slope −1/<span class="math notranslate nohighlight">\(m\)</span>.</span><a class="headerlink" href="#tangent-and-normal" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">The tangent at the point is indicated in blue and the normal is indicated in red.  If the tangent has slope <span class="math notranslate nohighlight">\(m\)</span> then the normal has slope −1/<span class="math notranslate nohighlight">\(m\)</span>.</span><a class="headerlink" href="#tangent-and-normal" title="Permalink to this image">¶</a></p>
 </div>
-<p>In <a class="reference internal" href="#tangent-and-normal"><span class="std std-numref">Fig. 3.1</span></a> we can see that if we moved the point along the curve, both the slope of the tangent line and the normal line change.  We are interested in finding a mathematical expression for the slope of a curve at any given point <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>In <a class="reference internal" href="#tangent-and-normal"><span class="std std-numref">Fig. 5.1</span></a> we can see that if we moved the point along the curve, both the slope of the tangent line and the normal line change.  We are interested in finding a mathematical expression for the slope of a curve at any given point <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <div class="figure align-default" id="height-base">
 <img alt="../_images/height-base.png" src="../_images/height-base.png" />
-<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">The curve shows a hypothetical function <span class="math notranslate nohighlight">\(f\)</span>, and the black dashed line shows the tangent at the arbitrary point <span class="math notranslate nohighlight">\((x,f(x))\)</span>. The slope of this line is the <strong>height:base</strong> ratio in the gray shaded triangle</span><a class="headerlink" href="#height-base" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">The curve shows a hypothetical function <span class="math notranslate nohighlight">\(f\)</span>, and the black dashed line shows the tangent at the arbitrary point <span class="math notranslate nohighlight">\((x,f(x))\)</span>. The slope of this line is the <strong>height:base</strong> ratio in the gray shaded triangle</span><a class="headerlink" href="#height-base" title="Permalink to this image">¶</a></p>
 </div>
-<p>As a first approximation, we construct a secant on the curve by joining <span class="math notranslate nohighlight">\(x\)</span> to a nearby point <span class="math notranslate nohighlight">\(x+Δx\)</span>. Here, <span class="math notranslate nohighlight">\(Δx\)</span> means a small change in the parameter <span class="math notranslate nohighlight">\(x\)</span>. This result is shown graphically in <a class="reference internal" href="#height-base"><span class="std std-numref">Fig. 3.2</span></a>, we consider the secant line joining <span class="math notranslate nohighlight">\((x,f(x))\)</span> to a nearby point <span class="math notranslate nohighlight">\((x+Δx,f(x+Δx))\)</span></p>
+<p>As a first approximation, we construct a secant on the curve by joining <span class="math notranslate nohighlight">\(x\)</span> to a nearby point <span class="math notranslate nohighlight">\(x+Δx\)</span>. Here, <span class="math notranslate nohighlight">\(Δx\)</span> means a small change in the parameter <span class="math notranslate nohighlight">\(x\)</span>. This result is shown graphically in <a class="reference internal" href="#height-base"><span class="std std-numref">Fig. 5.2</span></a>, we consider the secant line joining <span class="math notranslate nohighlight">\((x,f(x))\)</span> to a nearby point <span class="math notranslate nohighlight">\((x+Δx,f(x+Δx))\)</span></p>
 <p>The slope of the secant line is given by:</p>
 <div class="math notranslate nohighlight" id="equation-slope-secant">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-slope-secant" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{Δf}{Δx}=\displaystyle\frac{f(x+Δx)−f(x)}{Δx}\]</div>
-<p>As we make <span class="math notranslate nohighlight">\(Δx\)</span> smaller so that the two points are closer together, the secant line approaches the tangent.  We are therefore interested in what happens to <a class="reference internal" href="#equation-slope-secant">(3.1)</a> “as <span class="math notranslate nohighlight">\(Δx\)</span> approaches zero”</p>
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-slope-secant" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{Δf}{Δx}=\displaystyle\frac{f(x+Δx)−f(x)}{Δx}\]</div>
+<p>As we make <span class="math notranslate nohighlight">\(Δx\)</span> smaller so that the two points are closer together, the secant line approaches the tangent.  We are therefore interested in what happens to <a class="reference internal" href="#equation-slope-secant">(5.1)</a> “as <span class="math notranslate nohighlight">\(Δx\)</span> approaches zero”</p>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
 <p>Consider the function <span class="math notranslate nohighlight">\(f(x)=x^2\)</span>.
-Using the definition given in <a class="reference internal" href="#equation-slope-secant">(3.1)</a>, we have</p>
+Using the definition given in <a class="reference internal" href="#equation-slope-secant">(5.1)</a>, we have</p>
 <p><span class="math notranslate nohighlight">\(\displaystyle\frac{Δf}{Δx}=\displaystyle\frac{f(x+Δx)−f(x)}{Δx}=\displaystyle\frac{(x+Δx)^2−x^2}{Δ𝑥}=\displaystyle\frac{x^2+2Δx+(Δx)^2−x^2}{Δ𝑥}=2x+Δx\)</span></p>
 <p>As <span class="math notranslate nohighlight">\(Δx\)</span> approaches zero the result approaches <span class="math notranslate nohighlight">\(2x\)</span>, which we can write as <span class="math notranslate nohighlight">\(\displaystyle\frac{Δ𝑓}{Δ𝑥}→2x\)</span>  because <span class="math notranslate nohighlight">\(Δx→0\)</span>.</p>
 <p>More formally, the result is written as</p>
@@ -323,12 +338,12 @@ Using the definition given in <a class="reference internal" href="#equation-slop
 <p>and we say that “the limit <span class="math notranslate nohighlight">\(Δx\)</span>→0”, the result is <span class="math notranslate nohighlight">\(2x\)</span>.</p>
 <div class="figure align-default" id="x2">
 <img alt="../_images/x2.png" src="../_images/x2.png" />
-<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(y=x^2\)</span>, together with the tangent.  The tangent has slope <span class="math notranslate nohighlight">\(2x\)</span>.</span><a class="headerlink" href="#x2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(y=x^2\)</span>, together with the tangent.  The tangent has slope <span class="math notranslate nohighlight">\(2x\)</span>.</span><a class="headerlink" href="#x2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <p>Note that in this example, a factor of <span class="math notranslate nohighlight">\(Δx\)</span> was cancelled from the numerator and denominator.  The limit is not evaluated at <span class="math notranslate nohighlight">\(Δx=0\)</span>, but as <span class="math notranslate nohighlight">\(Δx\)</span> approaches <span class="math notranslate nohighlight">\(0\)</span>. The derivative of a function <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span> is given by the result</p>
 <div class="math notranslate nohighlight" id="equation-derivative">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-derivative" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{\mathrm{d}𝑓}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}\displaystyle\frac{f(x+Δx)−f(x)}{Δx}\]</div>
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-derivative" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{\mathrm{d}𝑓}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}\displaystyle\frac{f(x+Δx)−f(x)}{Δx}\]</div>
 <p>The derivative <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}\)</span> is also written <span class="math notranslate nohighlight">\(f'(x)\)</span>. The two different notations are known as Newton and Leibniz notation.</p>
 <p>The process of calculating the derivative is called “differentiation”.</p>
 <p>As <span class="math notranslate nohighlight">\(Δx\rightarrow 0\)</span>, both the numerator and denominator of the fraction tend to zero, yet in most cases we will see that their ratio approaches a finite limit.
@@ -344,12 +359,12 @@ What determines the limit is how quickly the numerator approaches zero, relative
 </div>
 </div>
 <div class="section" id="derivative-as-a-rate-of-change">
-<h2><span class="section-number">3.2. </span>Derivative as a “rate of change”<a class="headerlink" href="#derivative-as-a-rate-of-change" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>Derivative as a “rate of change”<a class="headerlink" href="#derivative-as-a-rate-of-change" title="Permalink to this headline">¶</a></h2>
 <p>Differentiation can be thought of as a measure of the rate of change of one variable with respect to another. For instance, <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> is a measure of how quickly <span class="math notranslate nohighlight">\(y\)</span> changes (instantaneously) as <span class="math notranslate nohighlight">\(x\)</span> changes. Here, we call <span class="math notranslate nohighlight">\(y\)</span> the dependent variable, and we call <span class="math notranslate nohighlight">\(x\)</span> the independent variable.</p>
-<p>In many problems the independent variable is time. For example, consider the case of a simple pendulum shown in <a class="reference internal" href="#pendulum"><span class="std std-numref">Fig. 3.4</span></a>, where <span class="math notranslate nohighlight">\(\theta(t)\)</span> measures the anticlockwise angle of the pendulum from the downward vertical as a function of time <span class="math notranslate nohighlight">\(t\)</span>. The pendulum is initially released from rest at a positive angle.</p>
+<p>In many problems the independent variable is time. For example, consider the case of a simple pendulum shown in <a class="reference internal" href="#pendulum"><span class="std std-numref">Fig. 5.4</span></a>, where <span class="math notranslate nohighlight">\(\theta(t)\)</span> measures the anticlockwise angle of the pendulum from the downward vertical as a function of time <span class="math notranslate nohighlight">\(t\)</span>. The pendulum is initially released from rest at a positive angle.</p>
 <div class="figure align-default" id="pendulum">
 <img alt="../_images/pendulum.png" src="../_images/pendulum.png" />
-<p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">A pendulum swing “animation”, the angle of inclination with the downward vertical is denoted by <span class="math notranslate nohighlight">\(\theta\)</span> and is measured in the anti-clockwise direction.  The graph on the right shows the rate of change of <span class="math notranslate nohighlight">\(\theta\)</span> with respect to time <span class="math notranslate nohighlight">\(t\)</span>.</span><a class="headerlink" href="#pendulum" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">A pendulum swing “animation”, the angle of inclination with the downward vertical is denoted by <span class="math notranslate nohighlight">\(\theta\)</span> and is measured in the anti-clockwise direction.  The graph on the right shows the rate of change of <span class="math notranslate nohighlight">\(\theta\)</span> with respect to time <span class="math notranslate nohighlight">\(t\)</span>.</span><a class="headerlink" href="#pendulum" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>At the maximum height of the swing (amplitude), the pendulum comes to an instantaneous standstill, and so <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}\theta}{\mathrm{d}t}=0\)</span>.</p></li>
@@ -359,7 +374,7 @@ What determines the limit is how quickly the numerator approaches zero, relative
 </ul>
 </div>
 <div class="section" id="second-and-higher-derivatives">
-<h2><span class="section-number">3.3. </span>Second and Higher Derivatives<a class="headerlink" href="#second-and-higher-derivatives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Second and Higher Derivatives<a class="headerlink" href="#second-and-higher-derivatives" title="Permalink to this headline">¶</a></h2>
 <p>We can differentiate a function repeatedly.  For example, we might differentiate the function <span class="math notranslate nohighlight">\(3x^2+5x^3\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span> twice:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -387,7 +402,7 @@ f''(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}$, \quad f'''(x)=\displays
 </div>
 </div>
 <div class="section" id="stationary-points">
-<h2><span class="section-number">3.4. </span>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>The point (<span class="math notranslate nohighlight">\(x_0,f(x_0))\)</span> is a stationary point of <span class="math notranslate nohighlight">\(f(x)\)</span> if <span class="math notranslate nohighlight">\(f′(x_0)=0\)</span>.</p>
@@ -397,7 +412,7 @@ f''(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}$, \quad f'''(x)=\displays
 <a class="reference internal image-reference" href="../_images/table-1.png" id="table-for-stat-points"><img alt="alternative description" class="align-center" id="table-for-stat-points" src="../_images/table-1.png" style="width: 462.59999999999997px; height: 141.6px;" /></a>
 <br>
 <div class="section" id="first-derivative-test">
-<h3><span class="section-number">3.4.1. </span>First Derivative Test<a class="headerlink" href="#first-derivative-test" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.1. </span>First Derivative Test<a class="headerlink" href="#first-derivative-test" title="Permalink to this headline">¶</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
 <p>Find and classify the stationary points of <span class="math notranslate nohighlight">\(f(x)=-x^3+9x^2−24x+20\)</span></p>
@@ -428,7 +443,7 @@ f''(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}$, \quad f'''(x)=\displays
 </div>
 </div>
 <div class="section" id="second-derivative-test">
-<h3><span class="section-number">3.4.2. </span>Second derivative test<a class="headerlink" href="#second-derivative-test" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.2. </span>Second derivative test<a class="headerlink" href="#second-derivative-test" title="Permalink to this headline">¶</a></h3>
 <p>The second derivative measures the rate of change of the slope, since</p>
 <p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2f}{\mathrm{d}x^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}s}{\mathrm{d}x}\)</span> where <span class="math notranslate nohighlight">\(s\)</span> measures the slope.</p>
 <p>Thus, the second derivative is a measure of concavity.</p>
@@ -444,7 +459,7 @@ If the function is concave downward at a stationary point, it is a local maximum
 </div>
 </div>
 <div class="section" id="differentiation-rules">
-<h2><span class="section-number">3.5. </span>Differentiation Rules<a class="headerlink" href="#differentiation-rules" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.5. </span>Differentiation Rules<a class="headerlink" href="#differentiation-rules" title="Permalink to this headline">¶</a></h2>
 <p><strong>Sum rule</strong></p>
 <p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(u+v)=\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}+\displaystyle\frac{\mathrm{d}v}{\mathrm{d}x}\)</span></p>
 <p>This result says that the derivative of a sum is equal to the sum of the derivatives.</p>
@@ -520,12 +535,12 @@ Intuitively, we hope to combine these two results to find the rate of change of 
 </div>
 </div>
 <div class="section" id="parametric-differentiation">
-<h2><span class="section-number">3.6. </span>Parametric Differentiation<a class="headerlink" href="#parametric-differentiation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>Parametric Differentiation<a class="headerlink" href="#parametric-differentiation" title="Permalink to this headline">¶</a></h2>
 <p>We can express the equation of a circle in the form <span class="math notranslate nohighlight">\(x=\cos(t)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(t)\)</span>. This is known as a parametric representation. By varying the parameter <span class="math notranslate nohighlight">\(t\)</span>, the entire circle is mapped out.</p>
 <p>In principle, any curve can be parameterised in terms of a single parameter, regardless of the number of coordinates. To describe a surface, two parameters are required. For example, the surface of a sphere can be described by varying two parameters such as the latitude and longitude.</p>
 <p>According to the chain rule, we can write</p>
 <div class="math notranslate nohighlight" id="equation-parametric">
-<span class="eqno">(3.3)<a class="headerlink" href="#equation-parametric" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}\displaystyle\frac{\mathrm{d}t}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}\]</div>
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-parametric" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}\displaystyle\frac{\mathrm{d}t}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}\]</div>
 <p>So, we obtain a result for <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> in terms of the rate of change of each variable w.r.t. parameter <span class="math notranslate nohighlight">\(t\)</span>. This result is known as parametric differentiation. The result is obtained fully in terms of the parameter.</p>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
@@ -543,7 +558,7 @@ Intuitively, we hope to combine these two results to find the rate of change of 
 </div>
 </div>
 <div class="section" id="derivatives-of-inverse-functions">
-<h2><span class="section-number">3.7. </span>Derivatives of Inverse Functions<a class="headerlink" href="#derivatives-of-inverse-functions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.7. </span>Derivatives of Inverse Functions<a class="headerlink" href="#derivatives-of-inverse-functions" title="Permalink to this headline">¶</a></h2>
 <p>In this scenario we wish to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> where <span class="math notranslate nohighlight">\(f^{-1}(x)\)</span> and we know how to differentiate function <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <p>For example, to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)\)</span> we let <span class="math notranslate nohighlight">\(y=\ln(x)\)</span> so that <span class="math notranslate nohighlight">\(x=e^y\)</span></p>
 <p>We know that <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=e^y\)</span> and then by using the special case of the chain rule we obtain the result :</p>
@@ -564,7 +579,7 @@ The final result is <span class="math notranslate nohighlight">\(\displaystyle\f
 </div>
 </div>
 <div class="section" id="implicit-differentiation">
-<h2><span class="section-number">3.8. </span>Implicit Differentiation<a class="headerlink" href="#implicit-differentiation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.8. </span>Implicit Differentiation<a class="headerlink" href="#implicit-differentiation" title="Permalink to this headline">¶</a></h2>
 <p>Up to now, we have been calculating the derivatives of functions given explicitly in terms of the dependent variable in the manner <span class="math notranslate nohighlight">\(y=y(x)\)</span>.
 However, there are many occasions where we want to calculate the derivative of a function <span class="math notranslate nohighlight">\(y\)</span> that is implicitly related to the dependent variable <span class="math notranslate nohighlight">\(x\)</span> in the manner <span class="math notranslate nohighlight">\(f(x,y)=0\)</span>.</p>
 <p>In that case, we differentiate the entire expression with respect to the independent variable and apply the chain rule to differentiate terms involving the dependent variable.</p>
@@ -591,7 +606,7 @@ However, there are many occasions where we want to calculate the derivative of a
 </div>
 </div>
 <div class="section" id="solutions">
-<h2><span class="section-number">3.9. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.9. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
 <p><strong>Problems for Motivation and Principle Arguments</strong></p>
 <ol>
 <li><p>Let <span class="math notranslate nohighlight">\(f(x)=3x^2+2x\)</span></p>
@@ -757,7 +772,7 @@ These points are stationary points w.r.t <span class="math notranslate nohighlig
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Differentiation"
+            path: "./differentiation_and_integration"
         },
         predefinedOutput: true
     }
@@ -769,8 +784,8 @@ These points are stationary points w.r.t <span class="math notranslate nohighlig
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../complex_numbers/complex_numbers.html" title="previous page"><span class="section-number">2. </span>Complex Numbers</a>
-    <a class='right-next' id="next-link" href="../Integration/integration.html" title="next page"><span class="section-number">4. </span>Integration</a>
+    <a class='left-prev' id="prev-link" href="../complex_numbers/complex_numbers.html" title="previous page"><span class="section-number">4. </span>Complex Numbers</a>
+    <a class='right-next' id="next-link" href="integration.html" title="next page"><span class="section-number">6. </span>Integration</a>
 
         </div>
         

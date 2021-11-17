@@ -7,11 +7,14 @@ options:
   numbered: True
 
 chapters:
+- file: sequences_and_series/limits.md
 - file: sequences_and_series/series.md
+- file: sequences_and_series/convergence.md
 - file: complex_numbers/complex_numbers.md
-- file: Differentiation/Differentiation.md
-- file: Integration/integration.md
-- file: odes/Intro_ODEs.md
-- file: odes/1st_order_ODEs.md
-- file: odes/2nd_order_ODEs.md
+- file: differentiation_and_integration/differentiation.md
+- file: differentiation_and_integration/integration.md
+- file: sequences_and_series/taylor_series.md
+- file: odes/intro_odes.md
+- file: odes/1st_order_odes.md
+- file: odes/2nd_order_odes.md
 - file: python/ode_solver_demo.ipynb

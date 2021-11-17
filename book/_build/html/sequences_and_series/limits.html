@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Limits of Functions and Sequences &#8212; Mathematics for Natural Sciences 1</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Introduction to Series" href="series.html" />
+    <link rel="prev" title="Introduction" href="../intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Limits of Functions and Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="series.html">
+   2. Introduction to Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convergence.html">
+   3. Convergence of Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../complex_numbers/complex_numbers.html">
+   4. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
+   5. Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation_and_integration/integration.html">
+   6. Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="taylor_series.html">
+   7. Taylor series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/intro_odes.html">
+   8. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/1st_order_odes.html">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/2nd_order_odes.html">
+   10. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/ode_solver_demo.html">
+   11. ODEs with Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/sequences_and_series/limits.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-f-x-x-2">
+   1.1. Example:
+   <span class="math notranslate nohighlight">
+    \(f(x) = x^2\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-f-x-frac-1-x">
+   1.2. Example:
+   <span class="math notranslate nohighlight">
+    \(f(x) = \frac{1}{x}\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-one-sided-limit">
+   1.3. The one-sided limit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combination-of-limits">
+   1.4. Combination of limits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-that-tend-to-finite-values">
+     1.4.1. Functions that tend to finite values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-that-tend-to-infinite-values">
+     1.4.2. Functions that tend to infinite values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questions">
+     1.4.3. Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequences">
+   1.5. Sequences
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition">
+     1.5.1. Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recurrence-relationships">
+     1.5.2. Recurrence relationships
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limits-of-sequences">
+     1.5.3. Limits of sequences
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       1.5.3.1. Definition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#similarity-to-limits-of-a-function">
+       1.5.3.2. Similarity to limits of a function
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="limits-of-functions-and-sequences">
+<h1><span class="section-number">1. </span>Limits of Functions and Sequences<a class="headerlink" href="#limits-of-functions-and-sequences" title="Permalink to this headline">¶</a></h1>
+<p>The mathematics of <a class="reference external" href="https://en.wikipedia.org/wiki/Limit_(mathematics)">limits</a> is used to describe the behaviour of a
+function or sequence that is not AT a point, but approaching it.</p>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Limit_of_a_function">limits of a function</a> are best illustrated by example.</p>
+<div class="section" id="example-f-x-x-2">
+<h2><span class="section-number">1.1. </span>Example: <span class="math notranslate nohighlight">\(f(x) = x^2\)</span><a class="headerlink" href="#example-f-x-x-2" title="Permalink to this headline">¶</a></h2>
+<p>We start with a trivial example, by considering the function <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> near to the point (2,4).</p>
+<div class="figure align-default" id="x-squared">
+<img alt="../_images/x_squared.png" src="../_images/x_squared.png" />
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">A plot of <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> together with the point <span class="math notranslate nohighlight">\((2,4)\)</span>.</span><a class="headerlink" href="#x-squared" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this example, it is apparent that we can trace along the <span class="math notranslate nohighlight">\(x^2\)</span> curve towards the point, from either direction.
+Mathematically, we say that we can make <span class="math notranslate nohighlight">\(f(x)\)</span> arbitrarily close (“as close as you like”) to 4 by making <span class="math notranslate nohighlight">\(x\)</span>
+sufficiently close to 2.
+We write</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 2} x^2 = 4\]</div>
+<p>and we say that “the limit of <span class="math notranslate nohighlight">\(x^2\)</span> as <span class="math notranslate nohighlight">\(x\)</span> tends to (approaches) 2 is equal to 4”.
+In fact, for the squared function, it is clear that</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to c} f(x) = f(c)\]</div>
+<p>for all <span class="math notranslate nohighlight">\(c\)</span>.
+However we will see that this behaviour does not apply for all functions.</p>
+<p>We may also consider the limit of a function <span class="math notranslate nohighlight">\(f(x)\)</span> as its argument <span class="math notranslate nohighlight">\(x\)</span> becomes “very large”.
+For instance, we can say that <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\to\infty} x^2 = \infty\)</span> since <span class="math notranslate nohighlight">\(x^2\)</span> can be made arbitrarily large by making <span class="math notranslate nohighlight">\(x\)</span>
+“big enough”.
+For instance, we can make <span class="math notranslate nohighlight">\(x^2\)</span> larger than <span class="math notranslate nohighlight">\(10^{998}\)</span> by making <span class="math notranslate nohighlight">\(x\)</span> larger than <span class="math notranslate nohighlight">\(10^{499}\)</span>.</p>
+<p>We would read the expression by saying: “the limit of <span class="math notranslate nohighlight">\(x^2\)</span> as <span class="math notranslate nohighlight">\(x\)</span> tends to infinity is infinity”, though it does not
+actually reach infinity.</p>
+</div>
+<div class="section" id="example-f-x-frac-1-x">
+<h2><span class="section-number">1.2. </span>Example: <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span><a class="headerlink" href="#example-f-x-frac-1-x" title="Permalink to this headline">¶</a></h2>
+<p>Whilst the limit of <span class="math notranslate nohighlight">\(x^2\)</span> for large <span class="math notranslate nohighlight">\(x\)</span> is non-finite, there are other functions which approach a finite value as
+<span class="math notranslate nohighlight">\(x \to \infty\)</span>, and also functions which approach a non-finite value whilst <span class="math notranslate nohighlight">\(x\)</span> remains finite.
+For example, consider the behaviour of <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>, illustrated in the plot below.</p>
+<div class="figure align-default" id="reciprocal-x">
+<img alt="../_images/reciprocal_x.png" src="../_images/reciprocal_x.png" />
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">A plot of <span class="math notranslate nohighlight">\(f(x)= \frac{1}{x}\)</span>.</span><a class="headerlink" href="#reciprocal-x" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this case, as <span class="math notranslate nohighlight">\(x\)</span> becomes very large, <span class="math notranslate nohighlight">\(f(x)\)</span> approaches zero.
+We write that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\lim_{x \to \infty} \frac{1}{x}&amp;= 0^+ \\
+\lim_{x \to - \infty} \frac{1}{x}&amp;= 0^- \ .\end{split}\]</div>
+<p>The <span class="math notranslate nohighlight">\(0^+\)</span> and <span class="math notranslate nohighlight">\(0^−\)</span> have been used here to indicate that the function “tends to zero from above/below” as <span class="math notranslate nohighlight">\(x\)</span> tends to
+positive and negative infinity respectively.</p>
+<p>Near to <span class="math notranslate nohighlight">\(x=0\)</span>, the behaviour of <span class="math notranslate nohighlight">\(\frac{1}{x}\)</span> is different to what we have seen so far:</p>
+<ul class="simple">
+<li><p>As <span class="math notranslate nohighlight">\(x\)</span> tends to zero from above (from the right), the graph shoots off to positive infinity, but…</p></li>
+<li><p>As <span class="math notranslate nohighlight">\(x\)</span> tends to zero from below (from the left), the graph shoot off to negative infinity.</p></li>
+</ul>
+</div>
+<div class="section" id="the-one-sided-limit">
+<h2><span class="section-number">1.3. </span>The one-sided limit<a class="headerlink" href="#the-one-sided-limit" title="Permalink to this headline">¶</a></h2>
+<p>The previous example motivates the idea of a <a class="reference external" href="https://en.wikipedia.org/wiki/One-sided_limit">one-sided limit</a>.
+We write that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\lim_{x \to 0^+} \frac{1}{x} &amp;= + \infty \\
+\lim_{x \to 0^-} \frac{1}{x} &amp;= - \infty \ .\end{split}\]</div>
+<p>Since the left- and right- limits are not the same, then we cannot meaningfully refer to “the limit” without providing
+a direction, so the result for <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to 0} \frac{1}{x}\)</span> is undefined.
+We say that the function is discontinuous at <span class="math notranslate nohighlight">\(x = 0\)</span>, though it is
+“<a class="reference external" href="https://math.stackexchange.com/questions/1968943/whats-the-difference-between-continuous-and-piecewise-continuous-functions">piecewise continuous</a>”
+on each of the pieces either side of <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<p>Another example of a piecewise continous function is the <a class="reference external" href="https://en.wikipedia.org/wiki/Heaviside_step_function">Heaviside function</a>,
+which we define as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H(x) = \begin{cases}
+1 \ \ &amp;\text{if} \ \ \ x &gt; 0 \\
+0 \ \ &amp;\text{if} \ \ \ x &lt; 0
+\end{cases} \ ,\end{split}\]</div>
+<p>although it may be defined otherwise (e.g. with <span class="math notranslate nohighlight">\(H(0)=\frac{1}{2}\)</span>).
+A plot of this function is shown below.
+It has a finite jump discontinuity at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<div class="figure align-default" id="heaviside">
+<img alt="../_images/heaviside.png" src="../_images/heaviside.png" />
+<p class="caption"><span class="caption-number">Fig. 1.3 </span><span class="caption-text">A plot of the Heaviside function <span class="math notranslate nohighlight">\(H(x)\)</span>.</span><a class="headerlink" href="#heaviside" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="combination-of-limits">
+<h2><span class="section-number">1.4. </span>Combination of limits<a class="headerlink" href="#combination-of-limits" title="Permalink to this headline">¶</a></h2>
+<p>It is useful to know how to solve the limit of combinations of functions (or so called functions of functions) such as</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to c} \frac{f(x)}{g(x)} \ ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(c\)</span> will can be any number such as <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(\infty\)</span>.</p>
+<p>The approach we take to solve these depends on whether the limits of the inidividual functions <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to c} f(x)\)</span>
+and <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to c} g(x)\)</span> are finite or infinite.</p>
+<div class="section" id="functions-that-tend-to-finite-values">
+<h3><span class="section-number">1.4.1. </span>Functions that tend to finite values<a class="headerlink" href="#functions-that-tend-to-finite-values" title="Permalink to this headline">¶</a></h3>
+<p>First consider the case where the limit of all the functions are finite.
+If and only if the limits of the individual functions are FINITE then we can use the combination theorem to solve the combination
+of functions.</p>
+<div class="admonition-the-combination-theorem-for-limits admonition">
+<p class="admonition-title">The combination theorem for limits</p>
+<p>If the limits <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to c} f(x)\)</span> and <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to c} g(x)\)</span>  are <strong>finite</strong> then,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} &amp;\lim_{x \to c} \Big( \alpha f(x) + \beta g(x) \Big) = \alpha \lim_{x \to c} f(x) + \beta \lim_{x \to c} g(x) \ ,\\
+&amp;\lim_{x \to c} f(x) g(x) = \lim_{x \to c} f(x) \lim_{x \to c} g(x) \ ,  \\
+&amp;\lim_{x \to c} \frac{f(x)}{g(x)} \ ,\end{split}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are constants.
+To stress the point again, the combination theorem for limits can only be used if the limit of every function is finite.</p>
+<p>As an example, consider the function:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 0} \frac{x^2}{(x+1)^3 - (x-1)^3} \ .\]</div>
+<p>Since the limits of each of the individual functions are finite: <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to 0} x^2 = 0\)</span>, <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to 0} (x+1)^3 = 1\)</span>
+and <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to 0} (x-1)^3 = -1\)</span>, we can use first and third statment of the combination theorem to rewrite and solve
+the equation as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \lim_{x \to 0} \frac{x^2}{(x+1)^3 - (x-1)^3} &amp;= \frac{\displaystyle\lim_{x \to 0} x^2}{\displaystyle\lim_{x \to 0} \Big((x+1)^3 - (x-1)^3\big)}\\
+ &amp;= \frac{\displaystyle\lim_{x \to 0} x^2}{\displaystyle\lim_{x \to 0} (x+1)^3 - \displaystyle\lim_{x \to 0}(x-1)^3}\\
+ &amp; = \frac{0}{1 - (-1)}\end{split}\]</div>
+<p>So we can conclude the limit of the function is <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</div>
+<div class="section" id="functions-that-tend-to-infinite-values">
+<h3><span class="section-number">1.4.2. </span>Functions that tend to infinite values<a class="headerlink" href="#functions-that-tend-to-infinite-values" title="Permalink to this headline">¶</a></h3>
+<p>We now consider the case where the limit of all the individual functions are infinite, such as
+<span class="math notranslate nohighlight">\(\displaystyle\lim_{x\to \infty} x^2 = \infty\)</span> and <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\to 0^-} \frac{1}{x} = -\infty\)</span>.</p>
+<p>The approach we take can be illustrated by the following two examples:</p>
+<p><strong>Example 1</strong><br></p>
+<div class="math notranslate nohighlight">
+\[ \lim_{x \to \infty} ( x^2 - x ) \ .\]</div>
+<p>This limit appears to “go like” <span class="math notranslate nohighlight">\(\infty - \infty\)</span>, so you would be forgiven for thinking this result is zero.
+On the other hand, there is a sense in which <span class="math notranslate nohighlight">\(x^2\)</span> is “much bigger” than <span class="math notranslate nohighlight">\(x\)</span> and so it dominates this expression.
+That is <span class="math notranslate nohighlight">\(x^2\)</span> “blows up faster” than <span class="math notranslate nohighlight">\(x\)</span> as <span class="math notranslate nohighlight">\(x\to \infty\)</span>.
+Indeed, if you try subsitute a large value of <span class="math notranslate nohighlight">\(x\)</span> into the function <span class="math notranslate nohighlight">\((x^2 - x)\)</span> you may infer that function can get
+arbitrarily large by making <span class="math notranslate nohighlight">\(x\)</span> sufficiently large.
+So this limit appears to be infinity.</p>
+<p>Another way to approach this problem is to factorise <span class="math notranslate nohighlight">\((x^2 - x) = x (x-1)\)</span>; both <span class="math notranslate nohighlight">\(x \to \infty\)</span> and <span class="math notranslate nohighlight">\(x-1 \to \infty\)</span>
+as <span class="math notranslate nohighlight">\(x\to\infty\)</span>.</p>
+<p><strong>Example 2</strong><br></p>
+<div class="math notranslate nohighlight">
+\[ \lim_{x \to \infty} \frac{x + \sqrt{x + 2} }{4 x} \ .\]</div>
+<p>The second limit “goes like” <span class="math notranslate nohighlight">\(\frac{\infty}{\infty}\)</span>, but the answer is not one.
+To solve this limit we consider the behaviour of the numerator and denominator separately.
+We note that the function <span class="math notranslate nohighlight">\(x\)</span> is “much much” greater than <span class="math notranslate nohighlight">\(\sqrt{x + 2}\)</span> for large <span class="math notranslate nohighlight">\(x\)</span> (i.e. <span class="math notranslate nohighlight">\(x &gt;&gt; \sqrt{x + 2}\)</span>) so we
+say that the numerator “goes like” <span class="math notranslate nohighlight">\(x\)</span> for large <span class="math notranslate nohighlight">\(x\)</span>.
+The denominator simply “goes like” 4𝑥, so the fraction in the limit “goes like” <span class="math notranslate nohighlight">\( \frac{x}{4 x} = \frac{1}{4}\)</span>.
+Again, you may convince yourself of this by taking some large values of <span class="math notranslate nohighlight">\(x\)</span> on your calculator -
+though note that your calculator may not be able to handle the ratio if you make the values too large.</p>
+<p>Another approach you may take is to simplify the function first:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \lim_{x \to \infty} \frac{x + \sqrt{x + 2} }{4 x} &amp;= \frac{1 + \frac{\sqrt{x +2 }}{x} }{4} \\
+ &amp; = \frac{1 + \sqrt{ \frac{1}{x} + \frac{2}{x^2}  }}{4} \ .\end{split}\]</div>
+<p>Because <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\to\infty} \frac{1}{x} = \lim_{x\to\infty} \frac{2}{x^2} = 0\)</span>, we can see we also arrive at the solution
+of <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>.
+As an exercise, convince yourself of the following result:</p>
+<div class="math notranslate nohighlight">
+\[ \lim_{x \to 0} \frac{x + \sqrt{x + 2} }{4 x} = \infty \ .\]</div>
+<p><strong>Summary</strong><br></p>
+<p>From the 2 examples above we illustrate that the solutions can be found be determining the individual function(s) (which
+may be constant values) that dominate in the limit.
+It most cases it is useful to simply the equation before tackling the limit.</p>
+<p>It must be noted that fractions which “go like” <span class="math notranslate nohighlight">\(\frac{\infty}{\infty}\)</span> do not necessarily approach a finite limit.
+For instance, the result <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to \infty} \frac{x+2}{x^2 - x}\)</span> is equal to zero, since the degree of the denominator
+is larger than the degree of the numerator and it dominates.
+That is, the denomiator “blows up faster” than the numerator.</p>
+</div>
+<div class="section" id="questions">
+<h3><span class="section-number">1.4.3. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
+<p>Find the following limits:</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle\lim_{x\to\infty} \frac{x+2}{x^2-2}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle\lim_{x\to\infty} \frac{x-2}{x+2}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to \infty} \big( \sqrt{x^2-2} - \sqrt{x^2+x} \big)\)</span>.</p></li>
+</ol>
+<p><strong>Solutions</strong><br></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to \infty}\frac{x+2}{x^2 - 2} = \lim_{x \to \infty} \frac{1/x + 2/x^2}{1-2/x^2}\)</span>
+<span class="math notranslate nohighlight">\(= \frac{0+0}{1+0}\)</span>
+<span class="math notranslate nohighlight">\(=0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to \infty}\frac{x-2}{x+2} = \lim_{x \to \infty} \frac{1 - 2/x}{1+2/x}\)</span>
+<span class="math notranslate nohighlight">\(= \frac{1-0}{1+0}\)</span>
+<span class="math notranslate nohighlight">\(=1\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{x^2-2} - \sqrt{x^2+x}\)</span>
+<span class="math notranslate nohighlight">\( = \big(\sqrt{x^2-2} - \sqrt{x^2+x} \big) \frac{\sqrt{x^2-2} + \sqrt{x^2+x}}{\sqrt{x^2-2} + \sqrt{x^2+x}}\)</span>
+<span class="math notranslate nohighlight">\( = \frac{-x-2}{\sqrt{x^2-2} + \sqrt{x^2+x}}\)</span>
+<span class="math notranslate nohighlight">\( = \frac{-1-2/x}{\sqrt{1-2/x^2} + \sqrt{1+1/x} }\)</span>.
+Thus, <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to \infty} \big(\sqrt{x^2-2} - \sqrt{x^2+x} \big)\)</span>
+<span class="math notranslate nohighlight">\(= \frac{-1-0}{1+1}\)</span>
+<span class="math notranslate nohighlight">\( = -\frac{1}{2}\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="sequences">
+<h2><span class="section-number">1.5. </span>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h2>
+<p>Your intuition of a <a class="reference external" href="https://en.wikipedia.org/wiki/Sequence">sequence</a> will likely be correct.
+It can mean a sequence of letters, such as a word (e.g. A, U, S, T, R, A, L, I, A) or a DNA sequence
+(e.g. A, T, T, C, G, G, T, C, A, T, C).
+It can also be a sequence of numbers such as a telephone number, date of birth, something nonsensical
+(e.g. <span class="math notranslate nohighlight">\(181291, 2, -4309, \sqrt{7}\)</span>) or the prime numbers: <span class="math notranslate nohighlight">\(2, 3, 5, 7, 11, \dots\)</span>.
+Here, the dots indicate that the <a class="reference external" href="https://whatis.techtarget.com/definition/infinite-sequence">sequence goes on infinitely</a>.</p>
+<p>Each part of the sequence is called a <strong>term</strong>.
+Each sequence has a specific ordering of terms.
+For example, the series <span class="math notranslate nohighlight">\(1,2,3,4\)</span> is different from the series <span class="math notranslate nohighlight">\(4,3,2,1\)</span> much in the same way that the telephone number
+<span class="math notranslate nohighlight">\(18001234\)</span> will reach a different person to the phone number <span class="math notranslate nohighlight">\(18004321\)</span>.</p>
+<div class="section" id="definition">
+<h3><span class="section-number">1.5.1. </span>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-sequence admonition">
+<p class="admonition-title">Sequence</p>
+<p>A <strong>sequence</strong> is a set of terms where order matters, written as follows:</p>
+<div class="math notranslate nohighlight" id="equation-sequencedef">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-sequencedef" title="Permalink to this equation">¶</a></span>\[    u_1, u_2, \dots, u_n\]</div>
+</div>
+<p>Here, the size of the sequence (the number of terms) is <span class="math notranslate nohighlight">\(n\)</span>.
+The <span class="math notranslate nohighlight">\(i\)</span>-th term in the sequence may be denoted by <span class="math notranslate nohighlight">\(u_i\)</span> where <span class="math notranslate nohighlight">\(i = 1, 2, \dots, n\)</span>.</p>
+<p>The labels <span class="math notranslate nohighlight">\(u\)</span>, and <span class="math notranslate nohighlight">\(i\)</span> are arbitrary, and we could just as well use other letters to represent them.
+Sequences can have finite <span class="math notranslate nohighlight">\(n&lt;\infty\)</span> (e.g. telephone numbers) or infinite sizes
+<span class="math notranslate nohighlight">\(n \to \infty\)</span> (e.g. the prime numbers).</p>
+<p>The sequences that we will examine in this course are <a class="reference external" href="https://www.youtube.com/watch?v=vV7C7bXm4VI">numerical patterns</a>.
+Much of mathematics is concerned with patterns in both mathematical constructs and nature, and the study of sequences
+provides a firm grounding for this endeavour.</p>
+<p>Mathematical patterns can generally be expressed as formula for the <span class="math notranslate nohighlight">\(i\)</span>th term. For instance, the formula below generates the sequence <span class="math notranslate nohighlight">\(-1, 2, 5, 8, 11, 14, 17, 20\)</span> by taking <span class="math notranslate nohighlight">\(i=1,\dots 8\)</span> :</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+u_i = 2 + 3 (i-2)
+\end{equation*}\]</div>
+<p>Notice that the size of the terms in this sequence grows without bound as the number of terms is increased.</p>
+</div>
+<div class="section" id="recurrence-relationships">
+<h3><span class="section-number">1.5.2. </span>Recurrence relationships<a class="headerlink" href="#recurrence-relationships" title="Permalink to this headline">¶</a></h3>
+<p>It is sometimes possible to express a sequence as a formula, otherwise known as a
+<a class="reference external" href="https://en.wikipedia.org/wiki/Recurrence_relation">recurrence relation</a>, which sets out the
+rule(s) to find the sequence.</p>
+<p><strong>A famous example</strong><br>
+A well-know example that arises in many natural systems is the <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci sequence</a>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, \dots
+\end{equation*}\]</div>
+<p>This sequence is generated by starting with the sequence <span class="math notranslate nohighlight">\(0,1\)</span> and finding the next number
+in the sequence by adding the two previous numbers together, e.g. <span class="math notranslate nohighlight">\(0+1=\mathbf{1}\)</span>, <span class="math notranslate nohighlight">\(1+1=\mathbf{2}\)</span>, <span class="math notranslate nohighlight">\(1+2=\mathbf{3}\)</span>,
+<span class="math notranslate nohighlight">\(2+3=\mathbf{5}\)</span>, <span class="math notranslate nohighlight">\(3+5=\mathbf{8}\)</span>, etc.</p>
+<p>The sequence can be expressed as the formula</p>
+<div class="math notranslate nohighlight" id="equation-recreldef">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-recreldef" title="Permalink to this equation">¶</a></span>\[u_i=u_{i-1}+u_{i-2}\]</div>
+<p>which specifies the <span class="math notranslate nohighlight">\(i\)</span>-th term provided we have the term for <span class="math notranslate nohighlight">\(i-1\)</span> and <span class="math notranslate nohighlight">\(i-2\)</span>.
+It is because of this formula that it is necessary to provide the first two terms of the sequence, <span class="math notranslate nohighlight">\(u_1=0\)</span> and <span class="math notranslate nohighlight">\(u_2=1\)</span>,
+to find the rest of the sequence.</p>
+<p><strong>Python code for Fibonacci sequence:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">u1</span><span class="p">,</span> <span class="n">u2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="c1"># first two values</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">u1</span><span class="p">)</span> <span class="c1"># print values     </span>
+       <span class="n">nth</span> <span class="o">=</span> <span class="n">u1</span> <span class="o">+</span> <span class="n">u2</span> <span class="c1"># recurrence relation             </span>
+       <span class="n">u1</span> <span class="o">=</span> <span class="n">u2</span> <span class="c1"># update values       </span>
+       <span class="n">u2</span> <span class="o">=</span> <span class="n">nth</span> <span class="c1"># update values       </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+<p>You can use <a class="reference external" href="https://skulpt.org/">this webpage</a> to run basic python scripts.</p>
+<p>Note that the Fibonnaci recurrence relation will generate a different sequence to the Fibonacci sequence when the
+starting terms are different (e.g. <span class="math notranslate nohighlight">\(u_1=10\)</span> and <span class="math notranslate nohighlight">\(u_2=11\)</span>).</p>
+<p><strong>Exercise</strong> <br>
+Convince yourself that the formula <span class="math notranslate nohighlight">\(u_i = 2 + u_{i-1}\)</span> provides the sequence of even numbers when
+<span class="math notranslate nohighlight">\(u_1=2\)</span> and the sequence of odd numbers when <span class="math notranslate nohighlight">\(u_1=1\)</span>.</p>
+<p><strong>Python code for even numbers:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># first value</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># counter</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">nterms</span><span class="p">:</span> <span class="c1"># while loop</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="c1"># print values     </span>
+       <span class="n">u</span> <span class="o">=</span> <span class="n">u</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># recurrence relation                   </span>
+       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># update counter</span>
+</pre></div>
+</div>
+<p>Can you edit this code to produce the sequence of odd numbers?</p>
+<p>Recurrence relations, although simple, can produce surprisingly complicated behaviours.
+For further reading you may like to study the <a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_map">logistic map</a>:</p>
+<div class="math notranslate nohighlight" id="equation-logisticmap">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-logisticmap" title="Permalink to this equation">¶</a></span>\[u_{i+1} = r u_{i} (1 - u_i) \ ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is a constant.
+This equation (which models animal population growth) opened up the field of chaos theory.</p>
+</div>
+<div class="section" id="limits-of-sequences">
+<h3><span class="section-number">1.5.3. </span>Limits of sequences<a class="headerlink" href="#limits-of-sequences" title="Permalink to this headline">¶</a></h3>
+<p>In what comes next, we will be interested in calculating the “limit” of (i) the terms in a sequence <span class="math notranslate nohighlight">\(u_k\)</span> as
+<span class="math notranslate nohighlight">\(k \to \infty\)</span>, and (ii) the value of a function <span class="math notranslate nohighlight">\(f(x)\)</span> as <span class="math notranslate nohighlight">\(x \to c\)</span> where <span class="math notranslate nohighlight">\(c\)</span> can be a finite or infinite number.</p>
+<p>We may distinguish the cases where:</p>
+<ul class="simple">
+<li><p>the function and terms in a sequence <strong>diverge</strong> to an infinite value (blow up to <span class="math notranslate nohighlight">\(\pm \infty\)</span>),</p></li>
+<li><p>the function and terms in a sequence <strong>converge</strong> to a finite value.</p></li>
+</ul>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=riXcZT2ICjA">Link to a video introducing the concept of a limit</a>.</p>
+<div class="section" id="id1">
+<h4><span class="section-number">1.5.3.1. </span>Definition<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Limit_of_a_sequence">limit of a sequence</a> is the value that the terms of a sequence
+approaches (or tends to) as the number of terms approaches infinity, written as <span class="math notranslate nohighlight">\(k \to \infty\)</span> if <span class="math notranslate nohighlight">\(k\)</span> were the index variable.</p>
+<div class="admonition-the-limit-of-a-sequence admonition">
+<p class="admonition-title">The limit of a sequence</p>
+<p>For a sequence <span class="math notranslate nohighlight">\((u_1, u_2, u_3, \dots)\)</span>, the limit of a sequence is written as</p>
+<div class="math notranslate nohighlight">
+\[ \lim_{k \to \infty} u_k \ .\]</div>
+</div>
+<p>We say that a number, say <span class="math notranslate nohighlight">\(U\)</span>, is the limit of a the sequence <span class="math notranslate nohighlight">\((u_1, u_2, u_3, \dots)\)</span> if the numbers of the sequence
+<span class="math notranslate nohighlight">\(u_k\)</span> approach <span class="math notranslate nohighlight">\(U\)</span> as <span class="math notranslate nohighlight">\(k\to\infty\)</span>.
+We say that the limit of the sequence diverges if <span class="math notranslate nohighlight">\(\lvert U \rvert =\infty\)</span> and converges if <span class="math notranslate nohighlight">\(\lvert U \rvert &lt; \infty\)</span>.</p>
+</div>
+<div class="section" id="similarity-to-limits-of-a-function">
+<h4><span class="section-number">1.5.3.2. </span>Similarity to limits of a function<a class="headerlink" href="#similarity-to-limits-of-a-function" title="Permalink to this headline">¶</a></h4>
+<p>It is important to note that similarity between the limits of a sequence and a function.
+A function <span class="math notranslate nohighlight">\(f(x)\)</span> for real number <span class="math notranslate nohighlight">\(x\)</span> will have the same limit as the sequence <span class="math notranslate nohighlight">\(u_k = f(k)\)</span> for integer number <span class="math notranslate nohighlight">\(k\)</span>.
+For example <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>, the limit <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \to \infty} f(x) = \infty\)</span> is the same as the limit (infinite) of the
+sequence with terms <span class="math notranslate nohighlight">\(u_k = k^2\)</span>, <span class="math notranslate nohighlight">\((1, 2, 4, 16, \dots)\)</span>.</p>
+<p>The key difference is that when we refer to the limit of a sequence we always mean the limit of the terms <span class="math notranslate nohighlight">\(u_k\)</span> as the
+numbers of terms go to infinity <span class="math notranslate nohighlight">\(k\to\infty\)</span>.
+This is not the case for the limit of functions where the variable (i.e. <span class="math notranslate nohighlight">\(x\)</span>) can go to any number.</p>
+<p>Consider another example from the previous section, the limit of the infinite sequence with terms
+<span class="math notranslate nohighlight">\(u_k = \frac{1}{k}\)</span> for <span class="math notranslate nohighlight">\(k=1,2,\dots\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \dots\]</div>
+<p>is <span class="math notranslate nohighlight">\(0\)</span> in the same way that the limit of the functon <span class="math notranslate nohighlight">\(\frac{1}{x}\)</span> is zero, <span class="math notranslate nohighlight">\(\displaystyle \lim_{x\to\infty} \frac{1}{x} = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./sequences_and_series"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Introduction</a>
+    <a class='right-next' id="next-link" href="series.html" title="next page"><span class="section-number">2. </span>Introduction to Series</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

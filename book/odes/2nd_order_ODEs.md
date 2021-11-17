@@ -197,3 +197,141 @@ $\left[\begin{array}{cc}y\\y^{\prime}\end{array}\right]^{\prime}=\left[\begin{ar
 The eigenvalues of the problem $A\underline{y}=\lambda\underline{y}$ satisfy
 $a\lambda^2+b\lambda +c=0$
 and the solutions to the problem $\underline{y}^{\prime}=k\underline{y}$ are of exponential form. -->
+
+## Inhomogeneous problems
+
+Intended Learning Outcomes
+
+For an inhomogenous second order ODE with constant coefficients:
+
+* Find a particular integral using the method of undetermined coefficients
+* Find the general solution by combining the homogeneous solution and a particular integral
+* Find the particular solution satisfying given conditions.
+
+### Introduction to the problem
+
+This section of the notes will be concerned with the solution of a general problem of the form
+
+```{math}
+\mathcal{L}(y) = ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=f(x),
+```
+where $a,b,c$ are arbitrary constants.
+
+### The method of undetermined coefficients
+This method is a fancy name for educated guesswork. It requires us to pose an ansatz (trial solution), based on our observation of what $f(x)$ looks like. We will only be able to apply this method for some very limited types of function $f(x)$, mainly restricted to polynomials, exponentials and trigonometric functions. It is best illustrated by example.
+
+**Example 1:**<br>
+We will start by considering the following problem:
+```{math}
+y^{\prime\prime}+4y^{\prime}+5y=e^x
+```
+
+Since we are trying to "make" terms like $e^x$, we will guess a solution of the form $y_p=Ae^x$. Substituting this guess into the equation gives
+$10Ae^x=e^x \Rightarrow y_p=\frac{1}{10}e^x$
+
+We call this a particular integral. It is not the most general solution to the given problem, as it does not contain any free constants. We will be able to use our particular integral together with the solution to the corresponding homogeneous problem to construct the full result.
+
+But first let's practice finding some more particular integrals by the method of undetermined coefficients. The method gets its name because we guess the form of the solution without giving the values of the coefficients. We find the values of the undetermined coefficients by substituting our guess into the ODE and equating terms.
+
+**Example 2:**
+
+a. $y^{\prime\prime}+4y^{\prime}+5y=\sin(2x)$
+
+b. $y^{\prime\prime}+4y^{\prime}+5y=3x^2+4$
+
+c. $y^{\prime\prime}+4y^{\prime}+5y=e^x\cos(3x)$
+
+**Solutions**
+
+a. Here we want to "make" terms like $\sin(2x)$ so there will be some of those in our trial guess. However, when we substitute this guess into the ODE we will have some $\cos(2x)$ terms appearing on the left and so to balance them we will need some of those terms too.
+
+Our ansatz is $y=A\sin(2x)+B\cos(2x)$.
+
+Substituting into the ODE gives
+
+$(8A+B)\cos(2x)+(A-8B)\sin(2x)=\sin(2x)$
+
+Equating coefficients of cosine and sine terms gives
+
+$8A+B=0, \quad A-8B=1\qquad \Rightarrow A=\frac{1}{65},\quad B=\frac{-8}{65}$
+
+Our particular integral is $y_p=\frac{1}{65}(\sin(2x)-8\cos(2x))$<br><br>
+
+b. Here we want to "make" terms like $3x^2+4$ so we will need a trial solution involving $x^2$ and its derivatives.
+
+Taking $y_p=Ax^2+bx+c$ and equating coefficients of $x^2$, $x$ and constant terms in the ODE gives
+
+$y_p=\frac{1}{125}(75x^2-120x+166)$<br><br>
+
+c. Here we will need an ansatz involving $e^x\cos(3x)$ and its derivatives.
+
+We will take $y_p=e^{x}(A\cos(3x)+B\sin(3x))$.
+
+Substituting in and equating coefficients of $e^{x}\cos(3x)$ and $e^x\sin(3x)$ gives
+
+$y_p=\frac{e^x}{325}(\cos(3x)+18\sin(3x))$<br><br>
+
+**Example 3:**
+
+Now let's try a tricky example:
+```{math}
+2\ddot{x}-\dot{x}-x=3e^{t}
+```
+
+Following the technique that we have used previously, we would think to try the ansatz $y_p=Ae^{t}$. However, if you substitute this into the left hand side of the equation you will find that it simply gives zero. Our desired ansatz here is a solution of the homogeneous problem!
+
+If (and only if) you encounter this problem, you can fix it by multiplying your ansatz by $x$. The reason this works is similar to the derivation of the linearly independent result that was given in the case of homogeneous problems with a repeated eigenvalue.
+
+Here, we try $y_p=Axe^{t}$ and equating coefficients of $e^t$ on the left and right sides gives $A=1$.
+
+### A note about the limitations of variation of parameters:
+The method can only be used to solve problems where there is a finite pattern of derivatives for $f(x)$. So, for example, it would not be usable for problems where $f(x)=\ln(x)$ since the ansatz would need to have an infinite number of terms. To balance the derivative of the logarithm would need a term like $1/x$, which would need a term like $1/x^2$, which would need ... [etc].
+
+There is a method that can be used to solve more general types of inhomogeneous problem, which is called variation of parameters. It is slightly beyond the scope of this course, but it uses a similar technique to what was done in the derivation of the homogeneous result for repeated real roots - employing known partial solutions to construct the full solution. It assumes a solution of the form $y=u(x)y_1(x)+v(x)y_2(x)$ where $y_1$ and $y_2$ are the homogeneous basis solutions and the functions $u,v$ are to be determined.
+
+### Constructing the full solution
+The general solution to the inhomogeneous problem can be constructed by combining the homogenous solution $y_h$ and a particular integral $y_p$:
+$y=y_h+y_p$
+It works because of the linearity property:
+```{math}
+\mathcal{L}(y_h+y_p) = \mathcal{L}(y_h)+\mathcal{L}(y_p) = 0+f(x).
+```
+
+The general solution contains two arbitrary constants so it can be made to satisfy a given set of two conditions. The values of the constants will depend on the particular integral you found. There are an infinite number of different particular integrals possible, but they all will differ only be an amount equal to a linear combination of the basis solutions.
+
+You MUST construct the full solution before employing the given conditions to find constant terms. For example, if you erroneously make $y_h(0)=y_0$ then you will find mathematical
+\begin{equation*}
+y(0)=y_h(0)+y_p(0) = y_0+y_p(0),
+\end{equation*}
+which is not what you want.
+
+```{admonition} Example
+:class: note
+Find the particular solution to the problem
+
+$y^{\prime\prime}+4y^{\prime}+5y=e^x, \quad y(0)=1, \quad y^{\prime(0)=2}$
+```
+
+```{admonition} Solution
+:class: tip
+We already found that the particular integral for this problem is $y=\frac{1}{10}e^x$.
+
+The homogenous solution is $y=e^{-2x}(k_1\cos(x)+k_2\sin(x))$
+
+Therefore the general solution is
+
+$y=e^{-2x}(k_1\cos(x)+k_2\sin(x))+\frac{1}{10}e^x$
+
+Substituting for the initial conditions gives
+
+$k_1+\frac{1}{10}=1$ and $k_2-2k_1+\frac{1}{10}=2$, with solution $k_1=\frac{9}{10}$, $k_2=\frac{37}{10}$
+
+The general solution is
+$y=\frac{1}{10}e^{-2x}(9\cos(x)+37\sin(x))+\frac{1}{10}e^x$
+```
+
+### Summary of technique:
+* Solve homogeneous to find $y_h$, which will include two arbitrary constants
+* Find a particular integral $y_p$, by educated guesswork (method of undetermined coefficients)
+* Form composite solution $y=y_h+y_p$ in accordance with superposition principle
+* Find constants satisfying any given conditions (this step MUST be done last).

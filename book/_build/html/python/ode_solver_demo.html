@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. ODEs with Python &#8212; Mathematics for Natural Sciences 1</title>
+    <title>11. ODEs with Python &#8212; Mathematics for Natural Sciences 1</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="7. Second Order ODEs" href="../odes/2nd_order_ODEs.html" />
+    <link rel="prev" title="10. Second Order ODEs" href="../odes/2nd_order_odes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,43 +92,58 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/limits.html">
+   1. Limits of Functions and Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   1. Series
+   2. Introduction to Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/convergence.html">
+   3. Convergence of Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   2. Complex Numbers
+   4. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Differentiation/Differentiation.html">
-   3. Differentiation
+  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
+   5. Differentiation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Integration/integration.html">
-   4. Integration
+  <a class="reference internal" href="../differentiation_and_integration/integration.html">
+   6. Integration
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../odes/Intro_ODEs.html">
-   5. Ordinary Differential Equations
+  <a class="reference internal" href="../sequences_and_series/taylor_series.html">
+   7. Taylor series
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../odes/1st_order_ODEs.html">
-   6. First Order ODEs
+  <a class="reference internal" href="../odes/intro_odes.html">
+   8. Ordinary Differential Equations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../odes/2nd_order_ODEs.html">
-   7. Second Order ODEs
+  <a class="reference internal" href="../odes/1st_order_odes.html">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/2nd_order_odes.html">
+   10. Second Order ODEs
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   8. ODEs with Python
+   11. ODEs with Python
   </a>
  </li>
 </ul>
@@ -221,22 +236,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-1-exponential-growth">
-   8.1. Example 1: Exponential growth
+   11.1. Example 1: Exponential growth
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-2-simple-harmonic-motion">
-   8.2. Example 2: Simple Harmonic Motion
+   11.2. Example 2: Simple Harmonic Motion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-3-shm-with-forcing">
-   8.3. Example 3: SHM with forcing
+   11.3. Example 3: SHM with forcing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-4-the-sir-model-of-infection">
-   8.4. Example 4 : The SIR model of infection
+   11.4. Example 4 : The SIR model of infection
   </a>
  </li>
 </ul>
@@ -251,7 +266,7 @@
               <div>
                 
   <div class="section" id="odes-with-python">
-<h1><span class="section-number">8. </span>ODEs with Python<a class="headerlink" href="#odes-with-python" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">11. </span>ODEs with Python<a class="headerlink" href="#odes-with-python" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## preamble : This part loads the packages that we will use</span>
@@ -268,7 +283,7 @@
 \[\frac{\mathrm{d}X}{\mathrm{d}t}=f(X,t,c)\]</div>
 <p>where <span class="math notranslate nohighlight">\(X\)</span> is a list of dependent variables and c is a sequence of parameters.</p>
 <div class="section" id="example-1-exponential-growth">
-<h2><span class="section-number">8.1. </span>Example 1: Exponential growth<a class="headerlink" href="#example-1-exponential-growth" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1. </span>Example 1: Exponential growth<a class="headerlink" href="#example-1-exponential-growth" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}I}{\mathrm{d}t}=\mu(r_0-1)I\]</div>
 <p>The first step requires us to set up a function that returns the derivative for a given value of <span class="math notranslate nohighlight">\(I\)</span>, and parameters <span class="math notranslate nohighlight">\(\mu,r_0\)</span>.</p>
@@ -324,7 +339,7 @@
 </div>
 </div>
 <div class="section" id="example-2-simple-harmonic-motion">
-<h2><span class="section-number">8.2. </span>Example 2: Simple Harmonic Motion<a class="headerlink" href="#example-2-simple-harmonic-motion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.2. </span>Example 2: Simple Harmonic Motion<a class="headerlink" href="#example-2-simple-harmonic-motion" title="Permalink to this headline">¶</a></h2>
 <p>The SHM equation is</p>
 <div class="math notranslate nohighlight">
 \[\ddot{x}=-\frac{k}{m}x,\]</div>
@@ -387,7 +402,7 @@
 </div>
 </div>
 <div class="section" id="example-3-shm-with-forcing">
-<h2><span class="section-number">8.3. </span>Example 3: SHM with forcing<a class="headerlink" href="#example-3-shm-with-forcing" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>Example 3: SHM with forcing<a class="headerlink" href="#example-3-shm-with-forcing" title="Permalink to this headline">¶</a></h2>
 <p>Now let’s see what happens if we add in a forcing term</p>
 <div class="math notranslate nohighlight">
 \[\ddot{x}-\frac{k}{m}x=F\sin(\Omega t),\]</div>
@@ -424,7 +439,7 @@
 <p>Experiment with making <span class="math notranslate nohighlight">\(\Omega\)</span> closer to <span class="math notranslate nohighlight">\(1\)</span>. What happens?</p>
 </div>
 <div class="section" id="example-4-the-sir-model-of-infection">
-<h2><span class="section-number">8.4. </span>Example 4 : The SIR model of infection<a class="headerlink" href="#example-4-the-sir-model-of-infection" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.4. </span>Example 4 : The SIR model of infection<a class="headerlink" href="#example-4-the-sir-model-of-infection" title="Permalink to this headline">¶</a></h2>
 <p>In this model, <span class="math notranslate nohighlight">\(S\)</span> represents people who are susceptible to catching an infection, <span class="math notranslate nohighlight">\(I\)</span> represents people who already have the infection, and <span class="math notranslate nohighlight">\(R\)</span> represents people who have recovered.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -493,7 +508,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../odes/2nd_order_ODEs.html" title="previous page"><span class="section-number">7. </span>Second Order ODEs</a>
+    <a class='left-prev' id="prev-link" href="../odes/2nd_order_odes.html" title="previous page"><span class="section-number">10. </span>Second Order ODEs</a>
 
         </div>
         
