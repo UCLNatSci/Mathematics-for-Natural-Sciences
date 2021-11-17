@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Second Order ODEs &#8212; Mathematics for Natural Sciences 1</title>
+    <title>10. Second Order ODEs &#8212; Mathematics for Natural Sciences 1</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. ODEs with Python" href="../python/ode_solver_demo.html" />
-    <link rel="prev" title="6. First Order ODEs" href="1st_order_ODEs.html" />
+    <link rel="next" title="11. ODEs with Python" href="../python/ode_solver_demo.html" />
+    <link rel="prev" title="9. First Order ODEs" href="1st_order_odes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -93,43 +93,58 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/limits.html">
+   1. Limits of Functions and Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   1. Series
+   2. Introduction to Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/convergence.html">
+   3. Convergence of Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   2. Complex Numbers
+   4. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Differentiation/Differentiation.html">
-   3. Differentiation
+  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
+   5. Differentiation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Integration/integration.html">
-   4. Integration
+  <a class="reference internal" href="../differentiation_and_integration/integration.html">
+   6. Integration
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Intro_ODEs.html">
-   5. Ordinary Differential Equations
+  <a class="reference internal" href="../sequences_and_series/taylor_series.html">
+   7. Taylor series
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="1st_order_ODEs.html">
-   6. First Order ODEs
+  <a class="reference internal" href="intro_odes.html">
+   8. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1st_order_odes.html">
+   9. First Order ODEs
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   7. Second Order ODEs
+   10. Second Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   8. ODEs with Python
+   11. ODEs with Python
   </a>
  </li>
 </ul>
@@ -173,7 +188,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/odes/2nd_order_ODEs.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/odes/2nd_order_odes.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -205,47 +220,79 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-to-the-problem">
-   7.1. Introduction to the problem
+   10.1. Introduction to the problem
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#an-observation">
-     7.1.1. An observation
+     10.1.1. An observation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#principle-of-linear-superposition">
-     7.1.2. Principle of linear superposition
+     10.1.2. Principle of linear superposition
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#applying-conditions">
-     7.1.3. Applying conditions
+     10.1.3. Applying conditions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#complex-conjugate-roots">
-     7.1.4. Complex conjugate roots
+     10.1.4. Complex conjugate roots
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#repeated-roots">
-     7.1.5. Repeated roots:
+     10.1.5. Repeated roots:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#summary">
-     7.1.6. Summary:
+     10.1.6. Summary:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#existence-of-a-particular-solution">
-     7.1.7. Existence of a particular solution:
+     10.1.7. Existence of a particular solution:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#motivation-for-the-trial-solution">
-     7.1.8. Motivation for the trial solution
+     10.1.8. Motivation for the trial solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inhomogeneous-problems">
+   10.2. Inhomogeneous problems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     10.2.1. Introduction to the problem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-method-of-undetermined-coefficients">
+     10.2.2. The method of undetermined coefficients
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-about-the-limitations-of-variation-of-parameters">
+     10.2.3. A note about the limitations of variation of parameters:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#constructing-the-full-solution">
+     10.2.4. Constructing the full solution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-of-technique">
+     10.2.5. Summary of technique:
     </a>
    </li>
   </ul>
@@ -262,7 +309,7 @@
               <div>
                 
   <div class="section" id="second-order-odes">
-<h1><span class="section-number">7. </span>Second Order ODEs<a class="headerlink" href="#second-order-odes" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">10. </span>Second Order ODEs<a class="headerlink" href="#second-order-odes" title="Permalink to this headline">¶</a></h1>
 <p>Intended Learning Outcomes</p>
 <ul class="simple">
 <li><p>Correctly use the term “homogeneous”</p></li>
@@ -270,14 +317,14 @@
 <li><p>Apply given conditions to determine the constants of integration</p></li>
 </ul>
 <div class="section" id="introduction-to-the-problem">
-<h2><span class="section-number">7.1. </span>Introduction to the problem<a class="headerlink" href="#introduction-to-the-problem" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.1. </span>Introduction to the problem<a class="headerlink" href="#introduction-to-the-problem" title="Permalink to this headline">¶</a></h2>
 <p>This section of the notes will be concerned with the solution of a general problem of the form</p>
 <div class="math notranslate nohighlight" id="equation-ode2general">
-<span class="eqno">(7.1)<a class="headerlink" href="#equation-ode2general" title="Permalink to this equation">¶</a></span>\[ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=f(x),\]</div>
+<span class="eqno">(10.1)<a class="headerlink" href="#equation-ode2general" title="Permalink to this equation">¶</a></span>\[ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=f(x),\]</div>
 <p>where <span class="math notranslate nohighlight">\(a,b,c\)</span> are arbitrary constants.</p>
 <p>First, we consider the case when <span class="math notranslate nohighlight">\(f(x)=0\)</span> so that we obtain the homogeneous problem</p>
 <div class="math notranslate nohighlight" id="equation-ode2hom">
-<span class="eqno">(7.2)<a class="headerlink" href="#equation-ode2hom" title="Permalink to this equation">¶</a></span>\[ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=0\]</div>
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-ode2hom" title="Permalink to this equation">¶</a></span>\[ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=0\]</div>
 <p>We can also conveniently write these problems using a linear operator:</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{L}=a\frac{\mathrm{d}^2}{\mathrm{d}x^2}+b\frac{\mathrm{d}}{\mathrm{d}x}+c\]</div>
@@ -287,7 +334,7 @@
 <li><p><span class="math notranslate nohighlight">\(\mathcal{L}(y)=f(x)\)</span> (inhomogeneous)</p></li>
 </ul>
 <div class="section" id="an-observation">
-<h3><span class="section-number">7.1.1. </span>An observation<a class="headerlink" href="#an-observation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.1. </span>An observation<a class="headerlink" href="#an-observation" title="Permalink to this headline">¶</a></h3>
 <p>If we try a solution of the form <span class="math notranslate nohighlight">\(y=e^{\lambda x}\)</span> then the homogeneous problem reduces to
 <span class="math notranslate nohighlight">\(e^{\lambda x}(a\lambda^2+b\lambda +c)=0\)</span>
 and so by solving the quadratic in <span class="math notranslate nohighlight">\(\lambda\)</span> we will have found a solution. We call the quadratic the auxiliary equation. The nature of the solutions depends on the quantity <span class="math notranslate nohighlight">\(\Delta= -b^2-4ac\)</span>, which we call the discriminant.</p>
@@ -297,14 +344,14 @@ For the problem <span class="math notranslate nohighlight">\(2y^{\prime\prime}(x
 The quadratic has roots <span class="math notranslate nohighlight">\(\lambda=-\frac{1}{2}\)</span> and <span class="math notranslate nohighlight">\(\lambda=1\)</span>, so we have found two particular solutions of the given ODE, which are <span class="math notranslate nohighlight">\(y_1=e^{-\frac{1}{2}x}, \quad y_2=e^{x}\)</span></p>
 </div>
 <div class="section" id="principle-of-linear-superposition">
-<h3><span class="section-number">7.1.2. </span>Principle of linear superposition<a class="headerlink" href="#principle-of-linear-superposition" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.2. </span>Principle of linear superposition<a class="headerlink" href="#principle-of-linear-superposition" title="Permalink to this headline">¶</a></h3>
 <p>The general second order homogeneous ODE given is linear, meaning that it has no products of terms involving the dependent variable <span class="math notranslate nohighlight">\(y\)</span>. As a result of this fact, any linear combination of solutions will also be a solution:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dea65c7d-3207-4a7d-9e49-171ed81ec6e4">
-<span class="eqno">(7.3)<a class="headerlink" href="#equation-dea65c7d-3207-4a7d-9e49-171ed81ec6e4" title="Permalink to this equation">¶</a></span>\[\begin{align}\mathcal{L}(k_1y_1+k_2y_2)&amp;=k_1\left[a y_1^{\prime\prime}+by_1^{\prime}+c y_1\right]+k_2\left[a y_2^{\prime\prime}+by_2^{\prime}+c y_2\right]\\&amp;=k_1\mathcal{L}(y_1)+k_2\mathcal{L}(y_2)\\&amp;=0+0 \quad \text{ if $y_1$ and $y_2$ are solutions.}\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-401daa7f-554b-4004-9131-fba872eacdc0">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-401daa7f-554b-4004-9131-fba872eacdc0" title="Permalink to this equation">¶</a></span>\[\begin{align}\mathcal{L}(k_1y_1+k_2y_2)&amp;=k_1\left[a y_1^{\prime\prime}+by_1^{\prime}+c y_1\right]+k_2\left[a y_2^{\prime\prime}+by_2^{\prime}+c y_2\right]\\&amp;=k_1\mathcal{L}(y_1)+k_2\mathcal{L}(y_2)\\&amp;=0+0 \quad \text{ if $y_1$ and $y_2$ are solutions.}\end{align}\]</div>
 <p>Therefore, in the previous example we can combine the two solutions that we found, to obtain a more general solution <span class="math notranslate nohighlight">\(y=k_1e^{-\frac{1}{2}x}+k_2 e^{x}\)</span>. You are encouraged to check this solution to confirm that it works!</p>
 </div>
 <div class="section" id="applying-conditions">
-<h3><span class="section-number">7.1.3. </span>Applying conditions<a class="headerlink" href="#applying-conditions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.3. </span>Applying conditions<a class="headerlink" href="#applying-conditions" title="Permalink to this headline">¶</a></h3>
 <p>Since the result we obtained has two arbitrary constants, it generates a family of solution curves. We can fix the solution to one of these curves by providing conditions for either <span class="math notranslate nohighlight">\(y\)</span> or its derivatives at two different <span class="math notranslate nohighlight">\(x\)</span> values.</p>
 <div class="note admonition">
 <p class="admonition-title">Example</p>
@@ -331,14 +378,14 @@ The quadratic has roots <span class="math notranslate nohighlight">\(\lambda=-\f
 <p>For practical problems, the conditions tell us about a particular state of the system. For instance, applying Newton’s second law to the motion of a pendulum gives a second order differential equation for the angular displacement <span class="math notranslate nohighlight">\(\theta\)</span> from the downward vertical. Conditions for <span class="math notranslate nohighlight">\(\theta(0)\)</span> and <span class="math notranslate nohighlight">\(\dot{\theta}(0)\)</span> specify the initial displacement and the initial angular velocity. These types of condition, specified at time <span class="math notranslate nohighlight">\(t=0\)</span> are called initial conditions. For some other types of problem we may have conditions specified at two end-points of an interval. Such types of condition are called boundary conditions.</p>
 </div>
 <div class="section" id="complex-conjugate-roots">
-<h3><span class="section-number">7.1.4. </span>Complex conjugate roots<a class="headerlink" href="#complex-conjugate-roots" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.4. </span>Complex conjugate roots<a class="headerlink" href="#complex-conjugate-roots" title="Permalink to this headline">¶</a></h3>
 <p>If the discriminant <span class="math notranslate nohighlight">\(b^2-4ac\)</span> is negative, the auxiliary equation will have complex conjugate solutions of the form <span class="math notranslate nohighlight">\(\lambda=\alpha\pm i\omega\)</span>.
 In that case, we may wish to write the general solution a bit differently. After all, if we have
 <span class="math notranslate nohighlight">\(y=k_1 e^{(\alpha+i\omega)x}+k_2 e^{(\alpha -i\omega)x}\)</span>
 then the only way to satisfy real initial conditions would be if the coefficients <span class="math notranslate nohighlight">\(k_1\)</span> and <span class="math notranslate nohighlight">\(k_2\)</span> are complex, which isn’t nice.
 We make use of our knowledge of complex numbers (Euler’s theorem) to rewrite:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0e8d5abd-6967-41f7-a568-2ad0c72c3185">
-<span class="eqno">(7.4)<a class="headerlink" href="#equation-0e8d5abd-6967-41f7-a568-2ad0c72c3185" title="Permalink to this equation">¶</a></span>\[\begin{align}y&amp;=e^{\alpha x}\left[(k_1+k_2)\cos(\omega x)+i(k_1-k_2)\sin(\omega x)\right]\\&amp;=e^{\alpha x}\left[K_1\cos(\omega x)+K_2\sin(\omega x)\right]\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-29d68da3-8400-42c4-bce6-fadb97dcc507">
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-29d68da3-8400-42c4-bce6-fadb97dcc507" title="Permalink to this equation">¶</a></span>\[\begin{align}y&amp;=e^{\alpha x}\left[(k_1+k_2)\cos(\omega x)+i(k_1-k_2)\sin(\omega x)\right]\\&amp;=e^{\alpha x}\left[K_1\cos(\omega x)+K_2\sin(\omega x)\right]\end{align}\]</div>
 <p>upon relabelling the constants.
 This is a much nicer form of the solution, because all parts of it are real, and so we expect that the coefficients <span class="math notranslate nohighlight">\(K_1\)</span> and <span class="math notranslate nohighlight">\(K_2\)</span> will be real as well. It also shows us clearly that the solution consists of an exponentially growing/decaying amplitude combined with wavy oscillations of frequency <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <div class="note admonition">
@@ -352,7 +399,7 @@ This is a much nicer form of the solution, because all parts of it are real, and
 </div>
 </div>
 <div class="section" id="repeated-roots">
-<h3><span class="section-number">7.1.5. </span>Repeated roots:<a class="headerlink" href="#repeated-roots" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.5. </span>Repeated roots:<a class="headerlink" href="#repeated-roots" title="Permalink to this headline">¶</a></h3>
 <p>If the discriminant <span class="math notranslate nohighlight">\(b^2-4ac\)</span> is zero, the auxiliary equation will only have one distinct solution <span class="math notranslate nohighlight">\(e^{\lambda x}\)</span>, where <span class="math notranslate nohighlight">\(\lambda=-\frac{b}{2a}\)</span>. We will look for another solution of the form</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -390,21 +437,21 @@ For the problem <span class="math notranslate nohighlight">\(y^{\prime\prime}(x)
 </div>
 </div>
 <div class="section" id="summary">
-<h3><span class="section-number">7.1.6. </span>Summary:<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.6. </span>Summary:<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <p>The general solution of the homogeneous second order ODE</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=0
 \end{equation*}\]</div>
 <p>is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3893ded1-9c15-4045-a940-988f7e0f5529">
-<span class="eqno">(7.5)<a class="headerlink" href="#equation-3893ded1-9c15-4045-a940-988f7e0f5529" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c5849566-0ac5-4f82-8108-05fe2c991d2d">
+<span class="eqno">(10.5)<a class="headerlink" href="#equation-c5849566-0ac5-4f82-8108-05fe2c991d2d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 y=\begin{cases}\begin{array}{lll}k_1e^{\lambda_1 x}+k_2 e^{\lambda_2 x}, &amp;\text{where $\lambda_{1,2}=\frac{-b\pm\sqrt{\Delta}}{2a}$} &amp; \text{if $\Delta &gt;0$}\\e^{\alpha x}(k_1\cos(\omega x)+k_2\sin(\omega x))&amp;\text{where $\alpha=-\frac{b}{2a}$, $\omega =\sqrt{\Delta}$}&amp;\text{if $\Delta &lt; 0$}\\(k_1x+k_2)e^{\lambda x}&amp;\text{where $\lambda=-\frac{b}{2a}$}&amp;\text{if $\Delta=0$}\end{array}\end{cases}
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Delta=b^2-4ac\)</span>.</p>
 </div>
 <div class="section" id="existence-of-a-particular-solution">
-<h3><span class="section-number">7.1.7. </span>Existence of a particular solution:<a class="headerlink" href="#existence-of-a-particular-solution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.7. </span>Existence of a particular solution:<a class="headerlink" href="#existence-of-a-particular-solution" title="Permalink to this headline">¶</a></h3>
 <p>The general solution</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -412,16 +459,16 @@ y(x)=k_1 y_1(x)+k_2 y_2(x)
 \end{equation*}\]</div>
 <p>can be made to satisfy arbitrary initial conditions <span class="math notranslate nohighlight">\(y(x_0)=y_0\)</span>, <span class="math notranslate nohighlight">\(y^{\prime}(x_0)=y^{\prime}_0\)</span> if and only if</p>
 <div class="math notranslate nohighlight" id="equation-linindepend">
-<span class="eqno">(7.6)<a class="headerlink" href="#equation-linindepend" title="Permalink to this equation">¶</a></span>\[y_1^{\prime}(x_0)y_2(x_0)-y_2^{\prime}(x_0)y_1(x_0)\neq 0\]</div>
+<span class="eqno">(10.6)<a class="headerlink" href="#equation-linindepend" title="Permalink to this equation">¶</a></span>\[y_1^{\prime}(x_0)y_2(x_0)-y_2^{\prime}(x_0)y_1(x_0)\neq 0\]</div>
 <p>This condition is met if <span class="math notranslate nohighlight">\(y_2\)</span> is not a constant multiple of <span class="math notranslate nohighlight">\(y_1\)</span>. We say that the solutions are <em>linearly independent</em>. A more general definition of linear independence will be given in the course on mathematical methods 2.</p>
 <p><strong>Proof:</strong><br>
 Applying the given conditions gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b35bdd9-9bc7-4327-9aef-b924abd3de42">
-<span class="eqno">(7.7)<a class="headerlink" href="#equation-5b35bdd9-9bc7-4327-9aef-b924abd3de42" title="Permalink to this equation">¶</a></span>\[\begin{align}y_1(x_0)k_1+y_2(x_0)k_2 &amp;=y_0\\y_1^{\prime}(x_0)k_1+y_2^{\prime}(x_0)&amp;=y_0^{\prime}\end{align}\]</div>
-<p>This is a set of two equations in two unknowns (<span class="math notranslate nohighlight">\(k_0\)</span> and <span class="math notranslate nohighlight">\(k_1\)</span>). A unique solution exists if and only if the condition <a class="reference internal" href="#equation-linindepend">(7.6)</a> is met.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0c5ef322-c798-474f-ae0a-fc20f5f2f788">
+<span class="eqno">(10.7)<a class="headerlink" href="#equation-0c5ef322-c798-474f-ae0a-fc20f5f2f788" title="Permalink to this equation">¶</a></span>\[\begin{align}y_1(x_0)k_1+y_2(x_0)k_2 &amp;=y_0\\y_1^{\prime}(x_0)k_1+y_2^{\prime}(x_0)&amp;=y_0^{\prime}\end{align}\]</div>
+<p>This is a set of two equations in two unknowns (<span class="math notranslate nohighlight">\(k_0\)</span> and <span class="math notranslate nohighlight">\(k_1\)</span>). A unique solution exists if and only if the condition <a class="reference internal" href="#equation-linindepend">(10.6)</a> is met.</p>
 </div>
 <div class="section" id="motivation-for-the-trial-solution">
-<h3><span class="section-number">7.1.8. </span>Motivation for the trial solution<a class="headerlink" href="#motivation-for-the-trial-solution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.8. </span>Motivation for the trial solution<a class="headerlink" href="#motivation-for-the-trial-solution" title="Permalink to this headline">¶</a></h3>
 <p>One way to motivate the trial solution <span class="math notranslate nohighlight">\(y=e^{\lambda x}\)</span> is to begin by solving the problem for the special case where <span class="math notranslate nohighlight">\(c=0\)</span>, which reduces to</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -433,6 +480,106 @@ $\left[\begin{array}{cc}y\\y^{\prime}\end{array}\right]^{\prime}=\left[\begin{ar
 The eigenvalues of the problem $A\underline{y}=\lambda\underline{y}$ satisfy
 $a\lambda^2+b\lambda +c=0$
 and the solutions to the problem $\underline{y}^{\prime}=k\underline{y}$ are of exponential form. -->
+</div>
+</div>
+<div class="section" id="inhomogeneous-problems">
+<h2><span class="section-number">10.2. </span>Inhomogeneous problems<a class="headerlink" href="#inhomogeneous-problems" title="Permalink to this headline">¶</a></h2>
+<p>Intended Learning Outcomes</p>
+<p>For an inhomogenous second order ODE with constant coefficients:</p>
+<ul class="simple">
+<li><p>Find a particular integral using the method of undetermined coefficients</p></li>
+<li><p>Find the general solution by combining the homogeneous solution and a particular integral</p></li>
+<li><p>Find the particular solution satisfying given conditions.</p></li>
+</ul>
+<div class="section" id="id1">
+<h3><span class="section-number">10.2.1. </span>Introduction to the problem<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This section of the notes will be concerned with the solution of a general problem of the form</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}(y) = ay^{\prime\prime}(x)+by^{\prime}(x)+cy(x)=f(x),\]</div>
+<p>where <span class="math notranslate nohighlight">\(a,b,c\)</span> are arbitrary constants.</p>
+</div>
+<div class="section" id="the-method-of-undetermined-coefficients">
+<h3><span class="section-number">10.2.2. </span>The method of undetermined coefficients<a class="headerlink" href="#the-method-of-undetermined-coefficients" title="Permalink to this headline">¶</a></h3>
+<p>This method is a fancy name for educated guesswork. It requires us to pose an ansatz (trial solution), based on our observation of what <span class="math notranslate nohighlight">\(f(x)\)</span> looks like. We will only be able to apply this method for some very limited types of function <span class="math notranslate nohighlight">\(f(x)\)</span>, mainly restricted to polynomials, exponentials and trigonometric functions. It is best illustrated by example.</p>
+<p><strong>Example 1:</strong><br>
+We will start by considering the following problem:</p>
+<div class="math notranslate nohighlight">
+\[y^{\prime\prime}+4y^{\prime}+5y=e^x\]</div>
+<p>Since we are trying to “make” terms like <span class="math notranslate nohighlight">\(e^x\)</span>, we will guess a solution of the form <span class="math notranslate nohighlight">\(y_p=Ae^x\)</span>. Substituting this guess into the equation gives
+<span class="math notranslate nohighlight">\(10Ae^x=e^x \Rightarrow y_p=\frac{1}{10}e^x\)</span></p>
+<p>We call this a particular integral. It is not the most general solution to the given problem, as it does not contain any free constants. We will be able to use our particular integral together with the solution to the corresponding homogeneous problem to construct the full result.</p>
+<p>But first let’s practice finding some more particular integrals by the method of undetermined coefficients. The method gets its name because we guess the form of the solution without giving the values of the coefficients. We find the values of the undetermined coefficients by substituting our guess into the ODE and equating terms.</p>
+<p><strong>Example 2:</strong></p>
+<p>a. <span class="math notranslate nohighlight">\(y^{\prime\prime}+4y^{\prime}+5y=\sin(2x)\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(y^{\prime\prime}+4y^{\prime}+5y=3x^2+4\)</span></p>
+<p>c. <span class="math notranslate nohighlight">\(y^{\prime\prime}+4y^{\prime}+5y=e^x\cos(3x)\)</span></p>
+<p><strong>Solutions</strong></p>
+<p>a. Here we want to “make” terms like <span class="math notranslate nohighlight">\(\sin(2x)\)</span> so there will be some of those in our trial guess. However, when we substitute this guess into the ODE we will have some <span class="math notranslate nohighlight">\(\cos(2x)\)</span> terms appearing on the left and so to balance them we will need some of those terms too.</p>
+<p>Our ansatz is <span class="math notranslate nohighlight">\(y=A\sin(2x)+B\cos(2x)\)</span>.</p>
+<p>Substituting into the ODE gives</p>
+<p><span class="math notranslate nohighlight">\((8A+B)\cos(2x)+(A-8B)\sin(2x)=\sin(2x)\)</span></p>
+<p>Equating coefficients of cosine and sine terms gives</p>
+<p><span class="math notranslate nohighlight">\(8A+B=0, \quad A-8B=1\qquad \Rightarrow A=\frac{1}{65},\quad B=\frac{-8}{65}\)</span></p>
+<p>Our particular integral is <span class="math notranslate nohighlight">\(y_p=\frac{1}{65}(\sin(2x)-8\cos(2x))\)</span><br><br></p>
+<p>b. Here we want to “make” terms like <span class="math notranslate nohighlight">\(3x^2+4\)</span> so we will need a trial solution involving <span class="math notranslate nohighlight">\(x^2\)</span> and its derivatives.</p>
+<p>Taking <span class="math notranslate nohighlight">\(y_p=Ax^2+bx+c\)</span> and equating coefficients of <span class="math notranslate nohighlight">\(x^2\)</span>, <span class="math notranslate nohighlight">\(x\)</span> and constant terms in the ODE gives</p>
+<p><span class="math notranslate nohighlight">\(y_p=\frac{1}{125}(75x^2-120x+166)\)</span><br><br></p>
+<p>c. Here we will need an ansatz involving <span class="math notranslate nohighlight">\(e^x\cos(3x)\)</span> and its derivatives.</p>
+<p>We will take <span class="math notranslate nohighlight">\(y_p=e^{x}(A\cos(3x)+B\sin(3x))\)</span>.</p>
+<p>Substituting in and equating coefficients of <span class="math notranslate nohighlight">\(e^{x}\cos(3x)\)</span> and <span class="math notranslate nohighlight">\(e^x\sin(3x)\)</span> gives</p>
+<p><span class="math notranslate nohighlight">\(y_p=\frac{e^x}{325}(\cos(3x)+18\sin(3x))\)</span><br><br></p>
+<p><strong>Example 3:</strong></p>
+<p>Now let’s try a tricky example:</p>
+<div class="math notranslate nohighlight">
+\[2\ddot{x}-\dot{x}-x=3e^{t}\]</div>
+<p>Following the technique that we have used previously, we would think to try the ansatz <span class="math notranslate nohighlight">\(y_p=Ae^{t}\)</span>. However, if you substitute this into the left hand side of the equation you will find that it simply gives zero. Our desired ansatz here is a solution of the homogeneous problem!</p>
+<p>If (and only if) you encounter this problem, you can fix it by multiplying your ansatz by <span class="math notranslate nohighlight">\(x\)</span>. The reason this works is similar to the derivation of the linearly independent result that was given in the case of homogeneous problems with a repeated eigenvalue.</p>
+<p>Here, we try <span class="math notranslate nohighlight">\(y_p=Axe^{t}\)</span> and equating coefficients of <span class="math notranslate nohighlight">\(e^t\)</span> on the left and right sides gives <span class="math notranslate nohighlight">\(A=1\)</span>.</p>
+</div>
+<div class="section" id="a-note-about-the-limitations-of-variation-of-parameters">
+<h3><span class="section-number">10.2.3. </span>A note about the limitations of variation of parameters:<a class="headerlink" href="#a-note-about-the-limitations-of-variation-of-parameters" title="Permalink to this headline">¶</a></h3>
+<p>The method can only be used to solve problems where there is a finite pattern of derivatives for <span class="math notranslate nohighlight">\(f(x)\)</span>. So, for example, it would not be usable for problems where <span class="math notranslate nohighlight">\(f(x)=\ln(x)\)</span> since the ansatz would need to have an infinite number of terms. To balance the derivative of the logarithm would need a term like <span class="math notranslate nohighlight">\(1/x\)</span>, which would need a term like <span class="math notranslate nohighlight">\(1/x^2\)</span>, which would need … [etc].</p>
+<p>There is a method that can be used to solve more general types of inhomogeneous problem, which is called variation of parameters. It is slightly beyond the scope of this course, but it uses a similar technique to what was done in the derivation of the homogeneous result for repeated real roots - employing known partial solutions to construct the full solution. It assumes a solution of the form <span class="math notranslate nohighlight">\(y=u(x)y_1(x)+v(x)y_2(x)\)</span> where <span class="math notranslate nohighlight">\(y_1\)</span> and <span class="math notranslate nohighlight">\(y_2\)</span> are the homogeneous basis solutions and the functions <span class="math notranslate nohighlight">\(u,v\)</span> are to be determined.</p>
+</div>
+<div class="section" id="constructing-the-full-solution">
+<h3><span class="section-number">10.2.4. </span>Constructing the full solution<a class="headerlink" href="#constructing-the-full-solution" title="Permalink to this headline">¶</a></h3>
+<p>The general solution to the inhomogeneous problem can be constructed by combining the homogenous solution <span class="math notranslate nohighlight">\(y_h\)</span> and a particular integral <span class="math notranslate nohighlight">\(y_p\)</span>:
+<span class="math notranslate nohighlight">\(y=y_h+y_p\)</span>
+It works because of the linearity property:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}(y_h+y_p) = \mathcal{L}(y_h)+\mathcal{L}(y_p) = 0+f(x).\]</div>
+<p>The general solution contains two arbitrary constants so it can be made to satisfy a given set of two conditions. The values of the constants will depend on the particular integral you found. There are an infinite number of different particular integrals possible, but they all will differ only be an amount equal to a linear combination of the basis solutions.</p>
+<p>You MUST construct the full solution before employing the given conditions to find constant terms. For example, if you erroneously make <span class="math notranslate nohighlight">\(y_h(0)=y_0\)</span> then you will find mathematical</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y(0)=y_h(0)+y_p(0) = y_0+y_p(0),
+\end{equation*}\]</div>
+<p>which is not what you want.</p>
+<div class="note admonition">
+<p class="admonition-title">Example</p>
+<p>Find the particular solution to the problem</p>
+<p><span class="math notranslate nohighlight">\(y^{\prime\prime}+4y^{\prime}+5y=e^x, \quad y(0)=1, \quad y^{\prime(0)=2}\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Solution</p>
+<p>We already found that the particular integral for this problem is <span class="math notranslate nohighlight">\(y=\frac{1}{10}e^x\)</span>.</p>
+<p>The homogenous solution is <span class="math notranslate nohighlight">\(y=e^{-2x}(k_1\cos(x)+k_2\sin(x))\)</span></p>
+<p>Therefore the general solution is</p>
+<p><span class="math notranslate nohighlight">\(y=e^{-2x}(k_1\cos(x)+k_2\sin(x))+\frac{1}{10}e^x\)</span></p>
+<p>Substituting for the initial conditions gives</p>
+<p><span class="math notranslate nohighlight">\(k_1+\frac{1}{10}=1\)</span> and <span class="math notranslate nohighlight">\(k_2-2k_1+\frac{1}{10}=2\)</span>, with solution <span class="math notranslate nohighlight">\(k_1=\frac{9}{10}\)</span>, <span class="math notranslate nohighlight">\(k_2=\frac{37}{10}\)</span></p>
+<p>The general solution is
+<span class="math notranslate nohighlight">\(y=\frac{1}{10}e^{-2x}(9\cos(x)+37\sin(x))+\frac{1}{10}e^x\)</span></p>
+</div>
+</div>
+<div class="section" id="summary-of-technique">
+<h3><span class="section-number">10.2.5. </span>Summary of technique:<a class="headerlink" href="#summary-of-technique" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Solve homogeneous to find <span class="math notranslate nohighlight">\(y_h\)</span>, which will include two arbitrary constants</p></li>
+<li><p>Find a particular integral <span class="math notranslate nohighlight">\(y_p\)</span>, by educated guesswork (method of undetermined coefficients)</p></li>
+<li><p>Form composite solution <span class="math notranslate nohighlight">\(y=y_h+y_p\)</span> in accordance with superposition principle</p></li>
+<li><p>Find constants satisfying any given conditions (this step MUST be done last).</p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -462,8 +609,8 @@ and the solutions to the problem $\underline{y}^{\prime}=k\underline{y}$ are of 
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="1st_order_ODEs.html" title="previous page"><span class="section-number">6. </span>First Order ODEs</a>
-    <a class='right-next' id="next-link" href="../python/ode_solver_demo.html" title="next page"><span class="section-number">8. </span>ODEs with Python</a>
+    <a class='left-prev' id="prev-link" href="1st_order_odes.html" title="previous page"><span class="section-number">9. </span>First Order ODEs</a>
+    <a class='right-next' id="next-link" href="../python/ode_solver_demo.html" title="next page"><span class="section-number">11. </span>ODEs with Python</a>
 
         </div>
         

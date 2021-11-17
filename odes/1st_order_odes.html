@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. First Order ODEs &#8212; Mathematics for Natural Sciences 1</title>
+    <title>9. First Order ODEs &#8212; Mathematics for Natural Sciences 1</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Second Order ODEs" href="2nd_order_ODEs.html" />
-    <link rel="prev" title="5. Ordinary Differential Equations" href="Intro_ODEs.html" />
+    <link rel="next" title="10. Second Order ODEs" href="2nd_order_odes.html" />
+    <link rel="prev" title="8. Ordinary Differential Equations" href="intro_odes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -93,43 +93,58 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/limits.html">
+   1. Limits of Functions and Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   1. Series
+   2. Introduction to Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/convergence.html">
+   3. Convergence of Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   2. Complex Numbers
+   4. Complex Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Differentiation/Differentiation.html">
-   3. Differentiation
+  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
+   5. Differentiation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Integration/integration.html">
-   4. Integration
+  <a class="reference internal" href="../differentiation_and_integration/integration.html">
+   6. Integration
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Intro_ODEs.html">
-   5. Ordinary Differential Equations
+  <a class="reference internal" href="../sequences_and_series/taylor_series.html">
+   7. Taylor series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_odes.html">
+   8. Ordinary Differential Equations
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   6. First Order ODEs
+   9. First Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="2nd_order_ODEs.html">
-   7. Second Order ODEs
+  <a class="reference internal" href="2nd_order_odes.html">
+   10. Second Order ODEs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   8. ODEs with Python
+   11. ODEs with Python
   </a>
  </li>
 </ul>
@@ -173,7 +188,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/odes/1st_order_ODEs.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/odes/1st_order_odes.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -205,22 +220,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#separation-of-variables-technique">
-   6.1. Separation of variables Technique
+   9.1. Separation of variables Technique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integrating-factor-technique">
-   6.2. Integrating Factor Technique
+   9.2. Integrating Factor Technique
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#motivation">
-     6.2.1. Motivation
+     9.2.1. Motivation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#technique">
-     6.2.2. Technique
+     9.2.2. Technique
     </a>
    </li>
   </ul>
@@ -237,10 +252,10 @@
               <div>
                 
   <div class="section" id="first-order-odes">
-<h1><span class="section-number">6. </span>First Order ODEs<a class="headerlink" href="#first-order-odes" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span>First Order ODEs<a class="headerlink" href="#first-order-odes" title="Permalink to this headline">¶</a></h1>
 <p>In this section we will look at some strategies for solving first order ODEs</p>
 <div class="section" id="separation-of-variables-technique">
-<h2><span class="section-number">6.1. </span>Separation of variables Technique<a class="headerlink" href="#separation-of-variables-technique" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Separation of variables Technique<a class="headerlink" href="#separation-of-variables-technique" title="Permalink to this headline">¶</a></h2>
 <p>Of all the techniques for solving first order ODEs, separation of variables is the simplest to understand, being essentially a direct application of Fundamental Theorem of Calculus.
 The technique requires us to take a look at whether the variable dependence can be totally separated on different sides of the equation.</p>
 <p>For example, in the problem <span class="math notranslate nohighlight">\(\frac{\mathrm{d}y}{\mathrm{d}x} = x^2y\)</span> we can separate the <span class="math notranslate nohighlight">\(x\)</span> and the <span class="math notranslate nohighlight">\(y\)</span> dependence to give</p>
@@ -294,12 +309,12 @@ y=Ae^{\frac{1}{3}x^3}, \quad A \in \mathbb{R}.
 </div>
 </div>
 <div class="section" id="integrating-factor-technique">
-<h2><span class="section-number">6.2. </span>Integrating Factor Technique<a class="headerlink" href="#integrating-factor-technique" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Integrating Factor Technique<a class="headerlink" href="#integrating-factor-technique" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="motivation">
-<h3><span class="section-number">6.2.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
 <p>Consider the following differential equation:</p>
 <div class="math notranslate nohighlight" id="equation-intfexample">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-intfexample" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\frac{\cos(x)}{x}, \quad (x\neq 0)\]</div>
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-intfexample" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\frac{\cos(x)}{x}, \quad (x\neq 0)\]</div>
 <p>A quick check will show that this equation is not separable.
 If we try to integrate directly, then we obtain</p>
 <div class="amsmath math notranslate nohighlight">
@@ -307,20 +322,20 @@ If we try to integrate directly, then we obtain</p>
 \displaystyle \int \mathrm{d}y+\int \frac{1}{x}y \mathrm{d}x = \int \frac{\cos(x)}{x}\mathrm{d}x.
 \end{equation*}\]</div>
 <p>We can deal with the integral on the right (in principle) but the term <span class="math notranslate nohighlight">\(\displaystyle \int \frac{y}{x}\mathrm{d}x\)</span> appearing on the left cannot be evaluated without knowing <span class="math notranslate nohighlight">\(y\)</span>. So, we reached a dead end.</p>
-<p>Now, observe that we can multiply equation <a class="reference internal" href="#equation-intfexample">(6.1)</a> throughout by <span class="math notranslate nohighlight">\(x\)</span>, to obtain</p>
+<p>Now, observe that we can multiply equation <a class="reference internal" href="#equation-intfexample">(9.1)</a> throughout by <span class="math notranslate nohighlight">\(x\)</span>, to obtain</p>
 <div class="math notranslate nohighlight" id="equation-intfexample2">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-intfexample2" title="Permalink to this equation">¶</a></span>\[x\frac{\mathrm{d}y}{\mathrm{d}x}+y=\cos(x), \quad (x\neq 0)\]</div>
+<span class="eqno">(9.2)<a class="headerlink" href="#equation-intfexample2" title="Permalink to this equation">¶</a></span>\[x\frac{\mathrm{d}y}{\mathrm{d}x}+y=\cos(x), \quad (x\neq 0)\]</div>
 <p>The expression on the left-hand side is an <em>exact derivative</em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 \frac{\mathrm{d}}{\mathrm{d}x}(yx)=x\frac{\mathrm{d}y}{\mathrm{d}x}+y
 \end{equation*}\]</div>
-<p>Neat! This means that we can integrate equation <a class="reference internal" href="#equation-intfexample2">(6.2)</a> to obtain</p>
+<p>Neat! This means that we can integrate equation <a class="reference internal" href="#equation-intfexample2">(9.2)</a> to obtain</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 xy=\int\cos(x)\mathrm{d}x
 \end{equation*}\]</div>
-<p>The final solution is <span class="math notranslate nohighlight">\(y=\frac{1}{x}(\sin(x)+k)\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is an arbitrary constant. Verify that the solution satisfies equation <a class="reference internal" href="#equation-intfexample">(6.1)</a> now.</p>
+<p>The final solution is <span class="math notranslate nohighlight">\(y=\frac{1}{x}(\sin(x)+k)\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is an arbitrary constant. Verify that the solution satisfies equation <a class="reference internal" href="#equation-intfexample">(9.1)</a> now.</p>
 <p><strong>Solution</strong><br>
 We have <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\left[-\frac{1}{x^2}(\sin(x)+k)+\frac{1}{x}\cos(x)\right]+\frac{1}{x^2}(\sin(x)+k)=\frac{\cos(x)}{x}\)</span> as required.</p>
 <div class="tip admonition">
@@ -339,7 +354,7 @@ We have <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm
 <p>It turns out that we can always find an integrating factor for problems of a special form that we will look at in the next section.</p>
 </div>
 <div class="section" id="technique">
-<h3><span class="section-number">6.2.2. </span>Technique<a class="headerlink" href="#technique" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.2. </span>Technique<a class="headerlink" href="#technique" title="Permalink to this headline">¶</a></h3>
 <p>We will apply an integrating factor technique to solve problems of the special form</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} + f(x)y = g(x)\]</div>
@@ -390,11 +405,11 @@ e^{3x}\left(x-\frac{1}{3}\right) + \frac{K}{x^3}\)</span></p>
 <p><strong>So how does it work?</strong></p>
 <p>Multiplying the LHS of the general form by <span class="math notranslate nohighlight">\(\mu(x)\)</span> gives</p>
 <div class="math notranslate nohighlight" id="equation-eq1compare">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-eq1compare" title="Permalink to this equation">¶</a></span>\[\mu \frac{\mathrm{d}y}{\mathrm{d}x}+ y \mu f(x)\]</div>
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-eq1compare" title="Permalink to this equation">¶</a></span>\[\mu \frac{\mathrm{d}y}{\mathrm{d}x}+ y \mu f(x)\]</div>
 <p>Compare with</p>
 <div class="math notranslate nohighlight" id="equation-eq2compare">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-eq2compare" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}}{\mathrm{d}x}\left(\mu y \right)=\mu \frac{\mathrm{d}y}{\mathrm{d}x}+y\frac{\mathrm{d}\mu}{\mathrm{d}x}\]</div>
-<p>By equating <a class="reference internal" href="#equation-eq1compare">(6.3)</a> with <a class="reference internal" href="#equation-eq2compare">(6.4)</a> it can be seen that we can make the integrating factor work if we choose <span class="math notranslate nohighlight">\(\mu\)</span> to satisfy</p>
+<span class="eqno">(9.4)<a class="headerlink" href="#equation-eq2compare" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}}{\mathrm{d}x}\left(\mu y \right)=\mu \frac{\mathrm{d}y}{\mathrm{d}x}+y\frac{\mathrm{d}\mu}{\mathrm{d}x}\]</div>
+<p>By equating <a class="reference internal" href="#equation-eq1compare">(9.3)</a> with <a class="reference internal" href="#equation-eq2compare">(9.4)</a> it can be seen that we can make the integrating factor work if we choose <span class="math notranslate nohighlight">\(\mu\)</span> to satisfy</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 \frac{\mathrm{d}\mu}{\mathrm{d}x}=\mu f(x)
@@ -430,8 +445,8 @@ e^{3x}\left(x-\frac{1}{3}\right) + \frac{K}{x^3}\)</span></p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Intro_ODEs.html" title="previous page"><span class="section-number">5. </span>Ordinary Differential Equations</a>
-    <a class='right-next' id="next-link" href="2nd_order_ODEs.html" title="next page"><span class="section-number">7. </span>Second Order ODEs</a>
+    <a class='left-prev' id="prev-link" href="intro_odes.html" title="previous page"><span class="section-number">8. </span>Ordinary Differential Equations</a>
+    <a class='right-next' id="next-link" href="2nd_order_odes.html" title="next page"><span class="section-number">10. </span>Second Order ODEs</a>
 
         </div>
         

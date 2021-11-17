@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Convergence of Series &#8212; Mathematics for Natural Sciences 1</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Complex Numbers" href="../complex_numbers/complex_numbers.html" />
+    <link rel="prev" title="2. Introduction to Series" href="series.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="limits.html">
+   1. Limits of Functions and Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="series.html">
+   2. Introduction to Series
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Convergence of Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../complex_numbers/complex_numbers.html">
+   4. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
+   5. Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation_and_integration/integration.html">
+   6. Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="taylor_series.html">
+   7. Taylor series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/intro_odes.html">
+   8. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/1st_order_odes.html">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/2nd_order_odes.html">
+   10. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/ode_solver_demo.html">
+   11. ODEs with Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/sequences_and_series/convergence.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#infinite-series-as-limit-of-partial-sums">
+   3.1. Infinite series as limit of partial sums
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fundamental-concept">
+   3.2. Fundamental concept
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preliminary-test-for-divergence">
+   3.3. Preliminary test for divergence
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition">
+     3.3.1. Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-the-harmonic-series">
+     3.3.2. Example: the harmonic series
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dalemberts-ratio-test">
+   3.4. D’Alembert’s ratio test
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prelimaries">
+     3.4.1. Prelimaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#statement">
+     3.4.2. Statement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     3.4.3. Example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-test">
+   3.5. Comparison Test
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     3.5.1. Prelimaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     3.5.2. Statement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     3.5.3. Example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#absolute-vs-conditional-convergence">
+   3.6. Absolute v’s Conditional Convergence
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motivation">
+     3.6.1. Motivation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explanation-of-conditional-convergence">
+     3.6.2. Explanation of conditional convergence
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     3.6.3. Example
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="convergence-of-series">
+<h1><span class="section-number">3. </span>Convergence of Series<a class="headerlink" href="#convergence-of-series" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="infinite-series-as-limit-of-partial-sums">
+<h2><span class="section-number">3.1. </span>Infinite series as limit of partial sums<a class="headerlink" href="#infinite-series-as-limit-of-partial-sums" title="Permalink to this headline">¶</a></h2>
+<p>The value of a infinite series can be defined as the value of the limit (if exists) of the sequence defined by it partial
+sums, that is:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^\infty u_k = \lim_{n \to \infty} \sum_{k=1}^n u_k \ .\]</div>
+<p>Alternatively we could write that <span class="math notranslate nohighlight">\(S_n = \sum_{k=1}^n u_k\)</span> and that <span class="math notranslate nohighlight">\(\displaystyle\lim_{n \to \infty} S_n = S_\infty\)</span>.</p>
+<p>For example, consider the series of the geometric progression <span class="math notranslate nohighlight">\((a, a r, a r^2, a r^3, \dots , a r^{n-1})\)</span> where <span class="math notranslate nohighlight">\(1 &gt; r &gt; 0\)</span>
+and <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary constant:</p>
+<div class="math notranslate nohighlight">
+\[S_n = \sum_{k=1}^n a r^{k -1} = a \frac{1 - r^n}{1-r}\]</div>
+<p>The infinite series of the geometric progression for <span class="math notranslate nohighlight">\(n \to \infty\)</span> is thus:</p>
+<div class="math notranslate nohighlight">
+\[S_\infty = \lim_{n \to \infty} S_n =  a \lim_{n \to \infty} \frac{1 - r^n}{1-r} = \frac{a}{1-r} \ ,\]</div>
+<p>because <span class="math notranslate nohighlight">\(\displaystyle\lim_{n\to \infty} r^n = 0\)</span> since <span class="math notranslate nohighlight">\(r&lt;1\)</span>.</p>
+</div>
+<div class="section" id="fundamental-concept">
+<h2><span class="section-number">3.2. </span>Fundamental concept<a class="headerlink" href="#fundamental-concept" title="Permalink to this headline">¶</a></h2>
+<p>We have already seen in the sections on geometric progression and method of differences that some series can approach
+a finite value as the number of terms grows infinitely large.
+Series of this type are called <strong>convergent</strong>.
+For instance, the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N \left(\frac{1}{4}\right)^n\)</span> approaches (converges) to <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span> as <span class="math notranslate nohighlight">\(N\)</span> approaches <span class="math notranslate nohighlight">\(\infty\)</span>
+(<span class="math notranslate nohighlight">\(N \to \infty\)</span>).</p>
+<p>On the other hand, the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N n\)</span> can be made as big as we like by adding additional terms.
+We say that this series <strong>diverges</strong>.</p>
+<p>We may start to understand this behaviour by looking at what happens to the size of the terms in the long run.
+In the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N n\)</span>, the terms in the series are themselves growing, but this growing behaviour is not
+necessary for the series to diverge.</p>
+<p>For instance, in the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N \frac{1}{4}\)</span> the terms remain finite, but we can make the sum as big as we
+like by adding more terms; so this series also diverges.</p>
+<p>Less obviously, if we look at the series <span class="math notranslate nohighlight">\(\sum_{n=1}^N \frac{n^2}{4n^2 + 3 n + 1}\)</span> then it may be shown that the terms
+(<span class="math notranslate nohighlight">\(\frac{n^2}{4n^2 + 3 n + 1}\)</span>) in the series approach 1/4 as <span class="math notranslate nohighlight">\(n \to \infty\)</span>.
+This means that in the long run the series starts to resemble<span class="math notranslate nohighlight">\(\sum_{n=1}^N \frac{1}{4}\)</span>.
+Hence, this series also diverges.</p>
+</div>
+<div class="section" id="preliminary-test-for-divergence">
+<h2><span class="section-number">3.3. </span>Preliminary test for divergence<a class="headerlink" href="#preliminary-test-for-divergence" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition">
+<h3><span class="section-number">3.3.1. </span>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<p>The ideas of the previous section lead us to the following “preliminary test for divergence”.</p>
+<div class="admonition-preliminary-test-for-divergence admonition">
+<p class="admonition-title">Preliminary test for divergence</p>
+<p>If the terms <span class="math notranslate nohighlight">\(u_n\)</span> in a series do not approach zero as <span class="math notranslate nohighlight">\(n \to \infty\)</span> then the series diverges.</p>
+</div>
+<p>Note well that the preliminary test cannot conclusively identify a series as convergent, we require further tests in
+our toolbox.
+However it does test whether a series is divergent.</p>
+<p>This test should intuitively make sense; if the terms in a infinite sequences diverges then the series (the sum of the
+sequence) must also diverge.
+However, the case where the terms in the series approach zero may not match our intuition.
+It is NOT necessarily true that if the terms in the series approach zero then the series will converge.</p>
+</div>
+<div class="section" id="example-the-harmonic-series">
+<h3><span class="section-number">3.3.2. </span>Example: the harmonic series<a class="headerlink" href="#example-the-harmonic-series" title="Permalink to this headline">¶</a></h3>
+<p>For example, consider the <a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)">harmonic series</a></p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^N \frac{1}{n} \ .\]</div>
+<p>As <span class="math notranslate nohighlight">\(n \to \infty\)</span>, the denominator of the fraction becomes arbitrarily large and so the fraction shrinks away to zero.
+It may appear, then that the series will converge since in the end we are just adding on a bunch of nothings!
+However, a clever re-grouping of the terms shows that the series is divergent.
+<a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Comparison_test">The trick</a>, which was proved in 1350 by
+the French Mathematician Nicole Oresme, relies on grouping the terms in the following way:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^N \frac{1}{n} = \frac{1}{2} + \Big( \frac{1}{3} + \frac{1}{4} \Big) +
+ \Big( \frac{1}{5}  + \frac{1}{6} + \frac{1}{7}  + \frac{1}{8} \Big) + \dots\]</div>
+<p>so that each new group has twice as many terms as the previous one.
+It can be shown that each group of terms is then bigger than <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>, and so the sum must be larger than
+<span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \frac{1}{2}\)</span>, which diverges.
+Hence, this sum also diverges.</p>
+<p>On the other hand, the terms in the series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \frac{1}{4^n}\)</span> approach zero, and this sum converges.
+The preliminary test cannot distinguish between these cases, and so further tests are needed to determine the behaviour
+of the sum if the terms approach zero in the long run.
+One such test is D’Alembert’s ratio test, outined below.</p>
+</div>
+</div>
+<div class="section" id="dalemberts-ratio-test">
+<h2><span class="section-number">3.4. </span>D’Alembert’s ratio test<a class="headerlink" href="#dalemberts-ratio-test" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="prelimaries">
+<h3><span class="section-number">3.4.1. </span>Prelimaries<a class="headerlink" href="#prelimaries" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Ratio_test">D’Alembert’s ratio test</a> (sometimes simply referred to as the “ratio test”)
+looks at the <strong>ratio</strong> of each terms of an infinite sequence of numbers (<span class="math notranslate nohighlight">\(u_1,u_2,u_3,\dots\)</span>)</p>
+<div class="math notranslate nohighlight" id="equation-daratio">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-daratio" title="Permalink to this equation">¶</a></span>\[ \rho = \Bigg\lvert \frac{u_{n+1}}{u_n} \Bigg\rvert \ ,\]</div>
+<p>to determine if the infinite series converges or diverges.
+The notation |•| is used for the magnitude (otherwise known as the absolute value, e.g. <span class="math notranslate nohighlight">\(\lvert -2 \rvert = 2\)</span>) of the
+expression - the test thus only considers the relative size of the terms in the series.
+D’Alembert’s ratio test is more powerful than the preliminary test, but is usually a bit harder to apply and so we should use the
+preliminary test first (the clue is in the name!).</p>
+</div>
+<div class="section" id="statement">
+<h3><span class="section-number">3.4.2. </span>Statement<a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h3>
+<p>To determine if an infinite series <span class="math notranslate nohighlight">\(\sum{n=1}^\infty u_n\)</span> diverges (<span class="math notranslate nohighlight">\(\sum{n=1}^\infty u_n = \infty\)</span>) of converges
+(<span class="math notranslate nohighlight">\(\sum{n=1}^\infty u_n&lt;\infty\)</span>) we look at the behaviour of the ratio in equation <a class="reference internal" href="#equation-daratio">(3.1)</a> in the limit
+<span class="math notranslate nohighlight">\(n \to \infty\)</span>, written as:</p>
+<div class="admonition-d-alembert-s-ratio-test admonition">
+<p class="admonition-title">D’Alembert’s ratio test</p>
+<p>For the magnitude of the ratio of sucessive terms in a series,
+<span class="math notranslate nohighlight">\(\rho = \lim_{n \to \infty} \lvert \frac{u_{n+1}}{u_n} \rvert\)</span>, then if:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho &lt; 1\)</span> then the series converges absolutely,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho&gt;1\)</span> then the series diverges absolutely,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho=1\)</span> then the test is inconclusive.</p></li>
+</ul>
+</div>
+<p>Note well that the <span class="math notranslate nohighlight">\(n+1\)</span> term is the numerator and the <span class="math notranslate nohighlight">\(n\)</span> term is the denominator!</p>
+<p>Intuitively, D’Alembert’s ratio test tells us that if the ratio of suquential terms is less than 1 then the
+terms are <strong>shrinking</strong> and hence the series converges.
+If the converse is true the the terms are <strong>growing</strong> and hence the series diverges.</p>
+<p>The proof of the ratio test (not shown here) relies on comparing the series to a convergent/divergent geometric progression.</p>
+<p>Cases where the ratio test is inconclusive will not be dealt with in this course, although there are further tests that
+can be used for such problems.
+One of the most straightforward to use is the <a class="reference external" href="https://en.wikipedia.org/wiki/Squeeze_theorem">sandwich theorem</a>
+(also known as the “squeeze theorem”), which can be used not only to demonstrate that a series is convergent, but also
+to find upper and lower bounds for the value of the sum or even to find the value of the sum exactly.</p>
+</div>
+<div class="section" id="example">
+<h3><span class="section-number">3.4.3. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>We will use D’Alembert’s ratio test to determine whether <span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{k^2}{k!}\)</span> converges.</p>
+<p>Letting <span class="math notranslate nohighlight">\(u_k = \frac{k^2}{k!}\)</span>, the ratio <span class="math notranslate nohighlight">\(\frac{u_{k+1}}{u_k}\)</span> simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{u_{k+1}}{u_k} &amp;= \frac{(k+1)^2}{k^2} \frac{k!}{(k+1)!} \\
+&amp;= \frac{(k+1)^2 k!}{k^2 (k+1) k!} \\
+&amp; = \frac{k+1}{k^2} \ .\end{split}\]</div>
+<p>Here we have used the definition of the <a class="reference external" href="https://en.wikipedia.org/wiki/Factorial">factorial</a> to write <span class="math notranslate nohighlight">\((k+1)! = (k+1) k!\)</span>.
+By recalling the combination theorem, we have that:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \lim_{k\to\infty} \Bigg\lvert \frac{u_{n+1}}{u_n} \Bigg\rvert = \lim_{k \to \infty} \frac{k+1}{k^2} = 0 \ ,\]</div>
+<p>and thus the series converges absolutely.</p>
+<p>Note:</p>
+<ol class="simple">
+<li><p>It is very important to get the algebra correct in the division step. This is often done carelessly and can cost a lot of marks.</p></li>
+<li><p>The limit step is important! We are interested to know what happens to the terms in the series in the long run - i.e. as <span class="math notranslate nohighlight">\(n \to \infty\)</span>. The limit must be explicitly taken!</p></li>
+</ol>
+<p><strong>Questions</strong><br></p>
+<p>Use D’Alembert’s ratio test to determine if the following series converges:</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{(2 k)!}{2^k k!}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots\)</span>.</p></li>
+</ol>
+<p><strong>Solutions</strong><br></p>
+<ol class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(u_k = \frac{(2k)!}{2^k k!}\)</span>.
+Then <span class="math notranslate nohighlight">\(\frac{u_{k+1}}{u_k}\)</span>
+<span class="math notranslate nohighlight">\(= \frac{(2k+2)! (2^k k!)}{\big( 2^{k+1} (k+1)! \big) (2k)!}\)</span>
+<span class="math notranslate nohighlight">\( = \frac{(2k+2) (2k+1) (2k)! (2^k k!)}{\big( 2 2^{k} (k+1) k! \big) (2k)!}\)</span>
+<span class="math notranslate nohighlight">\( = \frac{(2k+2)(2k+1)}{2 (k+1)}\)</span>
+<span class="math notranslate nohighlight">\( = 2k+1\)</span>.
+So, <span class="math notranslate nohighlight">\(\displaystyle\lim_{k \to \infty} \lvert \frac{u_{k+1}}{u_k} \rvert =  \lim_{k \to \infty} (2k+1) &gt; 1\)</span>.
+Thus we conclude that the series diverges.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(u_k \frac{(-1)^{k-1}}{k}\)</span>.
+Then <span class="math notranslate nohighlight">\( \big\lvert \frac{u_{k+1}}{u_k} \big\rvert =  \big\lvert \frac{(-1)^k}{(k+1) (-1)^{k-1} / k} \big\rvert\)</span>
+<span class="math notranslate nohighlight">\(= \big\lvert \frac{k}{k+1} \big\rvert\)</span>
+<span class="math notranslate nohighlight">\( = \frac{1}{1+1/k}\)</span>.
+So, <span class="math notranslate nohighlight">\(\displaystyle\lim_{k \to \infty} \big\lvert \frac{u_{k+1}}{u_k} \big\rvert\)</span>
+<span class="math notranslate nohighlight">\( =  \frac{1}{1+1/k} \)</span>
+<span class="math notranslate nohighlight">\( = 1\)</span>.
+Thus we conclude that the test is inconclusive!
+Further tests are required to determine convergence/divergence, which is beyond the scope of the course.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="comparison-test">
+<h2><span class="section-number">3.5. </span>Comparison Test<a class="headerlink" href="#comparison-test" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3><span class="section-number">3.5.1. </span>Prelimaries<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This test aims to compare the terms in our unknown series with terms of a well understood series - typically we will compare to series involving powers of 2 here.  If for instance we write a geometric series that term by term is greater than or equal to the terms in an unknown series, we can typically argue that our unkown series converges and even offer an upper limit on the total value of the series.</p>
+</div>
+<div class="section" id="id2">
+<h3><span class="section-number">3.5.2. </span>Statement<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>We argue that a series <span class="math notranslate nohighlight">\(S_1 = \sum_n a_n\)</span> can be shown to converge if there exists a series <span class="math notranslate nohighlight">\(S_2 = \sum_n b_n\)</span> such that for all terms <span class="math notranslate nohighlight">\(|b_n| \geq |a_n|\)</span> where series <span class="math notranslate nohighlight">\(S_2\)</span> is known to converge, therefore series <span class="math notranslate nohighlight">\(S_1\)</span> must also converge.</p>
+</div>
+<div class="section" id="id3">
+<h3><span class="section-number">3.5.3. </span>Example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Show that the following series converges</p>
+<div class="math notranslate nohighlight">
+\[S_1 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{6^2} + \frac{1}{8^2} + \frac{1}{10^2} + \frac{1}{12^2} + \frac{1}{14^2} + \frac{1}{16^2} +\dots = \sum_n^\infty \frac{1}{(2n)^2}
+\]</div>
+<p>We can compare this series to the following series, which we can find by rounding down every denominator to nearest power of two (before applying the squared):</p>
+<div class="math notranslate nohighlight">
+\[S_2 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} +\dots\]</div>
+<p>We can see that every term in <span class="math notranslate nohighlight">\(S_2\)</span> is greater than or equal to every term in <span class="math notranslate nohighlight">\(S_1\)</span>, therefore if both <span class="math notranslate nohighlight">\(S_1, S_2\)</span> converge, the value of <span class="math notranslate nohighlight">\(S_2 &gt; S_1\)</span>.</p>
+<p>We can rewrite <span class="math notranslate nohighlight">\(S_2\)</span> by collecting together like terms:</p>
+<div class="math notranslate nohighlight">
+\[S_2 = \frac{1}{2^2} + \frac{2}{4^2} + \frac{4}{8^2} + \dots = 1 + \frac{1}{2^2} + \frac{1}{2^3} + \frac{1}{2^4} + \dots\]</div>
+<p>which we can see is a geometric series, with <span class="math notranslate nohighlight">\(a = \frac{1}{2^2}\)</span> and <span class="math notranslate nohighlight">\(r = \frac{1}{2}\)</span>, which means that</p>
+<div class="math notranslate nohighlight">
+\[S_2 = \frac{1/2^2}{1 - 1/2} = \frac{1}{2}\]</div>
+<p>and since <span class="math notranslate nohighlight">\(S_2\)</span> converges, then by the comparison test <span class="math notranslate nohighlight">\(S_1\)</span> also converges.</p>
+<p>The comparision test can also be used to put bounds on the values of some series, since the rounding down procesure can often be followed by a rounding up procecure, which will give us upper and lower bounds for a series.  For the sum <span class="math notranslate nohighlight">\(S_1\)</span>, we can have:</p>
+<div class="math notranslate nohighlight">
+\[S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{8^2} + \frac{1}{8^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} + \frac{1}{16^2} +\dots\]</div>
+<p>which we can see gives every term less than or equal to every term in <span class="math notranslate nohighlight">\(S_1\)</span>.  By a similar process to finding the value of <span class="math notranslate nohighlight">\(S_2\)</span> we find:</p>
+<div class="math notranslate nohighlight">
+\[S_3 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{2}{8^2} + \frac{4}{16^2} + \dots = \frac{1}{2^2} + \frac{1}{2^4} + \frac{1}{2^5} + \frac{1}{2^6} + \dots\]</div>
+<p>and if we skip the first term here, this is also a geometric series, with <span class="math notranslate nohighlight">\(a = \frac{1}{2^4}\)</span> and <span class="math notranslate nohighlight">\(r = \frac{1}{2}\)</span>, therfore:</p>
+<div class="math notranslate nohighlight">
+\[S_3 = \frac{1}{2^2} + \frac{1/2^4}{1 - 1/2} = \frac{3}{8}\]</div>
+<p>and since <span class="math notranslate nohighlight">\(S_2 &gt; S_1 &gt; S_3\)</span> we have <span class="math notranslate nohighlight">\(\frac{4}{8} &gt; S_1 &gt; \frac{3}{8}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="absolute-vs-conditional-convergence">
+<h2><span class="section-number">3.6. </span>Absolute v’s Conditional Convergence<a class="headerlink" href="#absolute-vs-conditional-convergence" title="Permalink to this headline">¶</a></h2>
+<p>See also Chapter 25 of “The Calculus Story: A Mathematical Adventure” by David Acheson.</p>
+<div class="section" id="motivation">
+<h3><span class="section-number">3.6.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
+<p>D’Alembert’s ratio test looks at the absolute value of the ratio to determine whether the terms are growing or decaying
+in size without recourse to their sign.
+This allows us to make a statement about the <a class="reference external" href="https://en.wikipedia.org/wiki/Absolute_convergence">absolute convergence</a>
+of the series.
+That is, series that converge to a single, finite number.
+However there are series that do not absolutely converge, but can be “rearranged” to converge to any value at all,
+including <span class="math notranslate nohighlight">\(\infty\)</span> or <span class="math notranslate nohighlight">\(-\infty\)</span>.
+This statement should not be immediately clear as it is quite unintuitive.
+These series are called <a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_convergence">conditionally convergence</a>, and are
+explained in what follows.</p>
+</div>
+<div class="section" id="explanation-of-conditional-convergence">
+<h3><span class="section-number">3.6.2. </span>Explanation of conditional convergence<a class="headerlink" href="#explanation-of-conditional-convergence" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-conditional-convergence admonition">
+<p class="admonition-title">Conditional convergence</p>
+<p>If a series is <strong>absolutely convergent</strong> then it will converge to the same value for any rearrangement of the terms.
+If the series is not absolutely convergent, then it may be <strong>conditionally convergent</strong>, in which case it can be summed
+to an arbitrary value (finite or infinite) depending on the arrangement of the terms in the series.</p>
+</div>
+<p>Conditionally convergent series have terms with alternating signs.
+In some of the previous examples that we looked at, all of the terms in the series were the same sign
+(all positive or all negative).
+In these cases: (i) we did not need to distinguish between absolute and conditional convergence, and (ii)
+looking at the relative size of the terms (as in D’Alembert’s ratio test) were sufficient to determine the
+convergence properties.
+But in the case where the signs in the series alternate, the behaviour is much more peculiar/subtle.</p>
+</div>
+<div class="section" id="id4">
+<h3><span class="section-number">3.6.3. </span>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Consider the <a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Alternating_harmonic_series">alternating harmonic series</a>:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n \frac{(-1)^{k+1}}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \dots \ ,\]</div>
+<p>It can be shown (see later a chapter on Taylor series) that this series converges to the natural logarithm of 2, <span class="math notranslate nohighlight">\(\ln(2)\)</span>.</p>
+<p>However, a regrouping of the terms gives:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sum_{k=1}^n \frac{(-1)^k}{k} &amp;= \Big( 1 - \frac{1}{2} \Big)  - \frac{1}{4} + \Big(\frac{1}{3} - \frac{1}{6}\Big) - \frac{1}{8} +
+\Big( \frac{1}{5} - \frac{1}{10} \Big) - \frac{1}{12} + \dots \\
+&amp;= \frac{1}{2} - \frac{1}{4} + \frac{1}{6} - \frac{1}{8} + \frac{1}{10} - \frac{1}{12} \\
+&amp;= \frac{1}{2} \Big( 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \dots \Big) \ ,\end{split}\]</div>
+<p>which is half of the original series!</p>
+<p>In fact, it can be shown that this series can be made equal to any value by a suitable rearrangement of the terms…</p>
+<p>This series is an example of a <a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_convergence">conditionally convergent</a> series
+-i.e. a series that does not converge absolutely, but can be made to converge to (any) value which depends on the
+arrangement of the terms.
+This is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Riemann_series_theorem">Riemann’s paradox</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?embed=no&amp;v=-EtHF5ND3_s">Here is a short video explanation</a>.</p>
+<p>In this course we will only look at absolute convergence.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./sequences_and_series"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="series.html" title="previous page"><span class="section-number">2. </span>Introduction to Series</a>
+    <a class='right-next' id="next-link" href="../complex_numbers/complex_numbers.html" title="next page"><span class="section-number">4. </span>Complex Numbers</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

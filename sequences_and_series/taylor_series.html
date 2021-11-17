@@ -1,0 +1,530 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Taylor series &#8212; Mathematics for Natural Sciences 1</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Ordinary Differential Equations" href="../odes/intro_odes.html" />
+    <link rel="prev" title="6. Integration" href="../differentiation_and_integration/integration.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="limits.html">
+   1. Limits of Functions and Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="series.html">
+   2. Introduction to Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convergence.html">
+   3. Convergence of Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../complex_numbers/complex_numbers.html">
+   4. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
+   5. Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation_and_integration/integration.html">
+   6. Integration
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. Taylor series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/intro_odes.html">
+   8. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/1st_order_odes.html">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/2nd_order_odes.html">
+   10. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/ode_solver_demo.html">
+   11. ODEs with Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/sequences_and_series/taylor_series.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taylor-expansion-definition">
+   7.1. Taylor expansion definition
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#practical-use">
+     7.1.1. Practical use
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-lagrange-remainder-theorem">
+     7.1.2. Advanced: Lagrange remainder theorem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-composite-function-expanions">
+     7.1.3. Advanced: Composite function expanions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application-lhopitals-rule">
+     7.1.4. Application: L’Hôpital’s Rule
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="taylor-series">
+<h1><span class="section-number">7. </span>Taylor series<a class="headerlink" href="#taylor-series" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="taylor-expansion-definition">
+<h2><span class="section-number">7.1. </span>Taylor expansion definition<a class="headerlink" href="#taylor-expansion-definition" title="Permalink to this headline">¶</a></h2>
+<p>We will write the formula for expansion about <span class="math notranslate nohighlight">\(x=a\)</span>, in which we seek to express <span class="math notranslate nohighlight">\(f(x)\)</span> as an infinite polynomial of the form</p>
+<div class="amsmath math notranslate nohighlight" id="equation-67b94c89-8c85-4fd2-8819-681c711cd0c3">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-67b94c89-8c85-4fd2-8819-681c711cd0c3" title="Permalink to this equation">¶</a></span>\[\begin{equation}p(x;a)=\sum_{j=0}^{\infty}c_n(x-a)^n = c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(c-a)^n+\dots\end{equation}\]</div>
+<p>We choose the coefficients <span class="math notranslate nohighlight">\(c_n\)</span> to ensure that the <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> derivative of the polynomial is equal to the <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> derivative of the function at the point <span class="math notranslate nohighlight">\(x=a\)</span>. In this sense, the Taylor series gives the best possible local polynomial approximation to <span class="math notranslate nohighlight">\(f(x)\)</span> of specified degree.</p>
+<p>By repeatedly differentiating and evaluating the polynomial, we obtain</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+c_n=\frac{f^{(n)}(a)}{n!}
+\end{equation*}\]</div>
+<p>This result defines the Taylor series for <span class="math notranslate nohighlight">\(f(x)\)</span>, given in the box below.</p>
+<div class="note admonition">
+<p class="admonition-title">Taylor series for <span class="math notranslate nohighlight">\(f(x)\)</span> about a point <span class="math notranslate nohighlight">\(x=a\)</span>.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}p(x;a) = \sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n\end{equation*}\]</div>
+<p>The special case when <span class="math notranslate nohighlight">\(a=0\)</span> is known as the Maclaurin series for historical reasons.</p>
+</div>
+<p><strong>An important example:</strong> Taylor expansion of <span class="math notranslate nohighlight">\(f(x)=e^x\)</span> about <span class="math notranslate nohighlight">\(x=0\)</span> <br></p>
+<p><span class="math notranslate nohighlight">\(f'(x)=e^x,\ f''(x)=e^x\ ...,\)</span> so</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+p(x;a)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+...
+\end{equation*}\]</div>
+<p>Notice that this series satisfies <span class="math notranslate nohighlight">\(\frac{\mathrm{d}p}{\mathrm{d}x}=p\)</span>.</p>
+<p><strong>More important examples:</strong><br>
+The Maclaurin expansions of <span class="math notranslate nohighlight">\(\sin\)</span>, <span class="math notranslate nohighlight">\(\cos\)</span>,  <span class="math notranslate nohighlight">\(e^x\)</span>, and <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> are particularly important:</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \sin(x) = x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+ = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{(2n)!}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \cos(x) = 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots+ = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n}}{(2n)!}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle e^x = 1+x+\frac{x^2}{2!}+\dots+ = \sum_{n=0}^{\infty}\frac{x^n}{n!}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \ln(1+x) = x-\frac{x^2}{2}+\frac{x^3}{3}-\dots+ = \sum_{n=0}^{\infty}\frac{(-1)^n x^{n+1}}{n+1}\)</span></p>
+<p>You should also be able to calculate the first few terms in the expansion of an arbitrary function <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<div class="notice admonition">
+<p class="admonition-title">Exercise:</p>
+<p>By regrouping the terms in the Maclaurin series for <span class="math notranslate nohighlight">\(e^{i\theta}\)</span>, derive Euler’s formula.</p>
+</div>
+<p><strong>Solution :</strong><br></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+e^{i\theta}&amp;=1+(i\theta)+\frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!}+\dots\\
+&amp;=(1-\frac{\theta^2}{2}+\frac{\theta^4}{4!}-\dots) + i(\theta - \frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\dots)
+\end{align*}\]</div>
+<p>We can write this out rigorously as follows:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+ e^{i\theta}&amp;=\sum_{n=0}^{\infty}\frac{(i\theta)^n}{n!} = \sum_{n=0,2,4,...}\frac{(i\theta)^n}{n!} + \sum_{n=1,3,5,...}\frac{(i\theta)^n}{n!} =\sum_{n=0}^{\infty}\frac{(i\theta)^{2n}}{(2n)!} + \sum_{n=0}^{\infty}\frac{(i\theta)^{2n+1}}{(2n+1)!}\\
+ &amp;= \sum_{n=0}^{\infty}\frac{(-1)^n(\theta)^{2n}}{(2n)!} + i\sum_{n=0}^{\infty}\frac{(-1)^n(\theta)^{2n+1}}{(2n+1)!} = \cos(\theta)+i\sin(\theta).
+ \end{align*}\]</div>
+<div class="danger admonition">
+<p class="admonition-title">A disclaimer!</p>
+<p>Not all functions are faithfully represented by their Taylor Series. We have only guaranteed that the polynomial has the “correct” behaviour in the immediate vicinity of the point <span class="math notranslate nohighlight">\(x=a\)</span>. Two things should be checked:</p>
+<ol class="simple">
+<li><p>Does the series converge to a finite value for all <span class="math notranslate nohighlight">\(x\)</span>?<br>
+If not then it is important to find the radius of convergence. This can be achieved by using the ratio test<br><br></p></li>
+<li><p>Does it converge to <span class="math notranslate nohighlight">\(f(x)\)</span>?<br>
+Even if the series converges, there is no guarantee that it converges to <span class="math notranslate nohighlight">\(f(x)\)</span>.<br>
+We would need to show that <span class="math notranslate nohighlight">\(\displaystyle \lim_{k\rightarrow \infty}|f(x)-p_k(x;a)|=0\)</span>, which may only be true for some values of <span class="math notranslate nohighlight">\(x\)</span>.<br>
+This can be done by making use of the Lagrange remainder theorem, introduced in the next subsection.</p></li>
+</ol>
+</div>
+<p>Functions which converge to their Taylor series for a range of values are called <em>analytic</em>, and functions which converge to their Taylor series everywhere are called <em>entire</em>. The sine and cosine series, and the <span class="math notranslate nohighlight">\(e^x\)</span> series are entire. The Maclaurin series for <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> is analytic for <span class="math notranslate nohighlight">\(|x|&lt;1\)</span>.</p>
+<div class="section" id="practical-use">
+<h3><span class="section-number">7.1.1. </span>Practical use<a class="headerlink" href="#practical-use" title="Permalink to this headline">¶</a></h3>
+<p>The Taylor series nearly always contains an infinite number of terms. To be of practical use in applications, we typically need to “truncate” the expansion, meaning that we retain only the terms up to a specified <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> power of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Example: The two-term expansion</p>
+<p>Let us examine what happens if we retain just the first two terms in the Taylor series:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+p(x;a)=f(a)+f'(a)(x-a)
+\end{equation*}\]</div>
+<p>This defines a straight line.</p>
+<ul class="simple">
+<li><p>The line passes through the point <span class="math notranslate nohighlight">\((a, f(a))\)</span> so it touches the curve f(x) at the point <span class="math notranslate nohighlight">\(x = a\)</span></p></li>
+<li><p>The line has slope <span class="math notranslate nohighlight">\(f^{\prime}(a)\)</span>, which is the gradient of the curve at <span class="math notranslate nohighlight">\(x = a\)</span></p></li>
+<li><p>Therefore, the two-term Taylor series is just the tangent to the curve!</p></li>
+</ul>
+<p>The tangent is the best possible approximation that we can obtain for the curve near the point <span class="math notranslate nohighlight">\(x = a\)</span> using only two terms.</p>
+</div>
+<p>As well as considering the validity of the infinite series, it is important to be able to determine how many terms in the series are needed for practical use. If the series converges very slowly, then it may not be much good!</p>
+<p>As can be seen from the plot below, the degree 21 Maclaurin expansion <span class="math notranslate nohighlight">\(\sin(x)\)</span> already represents <span class="math notranslate nohighlight">\(\sin(x)\)</span> rather faithfully on the range <span class="math notranslate nohighlight">\([-2\pi,2\pi]\)</span>, but it is less accurate further away from the expansion point.</p>
+<div class="figure align-default" id="macplot">
+<img alt="../_images/macplot.png" src="../_images/macplot.png" />
+<p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">A plot of the curve <span class="math notranslate nohighlight">\(\sin(x)\)</span> together with Maclaurin series expansion retaining successively greater numbers of terms, <span class="math notranslate nohighlight">\(p_1,p_3,p_5,p_7,p_{13},p_{21}\)</span>.</span><a class="headerlink" href="#macplot" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="advanced-lagrange-remainder-theorem">
+<h3><span class="section-number">7.1.2. </span>Advanced: Lagrange remainder theorem<a class="headerlink" href="#advanced-lagrange-remainder-theorem" title="Permalink to this headline">¶</a></h3>
+<p>The Lagrange remainder theorem, given in the box below,  allows us to place precise bounds on the size of the error. The result shows that the error in the truncated expansion is proportional to the next power of <span class="math notranslate nohighlight">\((x-a)\)</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Lagrange remainder theorem</p>
+<p>Let <span class="math notranslate nohighlight">\(p_n(x;a)\)</span> be the truncated Taylor expansion of <span class="math notranslate nohighlight">\(f(x)\)</span> about point <span class="math notranslate nohighlight">\(x=a\)</span>, up to and including the term in <span class="math notranslate nohighlight">\((x-a)^n\)</span>.
+The remainder (error) in the truncated expansion is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f98d58ef-b185-4eca-a1e0-b7939e31a3de">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-f98d58ef-b185-4eca-a1e0-b7939e31a3de" title="Permalink to this equation">¶</a></span>\[\begin{equation}R_n(x) = \biggr|f(x)-p_n(x;a)\biggr| = \biggr|\frac{f^{n+1}(\xi)(x-a)^{n+1}}{(n+1)!}\biggr|, \qquad \xi\in(a,x)\end{equation}\]</div>
+</div>
+<p>We say that the degree <span class="math notranslate nohighlight">\(n\)</span> series has “order <span class="math notranslate nohighlight">\((x-a)^n\)</span> accuracy”, and we may write</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f6e01eb3-4f41-4c35-b1fa-94fe0c82a39d">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-f6e01eb3-4f41-4c35-b1fa-94fe0c82a39d" title="Permalink to this equation">¶</a></span>\[\begin{equation}f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1})\end{equation}\]</div>
+<p>where the big-O notation describes the order of the error terms.</p>
+<p>The power-relationship in Lagrange’s theorem can be anticipated when <span class="math notranslate nohighlight">\((x-a)\)</span> is small, and for larger differences by noting that the factorial growth of the coefficient denominators is much faster than polynomial growth.</p>
+<div class="warning admonition">
+<p class="admonition-title">Big idea : Local approximation of a function</p>
+<p>We can compute a series expansion for a function in powers of <span class="math notranslate nohighlight">\(x\)</span> using Taylor series. The resulting truncated polynomial gives a good local approximation to a function in a sense made precise by the Lagrange remainder theorem. If the truncated polynomial is used near the expansion point <span class="math notranslate nohighlight">\(a\)</span> then its accuracy “goes like” the <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> power of the distance from <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</div>
+<p>The proof of the Lagrange remainder theorem, and derivation of the coefficient of <span class="math notranslate nohighlight">\((x-a)^n\)</span> is found by using another result called the mean value theorem. It won’t be of much benefit for our practical purposes to show the proof here. Instead, let us take a look at an illustrative example.</p>
+<p><strong>Example</strong><br>
+Use the Lagrange remainder theorem to compute an upper bound for the size of the error in the quadratic expansion of <span class="math notranslate nohighlight">\(\sin(x)\)</span> about <span class="math notranslate nohighlight">\(x=\frac{\pi}{3}\)</span>, at a nearby point <span class="math notranslate nohighlight">\(x=\frac{\pi}{2}\)</span>.</p>
+<p><strong>Solution</strong><br>
+The series expansion is found to be:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f5de2156-eee4-47d6-80c9-258533123e43">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-f5de2156-eee4-47d6-80c9-258533123e43" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_2(x;\pi/3)=\frac{\sqrt{3}}{2}+\frac{1}{2}\biggr(x-\frac{\pi}{3}\biggr)-\frac{\sqrt{3}}{4}\biggr(x-\frac{\pi}{3}\biggr)^2\end{equation}\]</div>
+<p>And from Lagrange’s formula, the error in the expansion at <span class="math notranslate nohighlight">\(x=\frac{\pi}{2}\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5bc739e0-aafc-4455-a8d1-b4fc2eedb0c0">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-5bc739e0-aafc-4455-a8d1-b4fc2eedb0c0" title="Permalink to this equation">¶</a></span>\[\begin{equation}R(\xi)= \biggr|\frac{\cos(\xi)(\frac{\pi}{2}-\frac{\pi}{3})^3}{6}\biggr| \end{equation}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(|\cos(\xi)|\)</span> is bounded above by <span class="math notranslate nohighlight">\(1\)</span> on the given domain, Lagrange’s remainder theorem gives an upper bound of <span class="math notranslate nohighlight">\(\frac{\pi^3}{6^4}=0.0239246\)</span>
+The exact error is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-dc8b998e-71c9-4378-95ec-1d08473c8b30">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-dc8b998e-71c9-4378-95ec-1d08473c8b30" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr|\sin\left(\frac{\pi}{2}\right)-p_2\left(\frac{\pi}{2};\frac{\pi}{3}\right)\biggr| = 0.0091119\end{equation}\]</div>
+</div>
+<div class="section" id="advanced-composite-function-expanions">
+<h3><span class="section-number">7.1.3. </span>Advanced: Composite function expanions<a class="headerlink" href="#advanced-composite-function-expanions" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(P(x)\)</span>, <span class="math notranslate nohighlight">\(Q(x)\)</span>, be two power series that converge to <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(g(x)\)</span> respectively
+Then</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(aP(x) + bQ(x)\)</span> converges to <span class="math notranslate nohighlight">\(af(x)+ bg(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( P(x)Q(x)\)</span> converges to <span class="math notranslate nohighlight">\(f(x)g(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( P(Q(x))\)</span> converges to <span class="math notranslate nohighlight">\(f(g(x))\)</span></p></li>
+</ul>
+<p>It means that we can construct the Taylor series for a composite function by using known results for elementary functions
+(although we need to take care to check the region of validity)</p>
+<div class="notice admonition">
+<p class="admonition-title">Example 1 :</p>
+<p><span class="math notranslate nohighlight">\(e^{\sin(x)}=1+\sin(x)+\frac{\sin(x)^2}{2!}+{\sin(x)^3}{3!}+...\)</span>
+<span class="math notranslate nohighlight">\(=1+(x-\frac{x^3}{3!+...})+\frac{1}{2!}(x-\frac{x^3}{3!+...})^2+\frac{1}{2!}(x-\frac{x^3}{3!+...})^3+....
+=1+x+\frac{1}{2!}x^2+0x^3+...\)</span></p>
+<p>This is valid everywhere since the series expansions for both <span class="math notranslate nohighlight">\(\sin\)</span> and <span class="math notranslate nohighlight">\(\exp\)</span> are entire)</p>
+</div>
+<div class="notice admonition">
+<p class="admonition-title">Example 2 :</p>
+<p>Find The Maclaurin series for <span class="math notranslate nohighlight">\(\ln(\frac{1+x}{1-x})\)</span>, and determine the interval of convergence for this expansion</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Solution :</p>
+<p>The series expansion of <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> can be found by taking <span class="math notranslate nohighlight">\(f(x)=\ln(1+x)\)</span> in the general formula, about the point <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<p>We can use the result to obtain:</p>
+<p><span class="math notranslate nohighlight">\(\ln\left(\frac{1+x}{1-x}\right) = \ln(1+x)-\ln(1-x) = \left(x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-\dots\right) - \left(-x-\frac{x^2}{2}-\frac{x^3}{3}-\frac{x^4}{4}-\dots\right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle =2x+\frac{2x^3}{3}+\frac{2x^5}{5}+\dots = \sum_{n=1}^{\infty}\frac{2x^{2n-1}}{2n-1}\)</span></p>
+<p>To find the radius of convergence, we let
+<span class="math notranslate nohighlight">\(u_{n} = \frac{2x^{2n-1}}{2n-1}\)</span>. Then,</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\lim_{n\rightarrow\infty}\frac{u_{n+1}}{u_n} = x^2\lim_{n\rightarrow\infty}\left(\frac{2-\frac{1}{n}}{2+\frac{1}{n}}\right)=x^2\)</span></p>
+<p>The series converges for <span class="math notranslate nohighlight">\(-1&lt;x&lt;1\)</span>.</p>
+<p>When <span class="math notranslate nohighlight">\(x=\pm 1\)</span>, the series expansion is equal to <span class="math notranslate nohighlight">\(\pm 2(1+\frac{1}{3}+\frac{1}{5}+\frac{1}{7}+\dots)\)</span>, which does not converge. For these values of <span class="math notranslate nohighlight">\(x\)</span>, the function <span class="math notranslate nohighlight">\(f(x)\)</span> is also not finite.</p>
+</div>
+</div>
+<div class="section" id="application-lhopitals-rule">
+<h3><span class="section-number">7.1.4. </span>Application: L’Hôpital’s Rule<a class="headerlink" href="#application-lhopitals-rule" title="Permalink to this headline">¶</a></h3>
+<p>A tricky, yet common, problem involves finding the limit of a ratio of two functions that both approach zero.</p>
+<p>For example, what is the value of the following limit?</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\lim_{x\rightarrow\ 0}\frac{\sin(x)}{x}
+\end{equation*}\]</div>
+<p>Trying some small values of <span class="math notranslate nohighlight">\(x\)</span> on a calculator suggests that the result approaches 1, but can we prove it analytically?</p>
+<p><I>Note: we also need to take care when dividing, multiplying or subtracting small values or values which differ by a small amount on a calculator. Numeric rounding errors can lead to very badly behaved results!</I></p>
+<p>To prove the result analytically, we use the series expansion for sine:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+ \lim_{x\rightarrow 0}\frac{\sin(x)}{x}=\lim_{x\rightarrow 0}\frac{x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots}{x} = \lim_{x\rightarrow 0}\left(1-\frac{x^2}{3!}+\frac{x^4}{5!}-\dots\right)=1
+ \end{equation*}\]</div>
+<p>A general result based on this type of approach is given in the box below.</p>
+<div class="note admonition">
+<p class="admonition-title">L’Hôpital’s rule :</p>
+<p>If <span class="math notranslate nohighlight">\(\displaystyle \lim_{x\rightarrow c}f(x)=\lim_{x\rightarrow c}g(x)=0\)</span> then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\lim_{x\rightarrow c}\frac{f(x)}{g(x)}= \lim_{x\rightarrow c}\frac{f^{\prime}(x)}{g^{\prime}(x)}
+\end{equation*}\]</div>
+<p>(provided both these limits exist and are finite)</p>
+<p>Extended L’Hôpital’s rule :</p>
+<p>If <span class="math notranslate nohighlight">\(\displaystyle \lim_{x\rightarrow c}f(x)=\lim_{x\rightarrow c}g(x)=\infty\)</span> then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\lim_{x\rightarrow c}\frac{f(x)}{g(x)}= \lim_{x\rightarrow c}\frac{f^{\prime}(x)}{g^{\prime}(x)}
+\end{equation*}\]</div>
+<p>(provided both these limits exist and are finite)</p>
+<p>We can apply these results repeatedly</p>
+</div>
+<p>Proof:</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \lim_{x\rightarrow c}\frac{f(x)}{g(x)}=\lim_{x\rightarrow c}\frac{f(c)+f^{\prime}(c)(x-c)+\dots}{g(c)+g^{\prime}(c)(x-c)+\dots}\)</span></p>
+<p>Since we are taking the limit as <span class="math notranslate nohighlight">\(x\rightarrow c\)</span> we are guaranteed that the Taylor series approximation is faithful if the function is differentiable.</p>
+<div class="notice admonition">
+<p class="admonition-title">Example 1 :</p>
+<p>Determine, with justification, the value of the limit</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \lim_{x\rightarrow 0}{\left(\frac{\sin^2(x)}{3 x^2 + 2x}\right)}\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Solution :</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \lim_{x\rightarrow 0}{\left(\frac{\sin^2(x)}{3 x^2 + 2x}\right)}=\displaystyle \lim_{x\rightarrow 0}{\left(\frac{2\sin(x)\cos(x)}{6x+2}\right)}=0\)</span></p>
+</div>
+<div class="notice admonition">
+<p class="admonition-title">Example 2 :</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow\infty}x^2 e^{-x}=\lim_{x\rightarrow\infty}\frac{x^2}{e^x}=\lim_{x\rightarrow\infty}\frac{f(x)}{g(x)}\)</span></p>
+<p>where <span class="math notranslate nohighlight">\(f(x)=x^2\)</span>, <span class="math notranslate nohighlight">\(g(x)=e^x\)</span> and both functions approach <span class="math notranslate nohighlight">\(\infty\)</span> in the limit.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Solution :</p>
+<p><span class="math notranslate nohighlight">\(f^{\prime}(x)=2x\)</span> so <span class="math notranslate nohighlight">\(f^{\prime}(\infty)=\infty\)</span></p>
+<p><span class="math notranslate nohighlight">\(g^{\prime}(x)=e^x\)</span> so <span class="math notranslate nohighlight">\(g^{\prime}(\infty)=\infty\)</span></p>
+<p><span class="math notranslate nohighlight">\(f^{\prime\prime} (x)=2\)</span></p>
+<p><span class="math notranslate nohighlight">\(g^{\prime\prime}(x)=e^x\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \lim_{x\rightarrow\infty} x^2 e^{-x} = \lim_{x\rightarrow\infty}\frac{2}{e^x}=0\)</span></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./sequences_and_series"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../differentiation_and_integration/integration.html" title="previous page"><span class="section-number">6. </span>Integration</a>
+    <a class='right-next' id="next-link" href="../odes/intro_odes.html" title="next page"><span class="section-number">8. </span>Ordinary Differential Equations</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

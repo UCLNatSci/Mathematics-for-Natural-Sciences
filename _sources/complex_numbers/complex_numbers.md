@@ -50,6 +50,10 @@ Suppose that $z_1=2-3i$ and $z_2=2-ai$.
 1. Write down the result of $z_1^*$
 1. What is the value of the constant $a$ if $z_1 = z_2$?
 ```
+**Solution**<br>
+1. $-3$
+2. $2 + 3i$
+3. $3$
 
 ## Geometric Interpretation
 ### The complex plane
@@ -115,7 +119,6 @@ The interactive app below allows you to generate randomly selected complex numbe
 https://www.wolframcloud.com/obj/ucqssjm/Published/argand.cdf
 ```
 
-
 ## Polar Form of a Complex Number
 
 The relationship between the Cartesian representation $z = x + yi$ and the modulus & argument representation is illustrated in . We conclude that a complex number can be expressed in the form:
@@ -129,7 +132,7 @@ An alternative way of writing this result is the celebrated *polar form* of a co
 
 ```{math}
 :label: eulersformula
-z = re^{i\theta} = r(cos(\theta) + i sin(\theta)), \textrm{where } r = |z|, \theta = arg(z)
+z = re^{i\theta} = r(\cos(\theta) + i \sin(\theta)), \textrm{where } r = |z|, \theta = \arg(z)
 ```
 
 We will understand (and prove!) this result later. For now, we just *find* the polar representation of given complex numbers, and *use* the polar form to deduce some further results.
@@ -138,14 +141,28 @@ We will understand (and prove!) this result later. For now, we just *find* the p
 :class: tip
 *Note: It is usually best to draw a diagram showing the location of the complex numbers in the plane, especially when just starting out. This will help avoid mistakes!*
 1. Write down the polar form of the following complex numbers:  
-(a) $1+i$ &emsp; (b) $-1+i$  
-(c) $-1-i$ &emsp; (d) $1-i$  
-(e) $-1$
+a. $1+i$ &emsp; b. $-1+i$  
+c. $-1-i$ &emsp; d. $1-i$  
+e. $-1$
 
 2. Express the following complex numbers in Cartesian form:  
-(a) $\sqrt{3}e^{-i\pi /3}$  
-(b) $e^{i\pi /2}$
+a. $\sqrt{3}e^{-i\pi /3}$  
+b. $e^{i\pi /2}$
 ```
+
+**Solution**<br>
+1. All of the numbers (a-d) have a modulus of $\sqrt{2}$ and subtend an angle of $\frac{\pi}{4}$ with the real axis. Thus, we have:<br>
+a. $1+i \equiv \sqrt{2}e^{\frac{i\pi}{4}}$<br>
+b. $-1+i \equiv \sqrt{2}e^{\frac{3i\pi}{4}}$<br>
+c. $-1-i \equiv \sqrt{2}e^{\frac{-3i\pi}{4}}$<br>
+d. $1-i \equiv \sqrt{2}e^{\frac{-i\pi}{4}}$<br>
+e. Since $-1$ lies on the negative real axis, it has an argument of $\pi$. It has a modulus $1$. Hence, we can write the famous result $e^{i\pi} + 1 = 0$.<br>
+
+2. Using the result that $e^{i\theta} = \textrm{cos}(\theta) + i\textrm{sin}(\theta)$ gives:<br>
+a. $\sqrt{3}e^{-i\frac{\pi}{3}} = \sqrt{3}(\textrm{cos}(\frac{\pi}{3} - i\textrm{sin}(\frac{\pi}{3})) = \sqrt{3}(\frac{1}{2} - i\frac{\sqrt3}{2}) = \frac{\sqrt3}{2} - i\frac{3}{2}$<br>
+b. $e^{i\frac{\pi}{2}} = i$<br>
+
+Both results could also be derived by sketching the numbers in the plane. Result (b) is particularly easy. It lies on the positive imaginary axis ($\textrm{arg}(z) = \frac{\pi}{2}$) and has a modulus of $1$.
 
 ## Complex Arithmetic
 ### Addition and Subtraction
@@ -197,6 +214,10 @@ Note the use of $i^2=-1$ to simplify the result.
 
 2. Show that the result $zz^* = |z|^2$ is true for any complex number z. *This result is useful, and should be remembered!*
 ```
+**Solutions**<br>
+1. $zw^* = (1+2i)(2-i) = 2-i+4i+2 = 3+3i$
+
+2. Let $z=x+yi$. Then $zz^* = (x+yi)(x-yi) = x^2 + yi - yi + i^2y = x^2 + y^2 = |z|^2$
 
 ### Division of Complex Numbers
 
@@ -222,6 +243,10 @@ Let's see how this works for an example in which $z_1 = 2 + 3i$ and $z_2 = 1 - 2
 :class: tip
 1. Simplify the expression $\frac{7+i}{1+3i}$
 ```
+
+**Solution**<br>
+$\frac{7+i}{1+3i} = \frac{7+i}{1+3i}\frac{1-3i}{1-3i} = \frac{7-21i+i+3}{1+9} = 1-2i$
+
 
 ### Multiplying and Dividing Complex Numbers in Polar Form
 
@@ -265,6 +290,18 @@ When $z_1$ is multiplied by $z_2$:
 2. By writing $z_1 = r_1e^{i\theta_1}$, $z_2 = r_2e^{i\theta_2}$, prove the result $(\frac{z_1}{z_2})^* = \frac{z_1^*}{z_2^*}$
 ```
 
+**Solution**<br>
+1. (a) $|z| = \sqrt{2}$, $|w| = 2$, so $|zw| = 2\sqrt{2}$<br>
+$\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{\pi}{6} = \frac{11}{12}\pi = \textrm{arg}(zw)$<br>
+(b) $|zw| = 2\sqrt{2}$<br>
+$\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{5}{6}\pi = \frac{19}{12}\pi$, which lies in the fourth quadrant.<br>
+The principal argument is given by $\textrm{arg}(zw) = -\frac{5}{12}\pi$.<br>
+
+2.
+```{math}
+\left(\frac{z_1}{z_2}\right)^* = \left(\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}\right)^* = \frac{r_1}{r_2} e^{-i(\theta_1 - \theta_2)} = \frac{r_1 e^{-i\theta_1}}{r_2 e^{-i\theta_2}} = \frac{z_1^* }{z_2^* }
+```
+
 ## Complex Roots
 ### Periodicity of $e^{i\theta}$
 
@@ -289,6 +326,11 @@ Write the following complex numbers in polar form where the argument is given in
 1. $\sqrt{2}e^{\frac{7\pi i}{3}}$
 2. $3e^{-\frac{13\pi i}{12}}$
 ```
+
+**Solution**<br>
+1. $\frac{7\pi}{3} = 2\pi + \frac{\pi}{3}$ so the result lies in the first quadrant at an angle of $\frac{\pi}{3}$ away from the real axis. The result can be written as $\sqrt{2}e^{\frac{\pi i}{3}}$.
+
+2. $-\frac{13\pi}{12}$ lies in the second quadrant at an angle of $\frac{\pi}{12}$ away from the real axis, so the equivalent to an argument of $\pi - \frac{\pi}{12}$. The result can be written as $3e^\frac{11\pi}{12}$.
 
 ### Roots of Unity
 In this subsection, we will deduce the roots of the problem $z^m = 1$, where $m$ is a natural number (1, 2, 3, ...). We call these results the $m^{th}$ "roots of unity".
@@ -406,11 +448,11 @@ $$
 Expanding out the right hand side using Binomial expansion, and collecting together powers of $\theta$ gives:
 
 $$
-\textrm{sin}^5(\theta) = (\frac{1}{2})^5 (-i) [(e^{5i\theta} - e^{-5i\theta}) - 5(e^{3i\theta} - e^{-3i\theta}) + 10(e^{i\theta} - e^{-i\theta})]
+\textrm{sin}^5(\theta) = \left(\frac{1}{2}\right)^5 (-i) [(e^{5i\theta} - e^{-5i\theta}) - 5(e^{3i\theta} - e^{-3i\theta}) + 10(e^{i\theta} - e^{-i\theta})]
 
-= \frac{1}{2})^5 (-i) [2i\textrm{sin}(5\theta) - 5(2i)\textrm{sin}(3\theta) + 10(2i)\textrm{sin}(\theta)]
+= \left(\frac{1}{2}\right)^5 (-i) [2i\textrm{sin}(5\theta) - 5(2i)\textrm{sin}(3\theta) + 10(2i)\textrm{sin}(\theta)]
 
-= \frac{1}{2})^4 [\textrm{sin}(5\theta) - 5\textrm{sin}(3\theta) + 10\textrm{sin}(\theta)]
+= \left(\frac{1}{2}\right)^4 [\textrm{sin}(5\theta) - 5\textrm{sin}(3\theta) + 10\textrm{sin}(\theta)]
 $$
 
 ```{admonition} Practice
@@ -419,6 +461,13 @@ Here is a nasty one for you to try:
 
 Show that $\textrm{cos}^7(\theta) = \frac{1}{64} [35\textrm{cos}(\theta) + 21\textrm{cos}(3\theta) + 7\textrm{cos}(5\theta) + \textrm{cos}(7\theta)$
 ```
+
+**Solution**<br>
+The roots are given by:
+* $z = e^{-\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} - i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} - i\frac{\sqrt{3}}{2}$
+* $z = e^0 = 1$
+* $z = e^{\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} + i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} + i\frac{\sqrt{3}}{2}$
+
 
 ### De Moivre's Theorem
 Starting with Euler's Identity $e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)$ and raising both sides to the $n^{th}$ power gives:
@@ -442,73 +491,3 @@ The fact that De Moivre's theorem is *consistent* with Euler's identity is reass
 :class: note
 For non-integer values $(\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n$ is multiple-valued. The principal root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result $\textrm{cos}(n\theta) + i\textrm{sin}(n\theta)$ gives a single root to the problem, but not necessarily the principal root.
 ```
-
-
-## Solutions
-#### Question 1.1.1
-1. $-3$
-2. $2 + 3i$
-3. $3$
-
-#### Question 1.3.1
-1. All of the numbers (a-d) have a modulus of $\sqrt{2}$ and subtend an angle of $\frac{\pi}{4}$ with the real axis. Thus, we have:
-
-(a) $1+i \equiv \sqrt{2}e^{\frac{i\pi}{4}}$
-
-(b) $-1+i \equiv \sqrt{2}e^{\frac{3i\pi}{4}}$
-
-(c) $-1-i \equiv \sqrt{2}e^{\frac{-3i\pi}{4}}$
-
-(d)$1-i \equiv \sqrt{2}e^{\frac{-i\pi}{4}}$
-
-(e) Since $-1$ lies on the negative real axis, it has an argument of $\pi$. It has a modulus $1$. Hence, we can write the famous result $e^{i\pi} + 1 = 0$.
-
-2. Using the result that $e^{i\theta} = \textrm{cos}(\theta) + i\textrm{sin}(\theta)$ gives:
-(a) $\sqrt{3}e^{-i\frac{\pi}{3}} = \sqrt{3}(\textrm{cos}(\frac{\pi}{3} - i\textrm{sin}(\frac{\pi}{3})) = \sqrt{3}(\frac{1}{2} - i\frac{\sqrt3}{2}) = \frac{\sqrt3}{2} - i\frac{3}{2}$
-
-(b) $e^{i\frac{\pi}{2}} = i$
-
-Both results could also be derived by sketching the numbers in the plane. Result (b) is particularly easy. It lies on the positive imaginary axis ($\textrm{arg}(z) = \frac{\pi}{2}$) and has a modulus of $1$.
-
-#### Question 1.4.1
-1. $zw^* = (1+2i)(2-i) = 2-i+4i+2 = 3+3i$
-
-2. Let $z=x+yi$. Then $zz^* = (x+yi)(x-yi) = x^2 + yi - yi + i^2y = x^2 + y^2 = |z|^2$
-
-#### Question 1.4.2
-$\frac{7+i}{1+3i} = \frac{7+i}{1+3i}\frac{1-3i}{1-3i} = \frac{7-21i+i+3}{1+9} = 1-2i$
-
-#### Question 1.4.3
-1. (a) $|z| = \sqrt{2}$, $|w| = 2$, so $|zw| = 2\sqrt{2}$
-
-$\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{\pi}{6} = \frac{11}{12}\pi = \textrm{arg}(zw)$
-
-(b) $|zw| = 2\sqrt{2}$
-
-$\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{5}{6}\pi = \frac{19}{12}\pi$, which lies in the fourth quadrant.
-
-The principal argument is given by $\textrm{arg}(zw) = -\frac{5}{12}\pi$.
-
-2. 
-```{math}
-\left(\frac{z_1}{z_2}\right)^* = \left(\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}\right)^* = \frac{r_1}{r_2} e^{-i(\theta_1 - \theta_2)} = \frac{r_1 e^{-i\theta_1}}{r_2 e^{-i\theta_2}} = \frac{z_1^* }{z_2^* }
-```
-
-
-
-#### Question 1.5.1
-1. $\frac{7\pi}{3} = 2\pi + \frac{\pi}{3}$ so the result lies in the first quadrant at an angle of $\frac{\pi}{3}$ away from the real axis. The result can be written as $\sqrt{2}e^{\frac{\pi i}{3}}$.
-
-2. $-\frac{13\pi}{12}$ lies in the second quadrant at an angle of $\frac{\pi}{12}$ away from the real axis, so the equivalent to an argument of $\pi - \frac{\pi}{12}$. The result can be written as $3e^\frac{11\pi}{12}$.
-
-#### Question 1.5.2
-The roots are given by:
-* $z = e^{-\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} - i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} - i\frac{\sqrt{3}}{2}$
-* $z = e^0 = 1$
-* $z = e^{\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} + i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} + i\frac{\sqrt{3}}{2}$
-
-
-
-
-
-
