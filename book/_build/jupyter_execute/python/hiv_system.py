@@ -82,6 +82,7 @@ plt.plot(tlist,ilist)
 
 
 
+
 # In[4]:
 
 
@@ -108,7 +109,6 @@ plt.plot(t,I,'b-')
 
 
 # In[6]:
-
 
 
 dIdt = lambda I,t : 1/4*(3-1)*I
@@ -157,6 +157,7 @@ plt.ylabel('values')
 plt.xlabel('time')
 plt.legend(loc='best')
 plt.show()
+
 
 
 # In[8]:

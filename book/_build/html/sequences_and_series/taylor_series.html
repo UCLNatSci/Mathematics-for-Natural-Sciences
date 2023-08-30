@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>7. Taylor series &#8212; Mathematics for Natural Sciences 1</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,48 +20,61 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Ordinary Differential Equations" href="../odes/intro_odes.html" />
+    <link rel="next" title="8. ODEs with Python" href="../python/ode_solver_demo.html" />
     <link rel="prev" title="6. Integration" href="../differentiation_and_integration/integration.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -68,10 +83,15 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -82,16 +102,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="limits.html">
    1. Limits of Functions and Sequences
@@ -128,34 +149,24 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../odes/intro_odes.html">
-   8. Ordinary Differential Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../odes/1st_order_odes.html">
-   9. First Order ODEs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../odes/2nd_order_odes.html">
-   10. Second Order ODEs
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   11. ODEs with Python
+   8. ODEs with Python
   </a>
  </li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -163,61 +174,117 @@
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/sequences_and_series/taylor_series.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/sequences_and_series/taylor_series.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#taylor-expansion-definition">
    7.1. Taylor expansion definition
@@ -247,22 +314,67 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Taylor series</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taylor-expansion-definition">
+   7.1. Taylor expansion definition
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#practical-use">
+     7.1.1. Practical use
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-lagrange-remainder-theorem">
+     7.1.2. Advanced: Lagrange remainder theorem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-composite-function-expanions">
+     7.1.3. Advanced: Composite function expanions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application-lhopitals-rule">
+     7.1.4. Application: L’Hôpital’s Rule
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="taylor-series">
-<h1><span class="section-number">7. </span>Taylor series<a class="headerlink" href="#taylor-series" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="taylor-expansion-definition">
-<h2><span class="section-number">7.1. </span>Taylor expansion definition<a class="headerlink" href="#taylor-expansion-definition" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="taylor-series">
+<h1><span class="section-number">7. </span>Taylor series<a class="headerlink" href="#taylor-series" title="Permalink to this headline">#</a></h1>
+<section id="taylor-expansion-definition">
+<h2><span class="section-number">7.1. </span>Taylor expansion definition<a class="headerlink" href="#taylor-expansion-definition" title="Permalink to this headline">#</a></h2>
 <p>We will write the formula for expansion about <span class="math notranslate nohighlight">\(x=a\)</span>, in which we seek to express <span class="math notranslate nohighlight">\(f(x)\)</span> as an infinite polynomial of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-67b94c89-8c85-4fd2-8819-681c711cd0c3">
-<span class="eqno">(7.1)<a class="headerlink" href="#equation-67b94c89-8c85-4fd2-8819-681c711cd0c3" title="Permalink to this equation">¶</a></span>\[\begin{equation}p(x;a)=\sum_{j=0}^{\infty}c_n(x-a)^n = c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(c-a)^n+\dots\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-87d2b4ff-ee07-44a6-9f9a-af29874cf3ad">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-87d2b4ff-ee07-44a6-9f9a-af29874cf3ad" title="Permalink to this equation">#</a></span>\[\begin{equation}p(x;a)=\sum_{j=0}^{\infty}c_n(x-a)^n = c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(c-a)^n+\dots\end{equation}\]</div>
 <p>We choose the coefficients <span class="math notranslate nohighlight">\(c_n\)</span> to ensure that the <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> derivative of the polynomial is equal to the <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> derivative of the function at the point <span class="math notranslate nohighlight">\(x=a\)</span>. In this sense, the Taylor series gives the best possible local polynomial approximation to <span class="math notranslate nohighlight">\(f(x)\)</span> of specified degree.</p>
 <p>By repeatedly differentiating and evaluating the polynomial, we obtain</p>
 <div class="amsmath math notranslate nohighlight">
@@ -319,8 +431,8 @@ This can be done by making use of the Lagrange remainder theorem, introduced in 
 </ol>
 </div>
 <p>Functions which converge to their Taylor series for a range of values are called <em>analytic</em>, and functions which converge to their Taylor series everywhere are called <em>entire</em>. The sine and cosine series, and the <span class="math notranslate nohighlight">\(e^x\)</span> series are entire. The Maclaurin series for <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> is analytic for <span class="math notranslate nohighlight">\(|x|&lt;1\)</span>.</p>
-<div class="section" id="practical-use">
-<h3><span class="section-number">7.1.1. </span>Practical use<a class="headerlink" href="#practical-use" title="Permalink to this headline">¶</a></h3>
+<section id="practical-use">
+<h3><span class="section-number">7.1.1. </span>Practical use<a class="headerlink" href="#practical-use" title="Permalink to this headline">#</a></h3>
 <p>The Taylor series nearly always contains an infinite number of terms. To be of practical use in applications, we typically need to “truncate” the expansion, meaning that we retain only the terms up to a specified <span class="math notranslate nohighlight">\(n^{\text{th}}\)</span> power of <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <div class="note admonition">
 <p class="admonition-title">Example: The two-term expansion</p>
@@ -339,24 +451,26 @@ p(x;a)=f(a)+f'(a)(x-a)
 </div>
 <p>As well as considering the validity of the infinite series, it is important to be able to determine how many terms in the series are needed for practical use. If the series converges very slowly, then it may not be much good!</p>
 <p>As can be seen from the plot below, the degree 21 Maclaurin expansion <span class="math notranslate nohighlight">\(\sin(x)\)</span> already represents <span class="math notranslate nohighlight">\(\sin(x)\)</span> rather faithfully on the range <span class="math notranslate nohighlight">\([-2\pi,2\pi]\)</span>, but it is less accurate further away from the expansion point.</p>
-<div class="figure align-default" id="macplot">
+<figure class="align-default" id="macplot">
 <img alt="../_images/macplot.png" src="../_images/macplot.png" />
-<p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">A plot of the curve <span class="math notranslate nohighlight">\(\sin(x)\)</span> together with Maclaurin series expansion retaining successively greater numbers of terms, <span class="math notranslate nohighlight">\(p_1,p_3,p_5,p_7,p_{13},p_{21}\)</span>.</span><a class="headerlink" href="#macplot" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="advanced-lagrange-remainder-theorem">
-<h3><span class="section-number">7.1.2. </span>Advanced: Lagrange remainder theorem<a class="headerlink" href="#advanced-lagrange-remainder-theorem" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 7.1 </span><span class="caption-text">A plot of the curve <span class="math notranslate nohighlight">\(\sin(x)\)</span> together with Maclaurin series expansion retaining successively greater numbers of terms, <span class="math notranslate nohighlight">\(p_1,p_3,p_5,p_7,p_{13},p_{21}\)</span>.</span><a class="headerlink" href="#macplot" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="advanced-lagrange-remainder-theorem">
+<h3><span class="section-number">7.1.2. </span>Advanced: Lagrange remainder theorem<a class="headerlink" href="#advanced-lagrange-remainder-theorem" title="Permalink to this headline">#</a></h3>
 <p>The Lagrange remainder theorem, given in the box below,  allows us to place precise bounds on the size of the error. The result shows that the error in the truncated expansion is proportional to the next power of <span class="math notranslate nohighlight">\((x-a)\)</span>.</p>
 <div class="note admonition">
 <p class="admonition-title">Lagrange remainder theorem</p>
 <p>Let <span class="math notranslate nohighlight">\(p_n(x;a)\)</span> be the truncated Taylor expansion of <span class="math notranslate nohighlight">\(f(x)\)</span> about point <span class="math notranslate nohighlight">\(x=a\)</span>, up to and including the term in <span class="math notranslate nohighlight">\((x-a)^n\)</span>.
 The remainder (error) in the truncated expansion is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f98d58ef-b185-4eca-a1e0-b7939e31a3de">
-<span class="eqno">(7.2)<a class="headerlink" href="#equation-f98d58ef-b185-4eca-a1e0-b7939e31a3de" title="Permalink to this equation">¶</a></span>\[\begin{equation}R_n(x) = \biggr|f(x)-p_n(x;a)\biggr| = \biggr|\frac{f^{n+1}(\xi)(x-a)^{n+1}}{(n+1)!}\biggr|, \qquad \xi\in(a,x)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1e84b4f8-51e3-4eca-b3f9-b264b0615a4d">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-1e84b4f8-51e3-4eca-b3f9-b264b0615a4d" title="Permalink to this equation">#</a></span>\[\begin{equation}R_n(x) = \biggr|f(x)-p_n(x;a)\biggr| = \biggr|\frac{f^{n+1}(\xi)(x-a)^{n+1}}{(n+1)!}\biggr|, \qquad \xi\in(a,x)\end{equation}\]</div>
 </div>
 <p>We say that the degree <span class="math notranslate nohighlight">\(n\)</span> series has “order <span class="math notranslate nohighlight">\((x-a)^n\)</span> accuracy”, and we may write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f6e01eb3-4f41-4c35-b1fa-94fe0c82a39d">
-<span class="eqno">(7.3)<a class="headerlink" href="#equation-f6e01eb3-4f41-4c35-b1fa-94fe0c82a39d" title="Permalink to this equation">¶</a></span>\[\begin{equation}f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1})\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3156ec2c-c926-4728-8168-65caff7d5953">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-3156ec2c-c926-4728-8168-65caff7d5953" title="Permalink to this equation">#</a></span>\[\begin{equation}f(x)=p_n(x;a)+\mathcal{O}((x-a)^{n+1})\end{equation}\]</div>
 <p>where the big-O notation describes the order of the error terms.</p>
 <p>The power-relationship in Lagrange’s theorem can be anticipated when <span class="math notranslate nohighlight">\((x-a)\)</span> is small, and for larger differences by noting that the factorial growth of the coefficient denominators is much faster than polynomial growth.</p>
 <div class="warning admonition">
@@ -368,18 +482,18 @@ The remainder (error) in the truncated expansion is given by</p>
 Use the Lagrange remainder theorem to compute an upper bound for the size of the error in the quadratic expansion of <span class="math notranslate nohighlight">\(\sin(x)\)</span> about <span class="math notranslate nohighlight">\(x=\frac{\pi}{3}\)</span>, at a nearby point <span class="math notranslate nohighlight">\(x=\frac{\pi}{2}\)</span>.</p>
 <p><strong>Solution</strong><br>
 The series expansion is found to be:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f5de2156-eee4-47d6-80c9-258533123e43">
-<span class="eqno">(7.4)<a class="headerlink" href="#equation-f5de2156-eee4-47d6-80c9-258533123e43" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_2(x;\pi/3)=\frac{\sqrt{3}}{2}+\frac{1}{2}\biggr(x-\frac{\pi}{3}\biggr)-\frac{\sqrt{3}}{4}\biggr(x-\frac{\pi}{3}\biggr)^2\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e44c9a90-a93a-48a8-91b3-cae1d4eada33">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-e44c9a90-a93a-48a8-91b3-cae1d4eada33" title="Permalink to this equation">#</a></span>\[\begin{equation}p_2(x;\pi/3)=\frac{\sqrt{3}}{2}+\frac{1}{2}\biggr(x-\frac{\pi}{3}\biggr)-\frac{\sqrt{3}}{4}\biggr(x-\frac{\pi}{3}\biggr)^2\end{equation}\]</div>
 <p>And from Lagrange’s formula, the error in the expansion at <span class="math notranslate nohighlight">\(x=\frac{\pi}{2}\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5bc739e0-aafc-4455-a8d1-b4fc2eedb0c0">
-<span class="eqno">(7.5)<a class="headerlink" href="#equation-5bc739e0-aafc-4455-a8d1-b4fc2eedb0c0" title="Permalink to this equation">¶</a></span>\[\begin{equation}R(\xi)= \biggr|\frac{\cos(\xi)(\frac{\pi}{2}-\frac{\pi}{3})^3}{6}\biggr| \end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-09a2eb92-b76f-4f9b-8f80-b9dcce37540a">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-09a2eb92-b76f-4f9b-8f80-b9dcce37540a" title="Permalink to this equation">#</a></span>\[\begin{equation}R(\xi)= \biggr|\frac{\cos(\xi)(\frac{\pi}{2}-\frac{\pi}{3})^3}{6}\biggr| \end{equation}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(|\cos(\xi)|\)</span> is bounded above by <span class="math notranslate nohighlight">\(1\)</span> on the given domain, Lagrange’s remainder theorem gives an upper bound of <span class="math notranslate nohighlight">\(\frac{\pi^3}{6^4}=0.0239246\)</span>
 The exact error is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dc8b998e-71c9-4378-95ec-1d08473c8b30">
-<span class="eqno">(7.6)<a class="headerlink" href="#equation-dc8b998e-71c9-4378-95ec-1d08473c8b30" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr|\sin\left(\frac{\pi}{2}\right)-p_2\left(\frac{\pi}{2};\frac{\pi}{3}\right)\biggr| = 0.0091119\end{equation}\]</div>
-</div>
-<div class="section" id="advanced-composite-function-expanions">
-<h3><span class="section-number">7.1.3. </span>Advanced: Composite function expanions<a class="headerlink" href="#advanced-composite-function-expanions" title="Permalink to this headline">¶</a></h3>
+<div class="amsmath math notranslate nohighlight" id="equation-cfa63189-d183-4ade-a7a0-a429bf4c7e13">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-cfa63189-d183-4ade-a7a0-a429bf4c7e13" title="Permalink to this equation">#</a></span>\[\begin{equation}\biggr|\sin\left(\frac{\pi}{2}\right)-p_2\left(\frac{\pi}{2};\frac{\pi}{3}\right)\biggr| = 0.0091119\end{equation}\]</div>
+</section>
+<section id="advanced-composite-function-expanions">
+<h3><span class="section-number">7.1.3. </span>Advanced: Composite function expanions<a class="headerlink" href="#advanced-composite-function-expanions" title="Permalink to this headline">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(P(x)\)</span>, <span class="math notranslate nohighlight">\(Q(x)\)</span>, be two power series that converge to <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(g(x)\)</span> respectively
 Then</p>
 <ul class="simple">
@@ -412,9 +526,9 @@ Then</p>
 <p>The series converges for <span class="math notranslate nohighlight">\(-1&lt;x&lt;1\)</span>.</p>
 <p>When <span class="math notranslate nohighlight">\(x=\pm 1\)</span>, the series expansion is equal to <span class="math notranslate nohighlight">\(\pm 2(1+\frac{1}{3}+\frac{1}{5}+\frac{1}{7}+\dots)\)</span>, which does not converge. For these values of <span class="math notranslate nohighlight">\(x\)</span>, the function <span class="math notranslate nohighlight">\(f(x)\)</span> is also not finite.</p>
 </div>
-</div>
-<div class="section" id="application-lhopitals-rule">
-<h3><span class="section-number">7.1.4. </span>Application: L’Hôpital’s Rule<a class="headerlink" href="#application-lhopitals-rule" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="application-lhopitals-rule">
+<h3><span class="section-number">7.1.4. </span>Application: L’Hôpital’s Rule<a class="headerlink" href="#application-lhopitals-rule" title="Permalink to this headline">#</a></h3>
 <p>A tricky, yet common, problem involves finding the limit of a ratio of two functions that both approach zero.</p>
 <p>For example, what is the value of the following limit?</p>
 <div class="amsmath math notranslate nohighlight">
@@ -471,9 +585,9 @@ Then</p>
 <p><span class="math notranslate nohighlight">\(g^{\prime\prime}(x)=e^x\)</span></p>
 <p><span class="math notranslate nohighlight">\(\displaystyle \lim_{x\rightarrow\infty} x^2 e^{-x} = \lim_{x\rightarrow\infty}\frac{2}{e^x}=0\)</span></p>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -497,34 +611,48 @@ Then</p>
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="../differentiation_and_integration/integration.html" title="previous page"><span class="section-number">6. </span>Integration</a>
-    <a class='right-next' id="next-link" href="../odes/intro_odes.html" title="next page"><span class="section-number">8. </span>Ordinary Differential Equations</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../differentiation_and_integration/integration.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Integration</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="../python/ode_solver_demo.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>ODEs with Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Natural Sciences<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

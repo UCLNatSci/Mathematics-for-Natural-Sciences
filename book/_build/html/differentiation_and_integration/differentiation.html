@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>5. Differentiation &#8212; Mathematics for Natural Sciences 1</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,48 +20,61 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. Integration" href="integration.html" />
     <link rel="prev" title="4. Complex Numbers" href="../complex_numbers/complex_numbers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -68,10 +83,15 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -82,16 +102,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/limits.html">
    1. Limits of Functions and Sequences
@@ -128,34 +149,24 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../odes/intro_odes.html">
-   8. Ordinary Differential Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../odes/1st_order_odes.html">
-   9. First Order ODEs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../odes/2nd_order_odes.html">
-   10. Second Order ODEs
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   11. ODEs with Python
+   8. ODEs with Python
   </a>
  </li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -163,61 +174,117 @@
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/differentiation_and_integration/differentiation.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/differentiation_and_integration/differentiation.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivations-and-first-principle-arguments">
    5.1. Motivations and First Principle Arguments
@@ -277,19 +344,94 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Differentiation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivations-and-first-principle-arguments">
+   5.1. Motivations and First Principle Arguments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivative-as-a-rate-of-change">
+   5.2. Derivative as a “rate of change”
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-and-higher-derivatives">
+   5.3. Second and Higher Derivatives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stationary-points">
+   5.4. Stationary Points
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-derivative-test">
+     5.4.1. First Derivative Test
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#second-derivative-test">
+     5.4.2. Second derivative test
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentiation-rules">
+   5.5. Differentiation Rules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parametric-differentiation">
+   5.6. Parametric Differentiation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivatives-of-inverse-functions">
+   5.7. Derivatives of Inverse Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implicit-differentiation">
+   5.8. Implicit Differentiation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solutions">
+   5.9. Solutions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="differentiation">
-<h1><span class="section-number">5. </span>Differentiation<a class="headerlink" href="#differentiation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="motivations-and-first-principle-arguments">
-<h2><span class="section-number">5.1. </span>Motivations and First Principle Arguments<a class="headerlink" href="#motivations-and-first-principle-arguments" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="differentiation">
+<h1><span class="section-number">5. </span>Differentiation<a class="headerlink" href="#differentiation" title="Permalink to this headline">#</a></h1>
+<section id="motivations-and-first-principle-arguments">
+<h2><span class="section-number">5.1. </span>Motivations and First Principle Arguments<a class="headerlink" href="#motivations-and-first-principle-arguments" title="Permalink to this headline">#</a></h2>
 <p>The equation <span class="math notranslate nohighlight">\(y=mx+c\)</span> represents a straight line. In this expression, the constant <span class="math notranslate nohighlight">\(m\)</span> tells us how quickly the slope <span class="math notranslate nohighlight">\(y\)</span> changes with <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>For instance,</p>
 <ul class="simple">
@@ -313,19 +455,23 @@
 <span class="math notranslate nohighlight">\(\displaystyle\frac{y−7}{x−5}\)</span> = <span class="math notranslate nohighlight">\(\displaystyle\frac{5}{8}\)</span>, which rearranges to <span class="math notranslate nohighlight">\(y\)</span>=<span class="math notranslate nohighlight">\(\displaystyle\frac{5}{8}x\)</span> + <span class="math notranslate nohighlight">\(\displaystyle\frac{31}{8}\)</span>.</p>
 </div>
 <p>In a curve, the slope is not constant, but we can identify the slope at any point by drawing the tangent to the curve at that point. The tangent is the line that “just touches” the curve, and the normal is the line that is at right angles to the tangent.</p>
-<div class="figure align-default" id="tangent-and-normal">
+<figure class="align-default" id="tangent-and-normal">
 <img alt="../_images/slope.png" src="../_images/slope.png" />
-<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">The tangent at the point is indicated in blue and the normal is indicated in red.  If the tangent has slope <span class="math notranslate nohighlight">\(m\)</span> then the normal has slope −1/<span class="math notranslate nohighlight">\(m\)</span>.</span><a class="headerlink" href="#tangent-and-normal" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">The tangent at the point is indicated in blue and the normal is indicated in red.  If the tangent has slope <span class="math notranslate nohighlight">\(m\)</span> then the normal has slope −1/<span class="math notranslate nohighlight">\(m\)</span>.</span><a class="headerlink" href="#tangent-and-normal" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In <a class="reference internal" href="#tangent-and-normal"><span class="std std-numref">Fig. 5.1</span></a> we can see that if we moved the point along the curve, both the slope of the tangent line and the normal line change.  We are interested in finding a mathematical expression for the slope of a curve at any given point <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<div class="figure align-default" id="height-base">
+<figure class="align-default" id="height-base">
 <img alt="../_images/height-base.png" src="../_images/height-base.png" />
-<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">The curve shows a hypothetical function <span class="math notranslate nohighlight">\(f\)</span>, and the black dashed line shows the tangent at the arbitrary point <span class="math notranslate nohighlight">\((x,f(x))\)</span>. The slope of this line is the <strong>height:base</strong> ratio in the gray shaded triangle</span><a class="headerlink" href="#height-base" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">The curve shows a hypothetical function <span class="math notranslate nohighlight">\(f\)</span>, and the black dashed line shows the tangent at the arbitrary point <span class="math notranslate nohighlight">\((x,f(x))\)</span>. The slope of this line is the <strong>height:base</strong> ratio in the gray shaded triangle</span><a class="headerlink" href="#height-base" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>As a first approximation, we construct a secant on the curve by joining <span class="math notranslate nohighlight">\(x\)</span> to a nearby point <span class="math notranslate nohighlight">\(x+Δx\)</span>. Here, <span class="math notranslate nohighlight">\(Δx\)</span> means a small change in the parameter <span class="math notranslate nohighlight">\(x\)</span>. This result is shown graphically in <a class="reference internal" href="#height-base"><span class="std std-numref">Fig. 5.2</span></a>, we consider the secant line joining <span class="math notranslate nohighlight">\((x,f(x))\)</span> to a nearby point <span class="math notranslate nohighlight">\((x+Δx,f(x+Δx))\)</span></p>
 <p>The slope of the secant line is given by:</p>
 <div class="math notranslate nohighlight" id="equation-slope-secant">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-slope-secant" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{Δf}{Δx}=\displaystyle\frac{f(x+Δx)−f(x)}{Δx}\]</div>
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-slope-secant" title="Permalink to this equation">#</a></span>\[\displaystyle\frac{Δf}{Δx}=\displaystyle\frac{f(x+Δx)−f(x)}{Δx}\]</div>
 <p>As we make <span class="math notranslate nohighlight">\(Δx\)</span> smaller so that the two points are closer together, the secant line approaches the tangent.  We are therefore interested in what happens to <a class="reference internal" href="#equation-slope-secant">(5.1)</a> “as <span class="math notranslate nohighlight">\(Δx\)</span> approaches zero”</p>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
@@ -336,14 +482,16 @@ Using the definition given in <a class="reference internal" href="#equation-slop
 <p>More formally, the result is written as</p>
 <p><span class="math notranslate nohighlight">\(\displaystyle \lim_{Δx \to 0} \displaystyle\frac{f(x+Δx)-f(x)}{Δx}=2x\)</span></p>
 <p>and we say that “the limit <span class="math notranslate nohighlight">\(Δx\)</span>→0”, the result is <span class="math notranslate nohighlight">\(2x\)</span>.</p>
-<div class="figure align-default" id="x2">
+<figure class="align-default" id="x2">
 <img alt="../_images/x2.png" src="../_images/x2.png" />
-<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(y=x^2\)</span>, together with the tangent.  The tangent has slope <span class="math notranslate nohighlight">\(2x\)</span>.</span><a class="headerlink" href="#x2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(y=x^2\)</span>, together with the tangent.  The tangent has slope <span class="math notranslate nohighlight">\(2x\)</span>.</span><a class="headerlink" href="#x2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
 <p>Note that in this example, a factor of <span class="math notranslate nohighlight">\(Δx\)</span> was cancelled from the numerator and denominator.  The limit is not evaluated at <span class="math notranslate nohighlight">\(Δx=0\)</span>, but as <span class="math notranslate nohighlight">\(Δx\)</span> approaches <span class="math notranslate nohighlight">\(0\)</span>. The derivative of a function <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span> is given by the result</p>
 <div class="math notranslate nohighlight" id="equation-derivative">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-derivative" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{\mathrm{d}𝑓}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}\displaystyle\frac{f(x+Δx)−f(x)}{Δx}\]</div>
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-derivative" title="Permalink to this equation">#</a></span>\[\displaystyle\frac{\mathrm{d}𝑓}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}\displaystyle\frac{f(x+Δx)−f(x)}{Δx}\]</div>
 <p>The derivative <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}\)</span> is also written <span class="math notranslate nohighlight">\(f'(x)\)</span>. The two different notations are known as Newton and Leibniz notation.</p>
 <p>The process of calculating the derivative is called “differentiation”.</p>
 <p>As <span class="math notranslate nohighlight">\(Δx\rightarrow 0\)</span>, both the numerator and denominator of the fraction tend to zero, yet in most cases we will see that their ratio approaches a finite limit.
@@ -357,24 +505,26 @@ What determines the limit is how quickly the numerator approaches zero, relative
 <p>(i) Calculate the equation of the tangent to this curve at <span class="math notranslate nohighlight">\(x=3\)</span></p>
 <p>(ii) Calculate the equation of the normal to the curve at <span class="math notranslate nohighlight">\(x=3\)</span></p>
 </div>
-</div>
-<div class="section" id="derivative-as-a-rate-of-change">
-<h2><span class="section-number">5.2. </span>Derivative as a “rate of change”<a class="headerlink" href="#derivative-as-a-rate-of-change" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="derivative-as-a-rate-of-change">
+<h2><span class="section-number">5.2. </span>Derivative as a “rate of change”<a class="headerlink" href="#derivative-as-a-rate-of-change" title="Permalink to this headline">#</a></h2>
 <p>Differentiation can be thought of as a measure of the rate of change of one variable with respect to another. For instance, <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> is a measure of how quickly <span class="math notranslate nohighlight">\(y\)</span> changes (instantaneously) as <span class="math notranslate nohighlight">\(x\)</span> changes. Here, we call <span class="math notranslate nohighlight">\(y\)</span> the dependent variable, and we call <span class="math notranslate nohighlight">\(x\)</span> the independent variable.</p>
 <p>In many problems the independent variable is time. For example, consider the case of a simple pendulum shown in <a class="reference internal" href="#pendulum"><span class="std std-numref">Fig. 5.4</span></a>, where <span class="math notranslate nohighlight">\(\theta(t)\)</span> measures the anticlockwise angle of the pendulum from the downward vertical as a function of time <span class="math notranslate nohighlight">\(t\)</span>. The pendulum is initially released from rest at a positive angle.</p>
-<div class="figure align-default" id="pendulum">
+<figure class="align-default" id="pendulum">
 <img alt="../_images/pendulum.png" src="../_images/pendulum.png" />
-<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">A pendulum swing “animation”, the angle of inclination with the downward vertical is denoted by <span class="math notranslate nohighlight">\(\theta\)</span> and is measured in the anti-clockwise direction.  The graph on the right shows the rate of change of <span class="math notranslate nohighlight">\(\theta\)</span> with respect to time <span class="math notranslate nohighlight">\(t\)</span>.</span><a class="headerlink" href="#pendulum" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.4 </span><span class="caption-text">A pendulum swing “animation”, the angle of inclination with the downward vertical is denoted by <span class="math notranslate nohighlight">\(\theta\)</span> and is measured in the anti-clockwise direction.  The graph on the right shows the rate of change of <span class="math notranslate nohighlight">\(\theta\)</span> with respect to time <span class="math notranslate nohighlight">\(t\)</span>.</span><a class="headerlink" href="#pendulum" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>At the maximum height of the swing (amplitude), the pendulum comes to an instantaneous standstill, and so <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}\theta}{\mathrm{d}t}=0\)</span>.</p></li>
 <li><p>As the pendulum swings clockwise, <span class="math notranslate nohighlight">\(\theta\)</span> is decreasing and so <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}\theta}{\mathrm{d}t}&lt;0\)</span>.</p></li>
 <li><p>As the pendulum swings anticlockwise, <span class="math notranslate nohighlight">\(\theta\)</span> is increasing and so <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}\theta}{\mathrm{d}t}&gt;0\)</span>.</p></li>
 <li><p>On the downswing the pendulum picks up speed.  The angular speed (rate of change of <span class="math notranslate nohighlight">\(|\theta|\)</span>) is greatest at the mid-point of each swing.</p></li>
 </ul>
-</div>
-<div class="section" id="second-and-higher-derivatives">
-<h2><span class="section-number">5.3. </span>Second and Higher Derivatives<a class="headerlink" href="#second-and-higher-derivatives" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="second-and-higher-derivatives">
+<h2><span class="section-number">5.3. </span>Second and Higher Derivatives<a class="headerlink" href="#second-and-higher-derivatives" title="Permalink to this headline">#</a></h2>
 <p>We can differentiate a function repeatedly.  For example, we might differentiate the function <span class="math notranslate nohighlight">\(3x^2+5x^3\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span> twice:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -400,9 +550,9 @@ f''(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}$, \quad f'''(x)=\displays
 <li><p>For the unit circle parameterisation <span class="math notranslate nohighlight">\(x=\cos(\theta), y=\sin(\theta)\)</span>, calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}\)</span> using parametric differentiation.</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="stationary-points">
-<h2><span class="section-number">5.4. </span>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="stationary-points">
+<h2><span class="section-number">5.4. </span>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">#</a></h2>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>The point (<span class="math notranslate nohighlight">\(x_0,f(x_0))\)</span> is a stationary point of <span class="math notranslate nohighlight">\(f(x)\)</span> if <span class="math notranslate nohighlight">\(f′(x_0)=0\)</span>.</p>
@@ -411,8 +561,8 @@ f''(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}$, \quad f'''(x)=\displays
 <br>
 <a class="reference internal image-reference" href="../_images/table-1.png" id="table-for-stat-points"><img alt="alternative description" class="align-center" id="table-for-stat-points" src="../_images/table-1.png" style="width: 462.59999999999997px; height: 141.6px;" /></a>
 <br>
-<div class="section" id="first-derivative-test">
-<h3><span class="section-number">5.4.1. </span>First Derivative Test<a class="headerlink" href="#first-derivative-test" title="Permalink to this headline">¶</a></h3>
+<section id="first-derivative-test">
+<h3><span class="section-number">5.4.1. </span>First Derivative Test<a class="headerlink" href="#first-derivative-test" title="Permalink to this headline">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
 <p>Find and classify the stationary points of <span class="math notranslate nohighlight">\(f(x)=-x^3+9x^2−24x+20\)</span></p>
@@ -441,9 +591,9 @@ f''(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}$, \quad f'''(x)=\displays
 <p>We know that the gradient changes sign only at the points <span class="math notranslate nohighlight">\(x\)</span>=2 and <span class="math notranslate nohighlight">\(x\)</span>=4, so testing the point <span class="math notranslate nohighlight">\(x\)</span>=3 tells us the sign of the gradient immediately right of <span class="math notranslate nohighlight">\(x\)</span>=2 and immediately left of <span class="math notranslate nohighlight">\(x\)</span>=4.</p>
 <p>From the table above, we can infer that <span class="math notranslate nohighlight">\(x\)</span>=2 is a local minimum and <span class="math notranslate nohighlight">\(x\)</span>=4 is a local maximum.</p>
 </div>
-</div>
-<div class="section" id="second-derivative-test">
-<h3><span class="section-number">5.4.2. </span>Second derivative test<a class="headerlink" href="#second-derivative-test" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="second-derivative-test">
+<h3><span class="section-number">5.4.2. </span>Second derivative test<a class="headerlink" href="#second-derivative-test" title="Permalink to this headline">#</a></h3>
 <p>The second derivative measures the rate of change of the slope, since</p>
 <p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2f}{\mathrm{d}x^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}s}{\mathrm{d}x}\)</span> where <span class="math notranslate nohighlight">\(s\)</span> measures the slope.</p>
 <p>Thus, the second derivative is a measure of concavity.</p>
@@ -456,10 +606,10 @@ f''(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}$, \quad f'''(x)=\displays
 <p>If the function is concave upwards at a stationary point, it is a local minimum
 If the function is concave downward at a stationary point, it is a local maximum</p>
 <p>A point of inflection is a point where the concavity of a function <span class="math notranslate nohighlight">\(f\)</span> changes sign. Therefore, at a point of inflection, <span class="math notranslate nohighlight">\(f''(x)=0\)</span>. However, it is important to note that <span class="math notranslate nohighlight">\(f''(c)=0\)</span> does guarantee that a point is an inflection, as some concave up/down functions also satisfy this criterion (<span class="math notranslate nohighlight">\(f(x)=\\cosh(x)\)</span> is an example). In this case, further testing using the first derivative test is needed.</p>
-</div>
-</div>
-<div class="section" id="differentiation-rules">
-<h2><span class="section-number">5.5. </span>Differentiation Rules<a class="headerlink" href="#differentiation-rules" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="differentiation-rules">
+<h2><span class="section-number">5.5. </span>Differentiation Rules<a class="headerlink" href="#differentiation-rules" title="Permalink to this headline">#</a></h2>
 <p><strong>Sum rule</strong></p>
 <p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(u+v)=\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}+\displaystyle\frac{\mathrm{d}v}{\mathrm{d}x}\)</span></p>
 <p>This result says that the derivative of a sum is equal to the sum of the derivatives.</p>
@@ -533,14 +683,14 @@ Intuitively, we hope to combine these two results to find the rate of change of 
 </li>
 </ol>
 </div>
-</div>
-<div class="section" id="parametric-differentiation">
-<h2><span class="section-number">5.6. </span>Parametric Differentiation<a class="headerlink" href="#parametric-differentiation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="parametric-differentiation">
+<h2><span class="section-number">5.6. </span>Parametric Differentiation<a class="headerlink" href="#parametric-differentiation" title="Permalink to this headline">#</a></h2>
 <p>We can express the equation of a circle in the form <span class="math notranslate nohighlight">\(x=\cos(t)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(t)\)</span>. This is known as a parametric representation. By varying the parameter <span class="math notranslate nohighlight">\(t\)</span>, the entire circle is mapped out.</p>
 <p>In principle, any curve can be parameterised in terms of a single parameter, regardless of the number of coordinates. To describe a surface, two parameters are required. For example, the surface of a sphere can be described by varying two parameters such as the latitude and longitude.</p>
 <p>According to the chain rule, we can write</p>
 <div class="math notranslate nohighlight" id="equation-parametric">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-parametric" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}\displaystyle\frac{\mathrm{d}t}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}\]</div>
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-parametric" title="Permalink to this equation">#</a></span>\[\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}\displaystyle\frac{\mathrm{d}t}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}\]</div>
 <p>So, we obtain a result for <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> in terms of the rate of change of each variable w.r.t. parameter <span class="math notranslate nohighlight">\(t\)</span>. This result is known as parametric differentiation. The result is obtained fully in terms of the parameter.</p>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
@@ -556,9 +706,9 @@ Intuitively, we hope to combine these two results to find the rate of change of 
 <p><span class="math notranslate nohighlight">\(2x+2y\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=0\)</span></p>
 <p>and rearranging provides again the result <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=-\displaystyle\frac{x}{y}\)</span></p>
 </div>
-</div>
-<div class="section" id="derivatives-of-inverse-functions">
-<h2><span class="section-number">5.7. </span>Derivatives of Inverse Functions<a class="headerlink" href="#derivatives-of-inverse-functions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="derivatives-of-inverse-functions">
+<h2><span class="section-number">5.7. </span>Derivatives of Inverse Functions<a class="headerlink" href="#derivatives-of-inverse-functions" title="Permalink to this headline">#</a></h2>
 <p>In this scenario we wish to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> where <span class="math notranslate nohighlight">\(f^{-1}(x)\)</span> and we know how to differentiate function <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <p>For example, to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)\)</span> we let <span class="math notranslate nohighlight">\(y=\ln(x)\)</span> so that <span class="math notranslate nohighlight">\(x=e^y\)</span></p>
 <p>We know that <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=e^y\)</span> and then by using the special case of the chain rule we obtain the result :</p>
@@ -577,9 +727,9 @@ The final result is <span class="math notranslate nohighlight">\(\displaystyle\f
 </ol>
 <p><img alt="arccosh" src="../_images/arccosh.png" /></p>
 </div>
-</div>
-<div class="section" id="implicit-differentiation">
-<h2><span class="section-number">5.8. </span>Implicit Differentiation<a class="headerlink" href="#implicit-differentiation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="implicit-differentiation">
+<h2><span class="section-number">5.8. </span>Implicit Differentiation<a class="headerlink" href="#implicit-differentiation" title="Permalink to this headline">#</a></h2>
 <p>Up to now, we have been calculating the derivatives of functions given explicitly in terms of the dependent variable in the manner <span class="math notranslate nohighlight">\(y=y(x)\)</span>.
 However, there are many occasions where we want to calculate the derivative of a function <span class="math notranslate nohighlight">\(y\)</span> that is implicitly related to the dependent variable <span class="math notranslate nohighlight">\(x\)</span> in the manner <span class="math notranslate nohighlight">\(f(x,y)=0\)</span>.</p>
 <p>In that case, we differentiate the entire expression with respect to the independent variable and apply the chain rule to differentiate terms involving the dependent variable.</p>
@@ -604,9 +754,9 @@ However, there are many occasions where we want to calculate the derivative of a
 <li><p>Use implicit differentiation to find the derivative of <span class="math notranslate nohighlight">\(y=\arcsin(x)\)</span></p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="solutions">
-<h2><span class="section-number">5.9. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="solutions">
+<h2><span class="section-number">5.9. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
 <p><strong>Problems for Motivation and Principle Arguments</strong></p>
 <ol>
 <li><p>Let <span class="math notranslate nohighlight">\(f(x)=3x^2+2x\)</span></p>
@@ -756,8 +906,8 @@ These points are stationary points w.r.t <span class="math notranslate nohighlig
 <p>which is the same result we obtained in the examples of section 6.2.6, where it was also explained why the positive square root is chosen for this example.</p>
 </li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -781,34 +931,48 @@ These points are stationary points w.r.t <span class="math notranslate nohighlig
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="../complex_numbers/complex_numbers.html" title="previous page"><span class="section-number">4. </span>Complex Numbers</a>
-    <a class='right-next' id="next-link" href="integration.html" title="next page"><span class="section-number">6. </span>Integration</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../complex_numbers/complex_numbers.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Complex Numbers</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="integration.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Integration</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Natural Sciences<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>
