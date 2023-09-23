@@ -5,9 +5,20 @@ format: jb-book
 root: intro
 options:
   numbered: True
-
 chapters:
-- file: 1_intro_to_python/notes.ipynb
-- file: 2_complex_numbers/notes.ipynb
-- file: 3_sequences_series/notes.ipynb
-- file: 4_taylor_series/notes.ipynb
+- file: 1_introduction/week_1.md
+  sections:
+  - file: 1_introduction/cocalc.md
+  - file: 1_introduction/fundamentals.md
+- file: 2_arrays_and_plots/week_2.md
+  sections:
+  - file: 2_arrays_and_plots/arrays_and_plots.md
+  - file: 2_arrays_and_plots/projectiles.ipynb
+  # chapters:
+  # - file: 1_introduction/cocalc.md
+  # - file: 1_introduction/fundamentals.md
+  # - file: 1_introduction/arrays_and_plots.md
+  # - file: 2_intro_to_python/notes.ipynb
+  # - file: 3_complex_numbers/notes.ipynb
+  # - file: 4_sequences_series/notes.ipynb
+  # - file: 5_taylor_series/notes.ipynb

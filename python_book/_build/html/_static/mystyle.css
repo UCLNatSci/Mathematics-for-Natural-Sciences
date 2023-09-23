@@ -1,0 +1,148 @@
+  .whatis {
+    border-color: #c566df;
+  }
+
+  .admonition.whatis .admonition-title:after {
+    color: #c566df;
+    font-family: "Font Awesome 5 Free";
+    content: "\f128";
+  }
+
+  .readmore {
+    border-color: #c566df;
+  }
+
+  .admonition.readmore .admonition-title:after {
+    color: #c566df;
+    font-family: "Font Awesome 5 Free";
+    content: "\f35d";
+  }
+
+  div.quote {
+    border-color: #FF69B4;
+  }
+
+  div.quote .admonition-title:after {
+    color: #FF69B4;
+    font-family: "Font Awesome 5 Free";
+    content: "\f10d";
+  }
+
+  div.exercise {
+    border-color: var(--note-border-color);
+    background-color: var(--note-title-color);
+  }
+
+  div.exercise p.admonition-title {
+    background-color: var(--note-title-color);
+  }
+
+  /* Remove content box */
+  div.exercise p.admonition-title:after {
+    content: "\f303";
+  }
+
+  div.solution {
+    border-color: var(--pst-color-danger);
+    background-color: var(--pst-color-surface);
+  }
+
+  div.solution p.admonition-title {
+    background-color: var(--pst-color-on-surface);
+
+  }
+
+  /* Remove content box */
+  div.solution p.admonition-title:after {
+    content: "\f303";
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  table {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+  }
+
+  table,
+  th,
+  td {
+    border: 2px solid steelblue !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 5px !important;
+    padding-right: 20px !important;
+    vertical-align: top !important;
+  }
+
+  .output_png {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  body {
+    --sd-color-primary: #D5FFFF;
+    --sd-color-primary-text: #212529;
+  }
+
+  .item {
+    display: inline-block;
+    vertical-align: top
+  }
+
+  .bd-content {
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+html[data-theme="light"] {
+    --pst-color-wotsit: #FADADD;
+}
+
+html[data-theme="dark"] {
+    --pst-color-wotsit: #4D4D4D;
+}
+
+/* Left align table captions */
+table, 
+caption {
+  text-align: left !important;
+}
+
+
+/* Basic table styling */
+.excel-like-table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.excel-like-table th, .excel-like-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Header row styling */
+.excel-like-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* First column (row number) styling */
+.excel-like-table th:first-child,
+.excel-like-table td:first-child {
+  width: 10px;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Alternating row background */
+.excel-like-table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}

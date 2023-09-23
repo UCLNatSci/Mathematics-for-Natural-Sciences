@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\jupyter_cache\executors\utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\nbclient\client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\nbclient\util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\nbclient\util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "c:\users\natsciteaching\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\nbclient\client.py", line 664, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "c:\users\natsciteaching\appdata\local\programs\python\python37\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import matplotlib.pyplot as plt
+
+# set values of constants
+
+vx0 = 5     # initial x velocity
+vy0 = 0
+mu = .3   # 
+g = 9.81    # acceleration due to gravity
+
+# calculate y for integer values of t from 0 to 9
+
+for tehta in range(0, np.pi/2, 0.2):
+    t = np.linspace(0, 15, 100)
+    x = (vx0/mu) * (1 - np.exp(-mu * t))
+    y = -(g/mu)*t + (1/mu)*(vy0 + (g/mu))*(1 - np.exp(-mu * t))
+    print("t (seconds):", t)
+    print("x (metres):", x)
+    print("y (metres):", y)
+
+    plt.plot(x, y)
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mTypeError[0m                                 Traceback (most recent call last)
+[1;32m~\AppData\Local\Temp\ipykernel_24716\1649757896.py[0m in [0;36m<module>[1;34m[0m
+[0;32m     11[0m [1;31m# calculate y for integer values of t from 0 to 9[0m[1;33m[0m[1;33m[0m[1;33m[0m[0m
+[0;32m     12[0m [1;33m[0m[0m
+[1;32m---> 13[1;33m [1;32mfor[0m [0mtehta[0m [1;32min[0m [0mrange[0m[1;33m([0m[1;36m0[0m[1;33m,[0m [0mnp[0m[1;33m.[0m[0mpi[0m[1;33m/[0m[1;36m2[0m[1;33m,[0m [1;36m0.2[0m[1;33m)[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m     14[0m     [0mt[0m [1;33m=[0m [0mnp[0m[1;33m.[0m[0mlinspace[0m[1;33m([0m[1;36m0[0m[1;33m,[0m [1;36m15[0m[1;33m,[0m [1;36m100[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m     15[0m     [0mx[0m [1;33m=[0m [1;33m([0m[0mvx0[0m[1;33m/[0m[0mmu[0m[1;33m)[0m [1;33m*[0m [1;33m([0m[1;36m1[0m [1;33m-[0m [0mnp[0m[1;33m.[0m[0mexp[0m[1;33m([0m[1;33m-[0m[0mmu[0m [1;33m*[0m [0mt[0m[1;33m)[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+
+[1;31mTypeError[0m: 'float' object cannot be interpreted as an integer
+TypeError: 'float' object cannot be interpreted as an integer
+
