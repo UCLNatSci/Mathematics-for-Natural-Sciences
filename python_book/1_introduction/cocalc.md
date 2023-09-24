@@ -48,7 +48,7 @@ The project contains a hierarchical file system much like an ordinary PC. To ope
 
 <h4> ✓ Open a notebook file</h4>
 
-> Navigate to chapters > chapter1 and open the file `Barnsley_Fern.ipynb`
+> Select the folder `week1` then open the file `Barnsley_Fern.ipynb`
 
 The extension `.ipynb` indicates that the file is a Jupyter notebook, also known as an IPython notebook. This type of file contains Python code and formatted text; allowing us to combine computations, results and descriptive text in a single file.
 
@@ -175,17 +175,13 @@ To right-click using a Mac: Press the `Ctrl` key on your keyboard and click the 
 
 To create a new file in the current folder, type the desired name in the 'New File Name' box, then click the arrow next to the 'New File' button and select the file type. To create a new folder, select 'Folder' at the bottom of the list of file types.
 
-> Create a new file `sandbox.ipynb` in the `chapter1` folder. You can either type the full file name including extension `.ipynb`, or just type `sandbox` then select 'Jupyter Notebook' from the list. If it asks you to select a kernel, choose 'Python 3 (system-wide)'.
+```{exercise}
+:label: ex_create_notebook
 
-```{admonition} File management tips
-You should have a separate directory for each chapter. Within each directory you should have one file for the worked exercises and one file for the assessed problems, as well as possibly other files.
+Create a new file `sandbox.ipynb` in the `week1` folder. You can either type the full file name including extension `.ipynb`, or just type `sandbox` then select 'Jupyter Notebook' from the list. If it asks you to select a kernel, choose 'Python 3 (system-wide)'.
+
 ```
 
-
-```{warning}
-Please ensure that you:
-* Place the work for each chapter in its own folder, labelled with the chapter name
-* Separate your answers to the chapter assessment from the worked exercises
-
-You will be given further advice about how to do this in class.
+```{admonition} File management tips
+You should create a separate folder for each week's work. Within each folder you should create one file for the homework problem, as well as other files for practice and draft work.
 ```

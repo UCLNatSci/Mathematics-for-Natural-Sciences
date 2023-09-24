@@ -39,6 +39,10 @@ After completing this chapter you should be able to:
 
 * Create a plot of a mathematical function using `matplotlib`, and perform basic styling such as labelling the axes or changing the line style
 
+```{attention}
+Before you start, create a new folder `week2` in Cocalc, then create a new notebook file inside the folder.
+```
+
 ## Importing libraries
 
 The standard Python language is very extensive, containing a wide range of built-in data types and functions. In addition, we can access an ever-growing collection of Python code libraries that provide additional functions. 

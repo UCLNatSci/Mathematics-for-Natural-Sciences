@@ -3,6 +3,10 @@
 
 # # Projectiles
 # 
+# ```{attention}
+# You should create a new new notebook file for this section.
+# ```
+# 
 # Python is especially useful for modelling physical systems. We'll illustrate this with a simple example from mechanics: the motion of an object under gravity.
 # 
 # ```{figure} cannon.jpg

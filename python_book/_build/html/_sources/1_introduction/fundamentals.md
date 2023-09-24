@@ -20,6 +20,10 @@ After completing this chapter you should be able to:
 * Use scientific notation
 * Define and work with numeric variables (int or float)
 
+```{attention}
+Do the exercises in the notebook file `week1_python_fundamentals.ipynb` which is in the `week1` folder of your Cocalc Project.
+```
+
 ## Arithmetic expressions
 
 We can use Python like a scientific calculator to evaluate a mathematical expression, such as 45 times 99. When you run the code, Python evaluates the expression and displays the result underneath the code cell:
