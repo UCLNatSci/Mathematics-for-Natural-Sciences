@@ -26,7 +26,7 @@
 # 
 # <h4> ✓ Start your project</h4>
 # 
-# > Click on "[Your Projects](https://cocalc.com/projects)". You should see a project titled something like '[your name] - nsci0006'. If you don't, this might be because you didn't use the correct email address in the previous step.
+# > Click on "[Your Projects](https://cocalc.com/projects)". You should see a project titled something like '[your name] - NSCI0005'. If you don't, this might be because you didn't use the correct email address in the previous step.
 # 
 # Your project is essentially a virtual computer hosted in the cloud, including operating system (Linux) and preinstalled software libraries so that you can start programming with Python straight away.
 # 
