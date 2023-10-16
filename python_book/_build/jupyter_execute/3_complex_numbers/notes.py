@@ -58,8 +58,31 @@ z ** 2
 # In[46]:
 
 
-u = 1j * np.pi/4
+u = 1j * np.pi/2
 
+
+# :::{exercise}
+# :label: ex_complex_1
+# 
+# Use Python to calculate the value of the following expressions:
+# 
+# 1. $\displaystyle \frac{1 + i}{i}$
+# 2. $\displaystyle \left(\frac{1}{2} + \frac{\sqrt{3}}{2}i\right)^3$
+# :::
+# 
+# :::{solution} ex_complex_1
+# :class: dropdown
+# 1\.
+# ```
+# (1 + 1j) / 1j # should evaluate to 1 - 1j
+# ```
+# 
+# 2\. 
+# 
+# ```
+# (1/2 + np.sqrt(3)/2 * 1j) ** 3 # should evaluate to 1
+# ```
+# :::
 
 # Another important operation is complex exponention, which we can calculate using the Numpy function `np.exp`. Make sure you import the `numpy` library before trying to use the function. Let's calculate $e^{i\pi/4}$:
 
@@ -84,13 +107,27 @@ print("Real part:", x)
 print("Imaginary part:", y)
 
 
-# ### Question
+# :::{exercise}
+# :label: ex_complex_2
 # 
 # Let $z = e^{i\pi/4}$.
 # 
 # Calculate $z$, $z^2$, $z^3$ and $z^4$ in Cartesian form.
 # 
+# :::
 # 
+# :::{solution} ex_complex_2
+# :class: dropdown
+# 
+# ```
+# z = np.exp(1j * np.pi/4)
+# 
+# print("z:", z)
+# print("z^2:", z**2)
+# print("z^3:", z**3)
+# print("z^4:", z**4)
+# ```
+# :::
 # 
 # 
 
@@ -130,36 +167,54 @@ z = 0.5 * np.exp(1j * np.pi/2)
 plt.scatter(z.real, z.imag)
 
 
-# ### Question
+# :::{exercise}
+# :label: ex_complex_3
 # 
 # Let $z = e^{i\pi/4}$.
 # 
 # Plot $z$, $z^2$, $z^3$ and $z^4$ on an Argand diagram.
-
-# In[58]:
-
-
-# Set up the axes for plotting
-plt.figure()
-plt.grid()
-plt.axvline(0, color='black')
-plt.axhline(0, color='black')
-plt.gca().set_aspect('equal')
-
-# Set the axis limits
-plt.xlim(-20, 20)
-plt.ylim(-20, 20)
-
-z = 2 * np.exp(1j * np.pi / 4) # z is a complex number with given argument and modulus
-z_2 = z**2 # z squared
-z_3 = z**3 # z cubed
-z_4 = z**4 # z to the power 4
-
-plt.scatter(z.real, z.imag)
-plt.scatter(z_2.real, z_2.imag)
-plt.scatter(z_3.real, z_3.imag)
-plt.scatter(z_4.real, z_4.imag)
-
+# :::
+# 
+# :::{solution} ex_complex_3
+# :class: dropdown
+# ```
+# # Set up the axes for plotting
+# plt.figure()
+# plt.grid()
+# plt.axvline(0, color='black')
+# plt.axhline(0, color='black')
+# plt.gca().set_aspect('equal')
+# 
+# # Set the axis limits
+# plt.xlim(-20, 20)
+# plt.ylim(-20, 20)
+# 
+# z = 2 * np.exp(1j * np.pi / 4) # z is a complex number with given argument and modulus
+# z_2 = z**2 # z squared
+# z_3 = z**3 # z cubed
+# z_4 = z**4 # z to the power 4
+# 
+# plt.scatter(z.real, z.imag)
+# plt.scatter(z_2.real, z_2.imag)
+# plt.scatter(z_3.real, z_3.imag)
+# plt.scatter(z_4.real, z_4.imag)
+# ```
+# :::
+# 
+# :::{exercise}
+# :label: ex_complex_4
+# 
+# Use your answer to the previous question to determine what the Argand diagram of $z, z^2, z^3, \ldots$ looks like for various values of $z$.
+# For what values of $z$ do:
+# 
+# 1. $z^n$ all lie on a straight line?
+# 2. $z^n$ all lie on a circle of radius $1$?
+# 3. $z^n$ all lie on one of the two axes?
+# 
+# :::
+# 
+# 
+# 
 
 # In[ ]:
 

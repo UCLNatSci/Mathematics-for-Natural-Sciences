@@ -11,7 +11,7 @@
 # 
 # The following code calculates and plots $\sin(x)$ as well as the first two approximations in its Taylor series, $x$ and $x - x^3/3!$.
 
-# In[15]:
+# In[2]:
 
 
 import numpy as np
@@ -35,27 +35,34 @@ plt.plot(x, f2)
 plt.ylim(-2, 2)
 
 
-
 # :::{exercise}
+# :label: ex_taylor_1
 # 
 # Calculate and plot the next two approximations to $\sin(x)$.
 # :::
-
-# In[16]:
-
-
-# calculate and plot f = sin(x)
-f = np.sin(x) 
-plt.plot(x, f)
-
-f3 = f2 + x**5 / (5 * 4 * 3 * 2)
-plt.plot(x, f3)
-
-f4 = f3 - x**7 / (7 * 6 * 5 * 4 * 3 * 2)
-plt.plot(x, f4)
-
-# restrict the limits of the y-axis
-plt.ylim(-2, 2)
-
-
-# Challenge: write a program which plots $n$ terms of the Taylor approximation to $\sin(x)$.
+# 
+# :::{solution} ex_taylor_1
+# :class: dropdown
+# ```
+# # calculate and plot f = sin(x)
+# f = np.sin(x) 
+# plt.plot(x, f)
+# 
+# # calculate and plot f1 = x
+# f1 = x
+# plt.plot(x, f1)
+# 
+# # calculate and plot f2 = x - x**3/3!
+# f2 = x - x**3 / (3 * 2)
+# plt.plot(x, f2)
+# 
+# f3 = f2 + x**5 / (5 * 4 * 3 * 2)
+# plt.plot(x, f3)
+# 
+# f4 = f3 - x**7 / (7 * 6 * 5 * 4 * 3 * 2)
+# plt.plot(x, f4)
+# 
+# # restrict the limits of the y-axis
+# plt.ylim(-2, 2)
+# ```
+# 

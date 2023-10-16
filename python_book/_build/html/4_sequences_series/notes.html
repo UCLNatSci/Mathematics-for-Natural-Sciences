@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Sequences and Series &#8212; Mathematics for Natural Sciences 1 - Python Material</title>
+    <title>4. Sequences and Series &#8212; Mathematics for Natural Sciences 1 - Python Material</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Power Series" href="../5_taylor_series/notes.html" />
+    <link rel="prev" title="3. Complex Numbers" href="../3_complex_numbers/notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1_introduction/week_1.html">
    1. Introduction to Computing
@@ -155,6 +157,26 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_complex_numbers/notes.html">
+   3. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Sequences and Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5_taylor_series/notes.html">
+   5. Power Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6_partial_differentiation/notes.html">
+   6. Functions of Several Variables
+  </a>
  </li>
 </ul>
 
@@ -319,12 +341,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sequences">
-   Sequences
+   4.1. Sequences
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#series">
-   Series
+   4.2. Series
   </a>
  </li>
 </ul>
@@ -348,12 +370,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sequences">
-   Sequences
+   4.1. Sequences
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#series">
-   Series
+   4.2. Series
   </a>
  </li>
 </ul>
@@ -367,9 +389,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="sequences-and-series">
-<h1>Sequences and Series<a class="headerlink" href="#sequences-and-series" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">4. </span>Sequences and Series<a class="headerlink" href="#sequences-and-series" title="Permalink to this headline">#</a></h1>
 <section id="sequences">
-<h2>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.1. </span>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">#</a></h2>
 <p>If we have an explicit formula for a sequence <span class="math notranslate nohighlight">\({a_n}\)</span> then it is very easy to use Python to calculate and plot a finite number of terms. For example, suppose that</p>
 <div class="math notranslate nohighlight">
 \[a_n = \frac{n - 1}{n + 1}.\]</div>
@@ -426,7 +448,7 @@ title="Print to PDF"
 <p>The sequence does appear to be converging to <span class="math notranslate nohighlight">\(1\)</span>, albeit slowly. We can never <em>prove</em> convergence using Python, but we could continue to calculate more terms to reassure ourselves.</p>
 <div class="exercise admonition" id="h">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 4.1 </span></p>
 <section id="exercise-content">
 <p>Use Python to investigate the sequence <span class="math notranslate nohighlight">\(a_n = \ln(n)\)</span>. Can you convince yourself that it increases without bound (and therefore doesn’t converge)?</p>
 </section>
@@ -462,7 +484,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="series">
-<h2>Series<a class="headerlink" href="#series" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.2. </span>Series<a class="headerlink" href="#series" title="Permalink to this headline">#</a></h2>
 <p>Recall that the sum of a series is defined as the limit of the sequence of partial sums:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{n=1}^\infty a_n = \lim_{N\to\infty}\sum_{n=1}^N a_n.\]</div>
@@ -528,6 +550,20 @@ s: [0.5        0.75       0.875      0.9375     0.96875    0.984375
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../3_complex_numbers/notes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Complex Numbers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../5_taylor_series/notes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Power Series</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

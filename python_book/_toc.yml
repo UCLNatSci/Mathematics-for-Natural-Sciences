@@ -14,6 +14,11 @@ chapters:
   sections:
   - file: 2_arrays_and_plots/arrays_and_plots.md
   - file: 2_arrays_and_plots/projectiles.ipynb
+- file: 3_complex_numbers/notes.ipynb
+- file: 4_sequences_series/notes.ipynb
+- file: 5_taylor_series/notes.ipynb
+- file: 6_partial_differentiation/notes.ipynb
+
   # chapters:
   # - file: 1_introduction/cocalc.md
   # - file: 1_introduction/fundamentals.md

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Power Series &#8212; Mathematics for Natural Sciences 1 - Python Material</title>
+    <title>5. Power Series &#8212; Mathematics for Natural Sciences 1 - Python Material</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Functions of Several Variables" href="../6_partial_differentiation/notes.html" />
+    <link rel="prev" title="4. Sequences and Series" href="../4_sequences_series/notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1_introduction/week_1.html">
    1. Introduction to Computing
@@ -155,6 +157,26 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_complex_numbers/notes.html">
+   3. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_sequences_series/notes.html">
+   4. Sequences and Series
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Power Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6_partial_differentiation/notes.html">
+   6. Functions of Several Variables
+  </a>
  </li>
 </ul>
 
@@ -320,7 +342,7 @@ title="Print to PDF"
               <div>
                 
   <section id="power-series">
-<h1>Power Series<a class="headerlink" href="#power-series" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">5. </span>Power Series<a class="headerlink" href="#power-series" title="Permalink to this headline">#</a></h1>
 <p>A Taylor series is a way of writing a function as an infinite sum of powers of <span class="math notranslate nohighlight">\(x\)</span>. For example, the Taylor series for <span class="math notranslate nohighlight">\(\sin(x)\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots.\]</div>
@@ -357,18 +379,28 @@ title="Print to PDF"
 <img alt="../_images/notes_1_1.png" src="../_images/notes_1_1.png" />
 </div>
 </div>
-<div class="exercise admonition" id="5_taylor_series/notes-exercise-0">
+<div class="exercise admonition" id="ex_taylor_1">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 5.1 </span></p>
 <section id="exercise-content">
 <p>Calculate and plot the next two approximations to <span class="math notranslate nohighlight">\(\sin(x)\)</span>.</p>
 </section>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate and plot f = sin(x)</span>
+<div class="solution dropdown admonition" id="5_taylor_series/notes-solution-1">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="#ex_taylor_1"> Exercise 5.1</a></p>
+<section id="solution-content">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate and plot f = sin(x)</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="c1"># calculate and plot f1 = x</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">x</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f1</span><span class="p">)</span>
+
+<span class="c1"># calculate and plot f2 = x - x**3/3!</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f2</span><span class="p">)</span>
 
 <span class="n">f3</span> <span class="o">=</span> <span class="n">f2</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">5</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f3</span><span class="p">)</span>
@@ -380,15 +412,8 @@ title="Print to PDF"
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-2.0, 2.0)
-</pre></div>
-</div>
-<img alt="../_images/notes_3_1.png" src="../_images/notes_3_1.png" />
-</div>
-</div>
-<p>Challenge: write a program which plots <span class="math notranslate nohighlight">\(n\)</span> terms of the Taylor approximation to <span class="math notranslate nohighlight">\(\sin(x)\)</span>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -418,6 +443,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../4_sequences_series/notes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Sequences and Series</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../6_partial_differentiation/notes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Functions of Several Variables</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
