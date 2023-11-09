@@ -18,6 +18,8 @@ chapters:
 - file: 4_sequences_series/notes.ipynb
 - file: 5_taylor_series/notes.ipynb
 - file: 6_partial_differentiation/notes.ipynb
+- file: 7_odes_1/notes.ipynb
+- file: 8_odes_2/notes.ipynb
 
   # chapters:
   # - file: 1_introduction/cocalc.md

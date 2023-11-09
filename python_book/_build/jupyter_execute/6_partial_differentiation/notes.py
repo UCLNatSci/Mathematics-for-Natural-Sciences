@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Functions of Several Variables
+# # Multivariable Calculus
 # 
 # The function 
 # 

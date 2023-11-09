@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
+# # Week 3 Homework Solutions
+
+# In[ ]:
 
 
 import matplotlib.pyplot as plt

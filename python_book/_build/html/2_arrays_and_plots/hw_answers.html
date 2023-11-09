@@ -173,7 +173,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../6_partial_differentiation/notes.html">
-   6. Functions of Several Variables
+   6. Multivariable Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_odes_1/notes.html">
+   7. Differential Equations I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_odes_2/notes.html">
+   8. Differential Equations II
   </a>
  </li>
 </ul>
@@ -350,7 +360,7 @@ title="Print to PDF"
 
 <span class="c1"># set values of constants</span>
 
-<span class="n">v0</span> <span class="o">=</span> <span class="mi">60</span>     <span class="c1"># initial speed</span>
+<span class="n">v0</span> <span class="o">=</span> <span class="mi">100</span>     <span class="c1"># initial speed</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span> <span class="c1"># angle of launch</span>
 <span class="n">mu</span> <span class="o">=</span> <span class="mf">.3</span>   <span class="c1"># air resistance</span>
 <span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>    <span class="c1"># acceleration due to gravity</span>
@@ -369,7 +379,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 57.73491570388195)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 115.7172926344657)
 </pre></div>
 </div>
 <img alt="../_images/hw_answers_1_1.png" src="../_images/hw_answers_1_1.png" />
@@ -377,41 +387,41 @@ title="Print to PDF"
 </div>
 <p><strong>[4]</strong> for a correct graph. <strong>[1]</strong> for the correct lower y-axis limit.</p>
 <p>2.</p>
-<p>According to the graph, the projectile hits the ground at approximately <span class="math notranslate nohighlight">\(x = 120{~\mathrm{m}}\)</span> <strong>[1]</strong>.  Any value between <span class="math notranslate nohighlight">\(120{~\mathrm{m}}\)</span> and <span class="math notranslate nohighlight">\(125{~\mathrm{m}}\)</span> accepted.</p>
+<p>According to the graph, the projectile hits the ground at approximately <span class="math notranslate nohighlight">\(x = 220{~\mathrm{m}}\)</span> <strong>[1]</strong>.  Any value between <span class="math notranslate nohighlight">\(210{~\mathrm{m}}\)</span> and <span class="math notranslate nohighlight">\(230{~\mathrm{m}}\)</span> accepted.</p>
 <p>3.</p>
-<p>We can repeatedly execute the above code with different values of <span class="math notranslate nohighlight">\(\theta\)</span>. By trial and error you should find that an angle of <span class="math notranslate nohighlight">\(0.54\)</span> radians results in a distance of <span class="math notranslate nohighlight">\(134\mathrm{~m}\)</span>. However, in order to determine this accurately it’s necessary to ‘zoom in’ on the x-axis of the graph by setting the axis limits using <code class="docutils literal notranslate"><span class="pre">plt.xlim</span></code>.</p>
+<p>We can repeatedly execute the above code with different values of <span class="math notranslate nohighlight">\(\theta\)</span>. By trial and error you should find that an angle of <span class="math notranslate nohighlight">\(0.46\)</span> radians results in a distance of <span class="math notranslate nohighlight">\(260\mathrm{~m}\)</span>. However, in order to determine this accurately it’s necessary to ‘zoom in’ on the x-axis of the graph by setting the axis limits using <code class="docutils literal notranslate"><span class="pre">plt.xlim</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v0</span> <span class="o">=</span> <span class="mi">60</span>     <span class="c1"># initial speed</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v0</span> <span class="o">=</span> <span class="mi">100</span>     <span class="c1"># initial speed</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span> <span class="c1"># angle of launch</span>
 <span class="n">mu</span> <span class="o">=</span> <span class="mf">.3</span>   <span class="c1"># air resistance</span>
 <span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>    <span class="c1"># acceleration due to gravity</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># an array of 100 t values between 0 and 15</span>
 
-<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.54</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.46</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">v0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">/</span><span class="n">mu</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">mu</span> <span class="o">*</span> <span class="n">t</span><span class="p">))</span>
 <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">g</span><span class="o">/</span><span class="n">mu</span><span class="p">)</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mu</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">v0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">g</span><span class="o">/</span><span class="n">mu</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">mu</span> <span class="o">*</span> <span class="n">t</span><span class="p">))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> 
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;x, y coordinates of projectile&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x (m)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y (m)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span> <span class="mi">140</span><span class="p">)</span> <span class="c1"># set the axis limits so that we can accurately determine the distance.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">258</span><span class="p">,</span> <span class="mi">262</span><span class="p">)</span> <span class="c1"># set the axis limits so that we can accurately determine the distance.</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(130.0, 140.0)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(258.0, 262.0)
 </pre></div>
 </div>
 <img alt="../_images/hw_answers_3_1.png" src="../_images/hw_answers_3_1.png" />
 </div>
 </div>
-<p><strong>[3]</strong> for a correct graph and <strong>[1]</strong> for a value of <span class="math notranslate nohighlight">\(x\)</span> between <span class="math notranslate nohighlight">\(130\mathrm{~m}\)</span> and <span class="math notranslate nohighlight">\(135\mathrm{~m}\)</span>. A further <strong>[1]</strong> for an accurate value <span class="math notranslate nohighlight">\(134\mathrm{~m}\)</span> supported by a graph with suitable x-axis limits <strong>[1]</strong>.</p>
+<p><strong>[3]</strong> for a correct graph and <strong>[1]</strong> for a value of <span class="math notranslate nohighlight">\(x\)</span> of <span class="math notranslate nohighlight">\(260\mathrm{~m}\)</span>. A further <strong>[1]</strong> if the accurate value of <span class="math notranslate nohighlight">\(x\)</span> supported by a graph with suitable x-axis limits <strong>[1]</strong>.</p>
 <p><strong>[3]</strong> marks for submissions that correctly follow the instructions. Deduct 1 mark for each instruction not followed.</p>
 </section>
 

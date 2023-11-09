@@ -171,7 +171,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../6_partial_differentiation/notes.html">
-   6. Functions of Several Variables
+   6. Multivariable Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_odes_1/notes.html">
+   7. Differential Equations I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_odes_2/notes.html">
+   8. Differential Equations II
   </a>
  </li>
 </ul>
@@ -364,15 +374,16 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
+  <p>Week 4 Homework Solutions</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Homework 2 a)</span>
+<span class="c1"># Homework 1a)</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mi">101</span><span class="o">/</span><span class="mi">100</span>
-<span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="n">n</span> <span class="o">/</span> <span class="n">n</span> 
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
@@ -387,15 +398,15 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$(-101/100)^n/n$&#39;)
 </pre></div>
 </div>
-<img alt="../_images/hw4_9511_0_1.png" src="../_images/hw4_9511_0_1.png" />
+<img alt="../_images/hw4_9511_1_1.png" src="../_images/hw4_9511_1_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Homework 2 b)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Homework 1b)</span>
 
-<span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="n">n</span> <span class="o">/</span> <span class="n">n</span> 
+<span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">n</span><span class="o">**</span><span class="mi">3</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -409,7 +420,31 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$1/n^3$&#39;)
 </pre></div>
 </div>
-<img alt="../_images/hw4_9511_1_1.png" src="../_images/hw4_9511_1_1.png" />
+<img alt="../_images/hw4_9511_2_1.png" src="../_images/hw4_9511_2_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Homework 1c)</span>
+
+<span class="kn">import</span> <span class="nn">scipy.special</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> 
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$e^n/\sqrt{n!}$&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$e^n/\\sqrt{n!}$&#39;)
+</pre></div>
+</div>
+<img alt="../_images/hw4_9511_3_1.png" src="../_images/hw4_9511_3_1.png" />
 </div>
 </div>
 

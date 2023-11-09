@@ -175,7 +175,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../6_partial_differentiation/notes.html">
-   6. Functions of Several Variables
+   6. Multivariable Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_odes_1/notes.html">
+   7. Differential Equations I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_odes_2/notes.html">
+   8. Differential Equations II
   </a>
  </li>
 </ul>
@@ -439,23 +449,25 @@ title="Print to PDF"
  0.96      ]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x162e6137c48&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x1aa78980e48&gt;
 </pre></div>
 </div>
 <img alt="../_images/notes_4_2.png" src="../_images/notes_4_2.png" />
 </div>
 </div>
 <p>The sequence does appear to be converging to <span class="math notranslate nohighlight">\(1\)</span>, albeit slowly. We can never <em>prove</em> convergence using Python, but we could continue to calculate more terms to reassure ourselves.</p>
-<div class="exercise admonition" id="h">
+<div class="exercise admonition" id="ex_sequence_1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.1 </span></p>
 <section id="exercise-content">
 <p>Use Python to investigate the sequence <span class="math notranslate nohighlight">\(a_n = \ln(n)\)</span>. Can you convince yourself that it increases without bound (and therefore doesn’t converge)?</p>
 </section>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<div class="solution dropdown admonition" id="4_sequences_series/notes-solution-1">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="#ex_sequence_1"> Exercise 4.1</a></p>
+<section id="solution-content">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
@@ -463,24 +475,7 @@ title="Print to PDF"
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: [0.         0.69314718 1.09861229 1.38629436 1.60943791 1.79175947
- 1.94591015 2.07944154 2.19722458 2.30258509 2.39789527 2.48490665
- 2.56494936 2.63905733 2.7080502  2.77258872 2.83321334 2.89037176
- 2.94443898 2.99573227 3.04452244 3.09104245 3.13549422 3.17805383
- 3.21887582 3.25809654 3.29583687 3.33220451 3.36729583 3.40119738
- 3.4339872  3.4657359  3.49650756 3.52636052 3.55534806 3.58351894
- 3.61091791 3.63758616 3.66356165 3.68887945 3.71357207 3.73766962
- 3.76120012 3.78418963 3.80666249 3.8286414  3.8501476  3.87120101
- 3.8918203 ]
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x162e62ad808&gt;
-</pre></div>
-</div>
-<img alt="../_images/notes_6_2.png" src="../_images/notes_6_2.png" />
-</div>
+</section>
 </div>
 </section>
 <section id="series">
@@ -492,7 +487,7 @@ title="Print to PDF"
 <p>Let’s use this function to calculate partial sums of the sequence <span class="math notranslate nohighlight">\(a_n = 1/2^n\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">n</span>
 <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 
@@ -504,13 +499,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: [0.5        0.25       0.125      0.0625     0.03125    0.015625
- 0.0078125  0.00390625 0.00195312]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: [5.00000000e-01 2.50000000e-01 1.25000000e-01 6.25000000e-02
+ 3.12500000e-02 1.56250000e-02 7.81250000e-03 3.90625000e-03
+ 1.95312500e-03 9.76562500e-04 4.88281250e-04 2.44140625e-04
+ 1.22070312e-04 6.10351562e-05]
 s: [0.5        0.75       0.875      0.9375     0.96875    0.984375
- 0.9921875  0.99609375 0.99804688]
+ 0.9921875  0.99609375 0.99804688 0.99902344 0.99951172 0.99975586
+ 0.99987793 0.99993896]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x162e74335c8&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x1aa7ad067c8&gt;
 </pre></div>
 </div>
 <img alt="../_images/notes_8_2.png" src="../_images/notes_8_2.png" />
@@ -519,7 +517,54 @@ s: [0.5        0.75       0.875      0.9375     0.96875    0.984375
 <p>As expected, the series</p>
 <div class="math notranslate nohighlight">
 \[\sum_{n=1}^{\infty}1/2^n\]</div>
-<p>appears to be converge to the value <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>appears to converge to the value <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>The series</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=0}^\infty \frac{1}{n!} = 1 + \frac{1}{1} + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \cdots\]</div>
+<p>is very important in mathematics. To calculate its sum we need to use the factorial function <span class="math notranslate nohighlight">\(n!\)</span>. To access this function, we first need to import a new library called <code class="docutils literal notranslate"><span class="pre">scipy.special</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.special</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4! =&quot;</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4! = 24.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="exercise admonition" id="ex_sequence_2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.2 </span></p>
+<section id="exercise-content">
+<p>Use Python to calculate and plot the first few terms of the series</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=0}^\infty \frac{1}{n!}.\]</div>
+<p>What is the limit of this sequence?</p>
+</section>
+</div>
+<div class="solution dropdown admonition" id="4_sequences_series/notes-solution-3">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="#ex_sequence_2"> Exercise 4.2</a></p>
+<section id="solution-content">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.special</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">sp</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;s:&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The limit of this sequence is <span class="math notranslate nohighlight">\(e = 2.71828\ldots\)</span>.</p>
+</section>
+</div>
 </section>
 </section>
 
