@@ -20,7 +20,7 @@ B = I_0 + I_app
 A = B/(2*omega)
 I = np.exp(-t/2) * (A*np.sin(omega*t) + B * np.cos(omega * t)) - I_app  * np.cos(t)
 
-dI_by_dt = np.exp(-t/2) * (A*omega*np.cos(omega*t) - B * omega * np.sin(omega * t) - 0.5 * (A * np.sin(omega*t) + B * np.cos(omega*t))) - I_app  * np.sin(t)
+dI_by_dt = np.exp(-t/2) * (A*omega*np.cos(omega*t) - B * omega * np.sin(omega * t) - 0.5 * (A * np.sin(omega*t) + B * np.cos(omega*t))) + I_app  * np.sin(t)
 
 plt.figure()
 plt.plot(t, I)

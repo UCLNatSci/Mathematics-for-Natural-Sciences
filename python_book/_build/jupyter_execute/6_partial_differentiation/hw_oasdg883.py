@@ -3,24 +3,19 @@
 
 # # Week 6 Homework Solutions
 
-# In[17]:
+# In[25]:
 
 
-import plotly.graph_objects as go
 import numpy as np
+import matplotlib.pyplot as plt
 
-X0 = np.arange(-1.5, 1.5, 0.1)
-Y0 = np.arange(-1, 2.5, 0.1)
+X0 = np.linspace(-1.5, 1.5, 100) # set x limits
+Y0 = np.linspace(-.5, 2.5, 100) # set y limits
 X, Y = np.meshgrid(X0, Y0)
 
-Z = Y**3 + 3 * X**2*Y -3 * X**2 - 3 * Y**2 + 2
+Z = Y**3 + 3 *X**2*Y - 3*X**2 - 3*Y**2 + 2 # calculate the value of Z for each X, Y
 
-
-fig = go.Figure(data=go.Contour(z=Z,x=X0, y=Y0, contours=dict(
-            type="levels", 
-            start=Z.min(),
-            end=Z.max(),
-            size=0.2)))
-
-fig.show()
+fig = plt.figure(figsize = (5,5))
+cs = plt.contour(X, Y, Z, levels=50)
+plt.clabel(cs)
 

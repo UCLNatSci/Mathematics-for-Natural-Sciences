@@ -27,11 +27,8 @@ y2 = 1 - np.sqrt(1/16 + 2 * np.log(x + 1))
 plt.plot(x, y2)
 
 
-# In[102]:
+# In[103]:
 
-
-import numpy as np
-import matplotlib.pyplot as plt
 
 x = np.linspace(0,0.6,15)
 y = np.linspace(0,50,10)
