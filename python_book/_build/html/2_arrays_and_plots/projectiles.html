@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.2. Projectiles &#8212; Mathematics for Natural Sciences 1 - Python Material</title>
+    <title>2.6. Projectiles &#8212; Mathematics for Natural Sciences 1 - Python Material</title>
   
   
   
@@ -63,8 +63,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '2_arrays_and_plots/projectiles';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Complex Numbers" href="../3_complex_numbers/notes.html" />
-    <link rel="prev" title="2.1. Arrays and plots" href="arrays_and_plots.html" />
+    <link rel="next" title="3. Sequences and Series" href="../3_sequences_series/notes.html" />
+    <link rel="prev" title="2.5. Arrays and plots" href="arrays_and_plots_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -161,14 +161,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../1_introduction/fundamentals.html">1.2. Fundamentals</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="week_2.html">2. Arrays and Plotting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="arrays_and_plots.html">2.1. Arrays and plots</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2. Projectiles</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="arrays_and_plots.html">2. Arrays and Plotting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="arrays_and_plots_2.html">2.5. Arrays and plots</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.6. Projectiles</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../3_complex_numbers/notes.html">3. Complex Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_sequences_series/notes.html">4. Sequences and Series</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_taylor_series/notes.html">5. Power Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_sequences_series/notes.html">3. Sequences and Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_taylor_series/notes.html">4. Power Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_complex_numbers/notes.html">5. Complex Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../6_partial_differentiation/notes.html">6. Multivariable Calculus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../7_odes_1/notes.html">7. Differential Equations I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../8_odes_2/notes.html">8. Differential Equations II</a></li>
@@ -318,8 +318,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#animation-optional-but-fun">2.2.1. Animation (Optional but Fun)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-orrery-optional">2.2.2. Virtual Orrery (Optional)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#animation-optional-but-fun">2.6.1. Animation (Optional but Fun)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-orrery-optional">2.6.2. Virtual Orrery (Optional)</a></li>
 </ul>
             </nav>
         </div>
@@ -332,7 +332,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="projectiles">
-<h1><span class="section-number">2.2. </span>Projectiles<a class="headerlink" href="#projectiles" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.6. </span>Projectiles<a class="headerlink" href="#projectiles" title="Permalink to this headline">#</a></h1>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>You should create a new new notebook file for this section.</p>
@@ -341,7 +341,7 @@ document.write(`
 <figure class="align-default" id="cannon">
 <a class="reference internal image-reference" href="../_images/cannon.jpg"><img alt="../_images/cannon.jpg" src="../_images/cannon.jpg" style="height: 150px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">A projectile fired horizontally from a cannon.</span><a class="headerlink" href="#cannon" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">A projectile fired horizontally from a cannon.</span><a class="headerlink" href="#cannon" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>A projectile fired horizontally at a speed <span class="math notranslate nohighlight">\(v_0 = 5~\mathrm{m/s}\)</span> from an initial height <span class="math notranslate nohighlight">\(y_0 = 200~\mathrm{m}\)</span> follows a trajectory given by the following equations:</p>
@@ -352,7 +352,7 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 <p>Let’s start by calculating and printing the <span class="math notranslate nohighlight">\(x\)</span> position at <span class="math notranslate nohighlight">\(t=3~\mathrm{s}\)</span>.</p>
 <div class="exercise admonition" id="question_trajectory">
 
-<p class="admonition-title"><span class="caption-number">Exercise 2.5 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.8 </span></p>
 <section id="exercise-content">
 <p>Complete the following code so that it calculates and prints the x and y coordinates of the projectile at time <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">3</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -372,7 +372,7 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 </div>
 <div class="solution dropdown admonition" id="2_arrays_and_plots/projectiles-solution-1">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#question_trajectory"> Exercise 2.5</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#question_trajectory"> Exercise 2.8</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -400,14 +400,14 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 <p>By changing the value of <code class="docutils literal notranslate"><span class="pre">t</span></code> and re-running the code we could calculate the position of the projectile at any time we choose.</p>
 <div class="exercise admonition" id="question_trajectory_2">
 
-<p class="admonition-title"><span class="caption-number">Exercise 2.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.9 </span></p>
 <section id="exercise-content">
 <p>Estimate the time the projectile reaches the ground by changing <code class="docutils literal notranslate"><span class="pre">t</span></code> until <code class="docutils literal notranslate"><span class="pre">y</span></code> is zero (to the nearest metre). Then check your answer by calculating the <em>exact</em> value of <span class="math notranslate nohighlight">\(t\)</span> such that <span class="math notranslate nohighlight">\(y = 0~\mathrm{m}\)</span>.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="2_arrays_and_plots/projectiles-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#question_trajectory_2"> Exercise 2.6</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#question_trajectory_2"> Exercise 2.9</a></p>
 <section id="solution-content">
 <p>By trial and error, you should find that at <span class="math notranslate nohighlight">\(t = 6.4~\mathrm{s}\)</span> the absoluate value of <span class="math notranslate nohighlight">\(y\)</span> is less than <span class="math notranslate nohighlight">\(1~\mathrm{m}\)</span>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -437,7 +437,7 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 <p>Next we’d like to plot the projectile trajectory on a graph, which will require calculating <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> for a whole sequence of values of <code class="docutils literal notranslate"><span class="pre">t</span></code>. To do that, we will use an array.</p>
 <div class="exercise admonition" id="question_trajectory_3">
 
-<p class="admonition-title"><span class="caption-number">Exercise 2.7 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.10 </span></p>
 <section id="exercise-content">
 <p>Complete the following code to calculate and print arrays <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> representing the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> positions of the projectile between <span class="math notranslate nohighlight">\(t=0~\mathrm{s}\)</span> and <span class="math notranslate nohighlight">\(t=12~\mathrm{s}\)</span>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -461,7 +461,7 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 </div>
 <div class="solution dropdown admonition" id="2_arrays_and_plots/projectiles-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#question_trajectory_3"> Exercise 2.7</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#question_trajectory_3"> Exercise 2.10</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -498,7 +498,7 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 <p>Finally, let’s use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to plot the x-y trajectory of the projectile on a line graph.</p>
 <div class="exercise admonition" id="question_trajectory_4">
 
-<p class="admonition-title"><span class="caption-number">Exercise 2.8 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.11 </span></p>
 <section id="exercise-content">
 <p>Complete the following code to plot the x- and y-coordinates of the projectile. Include a suitable title and x- and y-axis labels.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -511,7 +511,7 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 </div>
 <div class="solution dropdown admonition" id="2_arrays_and_plots/projectiles-solution-7">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#question_trajectory_4"> Exercise 2.8</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#question_trajectory_4"> Exercise 2.11</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -527,14 +527,14 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 <p>First, we imported another package <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> which contains useful plotting functions. We then created a 5 by 5 figure and finally plotted <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> on the x- and y-axes respectively.</p>
 <div class="exercise admonition" id="question_trajectory_5">
 
-<p class="admonition-title"><span class="caption-number">Exercise 2.9 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.12 </span></p>
 <section id="exercise-content">
 <p>Plot two more graphs: <code class="docutils literal notranslate"><span class="pre">x</span></code> against <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> against <code class="docutils literal notranslate"><span class="pre">t</span></code>. Make sure each is on a separate set of axes!</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="2_arrays_and_plots/projectiles-solution-9">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#question_trajectory_5"> Exercise 2.9</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#question_trajectory_5"> Exercise 2.12</a></p>
 <section id="solution-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -560,7 +560,7 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 </section>
 </div>
 <section id="animation-optional-but-fun">
-<h2><span class="section-number">2.2.1. </span>Animation (Optional but Fun)<a class="headerlink" href="#animation-optional-but-fun" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.6.1. </span>Animation (Optional but Fun)<a class="headerlink" href="#animation-optional-but-fun" title="Permalink to this headline">#</a></h2>
 <p>Our last step is to generate an animation of the projectile trajectory. The code to achieve this is shown below, but we won’t study it in detail.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -598,7 +598,7 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 </div></blockquote>
 </section>
 <section id="virtual-orrery-optional">
-<h2><span class="section-number">2.2.2. </span>Virtual Orrery (Optional)<a class="headerlink" href="#virtual-orrery-optional" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.6.2. </span>Virtual Orrery (Optional)<a class="headerlink" href="#virtual-orrery-optional" title="Permalink to this headline">#</a></h2>
 <p>An <a class="reference external" href="https://en.wikipedia.org/wiki/Orrery">orrery</a> is a mechanical device which simulates the motions of heavenly bodies in the Solar System. Your goal is to construct a virtual orrery using Python, a little like the one <a class="reference external" href="https://www.schoolsobservatory.org/learn/astro/solsys/orrery/orr_go">here</a>. This task is open-ended, and you are unlikely to complete the whole Solar System; just see how far you can get!</p>
 <p>Assuming (incorrectly!) that planets follow circular orbits, we can use the following equations to simulation their motion:</p>
 <div class="math notranslate nohighlight">
@@ -644,20 +644,20 @@ y(t) = d\sin(2\pi t/p)\end{split}\]</div>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="arrays_and_plots.html"
+       href="arrays_and_plots_2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Arrays and plots</p>
+        <p class="prev-next-title"><span class="section-number">2.5. </span>Arrays and plots</p>
       </div>
     </a>
     <a class="right-next"
-       href="../3_complex_numbers/notes.html"
+       href="../3_sequences_series/notes.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Complex Numbers</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Sequences and Series</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -679,8 +679,8 @@ y(t) = d\sin(2\pi t/p)\end{split}\]</div>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#animation-optional-but-fun">2.2.1. Animation (Optional but Fun)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-orrery-optional">2.2.2. Virtual Orrery (Optional)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#animation-optional-but-fun">2.6.1. Animation (Optional but Fun)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-orrery-optional">2.6.2. Virtual Orrery (Optional)</a></li>
 </ul>
   </nav></div>
 

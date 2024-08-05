@@ -120,41 +120,9 @@ plt.plot(x, y);
 
 You should see a graph of a sine curve.
 
-<h4> ✓ Create a markdown cell</h4>
-
-A markdown cell contains human-readable formatted text. To create a markdown cell using the floating menu, choose the ![a](text.png) option.
-
-You can convert between markdown and code cells either by selecting the appropriate type from the 'Cell' menu or by pressing the `m` and `y` keys on your keyboard. The cell must be in command mode to use the keyboard shortcuts. If the cell is in edit mode, pres `Esc` first. 
-
-> Create a markdown cell at the bottom of the notebook by clicking the ![Text](text.png) button.
-
-Markdown cells contain text and special formatting instructions. For example, text surrounded by double asterisks symbols is rendered in bold.
-
-> Change to markdown edit mode and enter following text:<br/>
-> `Thank you for generating a **sine curve**!`<br/>
-> Then press `Shift` + `Enter` together to render the markup cell.
-
-```{admonition} Formatting tips
-Other formatting instructions include `#` to denote a heading, `*text*` for italics and `-` for a bulletted list.
-```
-
 <h4> ✓ Delete a cell</h4>
 
 To delete a cell, first select the cell then press `x`. The cell must be in command mode. If the cell is in edit mode, pres `Esc` first. 
 
-> Delete the markdown cell you just created.
+> Delete the code cell you just created.
 
-## Create a new file 
-
-To create a new file in the current folder, type the desired name in the 'New File Name' box, then click the arrow next to the 'New File' button and select the file type. To create a new folder, select 'Folder' at the bottom of the list of file types.
-
-```{exercise}
-:label: ex_create_notebook
-
-Create a new file `sandbox.ipynb` in the `week1` folder. You can either type the full file name including extension `.ipynb`, or just type `sandbox` then select 'Jupyter Notebook' from the list. If it asks you to select a kernel, choose 'Python 3 (system-wide)'.
-
-```
-
-```{admonition} File management tips
-You should create a separate folder for each week's work. Within each folder you should create one file for the homework problem, as well as other files for practice and draft work.
-```
