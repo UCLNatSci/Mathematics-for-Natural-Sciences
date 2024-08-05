@@ -13,12 +13,15 @@ kernelspec:
 
 # Fundamentals
 
-After completing this chapter you should be able to:
+```{admonition} What you will learn
+
+After completing this section you should be able to:
 
 * Perform arithmetic calculations using numbers (BIDMAS)
 * Define and work with numerical variables
 * Use the `print` function to display the value of variables
 * Use scientific notation
+```
 
 > Before you start, open the notebook file `fundamentals.ipynb` which is in the `week 1` folder of your CoCalc Project.
 

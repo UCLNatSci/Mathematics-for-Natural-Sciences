@@ -65,7 +65,6 @@ Cocalc automatically opens the new notebook ready for you to start work.
 You should create a separate folder for each week's work. Within each folder you should create one file for the workshop, as well as other files for practice and draft work.
 ```
 
-
 ## Importing libraries
 
 The standard Python language is very extensive, containing a wide range of built-in data types and functions. In addition, we can access an ever-growing collection of Python code libraries that provide additional functions. 

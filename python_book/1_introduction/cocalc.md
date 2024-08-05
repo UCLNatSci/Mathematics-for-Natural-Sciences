@@ -16,11 +16,14 @@ kernelspec:
 
 We will be using an online platform called *CoCalc* to run and edit *notebooks* containing code written in the *Python* programming language. By the end of the workshop you will be comfortable creating, editing and running notebook files using the platform. You will also see some Python code, but don't worry as you’re not expected to understand it yet.
 
-After completing the chapter you should be able to:
+```{admonition} What you will learn
+
+After completing this section you should be able to:
 
 * Log in to CoCalc and open a project
 * Open, edit and run notebooks
 * Create markdown and code cells
+```
 
 ## Initial steps
 

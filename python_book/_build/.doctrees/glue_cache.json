@@ -1,5 +1,5 @@
 {
-  "2_arrays_and_plots\\arrays_and_plots": {
+  "2_arrays_and_plots/arrays_and_plots_2": {
     "logist": {
       "output_type": "display_data",
       "metadata": {
@@ -8,7 +8,7 @@
           "mime_prefix": ""
         },
         "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\github\\Mathematics-for-Natural-Sciences\\python_book\\_build\\jupyter_execute\\2_arrays_and_plots\\arrays_and_plots_10_0.png"
+          "image/png": "/home/pete/github/Mathematics-for-Natural-Sciences/python_book/_build/jupyter_execute/2_arrays_and_plots/arrays_and_plots_2_10_0.png"
         }
       },
       "data": {

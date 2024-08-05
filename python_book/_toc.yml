@@ -11,9 +11,6 @@ chapters:
   - file: 1_introduction/cocalc.md
   - file: 1_introduction/fundamentals.md
 - file: 2_arrays_and_plots/arrays_and_plots.ipynb
-  sections:
-  - file: 2_arrays_and_plots/arrays_and_plots_2.md
-  - file: 2_arrays_and_plots/projectiles.ipynb
 - file: 3_sequences_series/notes.ipynb
 - file: 4_taylor_series/notes.ipynb
 - file: 5_complex_numbers/notes.ipynb

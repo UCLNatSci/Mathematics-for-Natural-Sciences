@@ -1,56 +1,49 @@
 
-
 <!DOCTYPE html>
 
-
-<html >
-
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>2. Arrays and Plotting &#8212; Mathematics for Natural Sciences 1 - Python Material</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -60,93 +53,61 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2_arrays_and_plots/arrays_and_plots';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.5. Arrays and plots" href="arrays_and_plots_2.html" />
+    <link rel="next" title="3. Sequences and Series" href="../3_sequences_series/notes.html" />
     <link rel="prev" title="1.2. Fundamentals" href="../1_introduction/fundamentals.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="../intro.html">
-  
-  
-  
-  
-    
-    
       
-    
-    
-    <img src="../_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 1 - Python Material</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -156,186 +117,317 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../1_introduction/week_1.html">1. Introduction to Computing</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../1_introduction/cocalc.html">1.1. Using CoCalc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../1_introduction/fundamentals.html">1.2. Fundamentals</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Arrays and Plotting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="arrays_and_plots_2.html">2.5. Arrays and plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="projectiles.html">2.6. Projectiles</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../3_sequences_series/notes.html">3. Sequences and Series</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_taylor_series/notes.html">4. Power Series</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_complex_numbers/notes.html">5. Complex Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_partial_differentiation/notes.html">6. Multivariable Calculus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../7_odes_1/notes.html">7. Differential Equations I</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../8_odes_2/notes.html">8. Differential Equations II</a></li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1_introduction/week_1.html">
+   1. Introduction to Computing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_introduction/cocalc.html">
+     1.1. Using CoCalc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_introduction/fundamentals.html">
+     1.2. Fundamentals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Arrays and Plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_sequences_series/notes.html">
+   3. Sequences and Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_taylor_series/notes.html">
+   4. Power Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5_complex_numbers/notes.html">
+   5. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6_partial_differentiation/notes.html">
+   6. Multivariable Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_odes_1/notes.html">
+   7. Differential Equations I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_odes_2/notes.html">
+   8. Differential Equations II
+  </a>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/2_arrays_and_plots/arrays_and_plots.ipynb" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
+          
 
 
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/2_arrays_and_plots/arrays_and_plots.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
   </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/2_arrays_and_plots/arrays_and_plots.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Arrays and Plotting</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-folder-and-file">2.1. Create a new folder and file</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projectiles">2.2. Projectiles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-numpy">2.3. Using Numpy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays">2.3.1. Numpy arrays</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">2.4. Plotting</a></li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-new-folder-and-file">
+   2.1. Create a new folder and file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#projectiles">
+   2.2. Projectiles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting">
+   2.3. Plotting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-numpy">
+   2.4. Using Numpy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-arrays">
+     2.4.1. Numpy arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-exercises">
+   2.5. Further Exercises
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Arrays and Plotting</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-new-folder-and-file">
+   2.1. Create a new folder and file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#projectiles">
+   2.2. Projectiles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting">
+   2.3. Plotting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-numpy">
+   2.4. Using Numpy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-arrays">
+     2.4.1. Numpy arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-exercises">
+   2.5. Further Exercises
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
+              <div>
+                
   <section class="tex2jax_ignore mathjax_ignore" id="arrays-and-plotting">
 <h1><span class="section-number">2. </span>Arrays and Plotting<a class="headerlink" href="#arrays-and-plotting" title="Permalink to this headline">#</a></h1>
 <p>After completing this chapter you will be able to:</p>
@@ -351,7 +443,7 @@ document.write(`
 <p><img alt="New dropdown" src="../_images/new_folder.png" /></p>
 <p>Perform the following steps to create a new folder called <code class="docutils literal notranslate"><span class="pre">week</span> <span class="pre">2</span></code>:</p>
 <blockquote>
-<div><ol class="arabic simple">
+<div><ol class="simple">
 <li><p>Click <img alt="home" src="../_images/home.png" /> to open the home folder.</p></li>
 <li><p>Click The ‘New’ dropdown button and select ‘Folder’ at the bottom of the list.</p></li>
 <li><p>Enter the folder name <code class="docutils literal notranslate"><span class="pre">week</span> <span class="pre">2</span></code> and click ‘Create’</p></li>
@@ -359,7 +451,7 @@ document.write(`
 </div></blockquote>
 <p>The folder is created and CoCalc automatically opens it. Next, create a new notebook file in the folder called <code class="docutils literal notranslate"><span class="pre">arrays_and_plots.ipynb</span></code></p>
 <blockquote>
-<div><ol class="arabic simple">
+<div><ol class="simple">
 <li><p>Click The ‘New’ dropdown button and select ‘Jupyter Notebook’ at the top of the list.</p></li>
 <li><p>Enter the file name <code class="docutils literal notranslate"><span class="pre">arrays_and_plots</span></code> and click ‘Create’.</p></li>
 <li><p>If Cocalc prompts you to select a kernel, click ‘Python 3 (system-wide)’</p></li>
@@ -384,11 +476,164 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}x(t) &amp;= v_0t\\
 y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
-<p>We will write a program which simulates the trajectory of the projectile, calculating the x,y-position of the projectile between zero and four seconds.</p>
-<p>If you execute the code below, Python creates and displays three arrays <code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. An array is a variable containing a sequence of numerical values.</p>
+<p>We will write a program which simulates the trajectory of the projectile, calculating the x,y-position of the projectile at <span class="math notranslate nohighlight">\(0, 1, 2, 3\)</span> and <span class="math notranslate nohighlight">\(4\)</span> seconds. The values will be stored in an array, which is a variable containing a sequence of numerical values.</p>
+<blockquote>
+<div><p>Enter the following code into a new code cell, then run the cell.</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
+
+# set values of constants
+
+v_0 = 5     # initial velocity
+y_0 = 200   # initial y position
+g = 9.81    # acceleration due to gravity
+
+# create an array t containing 5 values between 0 and 4
+
+t = np.linspace(0, 4, 5)
+
+x = v_0 * t
+y = y_0 - 0.5 * g * t ** 2
+
+print(&quot;t (seconds):&quot;, t)
+print(&quot;x (metres):&quot;, x)
+print(&quot;y (metres):&quot;, y)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t (seconds): [0. 1. 2. 3. 4.]
+x (metres): [ 0.  5. 10. 15. 20.]
+y (metres): [200.    195.095 180.38  155.855 121.52 ]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python creates and displays three arrays <code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<p>The first line,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<p>instructs Python to load a software library called ‘Numpy’. Numpy (pronounced ‘num-pie’) contains useful mathematical functions and an array data type. Next, we create three numerical variables <code class="docutils literal notranslate"><span class="pre">v_0</span></code>, <code class="docutils literal notranslate"><span class="pre">y_0</span></code> and <code class="docutils literal notranslate"><span class="pre">g</span></code>. Then,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>creates an array <code class="docutils literal notranslate"><span class="pre">t</span></code> containing 5 numbers between 0 and 4: <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code>. Next, we calculate the x- and y-positions of the projectile and store the results in arrays <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">v_0</span> <span class="o">*</span> <span class="n">t</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y_0</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>When you perform a calculation with an array, the operation is performed on each element separately. For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">v_0</span> <span class="pre">*</span> <span class="pre">t</span></code> multiplies <code class="docutils literal notranslate"><span class="pre">v_0</span> <span class="pre">=</span> <span class="pre">5</span></code> by each element of <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code> resulting in <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">5,</span> <span class="pre">10,</span> <span class="pre">15,</span> <span class="pre">20]</span></code>.</p>
+<div class="exercise admonition" id="2_arrays_and_plots/arrays_and_plots-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.1 </span></p>
+<section id="exercise-content">
+<p>What is the x,y-position of the projectile at 4 seconds?</p>
+<p>By increasing the upper limit of <code class="docutils literal notranslate"><span class="pre">t</span></code>, estimate the time that projectile hits the ground. How far does it travel horizontally?</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>At 4 seconds, the x-position of the projectile is <code class="docutils literal notranslate"><span class="pre">20.</span></code> metres and the y-position is <code class="docutils literal notranslate"><span class="pre">121.52</span></code> metres.</p>
+<p>To accurately estimate the time that the projectile hits the ground, it helps to increase the number of values in the array as well as increasing the upper limit. To do this, we can change the line <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">np.linspace(0,</span> <span class="pre">4,</span> <span class="pre">5)</span></code> to <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">np.linspace(0,</span> <span class="pre">9,</span> <span class="pre">10)</span></code> which increases the upper limit to 9 and the number of values to 10:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">v_0</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y_0</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">v_0</span> <span class="o">*</span> <span class="n">t</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y_0</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;t (seconds):&quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x (metres):&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y (metres):&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">(</span><span class="n">seconds</span><span class="p">):</span> <span class="p">[</span><span class="mf">0.</span> <span class="mf">1.</span> <span class="mf">2.</span> <span class="mf">3.</span> <span class="mf">4.</span> <span class="mf">5.</span> <span class="mf">6.</span> <span class="mf">7.</span> <span class="mf">8.</span> <span class="mf">9.</span><span class="p">]</span>
+<span class="n">x</span> <span class="p">(</span><span class="n">metres</span><span class="p">):</span> <span class="p">[</span> <span class="mf">0.</span>  <span class="mf">5.</span> <span class="mf">10.</span> <span class="mf">15.</span> <span class="mf">20.</span> <span class="mf">25.</span> <span class="mf">30.</span> <span class="mf">35.</span> <span class="mf">40.</span> <span class="mf">45.</span><span class="p">]</span>
+<span class="n">y</span> <span class="p">(</span><span class="n">metres</span><span class="p">):</span> <span class="p">[</span> <span class="mf">200.</span>     <span class="mf">195.095</span>  <span class="mf">180.38</span>   <span class="mf">155.855</span>  <span class="mf">121.52</span>    <span class="mf">77.375</span>   <span class="mf">23.42</span>   <span class="o">-</span><span class="mf">40.345</span>
+ <span class="o">-</span><span class="mf">113.92</span>  <span class="o">-</span><span class="mf">197.305</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The projectile hits the ground between 6 and 7 seconds, at which time it has travelled between 30 and 35 metres.</p>
+</div>
+</section>
+<section id="plotting">
+<h2><span class="section-number">2.3. </span>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h2>
+<p>In this section we’ll learn how to use Python to plot graphs. The following code will plot a graph of the trajectory of the projectile introduced at the start of this workshop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
+import matplotlib.pyplot as plt
+
+# set values of constants
+
+v_0 = 5     # initial velocity
+y_0 = 200   # initial y position
+g = 9.81    # acceleration due to gravity
+
+# create an array t containing 5 values between 0 and 4
+
+t = np.linspace(0, 4, 5)
+
+x = v_0 * t
+y = y_0 - 0.5 * g * t ** 2
+
+print(&quot;t (seconds):&quot;, t)
+print(&quot;x (metres):&quot;, x)
+print(&quot;y (metres):&quot;, y)
+
+plt.figure(figsize=(4,4))
+plt.xlabel(&quot;time (seconds)&quot;)
+plt.ylabel(&quot;x position (metres)&quot;)
+plt.plot(t, x);
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t (seconds): [0. 1. 2. 3. 4.]
+x (metres): [ 0.  5. 10. 15. 20.]
+y (metres): [200.    195.095 180.38  155.855 121.52 ]
+</pre></div>
+</div>
+<img alt="../_images/arrays_and_plots_3_1.png" src="../_images/arrays_and_plots_3_1.png" />
+</div>
+</div>
+<p>At the top of this section of code is the line</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<p>which loads the plotting library ‘Matplotlib’. The remainder of the code is the same as previously, except for the bottom four lines of code. Firstly,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>creates a new figure of dimensions 4 by 4. Next,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;time (seconds)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;x position (metres)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>sets the axis label text.</p>
+<p>The most important line is the last line</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which instructions Python to plot the graph with the values of <code class="docutils literal notranslate"><span class="pre">t</span></code> on the x-axis and the values of <code class="docutils literal notranslate"><span class="pre">x</span></code> on the y-axis.</p>
+<div class="exercise admonition" id="2_arrays_and_plots/arrays_and_plots-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.2 </span></p>
+<section id="exercise-content">
+<p>Plot a line graph of the y-position of the projectile against time.</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># set values of constants</span>
 
@@ -406,75 +651,22 @@ y(t) &amp;= y_0-\frac{1}{2}gt^2\end{align*}\end{split}\]</div>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;t (seconds):&quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x (metres):&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y (metres):&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t (seconds): [0. 1. 2. 3. 4.]
-x (metres): [ 0.  5. 10. 15. 20.]
-y (metres): [200.    195.095 180.38  155.855 121.52 ]
-</pre></div>
-</div>
-</div>
-</div>
-<p>The line</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-<p>instructs Python to load a software library called ‘Numpy’. Numpy (pronounced ‘num-pie’) contains useful mathematical functions and an array data type. Next, we create three numerical variables <code class="docutils literal notranslate"><span class="pre">v_0</span></code>, <code class="docutils literal notranslate"><span class="pre">y_0</span></code> and <code class="docutils literal notranslate"><span class="pre">g</span></code>. Then,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>creates an array <code class="docutils literal notranslate"><span class="pre">t</span></code> containing 5 numbers between 0 and 4. Next, we calculate the x- and y-positions of the projectile and store the results in arrays <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">v_0</span> <span class="o">*</span> <span class="n">t</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">y_0</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span>
-</pre></div>
-</div>
-<div class="exercise admonition" id="2_arrays_and_plots/arrays_and_plots-exercise-0">
 
-<p class="admonition-title"><span class="caption-number">Exercise 2.1 </span></p>
-<section id="exercise-content">
-<p>What is the x,y-position of the projectile at 4 seconds?</p>
-<p>By increasing the upper limit of <code class="docutils literal notranslate"><span class="pre">t</span></code>, estimate the time that projectile hits the ground. How far does it travel horizontally?</p>
-</section>
-</div>
-<div class="solution dropdown admonition">
-<p class="admonition-title">Solution</p>
-<p>At 4 seconds, the x-position of the projectile is <code class="docutils literal notranslate"><span class="pre">20.</span></code> metres and the y-position is <code class="docutils literal notranslate"><span class="pre">121.52</span></code> metres.</p>
-<p>To accurately estimate the time that the projectile hits the ground, it helps to increase the number of values in the array as well as increasing the upper limit. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">v_0</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">y_0</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
-
-<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">v_0</span> <span class="o">*</span> <span class="n">t</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">y_0</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;t (seconds):&quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x (metres):&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y (metres):&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;time (seconds)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y position (metres)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>increases the upper limit to 9 and the number of values to 10.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">(</span><span class="n">seconds</span><span class="p">):</span> <span class="p">[</span><span class="mf">0.</span> <span class="mf">1.</span> <span class="mf">2.</span> <span class="mf">3.</span> <span class="mf">4.</span> <span class="mf">5.</span> <span class="mf">6.</span> <span class="mf">7.</span> <span class="mf">8.</span> <span class="mf">9.</span><span class="p">]</span>
-<span class="n">x</span> <span class="p">(</span><span class="n">metres</span><span class="p">):</span> <span class="p">[</span> <span class="mf">0.</span>  <span class="mf">5.</span> <span class="mf">10.</span> <span class="mf">15.</span> <span class="mf">20.</span> <span class="mf">25.</span> <span class="mf">30.</span> <span class="mf">35.</span> <span class="mf">40.</span> <span class="mf">45.</span><span class="p">]</span>
-<span class="n">y</span> <span class="p">(</span><span class="n">metres</span><span class="p">):</span> <span class="p">[</span> <span class="mf">200.</span>     <span class="mf">195.095</span>  <span class="mf">180.38</span>   <span class="mf">155.855</span>  <span class="mf">121.52</span>    <span class="mf">77.375</span>   <span class="mf">23.42</span>   <span class="o">-</span><span class="mf">40.345</span>
- <span class="o">-</span><span class="mf">113.92</span>  <span class="o">-</span><span class="mf">197.305</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>The projectile hits the ground between 6 and 7 seconds, at which time it has travelled between 30 and 35 metres.</p>
 </div>
 </section>
 <section id="using-numpy">
-<span id="sec-numpy"></span><h2><span class="section-number">2.3. </span>Using Numpy<a class="headerlink" href="#using-numpy" title="Permalink to this headline">#</a></h2>
+<span id="sec-numpy"></span><h2><span class="section-number">2.4. </span>Using Numpy<a class="headerlink" href="#using-numpy" title="Permalink to this headline">#</a></h2>
 <p>As well as containing the array data type, the Numpy library gives us access to a variety of mathematical functions. For example, to calculate the square-root of two we use the <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The square root of 2 is&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = np.sqrt(2)
+print(&quot;The square root of 2 is&quot;, x)
 </pre></div>
 </div>
 </div>
@@ -484,16 +676,12 @@ y (metres): [200.    195.095 180.38  155.855 121.52 ]
 </div>
 </div>
 </div>
-<p>Note that we have to use the prefix <code class="docutils literal notranslate"><span class="pre">np.</span></code> which is the alias defined when we imported Numpy</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
 <p>A list of mathematical functions that are defined by the numpy library can be found <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.math.html">here</a>. The library also contains definitions of mathematical constants <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
 <p>For example, to calculate <span class="math notranslate nohighlight">\(\cos(3\pi/2)\)</span> we can use the following code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cos(3 pi/2) = &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = np.cos(3 * np.pi / 2)
+print(&quot;cos(3 pi/2) = &quot;, x)
 </pre></div>
 </div>
 </div>
@@ -504,9 +692,9 @@ y (metres): [200.    195.095 180.38  155.855 121.52 ]
 </div>
 </div>
 <p>The result is not exactly zero, but is extremely close. This happens because the calculation is done using something called “floating point arithmetic”.</p>
-<div class="exercise admonition" id="2_arrays_and_plots/arrays_and_plots-exercise-1">
+<div class="exercise admonition" id="2_arrays_and_plots/arrays_and_plots-exercise-2">
 
-<p class="admonition-title"><span class="caption-number">Exercise 2.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.3 </span></p>
 <section id="exercise-content">
 <p>(a) Calculate <span class="math notranslate nohighlight">\(e^{\sqrt{2}}\)</span> and define the result as <span class="math notranslate nohighlight">\(y\)</span>.<br>
 (b) Carry out further operations on <span class="math notranslate nohighlight">\(y\)</span> that should return the result 2.</p>
@@ -527,19 +715,19 @@ y (metres): [200.    195.095 180.38  155.855 121.52 ]
 <p>Note: The natural logarithm uses the function name <code class="docutils literal notranslate"><span class="pre">log</span></code>, not <code class="docutils literal notranslate"><span class="pre">ln</span></code>. This is common in scientific programming languages. If we want the log in base 10, we can use <code class="docutils literal notranslate"><span class="pre">log10</span></code>.</p>
 </div>
 <section id="numpy-arrays">
-<h3><span class="section-number">2.3.1. </span>Numpy arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.4.1. </span>Numpy arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">#</a></h3>
 <p>The Numpy library allows us construct arrays, which are variables containing a sequence of numerical values, like a vector from mathematics. The <code class="docutils literal notranslate"><span class="pre">linspace</span></code> functions from the numpy library can be used to create arrays of evenly spaced values.</p>
 <p>Check out the results of the following expressions. Using the <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code> operands on numpy arrays results in addition and multiplication.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = np.linspace(1,2,11)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+print(x)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+print(x-2)
+print(3*x)
+print(x+x)
+print(x**2)
 </pre></div>
 </div>
 </div>
@@ -554,9 +742,9 @@ y (metres): [200.    195.095 180.38  155.855 121.52 ]
 </div>
 </div>
 <p>In fact, any mathematical operation that can be applied to a single number can also be applied to arrays. For example, <code class="docutils literal notranslate"><span class="pre">np.exp(x)</span></code> or <code class="docutils literal notranslate"><span class="pre">np.sqrt(x)</span></code>.</p>
-<div class="exercise admonition" id="2_arrays_and_plots/arrays_and_plots-exercise-2">
+<div class="exercise admonition" id="2_arrays_and_plots/arrays_and_plots-exercise-3">
 
-<p class="admonition-title"><span class="caption-number">Exercise 2.3 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 2.4 </span></p>
 <section id="exercise-content">
 <p>Use <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to create an array containing the values <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">0.25</span> <span class="pre">0.5</span> <span class="pre">0.75</span> <span class="pre">1.0]</span></code>, then calculate an array containing the square roots of these numbers.</p>
 </section>
@@ -573,58 +761,10 @@ y (metres): [200.    195.095 180.38  155.855 121.52 ]
 </div>
 </section>
 </section>
-<section id="plotting">
-<h2><span class="section-number">2.4. </span>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h2>
-<p>In this section we’ll learn how to use Python to plot graphs. Let’s plot a graph of the trajectory of the projectile introduced at the start of this workshop:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="c1"># set values of constants</span>
-
-<span class="n">v_0</span> <span class="o">=</span> <span class="mi">5</span>     <span class="c1"># initial velocity</span>
-<span class="n">y_0</span> <span class="o">=</span> <span class="mi">200</span>   <span class="c1"># initial y position</span>
-<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>    <span class="c1"># acceleration due to gravity</span>
-
-<span class="c1"># create an array t containing 5 values between 0 and 4</span>
-
-<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">v_0</span> <span class="o">*</span> <span class="n">t</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">y_0</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;t (seconds):&quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x (metres):&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y (metres):&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;time (seconds)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y position (metres)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t (seconds): [0. 1. 2. 3. 4.]
-x (metres): [ 0.  5. 10. 15. 20.]
-y (metres): [200.    195.095 180.38  155.855 121.52 ]
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x267462ba188&gt;]
-</pre></div>
-</div>
-<img alt="../_images/7acf1c565dde6093c181cc50c411fac8c381c631c29a529109cb90a3a9d9a430.png" src="../_images/7acf1c565dde6093c181cc50c411fac8c381c631c29a529109cb90a3a9d9a430.png" />
-</div>
-</div>
-<p>At the top of the file we have introduced new <code class="docutils literal notranslate"><span class="pre">import</span></code> statement</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</pre></div>
-</div>
-<p>which loads the ‘Matplotlib’ library. This library contains functions which allow us to generate plots and graphs.</p>
+<section id="further-exercises">
+<h2><span class="section-number">2.5. </span>Further Exercises<a class="headerlink" href="#further-exercises" title="Permalink to this headline">#</a></h2>
+<p>Try plotting the functions defined in question 1 of this weeks problems.</p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -639,7 +779,7 @@ y (metres): [200.    195.095 180.38  155.855 121.52 ]
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./2_arrays_and_plots"
         },
         predefinedOutput: true
@@ -647,111 +787,50 @@ y (metres): [200.    195.095 180.38  155.855 121.52 ]
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="../1_introduction/fundamentals.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.2. </span>Fundamentals</p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../1_introduction/fundamentals.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.2. </span>Fundamentals</p>
+        </div>
     </a>
-    <a class="right-next"
-       href="arrays_and_plots_2.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="../3_sequences_series/notes.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.5. </span>Arrays and plots</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
-</div></div>
-  
-</div>
-
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-folder-and-file">2.1. Create a new folder and file</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projectiles">2.2. Projectiles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-numpy">2.3. Using Numpy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays">2.3.1. Numpy arrays</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">2.4. Plotting</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By Natural Sciences
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  <p class="copyright">
-    
-      © Copyright 2022.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
+        <p class="prev-next-title"><span class="section-number">3. </span>Sequences and Series</p>
     </div>
-  </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Natural Sciences<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>
